@@ -20,6 +20,8 @@ module.exports = {
         transparent_bg: "url('../dist/img/transparent.png')",
         home_banner_bg: "url('../dist/img/home/banner-bg.png')",
         footer_bg: "url('../dist/img/footer-bg.png')",
+        prop_details_bg: "url('../dist/img/inner-banner-bg.png')",
+        img_overlay: "url('../dist/img/home/house-2.png')",
       },
       colors:{
         dark: "#0D0D0D",
@@ -29,6 +31,7 @@ module.exports = {
         d_gray: "#2C2D2F",
         gray: "#797D86",
         primary: "#A57A5A",
+        l_blue: "#F0F2F4",
       },
       fontFamily: {
         'text-poppins': ["Poppins", "sans-serif"],
@@ -50,6 +53,10 @@ module.exports = {
         'fs-16': 'clamp(11px, 3.59vw, 14px)',
 
         'banner_h1' : 'clamp(64px, 5.156vw, 150px)',
+
+        'prop_banner_h1': 'clamp(64px, 3.5vw, 100px)',
+        'prop_title': 'clamp(24px, 4vw, 40px)',
+        'play_btn': 'clamp(24px, 1.66vw, 42px)',
 
         'button' : 'clamp(16px, 1vw, 24px)'
       },

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../src/output.css" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon-dark.png">
+
+    <!-- INTER FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- POPPINS FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+
+    <!-- AOS -->
+    <!-- <link href="./vendor/aos/aos.css" rel="stylesheet">
+    <script src="./vendor/aos/aos.js"></script> -->
+
+    <!-- TINY SLIDER -->
+    <link rel="stylesheet" href="./vendor/tiny-slider/tiny-slider.css"/>
+
+</head>
+<body>
+
+    <header class="header text-dark absolute top-0 l-0 z-[999] w-full py-[20px] pt-[25px]">
+        <div class="container">
+            <nav class="header__wrapper flex f-between-center relative">
+                <a href="./index.html" class="xl:mr-[35px]"><img src="./img/logo.png" alt=""></a>
+                <div>
+                    <button class="burger p-[10px] text-[24px] block xl:hidden"><i class="fas fa-bars"></i></button>
+                    <ul class="nav__links hidden xl:flex flex-col xl:flex-row xl:justify-between gap-[30px]">
+                        <li class="nav__link_item"><a href="#">Home</a></li>
+                        <li class="nav__link_item"><a href="#">About</a></li>
+                        <li class="nav__link_item"><a href="#">Properties</a></li>
+                        <li class="nav__link_item"><a href="#" class="active">Property Details</a></li>
+                        <li class="nav__link_item mr-[30px]"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden xl:flex justify-end gap-[clamp(12px,0.83vw,20px)] text-[clamp(20px,1.25vw,36px)] ">
+                    <a href="tel:123"><i class="fas fa-phone text-primary text-[32px]"></i></a>
+                    <a href="tel:123"><span class="ft-md hover:text-primary">+1 234 567 890</span></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="propBanner bg-prop_details_bg bg-cover bg-center">
+        <div class="container">
+            <div class="propBanner__wrapper h-[55vh] f-col-center">
+                <h1 class="text-center text-prop_banner_h1 ft-sb text-light uppercase mt-24">Property Details</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="property__detail py-[4.5rem]">
+        <div class="container">
+            <h1 class="ft-sb text-prop_title uppercase mb-[2rem]">Forest Heights Homes</h1>
+            <div class="house__detail">
+                <div class="house__detail_wrapper mb-[2rem]">
+                    <div class="house__detail__slider">
+                        <div id="house-1-content" class="house__item">
+                            <img src="../dist/img/home/house-1.png" alt="">
+                        </div>
+
+                        <div id="house-2-content"class="house__item">
+                            <img src="../dist/img/home/house-2.png" alt="">
+                        </div>
+
+                        <div id="house-3-content" class="house__item">
+                            <img src="../dist/img/home/house-3.png" alt="">
+                        </div>
+                        
+                        <div id="house-4-content" class="house__item">
+                            <img src="../dist/img/home/house-4.png" alt="">
+                        </div>
+                        
+                        <div id="house-5-content" class="house__item">
+                            <img src="../dist/img/home/house-5.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="house__detail__slider" id="house__slider__nav__small">
+                    <button><img src="../dist/img/home/house-1.png" alt="" class="h-[300px]"></button>
+                    <button><img src="../dist/img/home/house-2.png" alt=""></button>
+                    <button><img src="../dist/img/home/house-3.png" alt=""></button>
+                    <button><img src="../dist/img/home/house-4.png" alt=""></button>
+                    <button><img src="../dist/img/home/house-5.png" alt=""></button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="property__sched__info">
+        <div class="container">
+            <div class="property_sched__info__wrapper flex gap-3">
+
+                <div class="schedule__tour w-[33%]">
+                    <div class="contact bg-l_blue">
+                        <h2>Schedule a Tour</h2>
+                        <form action="">
+                            <div class="form__wrapper">
+                                <div>
+                                    <input type="date" name="date">
+                                </div>
+                                <div>
+                                    <input type="time" name="time">
+                                </div>
+                                <div>
+                                    <input type="text" name="name" placeholder="Your Name">
+                                </div>
+                                <div>
+                                    <input type="email" name="email" placeholder="Email">
+                                </div>
+                                <div>
+                                    <input type="tel" name="phone" placeholder="Your Number">
+                                </div>
+                                <div>
+                                    <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                                </div>
+                                <a href="#">Sumbit A Tour Request</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="broker bg-l_blue">
+                        <div class="broker__wrapper">
+                            <img src="./img/broker.png" alt="">
+                            <h5>Rebecca Robinson</h5>
+                            <small>Real Estate Broker</small>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa-solid fa-basketball"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="house__information__reviews w-[67%] font-text-inter">
+                    <div class="house__info bg-l_blue p-[32px] rounded-[0.65rem] mb-[2rem]">
+                        <h2 class="mb-[16px] ft-md text-2xl">Details</h2>
+                        <ul class="grid grid-cols-3 items-center">
+                            <li>
+                                <img src="../dist/img/property_details/icons/bed.png" alt="">
+                                <h3>2 Bed Rooms</h3>
+                            
+                            </li>
+                            <li>
+                                <img src="../dist/img/property_details/icons/toom.png" alt="">
+                                <h3>2 Bath Rooms</h3>
+                            </li>
+                            <li>
+                                <img src="../dist/img/property_details/icons/scale.png" alt="">
+                                <h3>200 sq. ft.</h3>
+                            </li>
+                            <li>
+                                <img src="../dist/img/property_details/icons/brick-wall.png" alt="">
+                                <h3>Year Build 2014</h3>
+                            </li>
+                            <li>
+                                <img src="../dist/img/property_details/icons/garage.png" alt="">
+                                <h3>Garages</h3>
+                            </li>
+                            <li>
+                                <img src="../dist/img/property_details/icons/home.png" alt="">
+                                <h3>Type House</h3>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="house__overview bg-l_blue p-[32px] rounded-[0.65rem] mb-[2rem]">
+                        <h2 class="ft-md text-2xl mb-[16px]">Overview</h2>
+                        <p class="mb-0 text-gray text-[16px] tracking-[0.02rem]">Forest Heights Homes is a residential community located in Calgary, Alberta, Canada. It offers a variety of housing options including single-family homes, townhouses, 
+                            and apartments. The community is known for its beautiful green spaces, parks, and playgrounds, providing residents with a peaceful and relaxing environment. It is also 
+                            conveniently located near shopping centers, restaurants, schools, and public transportation.
+                        </p>
+                    </div>
+
+                    <div class="house__location bg-l_blue p-[32px] rounded-[0.65rem] mb-[2rem]">
+                        <h2 class="ft-md text-2xl mb-[16px]">Location</h2>
+                        <span class="text-gray mb-[4px] text-fs-16">678 Ocean View Drive</span>
+                        <div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.6395364528967!2d-122.08626633780452!3d37.421994070413874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba02425dad8f%3A0x6c296c66619367e0!2sGoogleplex!5e0!3m2!1sen!2ske!4v1585314748051!5m2!1sen!2ske" height="300" width="100%"  style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="house__floor_plans bg-l_blue p-[32px] rounded-[0.65rem] mb-[2rem]">
+                        <h2 class="ft-md text-2xl mb-[16px]">Floor Plans</h2>
+                        <div class="floor__plans__wrapper flex flex-col flex-wrap gap-3">
+                            <div class="floor_plans_accordion bg-light rounded-[0.313rem] py-[22px] px-[24px] cursor-pointer">
+                                <div class="floor_plans_info flex justify-between">
+                                    <span><i class="fa-solid fa-angle-down mr-2 text-fs-16"></i>First Floor</span>  
+                                    <ul class="flex items-center gap-5">
+                                        <li>Rooms: 2</li>
+                                        <li>Baths: 2</li>
+                                        <li>Size: 200 sq. ft.</li>
+                                    </ul>  
+                                </div>
+                                <div>
+                                    <img src="./img/accordion-blueprint.png" alt="">
+                                </div>                        
+                            </div>
+                            <div class="floor_plans_accordion bg-light rounded-[0.313rem] py-[22px] px-[24px] cursor-pointer">
+                                <div class="floor_plans_info flex justify-between">
+                                    <span><i class="fa-solid fa-angle-down mr-2 text-fs-16"></i>Second Floor</span>  
+                                    <ul class="flex items-center gap-5">
+                                        <li>Rooms: 2</li>
+                                        <li>Baths: 2</li>
+                                        <li>Size: 200 sq. ft.</li>
+                                    </ul>  
+                                </div>
+                                <div>
+                                    <img src="./img/accordion-blueprint.png" alt="">
+                                </div>                        
+                            </div>
+                            <div class="floor_plans_accordion bg-light rounded-[0.313rem] py-[22px] px-[24px] cursor-pointer">
+                                <div class="floor_plans_info flex justify-between">
+                                    <span><i class="fa-solid fa-angle-down mr-2 text-fs-16"></i>Third Floor</span>  
+                                    <ul class="flex items-center gap-5">
+                                        <li>Rooms: 2</li>
+                                        <li>Baths: 2</li>
+                                        <li>Size: 200 sq. ft.</li>
+                                    </ul>  
+                                </div>
+                                <div>
+                                    <img src="./img/accordion-blueprint.png" alt="">
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="house__demo bg-l_blue p-[32px] rounded-[0.65rem] mb-[2rem]">
+                        <h2 class="ft-md text-2xl mb-[16px]">Video</h2>
+                        <div class="img-box w-full h-[400px] relative bg-img_overlay bg-no-repeat bg-cover bg-center object-cover">   
+                            <div class="overlay absolute top-0 right-0 h-[100%] w-[100%] rounded-[25px]">
+                                <a href="#vid" class="play-btn text-light absolute top-[50%] left-[50%] bg-d_gray pl-[0.5%] rounded-full grid content-center text-play_btn text-center w-[4rem] h-[4rem] -translate-x-2/4 -translate-y-2/4 border-light border-2">
+                                    <i class="fa-solid fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="video-box hidden">
+                            <video controls="">
+                                <source src="https://vjs.zencdn.net/v/oceans.mp4?HD" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <div class="house__reviews bg-l_blue p-[32px] rounded-[0.65rem] mb-[2rem]">
+                        <h2 class="ft-md text-2xl mb-[16px]">(3 Reviews)</h2>
+                        <div class="customer__reviews mb-[1rem]">
+                            <div class="customer__user flex justify-between items-center mb-[1rem]">
+                                <div class="customer__info flex items-center gap-7">
+                                    <img src="../dist/img/property_details/review-1.png" alt="">
+                                    <div>
+                                        <h4>Sarah M</h4>
+                                        <p>May 10, 2023</p>
+                                    </div>
+                                </div>
+                                <div class="customer__stars text-primary">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray text-[16px] tracking-[0.02rem] font-text-inter">"My family and I have been living in Forest Heights Homes for the past 2 years and we absolutely love it here. The community is safe and welcoming, and the amenities are top-notch. 
+                                The management team is also very responsive and helpful."
+                            </p>   
+                        </div>
+
+                        <div class="customer__reviews mb-[2rem]">
+                            <div class="customer__user flex justify-between items-center mb-[1rem]">
+                                <div class="customer__info flex items-center gap-7">
+                                    <img src="../dist/img/property_details/review-2.png" alt="">
+                                    <div>
+                                        <h4>John D</h4>
+                                        <p>May 12, 2023</p>
+                                    </div>
+                                </div>
+                                <div class="customer__stars text-primary">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray text-[16px] tracking-[0.02rem] font-text-inter">"I had a great experience renting a home in Forest Heights. The property was well-maintained, and the leasing process was easy and straightforward. 
+                                I highly recommend Forest Heights Homes for anyone looking for a comfortable and convenient place to live."
+                            </p>   
+                        </div>
+
+                        <div class="customer__reviews mb-[2rem]">
+                            <div class="customer__user flex justify-between items-center mb-[1rem]">
+                                <div class="customer__info flex items-center gap-7">
+                                    <img src="../dist/img/property_details/review-3.png" alt="">
+                                    <div>
+                                        <h4>Emily P</h4>
+                                        <p>May 14, 2023</p>
+                                    </div>
+                                </div>
+                                <div class="customer__stars text-primary">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray text-[16px] tracking-[0.02rem] font-text-inter">"I recently purchased a home in Forest Heights and couldn't be happier with my decision. 
+                                The community is peaceful, the homes are beautiful, and the location is unbeatable. Highly recommend!"
+                            </p>   
+                        </div>
+                    </div>
+
+                    <div class="add__review bg-l_blue p-[32px] rounded-[0.65rem] mb-[2rem]">
+                        <h2>Add A Review</h2>
+                
+                        <div>
+                            <div class="rating">
+                                <h2>Rating</h2>
+                            </div>
+                            <div class="star__form">
+                                <fieldset>
+                                    <span class="star-cb-group">
+                                        <input type="radio" id="rating-5" name="rating" value="5"><label for="rating-5">5</label>
+                                        <input type="radio" id="rating-4" name="rating" value="4"><label for="rating-4">4</label>
+                                        <input type="radio" id="rating-3" name="rating" value="3"><label for="rating-3">3</label>
+                                        <input type="radio" id="rating-2" name="rating" value="2"><label for="rating-2">2</label>
+                                        <input type="radio" id="rating-1" name="rating" value="1" checked="checked"><label for="rating-1">1</label>
+                                        <input type="radio" id="rating-0" name="rating" value="0" class="star-cb-clear"><label for="rating-0">0</label>
+                                    </span>
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <form action="">
+                            <div class="form__review">
+                                <div class="form__identity">
+                                    <div>
+                                        <input type="text" name="name" placeholder="Your Name">
+                                    </div>
+                                    <div>
+                                        <input type="email" name="email" placeholder="Your Email">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="checkbox"><label for="checkbox">Keep me posted via email for future comments on this website</label>
+                                </div>
+                                
+                                <div>
+                                    <textarea name="review" id="" cols="30" rows="10" placeholder="Review"></textarea>
+                                </div>
+                            </div>
+                            <a href="#">Sumbit Review</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="checkout">
+        <div class="container">
+            <div class="checkout__title">
+                <h1>Related</h1>
+            </div>
+            <div class="checkout__wrapper">
+                <div class="checkout__card">
+                    <div>
+                        <img src="./img/checkout-1.png" alt="">
+                        <span>$4,600/Mo</span>
+                    </div>
+                    <a href="#">Riverfront Landing Townhomes</a>
+                    <p>9012 Riverfront Way</p>
+                    <ul>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.9793 7.85904V2.8301C14.9793 1.60685 13.9841 0.611694 12.7609 0.611694H3.1754C1.95215 0.611694 0.956995 1.60688 0.956995 2.8301V7.92391C0.364495 8.54335 2.67029e-05 9.38263 2.67029e-05 10.3054V14.1187C2.67029e-05 14.8186 0.569495 15.3881 1.2695 15.3881C1.96946 15.3881 2.53893 14.8186 2.53893 14.1187V13.7249H13.4612V14.1187C13.4612 14.8186 14.0306 15.3881 14.7306 15.3881C15.4306 15.3881 16 14.8187 16 14.1187V10.3054C16 9.34998 15.6093 8.4841 14.9793 7.85904ZM3.1754 1.23669H12.7609C13.6395 1.23669 14.3543 1.95151 14.3543 2.8301V7.3672C14.1629 7.24935 13.9592 7.14966 13.7456 7.0706V6.03141C13.7456 5.11016 12.9961 4.36066 12.0748 4.36066H9.35831C8.79906 4.36066 8.30346 4.63713 8.00006 5.06029C7.69665 4.63713 7.20106 4.36066 6.64181 4.36066H3.92531C3.00406 4.36066 2.25456 5.11013 2.25456 6.03141V7.0706C2.01703 7.15851 1.79175 7.27188 1.58203 7.40738V2.8301C1.582 1.95151 2.29678 1.23669 3.1754 1.23669ZM3.44793 6.85754C3.25434 6.85754 3.06446 6.87385 2.8795 6.90466V6.03141C2.8795 5.45479 3.34862 4.98566 3.92525 4.98566H6.64175C7.21837 4.98566 7.6875 5.45479 7.6875 6.03141V6.85757H3.44793V6.85754ZM8.31253 6.03138C8.31253 5.45476 8.78165 4.98563 9.35828 4.98563H12.0748C12.6514 4.98563 13.1205 5.45476 13.1205 6.03138V6.90463C12.9355 6.87382 12.7457 6.85751 12.5521 6.85751H8.31253V6.03138ZM3.44793 7.48254H12.5521C14.1087 7.48254 15.375 8.74888 15.375 10.3054V11.2325H12.2407C12.0682 11.2325 11.9282 11.3725 11.9282 11.545C11.9282 11.7176 12.0682 11.8575 12.2407 11.8575H15.375V13.0999H0.625027V11.8575H9.11575C9.28834 11.8575 9.42825 11.7176 9.42825 11.545C9.42825 11.3725 9.28834 11.2325 9.11575 11.2325H0.625027V10.3054C0.625027 8.74888 1.89137 7.48254 3.44793 7.48254ZM1.91393 14.1187C1.91393 14.474 1.62484 14.7631 1.2695 14.7631C0.914152 14.7631 0.625027 14.474 0.625027 14.1187V13.7249H1.91393V14.1187ZM14.7306 14.7631C14.3752 14.7631 14.0861 14.474 14.0861 14.1187V13.7249H15.375V14.1187C15.375 14.474 15.0859 14.7631 14.7306 14.7631Z" fill="#0D0D0D"></path>
+                            </svg>
+                            6 Beds
+                        </li>
+                        <li>
+                            <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.789 0H0.601547C0.47211 0 0.367172 0.104906 0.367172 0.234375V15.7656C0.367172 15.8951 0.47211 16 0.601547 16H12.789C12.9185 16 13.0234 15.8951 13.0234 15.7656V0.234375C13.0234 0.104906 12.9185 0 12.789 0ZM0.835922 1.40625H2.71092C3.09864 1.40625 3.41405 1.72169 3.41405 2.10938V2.42325C2.69667 2.52634 2.12789 3.09512 2.0248 3.8125H1.92967C1.80023 3.8125 1.6953 3.91741 1.6953 4.04688C1.6953 4.17634 1.80023 4.28125 1.92967 4.28125H5.36717C5.49661 4.28125 5.60155 4.17634 5.60155 4.04688C5.60155 3.91741 5.49661 3.8125 5.36717 3.8125H5.27205C5.16895 3.09512 4.60017 2.52634 3.8828 2.42325V2.10938C3.8828 1.46319 3.35711 0.9375 2.71092 0.9375H0.835922V0.46875H6.46092V14.5938H0.835922V1.40625ZM3.64842 2.875C4.21436 2.875 4.68783 3.27825 4.7967 3.8125H2.50011C2.60902 3.27825 3.08248 2.875 3.64842 2.875ZM12.5547 15.5312H0.835922V15.0625H12.5547V15.5312ZM12.5547 14.5938H6.92967V0.46875H12.5547V14.5938Z" fill="#0D0D0D"></path>
+                            </svg>
+                            2 Baths
+                        </li>
+                        <li>
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_126_1290)">
+                                <path d="M15.9221 14.1251C15.6633 14.1251 15.4534 14.335 15.4534 14.5939V15.0626H14.9846C14.7258 15.0626 14.5159 15.2725 14.5159 15.5314C14.5159 15.7902 14.7258 16.0001 14.9846 16.0001H15.9221C16.181 16.0001 16.3909 15.7902 16.3909 15.5314V14.5939C16.3909 14.335 16.181 14.1251 15.9221 14.1251Z" fill="#0D0D0D"></path>
+                                <path d="M13.0915 15.0314H11.2092C10.9422 15.0314 10.7249 15.2486 10.7249 15.5157C10.7249 15.7828 10.9422 16 11.2092 16H13.0915C13.3585 16 13.5758 15.7828 13.5758 15.5157C13.5758 15.2486 13.3585 15.0314 13.0915 15.0314Z" fill="#0D0D0D"></path>
+                                <path d="M0.875232 5.65517C1.14229 5.65517 1.35955 5.43791 1.35955 5.17085V3.28864C1.35955 3.02158 1.14229 2.80432 0.875232 2.80432C0.60817 2.80432 0.390915 3.02158 0.390915 3.28864V5.17085C0.390915 5.43791 0.60817 5.65517 0.875232 5.65517Z" fill="#0D0D0D"></path>
+                                <path d="M0.859695 1.875C1.11857 1.875 1.32845 1.66512 1.32845 1.40625V0.9375H1.7972C2.05607 0.9375 2.26595 0.727625 2.26595 0.46875C2.26595 0.209875 2.05607 0 1.7972 0H0.859695C0.60082 0 0.390945 0.209875 0.390945 0.46875V1.40625C0.390945 1.66512 0.60082 1.875 0.859695 1.875Z" fill="#0D0D0D"></path>
+                                <path d="M11.2092 0.968634H13.0915C13.3585 0.968634 13.5758 0.751379 13.5758 0.484317C13.5758 0.217255 13.3585 0 13.0915 0H11.2092C10.9422 0 10.7249 0.217255 10.7249 0.484317C10.7249 0.751379 10.9422 0.968634 11.2092 0.968634Z" fill="#0D0D0D"></path>
+                                <path d="M7.4444 0.968634H9.32661C9.59367 0.968634 9.81093 0.751379 9.81093 0.484317C9.81093 0.217255 9.59367 0 9.32661 0H7.4444C7.17734 0 6.96008 0.217255 6.96008 0.484317C6.96008 0.751379 7.17734 0.968634 7.4444 0.968634Z" fill="#0D0D0D"></path>
+                                <path d="M3.67955 0.968634H5.56177C5.82883 0.968634 6.04608 0.751379 6.04608 0.484317C6.04608 0.217255 5.82883 0 5.56177 0H3.67955C3.41249 0 3.19524 0.217255 3.19524 0.484317C3.19524 0.751379 3.41249 0.968634 3.67955 0.968634Z" fill="#0D0D0D"></path>
+                                <path d="M14.9846 0.9375H15.4534V1.40625C15.4534 1.66512 15.6633 1.875 15.9221 1.875C16.181 1.875 16.3909 1.66512 16.3909 1.40625V0.46875C16.3909 0.209875 16.181 0 15.9221 0H14.9846C14.7258 0 14.5159 0.209875 14.5159 0.46875C14.5159 0.727625 14.7258 0.9375 14.9846 0.9375Z" fill="#0D0D0D"></path>
+                                <path d="M15.9065 6.56921C15.6394 6.56921 15.4222 6.78647 15.4222 7.05353V8.93574C15.4222 9.20281 15.6394 9.42006 15.9065 9.42006C16.1735 9.42006 16.3908 9.20281 16.3908 8.93574V7.05353C16.3908 6.7865 16.1735 6.56921 15.9065 6.56921Z" fill="#0D0D0D"></path>
+                                <path d="M15.9065 2.80432C15.6394 2.80432 15.4222 3.02158 15.4222 3.28864V5.17085C15.4222 5.43791 15.6394 5.65517 15.9065 5.65517C16.1735 5.65517 16.3908 5.43791 16.3908 5.17085V3.28864C16.3908 3.02158 16.1735 2.80432 15.9065 2.80432Z" fill="#0D0D0D"></path>
+                                <path d="M15.9065 10.334C15.6394 10.334 15.4222 10.5512 15.4222 10.8183V12.7005C15.4222 12.9676 15.6394 13.1848 15.9065 13.1848C16.1735 13.1848 16.3908 12.9676 16.3908 12.7005V10.8183C16.3908 10.5512 16.1735 10.334 15.9065 10.334Z" fill="#0D0D0D"></path>
+                                <path d="M13.5845 2.32227H11.9405C11.6816 2.32227 11.4718 2.53214 11.4718 2.79102C11.4718 3.04989 11.6816 3.25977 11.9405 3.25977H12.4529L8.18641 7.5262H1.35966V7.04848C1.35966 6.78139 1.14238 6.56411 0.87529 6.56411C0.608196 6.56411 0.390915 6.78139 0.390915 7.04848L0.391071 14.5752C0.391071 14.5762 0.390915 14.5772 0.390915 14.5782V15.5313C0.390915 15.7902 0.60079 16.0001 0.859665 16.0001H0.859821H9.32688C9.59398 16.0001 9.81126 15.7828 9.81126 15.5157C9.81126 15.2486 9.59398 15.0313 9.32688 15.0313H8.84932V8.18911L13.1158 3.92267V4.43505C13.1158 4.69392 13.3256 4.9038 13.5845 4.9038C13.8434 4.9038 14.0533 4.69392 14.0533 4.43505V2.79102C14.0533 2.53211 13.8434 2.32227 13.5845 2.32227ZM1.32857 15.047L1.35966 8.4637H7.91182V15.047H1.32857Z" fill="#0D0D0D"></path>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0126_1290">
+                                <rect width="16" height="16" fill="white" transform="translate(0.390945)"></rect>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            200 sqft
+                        </li>
+                        <a href="">For Rent</a>
+                    </ul>
+                </div>
+
+                <div class="checkout__card">
+                    <div>
+                        <img src="./img/checkout-2.png" alt="">
+                        <span>$90,000</span>
+                    </div>
+                    <a href="#">Mountain View Manor Homes</a>
+                    <p>8901 Pinecrest Drive</p>
+                    <ul>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.9793 7.85904V2.8301C14.9793 1.60685 13.9841 0.611694 12.7609 0.611694H3.1754C1.95215 0.611694 0.956995 1.60688 0.956995 2.8301V7.92391C0.364495 8.54335 2.67029e-05 9.38263 2.67029e-05 10.3054V14.1187C2.67029e-05 14.8186 0.569495 15.3881 1.2695 15.3881C1.96946 15.3881 2.53893 14.8186 2.53893 14.1187V13.7249H13.4612V14.1187C13.4612 14.8186 14.0306 15.3881 14.7306 15.3881C15.4306 15.3881 16 14.8187 16 14.1187V10.3054C16 9.34998 15.6093 8.4841 14.9793 7.85904ZM3.1754 1.23669H12.7609C13.6395 1.23669 14.3543 1.95151 14.3543 2.8301V7.3672C14.1629 7.24935 13.9592 7.14966 13.7456 7.0706V6.03141C13.7456 5.11016 12.9961 4.36066 12.0748 4.36066H9.35831C8.79906 4.36066 8.30346 4.63713 8.00006 5.06029C7.69665 4.63713 7.20106 4.36066 6.64181 4.36066H3.92531C3.00406 4.36066 2.25456 5.11013 2.25456 6.03141V7.0706C2.01703 7.15851 1.79175 7.27188 1.58203 7.40738V2.8301C1.582 1.95151 2.29678 1.23669 3.1754 1.23669ZM3.44793 6.85754C3.25434 6.85754 3.06446 6.87385 2.8795 6.90466V6.03141C2.8795 5.45479 3.34862 4.98566 3.92525 4.98566H6.64175C7.21837 4.98566 7.6875 5.45479 7.6875 6.03141V6.85757H3.44793V6.85754ZM8.31253 6.03138C8.31253 5.45476 8.78165 4.98563 9.35828 4.98563H12.0748C12.6514 4.98563 13.1205 5.45476 13.1205 6.03138V6.90463C12.9355 6.87382 12.7457 6.85751 12.5521 6.85751H8.31253V6.03138ZM3.44793 7.48254H12.5521C14.1087 7.48254 15.375 8.74888 15.375 10.3054V11.2325H12.2407C12.0682 11.2325 11.9282 11.3725 11.9282 11.545C11.9282 11.7176 12.0682 11.8575 12.2407 11.8575H15.375V13.0999H0.625027V11.8575H9.11575C9.28834 11.8575 9.42825 11.7176 9.42825 11.545C9.42825 11.3725 9.28834 11.2325 9.11575 11.2325H0.625027V10.3054C0.625027 8.74888 1.89137 7.48254 3.44793 7.48254ZM1.91393 14.1187C1.91393 14.474 1.62484 14.7631 1.2695 14.7631C0.914152 14.7631 0.625027 14.474 0.625027 14.1187V13.7249H1.91393V14.1187ZM14.7306 14.7631C14.3752 14.7631 14.0861 14.474 14.0861 14.1187V13.7249H15.375V14.1187C15.375 14.474 15.0859 14.7631 14.7306 14.7631Z" fill="#0D0D0D"></path>
+                            </svg>
+                            6 Beds
+                        </li>
+                        <li>
+                            <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.789 0H0.601547C0.47211 0 0.367172 0.104906 0.367172 0.234375V15.7656C0.367172 15.8951 0.47211 16 0.601547 16H12.789C12.9185 16 13.0234 15.8951 13.0234 15.7656V0.234375C13.0234 0.104906 12.9185 0 12.789 0ZM0.835922 1.40625H2.71092C3.09864 1.40625 3.41405 1.72169 3.41405 2.10938V2.42325C2.69667 2.52634 2.12789 3.09512 2.0248 3.8125H1.92967C1.80023 3.8125 1.6953 3.91741 1.6953 4.04688C1.6953 4.17634 1.80023 4.28125 1.92967 4.28125H5.36717C5.49661 4.28125 5.60155 4.17634 5.60155 4.04688C5.60155 3.91741 5.49661 3.8125 5.36717 3.8125H5.27205C5.16895 3.09512 4.60017 2.52634 3.8828 2.42325V2.10938C3.8828 1.46319 3.35711 0.9375 2.71092 0.9375H0.835922V0.46875H6.46092V14.5938H0.835922V1.40625ZM3.64842 2.875C4.21436 2.875 4.68783 3.27825 4.7967 3.8125H2.50011C2.60902 3.27825 3.08248 2.875 3.64842 2.875ZM12.5547 15.5312H0.835922V15.0625H12.5547V15.5312ZM12.5547 14.5938H6.92967V0.46875H12.5547V14.5938Z" fill="#0D0D0D"></path>
+                            </svg>
+                            2 Baths
+                        </li>
+                        <li>
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_126_1290)">
+                                <path d="M15.9221 14.1251C15.6633 14.1251 15.4534 14.335 15.4534 14.5939V15.0626H14.9846C14.7258 15.0626 14.5159 15.2725 14.5159 15.5314C14.5159 15.7902 14.7258 16.0001 14.9846 16.0001H15.9221C16.181 16.0001 16.3909 15.7902 16.3909 15.5314V14.5939C16.3909 14.335 16.181 14.1251 15.9221 14.1251Z" fill="#0D0D0D"></path>
+                                <path d="M13.0915 15.0314H11.2092C10.9422 15.0314 10.7249 15.2486 10.7249 15.5157C10.7249 15.7828 10.9422 16 11.2092 16H13.0915C13.3585 16 13.5758 15.7828 13.5758 15.5157C13.5758 15.2486 13.3585 15.0314 13.0915 15.0314Z" fill="#0D0D0D"></path>
+                                <path d="M0.875232 5.65517C1.14229 5.65517 1.35955 5.43791 1.35955 5.17085V3.28864C1.35955 3.02158 1.14229 2.80432 0.875232 2.80432C0.60817 2.80432 0.390915 3.02158 0.390915 3.28864V5.17085C0.390915 5.43791 0.60817 5.65517 0.875232 5.65517Z" fill="#0D0D0D"></path>
+                                <path d="M0.859695 1.875C1.11857 1.875 1.32845 1.66512 1.32845 1.40625V0.9375H1.7972C2.05607 0.9375 2.26595 0.727625 2.26595 0.46875C2.26595 0.209875 2.05607 0 1.7972 0H0.859695C0.60082 0 0.390945 0.209875 0.390945 0.46875V1.40625C0.390945 1.66512 0.60082 1.875 0.859695 1.875Z" fill="#0D0D0D"></path>
+                                <path d="M11.2092 0.968634H13.0915C13.3585 0.968634 13.5758 0.751379 13.5758 0.484317C13.5758 0.217255 13.3585 0 13.0915 0H11.2092C10.9422 0 10.7249 0.217255 10.7249 0.484317C10.7249 0.751379 10.9422 0.968634 11.2092 0.968634Z" fill="#0D0D0D"></path>
+                                <path d="M7.4444 0.968634H9.32661C9.59367 0.968634 9.81093 0.751379 9.81093 0.484317C9.81093 0.217255 9.59367 0 9.32661 0H7.4444C7.17734 0 6.96008 0.217255 6.96008 0.484317C6.96008 0.751379 7.17734 0.968634 7.4444 0.968634Z" fill="#0D0D0D"></path>
+                                <path d="M3.67955 0.968634H5.56177C5.82883 0.968634 6.04608 0.751379 6.04608 0.484317C6.04608 0.217255 5.82883 0 5.56177 0H3.67955C3.41249 0 3.19524 0.217255 3.19524 0.484317C3.19524 0.751379 3.41249 0.968634 3.67955 0.968634Z" fill="#0D0D0D"></path>
+                                <path d="M14.9846 0.9375H15.4534V1.40625C15.4534 1.66512 15.6633 1.875 15.9221 1.875C16.181 1.875 16.3909 1.66512 16.3909 1.40625V0.46875C16.3909 0.209875 16.181 0 15.9221 0H14.9846C14.7258 0 14.5159 0.209875 14.5159 0.46875C14.5159 0.727625 14.7258 0.9375 14.9846 0.9375Z" fill="#0D0D0D"></path>
+                                <path d="M15.9065 6.56921C15.6394 6.56921 15.4222 6.78647 15.4222 7.05353V8.93574C15.4222 9.20281 15.6394 9.42006 15.9065 9.42006C16.1735 9.42006 16.3908 9.20281 16.3908 8.93574V7.05353C16.3908 6.7865 16.1735 6.56921 15.9065 6.56921Z" fill="#0D0D0D"></path>
+                                <path d="M15.9065 2.80432C15.6394 2.80432 15.4222 3.02158 15.4222 3.28864V5.17085C15.4222 5.43791 15.6394 5.65517 15.9065 5.65517C16.1735 5.65517 16.3908 5.43791 16.3908 5.17085V3.28864C16.3908 3.02158 16.1735 2.80432 15.9065 2.80432Z" fill="#0D0D0D"></path>
+                                <path d="M15.9065 10.334C15.6394 10.334 15.4222 10.5512 15.4222 10.8183V12.7005C15.4222 12.9676 15.6394 13.1848 15.9065 13.1848C16.1735 13.1848 16.3908 12.9676 16.3908 12.7005V10.8183C16.3908 10.5512 16.1735 10.334 15.9065 10.334Z" fill="#0D0D0D"></path>
+                                <path d="M13.5845 2.32227H11.9405C11.6816 2.32227 11.4718 2.53214 11.4718 2.79102C11.4718 3.04989 11.6816 3.25977 11.9405 3.25977H12.4529L8.18641 7.5262H1.35966V7.04848C1.35966 6.78139 1.14238 6.56411 0.87529 6.56411C0.608196 6.56411 0.390915 6.78139 0.390915 7.04848L0.391071 14.5752C0.391071 14.5762 0.390915 14.5772 0.390915 14.5782V15.5313C0.390915 15.7902 0.60079 16.0001 0.859665 16.0001H0.859821H9.32688C9.59398 16.0001 9.81126 15.7828 9.81126 15.5157C9.81126 15.2486 9.59398 15.0313 9.32688 15.0313H8.84932V8.18911L13.1158 3.92267V4.43505C13.1158 4.69392 13.3256 4.9038 13.5845 4.9038C13.8434 4.9038 14.0533 4.69392 14.0533 4.43505V2.79102C14.0533 2.53211 13.8434 2.32227 13.5845 2.32227ZM1.32857 15.047L1.35966 8.4637H7.91182V15.047H1.32857Z" fill="#0D0D0D"></path>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0126_1290">
+                                <rect width="16" height="16" fill="white" transform="translate(0.390945)"></rect>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            200 sqft
+                        </li>
+                        <a href="">For Rent</a>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer bg-footer_bg bg-cover bg-no-repeat bg-center font-text-inter">
+        <div class="container">
+            <div class="footer__wrapper text-light pt-[100px] pb-[30px]">
+                <div class="footer__top f-col-center mb-10 md:mb-8 text-center">
+                    <h2 class="mb-4 text-[24px] md:text-[clamp(32px,2.2vw,64px)] ft-b lh-120">FIND YOUR DREAM HOME TODAY WITH OUR <br class="hidden md:inline-block">EXTENSIVE PROPERTY COLLECTION</h2>
+                    <button class="btn bg--primary-w ft-sb">View Properties</button>
+                </div>
+                <div class="footer__middle flex flex-wrap lg:flex-nowrap lg:justify-between">
+                    <div class="lg:order-1 mb-[54px] w-full lg:w-[25%] text-wrap px-0 lg:px-2">
+                        <h3 class="text-[28px] mb-3 ft-md">LOCATION</h3>
+                        <p class="fs-19 lh-130 mb-3">123 Street, Your City, State and Country.</p>
+                        <p class="fs-19 lh-130 mb-10">123 Street, Your City, State and Country.</p>
+                        <h3 class="text-[28px] mb-4 ft-md">TIMING</h3>
+                        <p class="fs-19 lh-130 mb-3 ft-md -ls-2">Mon-Sat, 9AM - 5PM</p>
+                        <p class="fs-19 lh-130 ft-md -ls-2">Sunday Off</p>
+                    </div>
+                    <div class="order-first lg:order-2 lg:mx-auto w-full lg:w-[33.33%] mb-12 lg:mt-[150px] lg:mb-[90px] px-0 lg:px-2">
+                        <h3 class="fs-23 ft-md mb-4">Subscribe Our Newsletter</h3>
+                        <form action="" class="w-full flex justify-between bg-light py-[12px] px-[24px] rounded-[10px] fs-19">
+                            <input type="email" placeholder="Your Email" id="footerEmailInput" class="w-full">
+                            <button class="text-d_gray text-[24px] leading-none mr-1"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                    <div class="lg:order-3 mb-[54px] w-full lg:w-[25%] text-wrap f-col px-0 lg:px-2">
+                        <h3 class="text-[28px] mb-3 ft-md">CONTACT US</h3>
+                        <a href="tel:123" class="mb-3"><span class="ft-sb hover:text-primary">+1 123 456 789</span></a>
+                        <a href="tel:123" class="mb-3"><span class="ft-sb hover:text-primary">+1 123 456 789</span></a>
+                        <a href="mailto:info@homelyexample.com" class="mb-8"><span class="ft-md hover:text-primary">info@homelyexample.com</span></a>
+
+                        <h3 class="text-[28px] mb-3">FOLLOW US</h3>
+                        <ul class="flex text-[24px] gap-3">
+                            <li><a href="#" class="fab fa-facebook-f"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fas fa-basketball"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-center fs-19">&copy;2024 Homely, All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="backTop"><button class="back-to-top fas fa-angle-up" onclick="scrollToTop()"></button></div>
+
+    <button class="toggleBtn hidden">TOGGLE DARK</button>
+    
+    <script src="./js/script.js"></script>
+    <script src="./vendor/tiny-slider/tiny-slider.js"></script>
+    <script>
+        var clientSlider = tns({
+            container: ".house__detail__slider",
+            items: 1,
+            loop: true,
+            // autoplay: true,
+            autoplayHoverPause: false,
+            autoplayButtonOutput: false,
+            controls: false,
+            nav: true,
+            // speed: 5000,
+            // autoplayTimeout: 0,
+            preventActionWhenRunning: true,
+            mouseDrag: true,
+            touch: true,
+            navAsThumbnails: true,
+            navContainer:'#house__slider__nav__small',
+            responsive: {
+                1200: {
+                    items: 1
+                },
+                992: {
+                    items: 1
+                },
+                
+                768: {
+                    items: 1
+                },
+                576: {
+                    items: 2
+                },
+            }
+        });
+    </script>
+</body>
+</html>
