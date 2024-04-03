@@ -483,6 +483,10 @@ button {
   cursor: pointer;
 }
 
+p {
+  letter-spacing: 0.03rem;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -641,6 +645,11 @@ button {
   font-weight: 400;
 }
 
+.nav__link_item a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(165 122 90 / var(--tw-text-opacity));
+}
+
 .header .nav__links.show {
   position: absolute;
   right: 0px;
@@ -657,6 +666,13 @@ button {
 .header .nav__links.show>li {
   margin-bottom: 10px;
   margin-right: 0px;
+}
+
+/* FOOTER */
+
+.footer__middle div:nth-child(3) ul>li>a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(165 122 90 / var(--tw-text-opacity));
 }
 
 /* BACK TO TOP BUTTON */
@@ -752,14 +768,6 @@ button {
   margin-right: 30px;
 }
 
-.mr-\[\] {
-  margin-right: ;
-}
-
-.mr-\[30\] {
-  margin-right: 30;
-}
-
 .block {
   display: block;
 }
@@ -845,6 +853,10 @@ button {
   background-position: center;
 }
 
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
 .p-\[10px\] {
   padding: 10px;
 }
@@ -893,12 +905,12 @@ button {
   font-size: 24px;
 }
 
-.text-\[25px\] {
-  font-size: 25px;
-}
-
 .text-\[28px\] {
   font-size: 28px;
+}
+
+.text-\[32px\] {
+  font-size: 32px;
 }
 
 .text-\[clamp\(20px\2c 1\.25vw\2c 36px\)\] {
@@ -1080,6 +1092,10 @@ button {
   line-height: 120%;
 }
 
+.-ls-2 {
+  letter-spacing: -0.02em;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -1194,18 +1210,6 @@ button {
 
   .lg\:mt-\[150px\] {
     margin-top: 150px;
-  }
-
-  .lg\:mr-\[30px\] {
-    margin-right: 30px;
-  }
-
-  .lg\:mr-\[35px\] {
-    margin-right: 35px;
-  }
-
-  .lg\:hidden {
-    display: none;
   }
 
   .lg\:w-\[25\%\] {

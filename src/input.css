@@ -48,6 +48,9 @@
     button{
         @apply cursor-pointer
     }
+    p{
+        @apply tracking-[0.03rem]
+    }
 }
 
 @layer components{
@@ -61,6 +64,9 @@
     .nav__links .nav__link_item{
         @apply font-text-inter text-[19px] ft-nm
     }
+    .nav__link_item a:hover{
+        @apply text-primary
+    }
     .header .nav__links.show{
         @apply block absolute right-0
         rounded-[8px]
@@ -70,7 +76,11 @@
     .header .nav__links.show>li{
         @apply mb-[10px] mr-0
     }
-    
+    /* FOOTER */
+    .footer__middle div:nth-child(3) ul>li>a:hover{
+        @apply text-primary
+    }
+
     /* BACK TO TOP BUTTON */
     .back-to-top {
         @apply bg-primary
@@ -165,4 +175,7 @@
         @apply leading-[120%]
     }
 
+    .-ls-2 {
+        @apply tracking-[-0.02em];
+    }
 }
