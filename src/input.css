@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    @apply 
+    w-full mx-auto px-[15px]
+    sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] 
+    xl:max-w-[1140px] 2xl:max-w-[1320px]
+    /* lg:max-w-[970px] xl:max-w-[1170px] */
+}
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+    @apply w-[8px]
+}
+  
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    @apply bg-dark/60 shadow-none
+}
+  
+/* Scrollbar  Handle */
+::-webkit-scrollbar-thumb {
+    @apply bg-light/50 rounded-[4px]
+}
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-light
+}
+
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../dist/fonts/");
+}
+
+@layer base {
+    html, html:focus-within {
+        @apply scroll-smooth
+        overflow-x-hidden overflow-y-scroll
+    }
+    body{
+        @apply bg-light h-full
+        font-text-poppins ft-nm text-dark
+        /* overflow-hidden */
+        text-text_xs sm:text-text_sm md:text-text_md lg:text-text_lg
+    }
+    button{
+        @apply cursor-pointer
+    }
+}
+
+@layer components{
+    /* HEADER */
+    .header *{
+        @apply text-light;
+    }
+    .header .active{
+        @apply text-primary
+    }
+    .nav__links .nav__link_item{
+        @apply font-text-inter text-[19px] ft-nm
+    }
+    .header .nav__links.show{
+        @apply block absolute right-0
+        rounded-[8px]
+        bg-dark
+        py-[15px] px-[20px]
+    }
+    .header .nav__links.show>li{
+        @apply mb-[10px] mr-0
+    }
+    
+    /* BACK TO TOP BUTTON */
+    .back-to-top {
+        @apply bg-primary
+        w-[150px] h-[150px] z-[999] py-[20px] 
+        fixed bottom-0 right-[20px] block
+        text-[100px] leading-[50px] text-center
+        opacity-0 hover:opacity-100
+        rounded-[50%] shadow-top_button_shadow
+        transition-all duration-300 scale-[0.3]
+        xs:right-[-20px] xs:bottom-[-20px]
+    }
+    
+}
+
+@layer utilities{
+    .btn{
+        @apply inline-block
+        font-text-inter text-button
+        leading-[130%] ft-md text-center
+        py-[clamp(8px,0.67vw,16px)] px-[clamp(16px,1.25vw,32px)]
+        rounded-[5px]
+        border-[1px] border-transparent
+        transition-all duration-500 ease-in-out;
+    }
+    .btn.bg--primary-w{
+        @apply bg-primary hover:bg-light
+        border-primary hover:border-light 
+        text-light hover:text-primary
+    }
+    .btn.bg--transparent-w{
+        @apply bg-transparent text-light
+        /* border-light */
+        hover:bg-light hover:text-dark;
+    }
+    .btn.bg--transparent{
+        @apply bg-transparent text-dark
+        /* border-border hover:border-border/10 */
+        hover:bg-dark/10 hover:text-dark;
+    }
+
+    .f-col{ @apply flex flex-col }
+    .f-col-center{ @apply flex flex-col items-center justify-center }
+    .f-center {@apply items-center justify-center }
+    .f-between-center {@apply items-center justify-between }
+
+
+    .ft-el{ @apply font-extralight }
+    .ft-lt{ @apply font-light }
+    .ft-nm{ @apply font-normal }
+    .ft-md{ @apply font-medium }
+    .ft-sb{ @apply font-semibold }
+    .ft-b{ @apply font-bold }
+    .ft-ex{ @apply font-extrabold }
+
+    .mb-30x{ @apply mb-[30px] }
+    .mb-40x{ @apply mb-[40px] }
+    .mb-60x{ @apply mb-[60px] }
+    .mb-80x{ @apply mb-[80px] }
+    .no-mb{ @apply mb-0 }
+    .mx-a{ @apply mx-auto }
+
+    .tx-a{ @apply left-1/2 -translate-x-1/2 }
+
+    .py-5v{ @apply py-[5vh] }
+    .py-10v{ @apply py-[10vh] }
+    .py-15v{ @apply py-[15vh] }
+    .py-20v{ @apply py-[20vh] }
+
+    
+    .fs-33{
+        @apply text-[21px] lg:text-[28px] xl:text-fs-33
+    }
+    .fs-28{
+        @apply text-[18px] xl:text-[28px]
+    }
+    .fs-23{
+        @apply text-[23px] md:text-[18px] xl:text-[23px]
+    }
+    .fs-19{
+        @apply text-fs-19 sm:text-fs-19_sm md:text-fs-19_md
+    }
+    .fs-16{
+        @apply text-fs-16 md:text-fs-16_md lg:text-fs-16_lg xl:text-fs-16_xl
+    }
+    .lh-160{
+        @apply leading-[160%]
+    }
+    .lh-130{
+        @apply leading-[130%]
+    }
+    .lh-120{
+        @apply leading-[120%]
+    }
+
+}
