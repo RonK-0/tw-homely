@@ -27,6 +27,7 @@ module.exports = {
         light: "#FAFAFA",
         light_2: "#D6D8DB",
         d_gray: "#2C2D2F",
+        l_gray: "#F0F2F4",
         gray: "#797D86",
         primary: "#A57A5A",
       },
@@ -50,8 +51,16 @@ module.exports = {
         'fs-16': 'clamp(11px, 3.59vw, 14px)',
 
         'banner_h1' : 'clamp(64px, 5.156vw, 150px)',
+        'heading_h2' : 'clamp(36px, 2.5vw, 64px)',
 
-        'button' : 'clamp(16px, 1vw, 24px)'
+        'property_entry_price' : 'clamp(16px, 0.9vw, 24px)',
+
+        'blog_category_label' : 'clamp(15px,1vw,22px)',
+        'blog_entry_title' : 'clamp(18px, 1.22vw, 32px)',
+        'blog_entry_date' : 'clamp(12px, 1.5vw, 16px)',
+        'blog_entry_fa' : 'clamp(20px,1.25vw,30vw)',
+
+        'button' : 'clamp(16px, 1vw, 24px)',
       },
       listStyleType: {
       //   none: 'none',
@@ -77,6 +86,16 @@ module.exports = {
         'top_button_shadow'     : '4px 4px 10px rgba(0, 0, 0, 0.2)',
 
       },
+      padding:{
+        'clientSlider_p' : 'clamp(64px, 5.208vw, 200px)',
+        'blog_card_text_content' : 'clamp(20px, 1.25vw, 32px) clamp(14px, 0.83vw, 24px)',
+        'property_entry_price' : 'clamp(6px, 0.5vw, 10px)',
+        'button': 'clamp(8px,0.67vw,16px) clamp(16px,1.25vw,32px)',
+        'py100' : 'clamp(64px, 5.208vw, 200px)',
+      },
+      margin:{
+        'heading_margin_bottom' : 'clamp(32px, 2.5vw, 64px)',
+      }
     },
   },
   plugins: [],
