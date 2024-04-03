@@ -4,7 +4,7 @@
 
 .container{
     @apply 
-    w-full mx-auto px-[15px]
+    w-full mx-auto px-[12px]
     sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] 
     xl:max-w-[1140px] 2xl:max-w-[1320px]
 }
@@ -92,6 +92,51 @@
         xs:right-[-20px] xs:bottom-[-20px]
     }
     
+
+
+    /* PROPERTIES STYLES */
+    .properties{
+        @apply pt-9 
+    }
+    .properties__card__img img{
+        @apply rounded-lg
+    }
+    .properties__card ul{
+        @apply pb-2 flex flex gap-1
+    }
+    .properties__card{
+        @apply pb-7 
+    }
+    .properties__card p{
+        @apply pb-2 pt-4 text-[1rem]
+    }
+    .selecting{
+        @apply bg-slate-100 rounded-md
+    }
+    .selecting__form{
+        @apply p-8
+    }
+    .selecting__forms h2{
+        @apply  font-medium text-[23px]
+    }
+    .selecting .selector{
+        @apply border-[1px] border-dark rounded-md bg-light p-[21.5px] text-gray w-[100%] text-[16px]
+    }
+    .selecting__radiobutton{
+      @apply  p-8  w-[100%] text-[16px]
+    }
+    .selecting__radiobutton__wrap ul{
+        @apply border-[1px] bg-light border-dark text-gray p-7 pl-10 rounded-md grid grid-cols-2 gap-7
+    }
+    .pagination__list{
+        @apply flex gap-4 text-lg
+    }
+    .pagination__list li{
+        @apply  bg-light shadow-md p-3 rounded-md h-9 leading-3
+    }
+
+    /* END PROPERTY STYLES */
+
 }
 
 @layer utilities{
@@ -118,6 +163,12 @@
         @apply bg-transparent text-dark
         /* border-border hover:border-border/10 */
         hover:bg-dark/10 hover:text-dark;
+    }
+
+    /*for property button */
+    .btn.bg--secondary{
+        @apply bg-transparent text-dark border-dark font-[550]
+        hover:bg-primary hover:border-none hover:text-light;
     }
 
     .f-col{ @apply flex flex-col }
