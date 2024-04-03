@@ -725,48 +725,6 @@ p {
   }
 }
 
-/* Property Details Page */
-
-/* property__detail */
-
-.house__item img {
-  display: block;
-  min-width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-/* property__sched__info */
-
-.property__sched__info .house__info ul li {
-  margin-top: 16px;
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-/* Property Details Page */
-
-/* property__detail */
-
-.house__item img {
-  display: block;
-  min-width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-/* property__sched__info */
-
-.property__sched__info .house__info ul li {
-  margin-top: 16px;
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
 /* HOME */
 
 .tns-visually-hidden {
@@ -1601,6 +1559,27 @@ p {
         }
     } */
 
+/* Property Details Page */
+
+/* property__detail */
+
+.house__item img {
+  display: block;
+  min-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* property__sched__info */
+
+.property__sched__info .house__info ul li {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .absolute {
   position: absolute;
 }
@@ -1722,10 +1701,6 @@ p {
   height: 100vh;
 }
 
-.h-\[200vh\] {
-  height: 200vh;
-}
-
 .h-\[300px\] {
   height: 300px;
 }
@@ -1776,14 +1751,14 @@ p {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .select-none {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-}
-
-.cursor-pointer {
-  cursor: pointer;
 }
 
 .resize {
@@ -1854,15 +1829,6 @@ p {
   border-radius: 10px;
 }
 
-.rounded-full {
-  border-radius: 9999px;
-}
-
-.bg-l_gray {
-  --tw-bg-opacity: 1;
-  background-color: rgb(240 242 244 / var(--tw-bg-opacity));
-}
-
 .rounded-\[25px\] {
   border-radius: 25px;
 }
@@ -1886,6 +1852,11 @@ p {
 }
 
 .bg-l_blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 242 244 / var(--tw-bg-opacity));
+}
+
+.bg-l_gray {
   --tw-bg-opacity: 1;
   background-color: rgb(240 242 244 / var(--tw-bg-opacity));
 }
@@ -1964,14 +1935,14 @@ p {
   padding-bottom: 20px;
 }
 
-.py-\[32px\] {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
 .py-\[22px\] {
   padding-top: 22px;
   padding-bottom: 22px;
+}
+
+.py-\[32px\] {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .py-\[4\.5rem\] {
