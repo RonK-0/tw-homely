@@ -10,11 +10,11 @@ burg.addEventListener("click", ()=>{
     nav.classList.toggle("show");
 });
 
-// const rt = document.querySelector("body");
-// const togglebtn = document.querySelector(".toggleBtn");
-// togglebtn.addEventListener("click", ()=>{
-//     rt.classList.toggle("dark");
-// });
+const rt = document.querySelector("body");
+const togglebtn = document.querySelector(".toggleBtn");
+togglebtn.addEventListener("click", ()=>{
+    rt.classList.toggle("dark");
+});
 
 // auto close nav menu on click of any link for mobile
 // const menu_entry = document.querySelectorAll("#menu-item");
@@ -28,8 +28,8 @@ burg.addEventListener("click", ()=>{
 // on scroll show back to top button
 window.onscroll = function() { 
     var btt = document.querySelector('.backTop');
-    var pageBanner = document.querySelector('.pageBanner');
-    var bannerHeight = pageBanner.offsetHeight*0.025
+    var pageBanner = document.querySelector('.homeBanner');
+    var bannerHeight = pageBanner.offsetHeight*0.025;
     if ( window.scrollY > bannerHeight ) { btt.classList.add("shown"); }
     else { btt.classList.remove("shown"); }
 }
