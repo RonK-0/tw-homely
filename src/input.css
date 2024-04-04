@@ -209,7 +209,7 @@
     .homeTopRatedProperties__entries{
         @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6;
         .homeTopRatedProperties__card{
-            @apply bg-light rounded-[10px] mb-6 lg:mb-0 w-full md:max-w-[416px] mx-auto;
+            @apply bg-light rounded-[10px] mb-6 lg:mb-0 w-full md:max-w-[416px] mx-auto select-none;
             .card__img{
                 @apply relative rounded-t-[10px] overflow-hidden mb-4 dark:no-mb;
                 img{
@@ -225,28 +225,15 @@
             }
             .card__text{
                 @apply f-col items-start dark:p-4;
-                a{
-                    @apply text-dark text-[23px]
-                    font-text-inter ft-md lh-130 capitalize
-                    mb-4;
-                }
-                p.location{
-                    @apply text-fs-19 ft-nm lh-140 text-dark font-text-inter mb-2
-                }
+                a{ @apply text-dark text-[23px] font-text-inter ft-md lh-130 capitalize mb-4; }
+                p.location{ @apply text-fs-19 ft-nm lh-140 text-dark font-text-inter mb-2 }
                 ul{
                     @apply pl-0  mb-4 flex;
                     li{
                         @apply mr-5 flex items-center gap-2;
                         *{ @apply text-dark_2; }
-                        span{
-                            @apply ft-md
-                            text-fs-16_xl
-                            lh-150 font-text-inter;
-                        }
+                        span{ @apply ft-md text-fs-16_xl lh-150 font-text-inter; }
                     }
-                }
-                button{
-                    @apply flex-grow-0;
                 }
             }
         }
@@ -262,7 +249,7 @@
     .homeBlogEntries{
         @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6;
         .homeBlogEntries__card{
-            @apply bg-light rounded-[10px] mb-6 lg:mb-0 md:max-w-[380px];
+            @apply bg-light rounded-[10px] mb-6 lg:mb-0 md:max-w-[380px] select-none;
             .card__img{
                 @apply relative rounded-t-[10px] overflow-hidden;
                 img{
@@ -282,32 +269,20 @@
                     @apply font-text-inter ft-nm text-blog_category_label
                     text-primary lh-130 mb-2;
                 }
-                a{
-                    @apply text-dark text-blog_entry_title
-                    font-text-inter ft-md lh-130 capitalize
-                    mb-4;
-                }
+                a{ @apply text-dark text-blog_entry_title font-text-inter ft-md lh-130 capitalize mb-4; }
                 ul{
                     @apply pl-0  no-mb flex;
                     li{
                         @apply mr-5 flex items-center gap-2;
                         *{ @apply text-dark_2; }
-                        span{
-                            @apply ft-md
-                            text-fs-16_xl
-                            lh-150 font-text-inter;
-                        }
+                        span{ @apply ft-md text-fs-16_xl lh-150 font-text-inter; }
                         i{ @apply text-blog_entry_fa; }
                     }
                 }
             }
         }
         .homeBlogEntries__card:hover{
-            .card__img {
-                img {
-                    @apply scale-110 transition-all duration-[0.6s] ease-linear
-                }
-            }
+            .card__img img { @apply scale-110 transition-all duration-[0.6s] ease-linear }
         }
     }
 
