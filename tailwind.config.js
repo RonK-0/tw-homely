@@ -53,6 +53,8 @@ module.exports = {
         'fs-16': 'clamp(11px, 3.59vw, 14px)',
 
         'banner_h1' : 'clamp(64px, 5.156vw, 150px)',
+        'bannerSlider_card_heading' : 'clamp(19px, 1.2vw, 32px)',
+        'bannerSlider_card_details' : 'clamp(13px, 0.83vw, 20px)',
         'heading_h2' : 'clamp(36px, 2.5vw, 64px)',
 
         'property_entry_price' : 'clamp(16px, 0.9vw, 24px)',
@@ -60,13 +62,13 @@ module.exports = {
         'blog_category_label' : 'clamp(15px,1vw,22px)',
         'blog_entry_title' : 'clamp(18px, 1.22vw, 32px)',
         'blog_entry_date' : 'clamp(12px, 1.5vw, 16px)',
-        'blog_entry_fa' : 'clamp(20px,1.25vw,30vw)',
+        'blog_entry_fa' : 'clamp(20px,1.25vw,30px)',
 
         'button' : 'clamp(16px, 1vw, 24px)',
       },
       listStyleType: {
       //   none: 'none',
-      // circle: 'circle',
+      //   circle: 'circle',
       //   disc: 'disc',
       //   decimal: 'decimal',
       //   square: 'square',
@@ -89,15 +91,26 @@ module.exports = {
 
       },
       padding:{
-        'container_p': 'calc(1.5rem * 0.5)',
-        'clientSlider_p' : 'clamp(64px, 5.208vw, 200px)',
+        'container_p' : 'calc(1.5rem * 0.5)',
+        'bannerSlider_card_p' : 'clamp(16px, 2vw, 64px) 0',
         'blog_card_text_content' : 'clamp(20px, 1.25vw, 32px) clamp(14px, 0.83vw, 24px)',
         'property_entry_price' : 'clamp(6px, 0.5vw, 10px)',
+        'clientSlider_p' : 'clamp(64px, 5.208vw, 200px)',
         'button': 'clamp(8px,0.67vw,16px) clamp(16px,1.25vw,32px)',
         'py100' : 'clamp(64px, 5.208vw, 200px)',
       },
       margin:{
         'heading_margin_bottom' : 'clamp(32px, 2.5vw, 64px)',
+      },
+      width:{
+        'bannerSlider_card_bg' : 'calc(100% + calc(1.5 * calc(1.5rem * 0.5)))',
+        'tel_icon' : 'clamp(24px, 10vw, 38px)',
+      },
+      height:{
+        'tel_icon' : 'clamp(24px, 10vw, 38px)',
+      },
+      maxWidth:{
+        'bannerSlider_card_bg' : 'calc(85% + calc(1.5rem * 0.5))',
       },
     },
   },

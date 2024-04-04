@@ -32,7 +32,7 @@
                 <a href="./index.html" class="xl:mr-[35px]"><img src="./img/logo.png" alt=""></a>
                 <div>
                     <button class="burger p-[10px] text-[24px] block xl:hidden"><i class="fas fa-bars"></i></button>
-                    <ul class="nav__links hidden xl:flex flex-col xl:flex-row xl:justify-between gap-[30px]">
+                    <ul class="nav__links hidden xl:flex flex-col xl:flex-row xl:justify-between gap-[30px] relative top-[-1px] left-[1px]">
                         <li class="nav__link_item"><a href="#" class="active">Home</a></li>
                         <li class="nav__link_item"><a href="#">About</a></li>
                         <li class="nav__link_item"><a href="#">Properties</a></li>
@@ -40,11 +40,7 @@
                         <li class="nav__link_item mr-[30px]"><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div class="hidden xl:flex justify-end gap-[clamp(12px,0.83vw,18px)] text-[clamp(20px,1.25vw,36px)] ">
-                    <!-- <a href="tel:123"><i class="fas fa-phone text-primary text-[32px]"></i></a> -->
-                    <a href="tel:123"><object data="./img/phone.svg" width="36px" height="36px"> </object></a>
-                    <a href="tel:123"><span class="ft-md hover:text-primary">+1 234 567 890</span></a>
-                </div>
+                <a href="tel:123"class="hidden xl:flex items-center justify-end gap-[clamp(12px,0.83vw,12px)] text-[clamp(20px,1.25vw,36px)] "><object data="./img/phone.svg" class="relative top-[-3px]"></object><span class="ft-md hover:text-primary no-mb lh-100 text-nowrap">+1 234 567 890</span></a>
             </nav>
         </div>
     </header>
@@ -53,19 +49,64 @@
     <!-- CONTENT START -->
 
 
-    <section class="homeBanner bg-home_banner_bg bg-cover bg-center">
+    <section class="homeBanner bg-home_banner_bg bg-cover bg-center relative">
         <div class="container">
-            <div class="homeBanner__wrapper h-[100vh] f-col-center">
+            <div class="homeBanner__wrapper h-[100vh] f-col-center relative">
                 <h1 class="text-center text-banner_h1 ft-b text-light uppercase lh-120">Find Your Dream<br>Home With Us</h1>
                 <button class="btn bg--primary-w">Find Home</button>
 
                 <!-- ADD BANNER BOTTOM SLIDER HERE -->
+                <div class="homeBanner_categorySlider_bg bg-l_gray dark:bg-dark_2 rounded-t-[30px] w-bannerSlider_card_bg h-[11vw] lg:h-[7.75vw] xl:h-[7vw] 2xl:h-[5.5vw] absolute content-[''] bottom-[-1px] left-1/2 -translate-x-1/2">
+                </div>
+                <div class="homeBanner_categorySlider">
+                    <div class="container">
+                        <div class="homeBanner_categorySlider__wrapper">
+                            <div class="categorySlider_card">
+                                <object data="./img/home/icons/home.svg"></object>
+                                <h4>House</h4>
+                                <p>6 Properties</p>
+                            </div>
+                            <div class="categorySlider_card">
+                                <object data="./img/home/icons/apartments.svg"></object>
+                                <h4>Apartments</h4>
+                                <p>5 Properties</p>
+                            </div>
+                            <div class="categorySlider_card">
+                                <object data="./img/home/icons/office.svg"></object>
+                                <h4>Office</h4>
+                                <p>3 Properties</p>
+                            </div>
+                            <div class="categorySlider_card">
+                                <object data="./img/home/icons/home.svg"></object>
+                                <h4>House</h4>
+                                <p>6 Properties</p>
+                            </div>
+                            <div class="categorySlider_card">
+                                <object data="./img/home/icons/home.svg"></object>
+                                <h4>House</h4>
+                                <p>6 Properties</p>
+                            </div>
+                            <div class="categorySlider_card">
+                                <object data="./img/home/icons/home.svg"></object>
+                                <h4>House</h4>
+                                <p>6 Properties</p>
+                            </div>
+                            <div class="categorySlider_card">
+                                <object data="./img/home/icons/home.svg"></object>
+                                <h4>House</h4>
+                                <p>6 Properties</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
             </div>
         </div>
     </section>
 
 
-    <section class="homeFeaturedProperties pt-[50px] pb-[32.5px] md:pb-[65px] bg-l_gray">
+    <section class="homeFeaturedProperties pt-[50px] pb-[32.5px] md:pb-[65px] bg-l_gray dark:bg-dark_2">
         <div class="container">
             <div class="sectionHeading">
                 <h2>CHECK OUT OUR FEATURED PROPERTIES</h2>
@@ -192,8 +233,6 @@
         </div>
     </section>
 
-
-
     <!-- section.homeClientStories -->
 
     <!-- section.homeAgents -->
@@ -259,7 +298,7 @@
     <footer class="footer bg-footer_bg bg-cover bg-no-repeat bg-center font-text-inter">
         <div class="container">
             <div class="footer__wrapper text-light pt-[100px] pb-[30px]">
-                <button class="toggleBtn block mx-a my-0 p-[3px] rounded-full bg-transparent dark:bg-light leading-none"><i class="fas fa-circle-half-stroke text-light dark:text-dark_2 leading-none"></i></button>
+                <button class="toggleBtn block mx-a my-0 p-0 rounded-full leading-none"><i class="fas fa-circle-half-stroke text-light dark:text-dark dark:bg-light rounded-full leading-none"></i></button>
 
                 <div class="footer__top f-col-center mb-10 md:mb-8 text-center">
                     <h2 class="mb-4 text-[24px] md:text-[clamp(32px,2.2vw,64px)] ft-b lh-120">FIND YOUR DREAM HOME TODAY WITH OUR <br class="hidden md:inline-block">EXTENSIVE PROPERTY COLLECTION</h2>
@@ -308,11 +347,40 @@
     <script src="./js/script.js"></script>
     <script src="./vendor/tiny-slider/tiny-slider.js"></script>
     <script>
+        var bannerCategorySlider = tns({
+            container: ".homeBanner_categorySlider__wrapper",
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayHoverPause: false,
+            autoplayButtonOutput: false,
+            controls: false,
+            nav: false,
+            speed: 750,
+            autoplayTimeout: 3000,
+            preventActionWhenRunning: true,
+            mouseDrag: true,
+            touch: true,
+            responsive: {
+                1200: {
+                    items: 5
+                },
+                992:{
+                    items: 4
+                },
+                768: {
+                    items: 3
+                },
+                490: {
+                    items: 2
+                },
+            }
+        });
         var featuredTopRatedProperties = tns({
             container: ".homeFeaturedProperties__entries",
             items: 1,
             loop: true,
-            center: true,
+            center: false,
             autoplay: true,
             autoplayHoverPause: false,
             autoplayButtonOutput: false,
@@ -327,10 +395,11 @@
             // navContainer:'#clientSlider_nav_small',
             responsive: {
                 1200: {
-                    items: 3
+                    items: 3,
+                    center: true,
                 },
                 768: {
-                    items: 2
+                    items: 2,
                 },
             }
         });
@@ -357,7 +426,6 @@
                 992: {
                     items: 4
                 },
-                
                 768: {
                     items: 3
                 },
