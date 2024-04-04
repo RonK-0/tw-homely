@@ -771,6 +771,11 @@ p {
     width: 100%;
   }
   .tns-outer {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  .tns-outer {
     overflow-x: hidden;
   }
   .tns-outer {

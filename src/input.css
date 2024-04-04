@@ -82,7 +82,7 @@
     /* HOME */
     .homeBanner_categorySlider{
         @apply absolute w-full bottom-[3vw] lg:bottom-[1vw] xl:bottom-[1.5vw] tx-a;
-        .tns-outer{ @apply w-full xl:max-w-bannerSlider_card_bg overflow-x-hidden mx-a relative; }
+        .tns-outer{ @apply w-full xl:max-w-bannerSlider_card_bg overflow-x-hidden mx-a relative select-none; }
         .homeBanner_categorySlider__wrapper{
             @apply w-full flex gap-8 relative mx-a;
             .categorySlider_card{
