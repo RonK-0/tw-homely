@@ -306,19 +306,22 @@
         @apply pt-9 
     }
     .properties__card__img img{
-        @apply rounded-lg
+        @apply rounded-lg w-[100%] object-cover
     }
     .properties__card ul{
-        @apply pb-2 flex flex gap-1
+        @apply pb-2 flex flex gap-2
+    }
+    .properties__card ul li{
+        @apply text-[16px] 
     }
     .properties__card{
         @apply pb-7 
     }
     .properties__card p{
-        @apply pb-2 pt-4 text-[1rem]
+        @apply pb-2 pt-4 
     }
     .selecting{
-        @apply bg-slate-100 rounded-md
+        @apply bg-slate-200 rounded-md 
     }
     .selecting__form{
         @apply p-8
@@ -336,14 +339,53 @@
         @apply border-[1px] bg-light border-dark text-gray p-7 pl-10 rounded-md grid grid-cols-2 gap-7
     }
     .pagination__list{
-        @apply flex gap-4 text-lg
+        @apply flex gap-4 text-lg justify-center 
     }
     .pagination__list li{
         @apply  bg-light shadow-md p-3 rounded-md h-9 leading-3
     }
+    .pagination__list li:hover{
+        @apply  bg-primary text-light shadow-md p-3 rounded-md h-9 leading-3
+    }
 
     /* END PROPERTY STYLES */
-
+   
+    /* RANGE STYLES */
+    .range{
+        @apply m-7 rounded-md bg-light p-10 border
+    }
+    .range-slider{
+        @apply h-[5px] relative bg-white rounded-[2px]
+    }
+    .range-selected{
+        @apply h-[100%] left-[30%] right-[30%] absolute bg-primary rounded-[5px]
+    }
+    .range-input{
+        @apply relative;
+    }
+    .range-input input{
+        @apply absolute w-[100%] h-[5px] top-[-7px] bg-none pointer-events-none select-none
+    }
+    .range-input input::-webkit-slider-thumb{
+        @apply h-[20px] w-[20px] rounded-[50%] bg-primary pointer-events-auto 
+    }
+    .range-input input::-moz-range-thumb{
+        @apply h-[20px] w-[20px] rounded-[50%] bg-primary  pointer-events-auto select-none appearance-none
+    }
+    .range-price{
+        @apply mx-[0] my-[30px] w-[100%] flex justify-center items-center
+    }
+    .range-price label{
+        @apply mr-[5px]
+    }
+    .range-price input{
+        @apply w-[40px] p-[5px]
+    }
+    .range-price input:first-of-type{
+        @apply mr-[15px]
+    }
+    
+    /* END */
 }
 
 @layer utilities{
