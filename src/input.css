@@ -299,23 +299,100 @@
         }
     } */
 
+
     /* Property Details Page */
 
     /* property__detail */
 
-
     .house__item img {
-        @apply block min-w-full object-cover 
+        @apply rounded-[0.625rem]
     }
 
 
     /* property__sched__info */
 
+    /* SCHEDULE FORM */
+    
+    .schedule__tour .form__wrapper input, textarea{
+        @apply block w-full py-[0.625rem] px-[0.875rem] xl:py-[0.9rem] xl:px-[1.875rem] border-dark border-[1px] bg-light text-gray
+        text-[1rem] rounded-[0.313rem] outline-none
+    }   
+
+
     .property__sched__info .house__info ul li{
-        @apply flex gap-3 items-center my-[16px]
+        @apply flex gap-3 items-center my-[16px] 
     }
     
+
+    /* INFORMATION SECTION*/
+
+    .floor_plans_accordion.active .floor__plan__img {
+        @apply block
+    }
+
+    /* house demo */
+
+    .house__demo .video-box video {
+        @apply w-full h-[400px] object-cover
+    }
+
+    .house__demo.active .img-box {
+        @apply hidden
+    }
+
+    .house__demo.active .video-box {
+        @apply block
+    }
+
+    /* add review star */
+
+    .star-cb-group input > label:before {
+        @apply content-['☆']
+    }
+
+    .form__identity input {
+        @apply block w-full py-[0.625rem] px-[0.875rem] xl:py-[0.9rem] xl:px-[1.3rem] border-dark border-[1px] bg-light text-gray
+        text-[1rem] rounded-[0.313rem] outline-none
+    }
+
+    .form__review #checkbox {
+        @apply mb-[1.5rem] ml-4 mr-[10px]
+    }
+
+    .form__review label {
+        @apply text-[14px] xl:text-[19px] cursor-pointer text-gray;
+    }
+
+    /* checkbox */
+
+    .reminder {
+        @apply relative block ml-[10px] pl-[35px] mb-5 cursor-pointer text-lg select-none;
+        input{
+            @apply absolute h-0 w-0 opacity-0 cursor-pointer;
+        }
+        span.checkmark{
+            @apply absolute top-0 left-0 h-[20px] w-[20px] bg-light_2;
+        }
+        span.checkmark:after {
+            @apply hidden absolute content-['']
+            ty-a tx-a w-[7px] h-[17px] rotate-45
+          border-dark_2 border-r-[2px] border-b-[2px];
+        }
+        input:checked ~ .checkmark:after {
+            @apply block;
+        }
+    }
     
+    .reminder:hover input ~ .checkmark {
+        @apply bg-light_2;
+    }
+    .reminder input:checked ~ .checkmark{
+        @apply animate-onCheck;
+    }
+    .reminder input:not(:checked) ~ .checkmark{
+        @apply animate-unCheck;
+    }
+
 }
 
 @layer utilities{
@@ -365,6 +442,7 @@
     .mx-a{ @apply mx-auto }
 
     .tx-a{ @apply left-1/2 -translate-x-1/2 }
+    .ty-a{ @apply top-1/2 -translate-y-1/2 }
 
     .py-5v{ @apply py-[5vh] }
     .py-10v{ @apply py-[10vh] }

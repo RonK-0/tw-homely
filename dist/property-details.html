@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homely - Property Details</title>
     <link href="../src/output.css" rel="stylesheet">
 
     <link rel="shortcut icon" type="image/x-icon" href="./img/favicon-dark.png">
@@ -34,8 +34,8 @@
                 <div>
                     <button class="burger p-[10px] text-[24px] block xl:hidden"><i class="fas fa-bars"></i></button>
                     <ul class="nav__links hidden xl:flex flex-col xl:flex-row xl:justify-between gap-[30px]">
-                        <li class="nav__link_item"><a href="#">Home</a></li>
-                        <li class="nav__link_item"><a href="#">About</a></li>
+                        <li class="nav__link_item"><a href="../dist/index.html">Home</a></li>
+                        <li class="nav__link_item"><a href="../dist/property-details.html">About</a></li>
                         <li class="nav__link_item"><a href="#">Properties</a></li>
                         <li class="nav__link_item"><a href="#" class="active">Property Details</a></li>
                         <li class="nav__link_item mr-[30px]"><a href="#">Contact</a></li>
@@ -49,6 +49,8 @@
         </div>
     </header>
 
+    <!-- BANNER -->
+
     <section class="propBanner bg-prop_details_bg bg-cover bg-center">
         <div class="container">
             <div class="propBanner__wrapper h-[55vh] f-col-center">
@@ -57,133 +59,136 @@
         </div>
     </section>
 
-    <section class="property__detail py-[4.5rem]">
+    <!-- BANNER END -->
+
+    <!-- PROPERTY SLIDER -->
+
+    <section class="property__detail py-[2rem] xl:py-[4.5rem]">
         <div class="container">
-            <h1 class="ft-sb text-prop_title uppercase mb-[2rem]">Forest Heights Homes</h1>
-            <div class="house__detail">
-                <div class="house__detail_wrapper mb-[2rem]">
+            <h1 class="ft-sb text-prop_title uppercase mb-[1.125rem] xl:mb-[2rem]">Forest Heights Homes</h1>
+            <div class="house__detail xl:flex flex-col">
+                <div class="house__detail_wrapper mb-[1.3rem] overflow-hidden rounded-[0.625rem]">
                     <div class="house__detail__slider">
                         <div id="house-1-content" class="house__item">
-                            <img src="../dist/img/home/house-1.png" alt="">
+                            <img src="../dist/img/property_details/banner-house-1.png" alt="">
                         </div>
 
                         <div id="house-2-content"class="house__item">
-                            <img src="../dist/img/home/house-2.png" alt="">
+                            <img src="../dist/img/property_details/banner-house-2.png" alt="">
                         </div>
 
                         <div id="house-3-content" class="house__item">
-                            <img src="../dist/img/home/house-3.png" alt="">
+                            <img src="../dist/img/property_details/banner-house-3.png" alt="">
                         </div>
                         
-                        <div id="house-4-content" class="house__item">
-                            <img src="../dist/img/home/house-4.png" alt="">
+                        <div id="house-4-content" class="house__item ">
+                            <img src="../dist/img/property_details/banner-house-4.png" alt="">
                         </div>
                         
                         <div id="house-5-content" class="house__item">
-                            <img src="../dist/img/home/house-5.png" alt="">
+                            <img src="../dist/img/property_details/banner-house-5.png" alt="">
                         </div>
                     </div>
                 </div>
 
-                <div class="house__detail__slider" id="house__slider__nav__small">
-                    <button><img src="../dist/img/home/house-1.png" alt="" class="h-[300px]"></button>
-                    <button><img src="../dist/img/home/house-2.png" alt=""></button>
-                    <button><img src="../dist/img/home/house-3.png" alt=""></button>
-                    <button><img src="../dist/img/home/house-4.png" alt=""></button>
-                    <button><img src="../dist/img/home/house-5.png" alt=""></button>
+                <div class="house__detail__slider flex flex-row gap-5 mx-4" id="house__slider__nav__small">
+                    <button><img src="../dist/img/property_details/banner-house-1.png" alt="" class="rounded-[0.625rem]"></button>
+                    <button><img src="../dist/img/property_details/banner-house-2.png" alt="" class="rounded-[0.625rem]"></button>
+                    <button><img src="../dist/img/property_details/banner-house-3.png" alt="" class="rounded-[0.625rem]"></button>
+                    <button><img src="../dist/img/property_details/banner-house-4.png" alt="" class="rounded-[0.625rem]"></button>
+                    <button><img src="../dist/img/property_details/banner-house-5.png" alt="" class="rounded-[0.625rem]"></button>
+                    <!-- <button><img src="../dist/img/property_details/banner-house-1.png" alt="" class="rounded-[0.625rem]"></button> -->
                 </div>
 
             </div>
         </div>
     </section>
 
+    <!-- PROPERTY SLIDER END -->
+
+    <!-- PROPERTY SCHEDULE AND INFORMATION -->
+
     <section class="property__sched__info">
         <div class="container">
-            <div class="property_sched__info__wrapper flex gap-3">
+            <div class="property_sched__info__wrapper grid xl:grid-cols-[_26rem,_1fr] gap-6">
 
-                <div class="schedule__tour w-[33%]">
-                    <div class="contact bg-l_blue">
-                        <h2>Schedule a Tour</h2>
+                <!-- w-[33%] -->
+                <div class="schedule__tour font-text-inter">
+                    <div class="contact bg-l_blue p-[2rem] rounded-[0.65rem] mb-[1.5rem]">
+                        <h2 class="mb-[16px] ft-md text-lg xl:text-2xl">Schedule a Tour</h2>
                         <form action="">
-                            <div class="form__wrapper">
-                                <div>
+                            <div class="form__wrapper flex xl:f-col flex-wrap gap-3 xl:gap-7">
+                                <div class="flex f-col md:flex-row xl:f-col gap-3 xl:gap-7 w-full">
                                     <input type="date" name="date">
-                                </div>
-                                <div>
                                     <input type="time" name="time">
                                 </div>
-                                <div>
+                                <div class="flex f-col md:flex-row xl:f-col gap-3 xl:gap-7 w-full">
                                     <input type="text" name="name" placeholder="Your Name">
+                                    <input type="email" name="email" placeholder="Your Email">
                                 </div>
-                                <div>
-                                    <input type="email" name="email" placeholder="Email">
-                                </div>
-                                <div>
-                                    <input type="tel" name="phone" placeholder="Your Number">
-                                </div>
-                                <div>
-                                    <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
-                                </div>
-                                <a href="#">Sumbit A Tour Request</a>
+                                <input type="tel" name="phone" placeholder="Your Phone Number">
+                                <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>   
+                                <a href="#" class="bg-primary border-[2px] text-light border-primary p-[1.2rem] text-[1.188rem] hover:bg-light hover:text-primary text-center rounded-[0.32rem] block w-full">Sumbit A Tour Request</a> 
                             </div>
                         </form>
                     </div>
-                    <div class="broker bg-l_blue">
-                        <div class="broker__wrapper">
-                            <img src="./img/broker.png" alt="">
-                            <h5>Rebecca Robinson</h5>
-                            <small>Real Estate Broker</small>
-                            <ul>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa-solid fa-basketball"></i></a></li>
+                    <div class="broker bg-l_blue rounded-[0.65rem]">
+                        <div class="broker__wrapper py-[1.875rem] flex flex-col items-center gap-1 xl:gap-2">
+                            <img src="../dist/img/home/img-2 (2).png" alt="">
+                            <h5 class="text-lg xl:text-[1.438rem] ft-md">Rebecca Robinson</h5>
+                            <small class="text-fs-16 text-gray mb-2 ft-md xl:text-fs-16_md xl:mb-3">Real Estate Broker</small>
+                            <ul class="flex gap-6">
+                                <li><a href="#"><i class="fab fa-facebook-f hover:text-primary text-[1.5rem]"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram hover:text-primary text-[1.5rem]"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter hover:text-primary text-[1.5rem]"></i></a></li>
+                                <li><a href="#"><i class="fa-solid fa-basketball hover:text-primary text-[1.5rem]"></i></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="house__information__reviews w-[67%] font-text-inter">
-                    <div class="house__info bg-l_blue p-[32px] rounded-[0.65rem] mb-[2rem]">
+                <!-- w-[67%] -->
+                <div class="house__information__reviews font-text-inter">
+                    <div class="house__info bg-l_blue p-[16px] xs:p-[32px] rounded-[0.65rem] mb-[2rem]">
                         <h2 class="mb-[16px] ft-md text-2xl">Details</h2>
-                        <ul class="grid grid-cols-3 items-center">
+                        <ul class="grid xs:grid-cols-2 md:grid-cols-3 items-center">
                             <li>
                                 <img src="../dist/img/property_details/icons/bed.png" alt="">
-                                <h3>2 Bed Rooms</h3>
+                                <h3 class="text-xl">2 Bed Rooms</h3>
                             
                             </li>
                             <li>
                                 <img src="../dist/img/property_details/icons/toom.png" alt="">
-                                <h3>2 Bath Rooms</h3>
+                                <h3 class="text-xl">2 Bath Rooms</h3>
                             </li>
                             <li>
                                 <img src="../dist/img/property_details/icons/scale.png" alt="">
-                                <h3>200 sq. ft.</h3>
+                                <h3 class="text-xl">200 sq. ft.</h3>
                             </li>
                             <li>
                                 <img src="../dist/img/property_details/icons/brick-wall.png" alt="">
-                                <h3>Year Build 2014</h3>
+                                <h3 class="text-xl">Year Build 2014</h3>
                             </li>
                             <li>
                                 <img src="../dist/img/property_details/icons/garage.png" alt="">
-                                <h3>Garages</h3>
+                                <h3 class="text-xl">Garages</h3>
                             </li>
                             <li>
                                 <img src="../dist/img/property_details/icons/home.png" alt="">
-                                <h3>Type House</h3>
+                                <h3 class="text-xl">Type House</h3>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="house__overview bg-l_blue p-[32px] rounded-[0.65rem] mb-[2rem]">
+                    <div class="house__overview bg-l_blue p-[16px] xs:p-[32px] rounded-[0.65rem] mb-[2rem]">
                         <h2 class="ft-md text-2xl mb-[16px]">Overview</h2>
-                        <p class="mb-0 text-gray text-[16px] tracking-[0.02rem]">Forest Heights Homes is a residential community located in Calgary, Alberta, Canada. It offers a variety of housing options including single-family homes, townhouses, 
+                        <p class="mb-0 text-gray text-[16px] tracking-[0.03rem] line-clamp-5 lg:line-clamp-none">Forest Heights Homes is a residential community located in Calgary, Alberta, Canada. It offers a variety of housing options including single-family homes, townhouses, 
                             and apartments. The community is known for its beautiful green spaces, parks, and playgrounds, providing residents with a peaceful and relaxing environment. It is also 
                             conveniently located near shopping centers, restaurants, schools, and public transportation.
                         </p>
                     </div>
 
-                    <div class="house__location bg-l_blue p-[32px] rounded-[0.65rem] mb-[2rem]">
+                    <div class="house__location bg-l_blue p-[16px] xs:p-[32px] rounded-[0.65rem] mb-[2rem]">
                         <h2 class="ft-md text-2xl mb-[16px]">Location</h2>
                         <span class="text-gray mb-[4px] text-fs-16">678 Ocean View Drive</span>
                         <div>
@@ -191,52 +196,52 @@
                         </div>
                     </div>
 
-                    <div class="house__floor_plans bg-l_blue p-[32px] rounded-[0.65rem] mb-[2rem]">
+                    <div class="house__floor_plans bg-l_blue p-[16px] xs:p-[32px] rounded-[0.65rem] mb-[2rem]">
                         <h2 class="ft-md text-2xl mb-[16px]">Floor Plans</h2>
                         <div class="floor__plans__wrapper flex flex-col flex-wrap gap-3">
-                            <div class="floor_plans_accordion bg-light rounded-[0.313rem] py-[22px] px-[24px] cursor-pointer">
-                                <div class="floor_plans_info flex justify-between">
-                                    <span><i class="fa-solid fa-angle-down mr-2 text-fs-16"></i>First Floor</span>  
-                                    <ul class="flex items-center gap-5">
+                            <div class="floor_plans_accordion cursor-pointer">
+                                <div class="floor_plans_info rounded-[0.313rem] py-[22px] px-[24px] flex flex-col gap-y-3 md:flex-row md:justify-between text-dark_2 bg-light">
+                                    <span class="text-[1rem] ft-md"><i class="fa-solid fa-angle-down mr-2 text-fs-16"></i>First Floor</span>  
+                                    <ul class="flex items-center pl-5 gap-7 xs:gap-9 ft-md text-[12px] md:text-[1rem] xs:text-[16px]">
                                         <li>Rooms: 2</li>
                                         <li>Baths: 2</li>
                                         <li>Size: 200 sq. ft.</li>
                                     </ul>  
                                 </div>
-                                <div>
-                                    <img src="./img/accordion-blueprint.png" alt="">
+                                <div class="floor__plan__img hidden">
+                                    <img src="../dist/img/property_details/blue-print.png" alt="">
                                 </div>                        
                             </div>
-                            <div class="floor_plans_accordion bg-light rounded-[0.313rem] py-[22px] px-[24px] cursor-pointer">
-                                <div class="floor_plans_info flex justify-between">
-                                    <span><i class="fa-solid fa-angle-down mr-2 text-fs-16"></i>Second Floor</span>  
-                                    <ul class="flex items-center gap-5">
+                            <div class="floor_plans_accordion cursor-pointer">
+                                <div class="floor_plans_info rounded-[0.313rem] py-[22px] px-[24px] flex flex-col gap-y-3 md:flex-row md:justify-between text-dark_2 bg-light">
+                                    <span class="text-[1rem] ft-md"><i class="fa-solid fa-angle-down mr-2 text-fs-16"></i>Second Floor</span>  
+                                    <ul class="flex items-center pl-5 gap-7 xs:gap-9 ft-md text-[12px] md:text-[1rem] xs:text-[16px]">
                                         <li>Rooms: 2</li>
                                         <li>Baths: 2</li>
                                         <li>Size: 200 sq. ft.</li>
                                     </ul>  
                                 </div>
-                                <div>
-                                    <img src="./img/accordion-blueprint.png" alt="">
+                                <div class="floor__plan__img hidden">
+                                    <img src="../dist/img/property_details/blue-print.png" alt="">
                                 </div>                        
                             </div>
-                            <div class="floor_plans_accordion bg-light rounded-[0.313rem] py-[22px] px-[24px] cursor-pointer">
-                                <div class="floor_plans_info flex justify-between">
-                                    <span><i class="fa-solid fa-angle-down mr-2 text-fs-16"></i>Third Floor</span>  
-                                    <ul class="flex items-center gap-5">
+                            <div class="floor_plans_accordion cursor-pointer">
+                                <div class="floor_plans_info rounded-[0.313rem] py-[22px] px-[24px] flex flex-col gap-y-3 md:flex-row md:justify-between text-dark_2 bg-light">
+                                        <span class="text-[1rem] ft-md"><i class="fa-solid fa-angle-down mr-2 text-fs-16"></i>Third Floor</span>  
+                                        <ul class="flex items-center pl-5 gap-7 xs:gap-9 ft-md text-[12px] md:text-[1rem] xs:text-[16px] xs:pl-[16px]">
                                         <li>Rooms: 2</li>
                                         <li>Baths: 2</li>
                                         <li>Size: 200 sq. ft.</li>
                                     </ul>  
                                 </div>
-                                <div>
-                                    <img src="./img/accordion-blueprint.png" alt="">
+                                <div class="floor__plan__img hidden">
+                                    <img src="../dist/img/property_details/blue-print.png" alt="">
                                 </div>                        
                             </div>
                         </div>
                     </div>
 
-                    <div class="house__demo bg-l_blue p-[32px] rounded-[0.65rem] mb-[2rem]">
+                    <div class="house__demo bg-l_blue p-[16px] xs:p-[32px] rounded-[0.65rem] mb-[2rem]">
                         <h2 class="ft-md text-2xl mb-[16px]">Video</h2>
                         <div class="img-box w-full h-[400px] relative bg-img_overlay bg-no-repeat bg-cover bg-center object-cover">   
                             <div class="overlay absolute top-0 right-0 h-[100%] w-[100%] rounded-[25px]">
@@ -252,122 +257,119 @@
                         </div>
                     </div>
 
-                    <div class="house__reviews bg-l_blue p-[32px] rounded-[0.65rem] mb-[2rem]">
+                    <div class="house__reviews bg-l_blue p-[16px] xs:p-[32px] rounded-[0.65rem] mb-[2rem]">
                         <h2 class="ft-md text-2xl mb-[16px]">(3 Reviews)</h2>
-                        <div class="customer__reviews mb-[1rem]">
+                        <div class="customer__reviews mb-[2rem]">
                             <div class="customer__user flex justify-between items-center mb-[1rem]">
-                                <div class="customer__info flex items-center gap-7">
+                                <div class="customer__info flex items-center gap-3 xs:gap-7">
                                     <img src="../dist/img/property_details/review-1.png" alt="">
                                     <div>
-                                        <h4>Sarah M</h4>
-                                        <p>May 10, 2023</p>
+                                        <h4 class="text-[16px] ft-md mb-2">Sarah M</h4>
+                                        <p class="text-[13px] xs:text-[16px] ft-normal">May 10, 2023</p>
                                     </div>
                                 </div>
-                                <div class="customer__stars text-primary">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                                <div class="customer__stars text-primary text-[16px] xs:clear-none">
+                                    <i class="fas fa-star text-[16px] xs:clear-none"></i>
+                                    <i class="fas fa-star text-[16px] xs:clear-none"></i>
+                                    <i class="fas fa-star text-[16px] xs:clear-none"></i>
+                                    <i class="fas fa-star text-[16px] xs:clear-none"></i>
+                                    <i class="fas fa-star text-[16px] xs:clear-none"></i>
                                 </div>
                             </div>
-                            <p class="text-gray text-[16px] tracking-[0.02rem] font-text-inter">"My family and I have been living in Forest Heights Homes for the past 2 years and we absolutely love it here. The community is safe and welcoming, and the amenities are top-notch. 
+                            <p class="text-gray text-[16px] tracking-[0.03rem] font-text-inter">"My family and I have been living in Forest Heights Homes for the past 2 years and we absolutely love it here. The community is safe and welcoming, and the amenities are top-notch. 
                                 The management team is also very responsive and helpful."
                             </p>   
                         </div>
 
                         <div class="customer__reviews mb-[2rem]">
                             <div class="customer__user flex justify-between items-center mb-[1rem]">
-                                <div class="customer__info flex items-center gap-7">
+                                <div class="customer__info flex items-center gap-3 xs:gap-7">
                                     <img src="../dist/img/property_details/review-2.png" alt="">
                                     <div>
-                                        <h4>John D</h4>
+                                        <h4 class="text-[16px] ft-md mb-2">John D</h4>
                                         <p>May 12, 2023</p>
                                     </div>
                                 </div>
                                 <div class="customer__stars text-primary">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star text-[16px] xs:clear-none"></i>
+                                    <i class="fas fa-star text-[16px] xs:clear-none"></i>
+                                    <i class="fas fa-star text-[16px] xs:clear-none"></i>
+                                    <i class="fas fa-star text-[16px] xs:clear-none"></i>
+                                    <i class="fas fa-star text-[16px] xs:clear-none"></i>
                                 </div>
                             </div>
-                            <p class="text-gray text-[16px] tracking-[0.02rem] font-text-inter">"I had a great experience renting a home in Forest Heights. The property was well-maintained, and the leasing process was easy and straightforward. 
+                            <p class="text-gray text-[16px] tracking-[0.03rem] font-text-inter">"I had a great experience renting a home in Forest Heights. The property was well-maintained, and the leasing process was easy and straightforward. 
                                 I highly recommend Forest Heights Homes for anyone looking for a comfortable and convenient place to live."
                             </p>   
                         </div>
 
                         <div class="customer__reviews mb-[2rem]">
                             <div class="customer__user flex justify-between items-center mb-[1rem]">
-                                <div class="customer__info flex items-center gap-7">
+                                <div class="customer__info flex items-center gap-3 xs:gap-7">
                                     <img src="../dist/img/property_details/review-3.png" alt="">
                                     <div>
-                                        <h4>Emily P</h4>
+                                        <h4 class="text-[16px] ft-md mb-2">Emily P</h4>
                                         <p>May 14, 2023</p>
                                     </div>
                                 </div>
-                                <div class="customer__stars text-primary">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                                <div class="customer__stars text-primary text-[16px] xs:clear-none">
+                                    <i class="fas fa-star text-[16px] xs:clear-none"></i>
+                                    <i class="fas fa-star text-[16px] xs:clear-none"></i>
+                                    <i class="fas fa-star text-[16px] xs:clear-none"></i>
+                                    <i class="fas fa-star text-[16px] xs:clear-none"></i>
+                                    <i class="fas fa-star text-[16px] xs:clear-none"></i>
                                 </div>
                             </div>
-                            <p class="text-gray text-[16px] tracking-[0.02rem] font-text-inter">"I recently purchased a home in Forest Heights and couldn't be happier with my decision. 
+                            <p class="text-gray text-[16px] tracking-[0.03rem] font-text-inter">"I recently purchased a home in Forest Heights and couldn't be happier with my decision. 
                                 The community is peaceful, the homes are beautiful, and the location is unbeatable. Highly recommend!"
                             </p>   
                         </div>
                     </div>
 
-                    <div class="add__review bg-l_blue p-[32px] rounded-[0.65rem] mb-[2rem]">
-                        <h2>Add A Review</h2>
+                    <div class="add__review bg-l_blue p-[16px] xs:p-[32px] rounded-[0.65rem] mb-[2rem] ">
+                        <h2 class="ft-md text-2xl mb-[16px]">Add A Review</h2>
                 
-                        <div>
+                        <div class="flex items-center gap-5 mb-5">
                             <div class="rating">
-                                <h2>Rating</h2>
+                                <h2 class="ft-md text-2xl">Rating</h2>
                             </div>
                             <div class="star__form">
                                 <fieldset>
                                     <span class="star-cb-group">
-                                        <input type="radio" id="rating-5" name="rating" value="5"><label for="rating-5">5</label>
-                                        <input type="radio" id="rating-4" name="rating" value="4"><label for="rating-4">4</label>
-                                        <input type="radio" id="rating-3" name="rating" value="3"><label for="rating-3">3</label>
-                                        <input type="radio" id="rating-2" name="rating" value="2"><label for="rating-2">2</label>
-                                        <input type="radio" id="rating-1" name="rating" value="1" checked="checked"><label for="rating-1">1</label>
-                                        <input type="radio" id="rating-0" name="rating" value="0" class="star-cb-clear"><label for="rating-0">0</label>
+                                        <input type="radio" id="rating-0" name="rating" value="0"><label for="rating-5"></label>
+                                        <input type="radio" id="rating-1" name="rating" value="1"><label for="rating-4"></label>
+                                        <input type="radio" id="rating-2" name="rating" value="2"><label for="rating-3"></label>
+                                        <input type="radio" id="rating-3" name="rating" value="3"><label for="rating-2"></label>
+                                        <input type="radio" id="rating-4" name="rating" value="4" checked="checked"><label for="rating-1"></label>
+                                        <input type="radio" id="rating-5" name="rating" value="5" class="star-cb-clear"><label for="rating-0"></label>
                                     </span>
                                 </fieldset>
                             </div>
                         </div>
 
                         <form action="">
-                            <div class="form__review">
-                                <div class="form__identity">
-                                    <div>
-                                        <input type="text" name="name" placeholder="Your Name">
-                                    </div>
-                                    <div>
-                                        <input type="email" name="email" placeholder="Your Email">
-                                    </div>
+                            <div class="form__review mb-5">
+                                <div class="form__identity mb-5 grid gap-3 grid-cols-1 xl:grid-cols-2 xl:gap-5">
+                                    <input type="text" name="name" placeholder="Your Name">
+                                    <input type="email" name="email" placeholder="Your Email"> 
                                 </div>
-
-                                <div>
-                                    <input type="checkbox" id="checkbox"><label for="checkbox">Keep me posted via email for future comments on this website</label>
-                                </div>
-                                
-                                <div>
-                                    <textarea name="review" id="" cols="30" rows="10" placeholder="Review"></textarea>
-                                </div>
+                                <label class="reminder">
+                                    <input type="checkbox" id="checkbox"><label for="checkbox" class="mb-3">Keep me posted via email for future comments on this website</label>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <textarea name="review" id="" cols="30" rows="10" placeholder="Review"></textarea>
                             </div>
-                            <a href="#">Sumbit Review</a>
+                            <a href="#"  class="bg-primary border-[2px] text-light border-primary p-[1.2rem] text-[1.188rem] hover:bg-light hover:text-primary text-center rounded-[0.32rem] block w-full">Sumbit Review</a>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- PROPERTY SCHEDULE AND INFORMATION END -->
+
+    <!-- PROPERTY CHECKOUT -->
 
     <section class="checkout">
         <div class="container">
@@ -555,7 +557,7 @@
                     items: 1
                 },
                 576: {
-                    items: 2
+                    items: 1
                 },
             }
         });

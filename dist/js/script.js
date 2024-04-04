@@ -36,3 +36,18 @@ window.onscroll = function() {
 
 // scroll to top function
 function scrollToTop(){ window.scrollTo(0,0); }
+
+// accordion
+const accordion = document.querySelectorAll(".floor_plans_accordion");
+accordion.forEach((accordion) => {
+    accordion.addEventListener("click", ()=>{
+        accordion.classList.toggle("active");
+    });
+});
+
+//image to video
+const demo = document.querySelector('.house__demo');
+demo.addEventListener("click", () => {
+    demo.classList.add('active');
+});
+
