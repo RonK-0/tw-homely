@@ -161,6 +161,32 @@
         }
     }
 
+    /* one stop property solution to be added */
+
+    .homePropertySolution__wrapper{
+        @apply grid grid-cols-3 gap-[24px];
+        .homePropertySolution__card{
+            @apply bg-l_gray rounded-[20px] cursor-pointer
+            py-[32px] px-[12px] mb-[32px] lg:no-mb sm:p-propertySolution_p
+            f-col-center text-center;
+            img{ @apply mb-6; }
+            h4{ @apply ft-sb fs-33 font-text-inter text-dark mb-4; }            
+            p{ @apply text-gray fs-16 mb-6 overflow-hidden font-text-inter line-clamp-3 text-ellipsis; }
+        }
+        .homePropertySolution__card:hover h4{ @apply text-primary; }
+    }
+
+    .homeDreamHome__wrapper{
+        @apply grid grid-cols-2 lg:grid-cols-3 gap-[25px];
+        .homeDreamHome__entry{
+            @apply rounded-[10px] overflow-hidden;
+            img { @apply transition-all duration-[0.6s] ease-linear; }
+        }
+        .homeDreamHome__entry:hover img { @apply scale-110 transition-all duration-[0.6s] ease-linear; }
+    }
+    
+
+
     .homeTopRatedProperties__entries{
         @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6;
         .homeTopRatedProperties__card{
@@ -190,6 +216,9 @@
         }
         .homeTopRatedProperties__card:hover .card__img img { @apply scale-110 transition-all duration-[0.6s] ease-linear; }
     }
+
+    /* client success stories to be added */
+    /* real estate agents to be added */
 
     .homeBlogEntries{
         @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6;
@@ -230,25 +259,6 @@
         .tns-outer{ @apply w-full overflow-hidden mx-a; }
         .homeClientSlider_logos img{ @apply w-[236px] max-h-[104px] pr-[24px] object-scale-down; }
     }
-
-    /* .gallery{
-        .img-block{
-            border-radius: 10px;
-            overflow: hidden;
-            img {
-                -webkit-transition: all 0.6s linear 0s;
-                transition: all 0.6s linear 0s;
-            }
-            &:hover{
-                img {
-                    -webkit-transform: scale(1.1);
-                    transform: scale(1.1);
-                    -webkit-transition: all 0.6s linear 0s;
-                    transition: all 0.6s linear 0s;
-                }
-            }
-        }
-    } */
 }
 
 @layer utilities{
@@ -264,6 +274,11 @@
         @apply bg-primary hover:bg-light
         border-primary hover:border-light 
         text-light hover:text-primary
+    }
+    .btn.bg--light-p{
+        @apply bg-light hover:bg-primary
+        border-dark hover:border-transparent 
+        text-dark hover:text-light
     }
     .btn.bg--transparent-p{
         @apply bg-transparent hover:bg-primary
@@ -305,76 +320,30 @@
     .py-15v{ @apply py-[15vh] }
     .py-20v{ @apply py-[20vh] }
 
-    .py100{
-        @apply py-py100;
-    }
+    .py100{ @apply py-py100; }
     
-    .fs-33{
-        @apply text-[21px] lg:text-[28px] xl:text-fs-33
-    }
-    .fs-28{
-        @apply text-[18px] xl:text-[28px]
-    }
-    .fs-23{
-        @apply text-[23px] md:text-[18px] xl:text-[23px]
-    }
-    .fs-19{
-        @apply text-fs-19 sm:text-fs-19_sm md:text-fs-19_md
-    }
-    .fs-16{
-        @apply text-fs-16 md:text-fs-16_md lg:text-fs-16_lg xl:text-fs-16_xl
-    }
+    .fs-33{ @apply text-[21px] lg:text-[28px] xl:text-fs-33}
+    .fs-28{ @apply text-[18px] xl:text-[28px]}
+    .fs-23{ @apply text-[23px] md:text-[18px] xl:text-[23px] }
+    .fs-19{ @apply text-fs-19 sm:text-fs-19_sm md:text-fs-19_md }
+    .fs-16{ @apply text-fs-16 md:text-fs-16_md lg:text-fs-16_lg xl:text-fs-16_xl }
+    
+    .lh-100{ @apply leading-[100%] }
+    .lh-110{ @apply leading-[110%] }
+    .lh-120{ @apply leading-[120%] }
+    .lh-130{ @apply leading-[130%] }
+    .lh-140{ @apply leading-[140%] }
+    .lh-150{ @apply leading-[150%] }
+    .lh-160{ @apply leading-[160%] }
+    .lh-180{ @apply leading-[180%] }
 
-    
-    .lh-100{
-        @apply leading-[100%]
-    }
-    .lh-110{
-        @apply leading-[110%]
-    }
-    .lh-120{
-        @apply leading-[120%]
-    }
-    .lh-130{
-        @apply leading-[130%]
-    }
-    .lh-140{
-        @apply leading-[140%]
-    }
-    .lh-150{
-        @apply leading-[150%]
-    }
-    .lh-160{
-        @apply leading-[160%]
-    }
-    .lh-180{
-        @apply leading-[180%]
-    }
-    .ls-4{
-        @apply tracking-[0.04em];
-    }
-    .ls-3{
-        @apply tracking-[0.03em];
-    }
-    .ls-2{
-        @apply tracking-[0.02em];
-    }
-    .ls-1{
-        @apply tracking-[0.01em];
-    }
-    .ls-0{
-        @apply tracking-[0.00em];
-    }
-    .-ls-1{
-        @apply tracking-[-0.01em];
-    }
-    .-ls-2 {
-        @apply tracking-[-0.02em];
-    }
-    .-ls-3{
-        @apply tracking-[-0.03em];
-    }
-    .-ls-4{
-        @apply tracking-[-0.04em];
-    }
+    .ls-4{ @apply tracking-[0.04em]; }
+    .ls-3{ @apply tracking-[0.03em]; }
+    .ls-2{ @apply tracking-[0.02em]; }
+    .ls-1{ @apply tracking-[0.01em]; }
+    .ls-0{ @apply tracking-[0.00em]; }
+    .-ls-1{ @apply tracking-[-0.01em]; }
+    .-ls-2 { @apply tracking-[-0.02em]; }
+    .-ls-3{ @apply tracking-[-0.03em]; }
+    .-ls-4{ @apply tracking-[-0.04em]; }
 }
