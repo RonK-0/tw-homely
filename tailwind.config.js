@@ -9,7 +9,7 @@ module.exports = {
         // 'lg': '1024px',
         // 'xl': '1280px',
         // '2xl': '1536px',
-        'xs': '490px',
+        // 'xs': '490px',
         'sm': '576px',
         'md': '768px',
         'lg': '992px',
@@ -30,6 +30,8 @@ module.exports = {
         l_gray: "#F0F2F4",
         gray: "#797D86",
         primary: "#A57A5A",
+        homeFeaturedProperties_Nav: '#c9cbcc',
+        homeFeaturedProperties_Nav_outline: 'rgba(44, 45, 47, 0.2)',
       },
       fontFamily: {
         'text-poppins': ["Poppins", "sans-serif"],
@@ -87,6 +89,7 @@ module.exports = {
 
       },
       padding:{
+        'container_p': 'calc(1.5rem * 0.5)',
         'clientSlider_p' : 'clamp(64px, 5.208vw, 200px)',
         'blog_card_text_content' : 'clamp(20px, 1.25vw, 32px) clamp(14px, 0.83vw, 24px)',
         'property_entry_price' : 'clamp(6px, 0.5vw, 10px)',
@@ -95,7 +98,7 @@ module.exports = {
       },
       margin:{
         'heading_margin_bottom' : 'clamp(32px, 2.5vw, 64px)',
-      }
+      },
     },
   },
   plugins: [],

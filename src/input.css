@@ -4,7 +4,7 @@
 
 .container{
     @apply 
-    w-full mx-auto px-[12px]
+    w-full mx-auto px-container_p
     sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] 
     xl:max-w-[1140px] 2xl:max-w-[1320px]
 }
@@ -91,7 +91,7 @@
         opacity-0 hover:opacity-100
         rounded-[50%] shadow-top_button_shadow
         transition-all duration-300 scale-[0.3]
-        xs:right-[-20px] xs:bottom-[-20px]
+        sm:right-[-20px] sm:bottom-[-20px]
     }
 
     /* HOME */
@@ -119,11 +119,42 @@
     }
 
     .homeFeaturedProperties{
-        .tns-outer{@apply w-full overflow-hidden mx-a;}
+        .sectionHeading{
+            h2{ @apply mb-2 text-[38px]; }
+            p{ @apply text-base ls-3; }
+        } 
+
+        .tns-outer{
+            @apply w-full overflow-x-hidden overflow-y-clip mx-a relative pb-12;
+            .tns-nav{
+                @apply absolute content-[''] bottom-1 left-1/2 -translate-x-1/2 z-10 flex gap-[14px];
+                button{
+                    @apply relative w-[16px] h-[16px] rounded-full
+                    bg-transparent
+                    outline-[1px] outline-homeFeaturedProperties_Nav/40
+                    ring-[1px] ring-homeFeaturedProperties_Nav_outline;
+                }
+                button::before{
+                    @apply absolute content-[''] z-[11] ty-a tx-a
+                    w-[10px] h-[10px] bg-homeFeaturedProperties_Nav/40
+                    rounded-full;
+                }
+                button.tns-nav-active{
+                    @apply ring-primary
+                }
+                button:before.tns-nav-active{
+                    @apply bg-primary;
+                }
+                button::before:hover{
+                    @apply bg-homeFeaturedProperties_Nav
+                }
+            }
+        }
+        
         .homeFeaturedProperties__entries{
-            @apply flex gap-6;
+            @apply flex gap-6 select-none;
             .homeFeaturedProperties__card{
-                @apply bg-light rounded-[10px] mb-6 lg:mb-0 md:max-w-[416px] mx-auto;
+                @apply bg-transparent rounded-[10px] mb-6 lg:mb-0 md:max-w-[416px] mx-auto;
                 .card__img{
                     @apply relative rounded-t-[10px] overflow-hidden mb-4 dark:no-mb;
                     img{
@@ -154,7 +185,7 @@
                             *{ @apply text-dark_2; }
                             span{
                                 @apply ft-md
-                                text-fs-16_xl
+                                text-fs-16_xl text-nowrap
                                 lh-150 font-text-inter;
                             }
                         }
@@ -178,7 +209,7 @@
     .homeTopRatedProperties__entries{
         @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6;
         .homeTopRatedProperties__card{
-            @apply bg-light rounded-[10px] mb-6 lg:mb-0 md:max-w-[416px] mx-auto;
+            @apply bg-light rounded-[10px] mb-6 lg:mb-0 w-full md:max-w-[416px] mx-auto;
             .card__img{
                 @apply relative rounded-t-[10px] overflow-hidden mb-4 dark:no-mb;
                 img{
@@ -347,6 +378,7 @@
     .mx-a{ @apply mx-auto }
 
     .tx-a{ @apply left-1/2 -translate-x-1/2 }
+    .ty-a{ @apply top-1/2 -translate-y-1/2 }
 
     .py-5v{ @apply py-[5vh] }
     .py-10v{ @apply py-[10vh] }
@@ -398,8 +430,20 @@
     .lh-180{
         @apply leading-[180%]
     }
-    .-ls-0{
-        @apply tracking-[-0.00em];
+    .ls-4{
+        @apply tracking-[0.04em];
+    }
+    .ls-3{
+        @apply tracking-[0.03em];
+    }
+    .ls-2{
+        @apply tracking-[0.02em];
+    }
+    .ls-1{
+        @apply tracking-[0.01em];
+    }
+    .ls-0{
+        @apply tracking-[0.00em];
     }
     .-ls-1{
         @apply tracking-[-0.01em];

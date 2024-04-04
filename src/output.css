@@ -600,12 +600,6 @@ p {
   width: 100%;
 }
 
-@media (min-width: 490px) {
-  .container {
-    max-width: 490px;
-  }
-}
-
 @media (min-width: 576px) {
   .container {
     max-width: 576px;
@@ -718,7 +712,7 @@ p {
   opacity: 1;
 }
 
-@media (min-width: 490px) {
+@media (min-width: 576px) {
   .back-to-top {
     right: -20px;
     bottom: -20px;
@@ -845,18 +839,154 @@ p {
 }
 
 .homeFeaturedProperties{
+  .sectionHeading{
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 38px;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+    p {
+      letter-spacing: 0.03em;
+    }
+  }
+  .tns-outer {
+    position: relative;
+  }
   .tns-outer {
     width: 100%;
   }
   .tns-outer {
-    overflow: hidden;
+    overflow-x: hidden;
+  }
+  .tns-outer {
+    overflow-y: clip;
+  }
+  .tns-outer {
+    padding-bottom: 3rem;
   }
   .tns-outer {
     margin-left: auto;
     margin-right: auto;
   }
+  .tns-outer{
+    .tns-nav {
+      position: absolute;
+    }
+    .tns-nav {
+      bottom: 0.25rem;
+    }
+    .tns-nav {
+      left: 50%;
+    }
+    .tns-nav {
+      z-index: 10;
+    }
+    .tns-nav {
+      display: flex;
+    }
+    .tns-nav {
+      --tw-translate-x: -50%;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+    .tns-nav {
+      gap: 14px;
+    }
+    .tns-nav {
+      --tw-content: '';
+      content: var(--tw-content);
+    }
+    .tns-nav{
+      button {
+        position: relative;
+      }
+      button {
+        height: 16px;
+      }
+      button {
+        width: 16px;
+      }
+      button {
+        border-radius: 9999px;
+      }
+      button {
+        background-color: transparent;
+      }
+      button {
+        outline-width: 1px;
+      }
+      button {
+        outline-color: rgb(201 203 204 / 0.4);
+      }
+      button {
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+      }
+      button {
+        --tw-ring-color: rgba(44, 45, 47, 0.2);
+      }
+      button::before {
+        position: absolute;
+      }
+      button::before {
+        z-index: 11;
+      }
+      button::before {
+        height: 10px;
+      }
+      button::before {
+        width: 10px;
+      }
+      button::before {
+        border-radius: 9999px;
+      }
+      button::before {
+        background-color: rgb(201 203 204 / 0.4);
+      }
+      button::before {
+        --tw-content: '';
+        content: var(--tw-content);
+      }
+      button::before {
+        left: 50%;
+      }
+      button::before {
+        --tw-translate-x: -50%;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+      }
+      button::before {
+        top: 50%;
+      }
+      button::before {
+        --tw-translate-y: -50%;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+      }
+      button.tns-nav-active {
+        --tw-ring-opacity: 1;
+        --tw-ring-color: rgb(165 122 90 / var(--tw-ring-opacity));
+      }
+      button.tns-nav-active:before {
+        --tw-bg-opacity: 1;
+        background-color: rgb(165 122 90 / var(--tw-bg-opacity));
+      }
+      button:hover::before {
+        --tw-bg-opacity: 1;
+        background-color: rgb(201 203 204 / var(--tw-bg-opacity));
+      }
+    }
+  }
   .homeFeaturedProperties__entries {
     display: flex;
+  }
+  .homeFeaturedProperties__entries {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
   }
   .homeFeaturedProperties__entries {
     gap: 1.5rem;
@@ -873,8 +1003,7 @@ p {
       border-radius: 10px;
     }
     .homeFeaturedProperties__card {
-      --tw-bg-opacity: 1;
-      background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+      background-color: transparent;
     }
     @media (min-width: 768px) {
       .homeFeaturedProperties__card {
@@ -1040,6 +1169,9 @@ p {
               color: rgb(27 28 30 / var(--tw-text-opacity));
             }
             span {
+              text-wrap: nowrap;
+            }
+            span {
               font-family: Inter, sans-serif;
             }
             span {
@@ -1105,6 +1237,9 @@ p {
   }
   .homeTopRatedProperties__card {
     margin-bottom: 1.5rem;
+  }
+  .homeTopRatedProperties__card {
+    width: 100%;
   }
   .homeTopRatedProperties__card {
     border-radius: 10px;
@@ -1761,12 +1896,20 @@ p {
   padding-bottom: 30px;
 }
 
+.pb-\[32\.5px\] {
+  padding-bottom: 32.5px;
+}
+
 .pt-\[100px\] {
   padding-top: 100px;
 }
 
 .pt-\[25px\] {
   padding-top: 25px;
+}
+
+.pt-\[50px\] {
+  padding-top: 50px;
 }
 
 .text-center {
@@ -1982,6 +2125,10 @@ p {
   line-height: 130%;
 }
 
+.ls-2 {
+  letter-spacing: 0.02em;
+}
+
 .-ls-2 {
   letter-spacing: -0.02em;
 }
@@ -1990,8 +2137,8 @@ p {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: calc(1.5rem * 0.5);
+  padding-right: calc(1.5rem * 0.5);
 }
 
 @media (min-width: 576px) {
@@ -2078,6 +2225,10 @@ p {
   .md\:py-\[48px\] {
     padding-top: 48px;
     padding-bottom: 48px;
+  }
+
+  .md\:pb-\[65px\] {
+    padding-bottom: 65px;
   }
 
   .md\:text-\[clamp\(32px\2c 2\.2vw\2c 64px\)\] {
