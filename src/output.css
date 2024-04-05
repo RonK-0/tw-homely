@@ -1585,8 +1585,6 @@ p {
   padding-left: 0.875rem;
   padding-right: 0.875rem;
   font-size: 1rem;
-  --tw-text-opacity: 1;
-  color: rgb(121 125 134 / var(--tw-text-opacity));
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
@@ -1600,6 +1598,33 @@ p {
   }
 }
 
+input {
+  --tw-text-opacity: 1;
+  color: rgb(121 125 134 / var(--tw-text-opacity));
+}
+
+input::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(121 125 134 / var(--tw-text-opacity));
+}
+
+input::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(121 125 134 / var(--tw-text-opacity));
+}
+
+textarea::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(121 125 134 / var(--tw-text-opacity));
+}
+
+textarea::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(121 125 134 / var(--tw-text-opacity));
+}
+
+/* INFORMATION SECTION*/
+
 .property__sched__info .house__info ul li {
   margin-top: 16px;
   margin-bottom: 16px;
@@ -1607,8 +1632,6 @@ p {
   align-items: center;
   gap: 0.75rem;
 }
-
-/* INFORMATION SECTION*/
 
 .floor_plans_accordion.active .floor__plan__img {
   display: block;
@@ -1644,8 +1667,8 @@ p {
   background-color: rgb(250 250 250 / var(--tw-bg-opacity));
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
-  padding-left: 0.875rem;
-  padding-right: 0.875rem;
+  padding-left: 0.85rem;
+  padding-right: 0.85rem;
   font-size: 1rem;
   --tw-text-opacity: 1;
   color: rgb(121 125 134 / var(--tw-text-opacity));
@@ -1724,6 +1747,22 @@ p {
   i {
     cursor: pointer;
   }
+}
+
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+textarea:focus::placeholder {
+  color: transparent;
 }
 
 /* checkbox */
@@ -1868,8 +1907,8 @@ p {
   position: relative;
 }
 
-.bottom-\[0\.2rem\] {
-  bottom: 0.2rem;
+.bottom-\[0\.38rem\] {
+  bottom: 0.38rem;
 }
 
 .left-\[50\%\] {
@@ -2023,10 +2062,6 @@ p {
 
 .h-\[4rem\] {
   height: 4rem;
-}
-
-.h-\[50vh\] {
-  height: 50vh;
 }
 
 .h-\[60vh\] {
@@ -2846,6 +2881,10 @@ p {
 }
 
 @media (min-width: 1200px) {
+  .xl\:bottom-\[0\.2rem\] {
+    bottom: 0.2rem;
+  }
+
   .xl\:mb-3 {
     margin-bottom: 0.75rem;
   }

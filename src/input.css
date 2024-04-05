@@ -311,20 +311,30 @@
 
     /* property__sched__info */
 
-    /* SCHEDULE FORM */
+    /* SCHEDULE FORM */ 
     
     .schedule__tour .form__wrapper input, textarea{
-        @apply block w-full py-[0.625rem] px-[0.875rem] xl:py-[0.9rem] xl:px-[1.875rem] border-dark border-[1px] bg-light text-gray
+        @apply block w-full py-[0.625rem] px-[0.875rem] xl:py-[0.9rem] xl:px-[1.875rem] border-dark border-[1px] bg-light
         text-[1rem] rounded-[0.313rem] outline-none
     }   
 
+    input {
+        @apply text-gray
+    }
+
+    input::placeholder {
+        @apply text-gray
+    }
+
+    textarea::placeholder {
+        @apply text-gray
+    }
+    
+    /* INFORMATION SECTION*/
 
     .property__sched__info .house__info ul li{
         @apply flex gap-3 items-center my-[16px] 
     }
-    
-
-    /* INFORMATION SECTION*/
 
     .floor_plans_accordion.active .floor__plan__img {
         @apply block
@@ -351,7 +361,7 @@
     }
 
     .form__identity input {
-        @apply block w-full py-[0.625rem] px-[0.875rem] xl:py-[0.9rem] xl:px-[1.3rem] border-dark border-[1px] bg-light text-gray
+        @apply block w-full py-[0.625rem] px-[0.85rem] xl:py-[0.9rem] xl:px-[1.3rem] border-dark border-[1px] bg-light text-gray
         text-[1rem] rounded-[0.313rem] outline-none
     }
 
@@ -383,9 +393,16 @@
         i {
             @apply cursor-pointer;
         }
-        
+
     }
 
+    input:focus::placeholder {
+        @apply text-transparent
+    }
+
+    textarea:focus::placeholder {
+        @apply text-transparent
+    }
 
     /* checkbox */
 
