@@ -36,22 +36,17 @@
         @apply scroll-smooth
         overflow-x-hidden overflow-y-scroll
     }
-    
     body{
         @apply bg-light h-full
         font-text-poppins ft-nm text-dark
         /* overflow-hidden */
         text-text_xs sm:text-text_sm md:text-text_md lg:text-text_lg
     }
-    body, form, input, a, span{
+    *, body, h1, h2, h3, h4, p, form, input, a, span{
         @apply transition-all duration-300 ease-in-out
     }
-    button{
-        @apply cursor-pointer
-    }
-    p{
-        @apply tracking-[0.03rem]
-    }
+    button{ @apply cursor-pointer }
+    p{ @apply tracking-[0.03rem] }
     .tns-visually-hidden { @apply hidden; }
     .tns-outer { @apply w-full overflow-hidden mx-a; }
 }
@@ -104,7 +99,8 @@
     .sectionHeading {
         @apply text-center mb-heading_margin_bottom;
         h2{ @apply font-text-poppins ft-sb uppercase lh-120 -ls-1
-            text-[32px] sm:text-[38px] md:text-heading_h2  mb-2; }
+            text-[32px] sm:text-[38px] md:text-heading_h2
+            text-dark dark:text-light mb-2; }
         p{ @apply font-text-inter text-base lh-140 text-gray dark:text-light_2
             mb-4 sm:mb-6 md:mb-9 xl:mb-0; }
         br{ @apply hidden md:inline-block;}
@@ -162,7 +158,6 @@
         }
     }
 
-    /* one stop property solution to be added */
     .homeSolution{
         .sectionHeading p{ @apply no-mb; }
         .homeSolution__wrapper{
@@ -220,6 +215,18 @@
     }
 
     /* client success stories to be added */
+    .homeClientStories{
+        .homeClientStories__wrapper{
+            @apply flex;
+            .homeClientStories__card{
+                @apply relative bg-light rounded-[10px] mx-[12px] overflow-hidden font-text-inter text-center;
+                img.storiesQuoteSym { @apply absolute top-0 left-0 z-10; }
+                img.storiesClientImg { @apply pt-[50px] mt-[-100px] mb-2; }
+                h4.storiesName { @apply ft-md text-bannerSlider_card_heading lh-130 text-dark mb-2; }
+                p.storiesQuoteText {@apply p-testimonial_text text-gray line-clamp-4 text-ellipsis mb-[2px]; }
+            }
+        }
+    }
 
     .homeAgents{
         .homeAgents__wrapper{
@@ -242,7 +249,6 @@
             }
         }
     }
-
 
     .homeBlogEntries{
         @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6;

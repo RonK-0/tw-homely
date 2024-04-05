@@ -97,6 +97,7 @@ module.exports = {
         'propertySolution_p' : 'clamp(40px, 3.3vw, 90px) clamp(24px, 1.66vw, 48px)',
         'property_entry_price' : 'clamp(6px, 0.5vw, 10px)',
         'blog_card_text_content' : 'clamp(20px, 1.25vw, 32px) clamp(14px, 0.83vw, 24px)',
+        'testimonial_text' : '0 clamp(18px, 1.66vw, 40px)',
         'clientSlider_p' : 'clamp(64px, 5.208vw, 200px)',
         'button': 'clamp(8px,0.67vw,16px) clamp(16px,1.25vw,32px)',
         'py100' : 'clamp(64px, 5.208vw, 200px)',

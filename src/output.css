@@ -479,7 +479,7 @@ body {
   }
 }
 
-body, form, input, a, span {
+*, body, h1, h2, h3, h4, p, form, input, a, span {
   transition-property: all;
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -928,6 +928,10 @@ p {
     text-transform: uppercase;
   }
   h2 {
+    --tw-text-opacity: 1;
+    color: rgb(13 13 13 / var(--tw-text-opacity));
+  }
+  h2 {
     font-weight: 600;
   }
   h2 {
@@ -945,6 +949,10 @@ p {
     h2 {
       font-size: clamp(36px, 2.5vw, 64px);
     }
+  }
+  h2:where(.dark, .dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(250 250 250 / var(--tw-text-opacity));
   }
   p {
     margin-bottom: 1rem;
@@ -1348,8 +1356,6 @@ p {
     }
   }
 }
-
-/* one stop property solution to be added */
 
 .homeSolution{
   .sectionHeading p {
@@ -1829,6 +1835,95 @@ p {
 }
 
 /* client success stories to be added */
+
+.homeClientStories{
+  .homeClientStories__wrapper {
+    display: flex;
+  }
+  .homeClientStories__wrapper{
+    .homeClientStories__card {
+      position: relative;
+    }
+    .homeClientStories__card {
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+    .homeClientStories__card {
+      overflow: hidden;
+    }
+    .homeClientStories__card {
+      border-radius: 10px;
+    }
+    .homeClientStories__card {
+      --tw-bg-opacity: 1;
+      background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+    }
+    .homeClientStories__card {
+      text-align: center;
+    }
+    .homeClientStories__card {
+      font-family: Inter, sans-serif;
+    }
+    .homeClientStories__card{
+      img.storiesQuoteSym {
+        position: absolute;
+      }
+      img.storiesQuoteSym {
+        top: 0px;
+      }
+      img.storiesQuoteSym {
+        left: 0px;
+      }
+      img.storiesQuoteSym {
+        z-index: 10;
+      }
+      img.storiesClientImg {
+        margin-top: -100px;
+      }
+      img.storiesClientImg {
+        margin-bottom: 0.5rem;
+      }
+      img.storiesClientImg {
+        padding-top: 50px;
+      }
+      h4.storiesName {
+        margin-bottom: 0.5rem;
+      }
+      h4.storiesName {
+        font-size: clamp(19px, 1.2vw, 32px);
+      }
+      h4.storiesName {
+        --tw-text-opacity: 1;
+        color: rgb(13 13 13 / var(--tw-text-opacity));
+      }
+      h4.storiesName {
+        font-weight: 500;
+      }
+      h4.storiesName {
+        line-height: 130%;
+      }
+      p.storiesQuoteText {
+        margin-bottom: 2px;
+      }
+      p.storiesQuoteText {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+      }
+      p.storiesQuoteText {
+        text-overflow: ellipsis;
+      }
+      p.storiesQuoteText {
+        padding: 0 clamp(18px, 1.66vw, 40px);
+      }
+      p.storiesQuoteText {
+        --tw-text-opacity: 1;
+        color: rgb(121 125 134 / var(--tw-text-opacity));
+      }
+    }
+  }
+}
 
 .homeAgents{
   .homeAgents__wrapper {
