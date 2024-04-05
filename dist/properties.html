@@ -54,7 +54,7 @@
 
     <section class="homeBanner bg-home_banner_bg bg-cover bg-center">
         <div class="container">
-            <div class="homeBanner__wrapper h-[30vh] f-col-center">
+            <div class="homeBanner__wrapper h-[50vh] f-col-center">
                 <h1 class="text-center text-banner_h1 ft-b text-light uppercase">properties</h1>
             </div>
         </div>
@@ -65,7 +65,7 @@
         <div class="container">
             <div class="properties__wrapper sm:pb-10 lg:grid lg:grid-cols-2 lg:justify-items-center">
                 <div class="properties__contents">
-                    <div class="properties__items md:grid md:grid-cols-2 md:gap-4 lg:w-[130%] lg:grid lg:grid-cols-2 lg:justify-items-center">
+                    <div class="properties__items md:grid md:grid-cols-2 md:gap-7 lg:w-[130%] lg:grid lg:grid-cols-2 lg:justify-items-center">
                         <!-- properties-card-1 -->
                         <div class="properties__card">
                             <div class="properties__card__img relative">
@@ -170,49 +170,44 @@
                             </div>
                         </div>
                     </div>
-                        <div class="selecting lg:translate-x-[6rem] lg:w-[60%] lg:h-[92%]">
+                        <div class="selecting  pb-[3px] md:translate-x-[-4rem] md:w-[120%] lg:translate-x-[7.5rem] lg:w-[65%] lg:h-[92%]">
                                 <div class="selecting__wrapper">
-                                    <div class="selecting__forms">
-                                        <div class="selecting__select">
-                                                <div class="selecting__form">
-                                                    <h2 class="p-3 pl-0">City</h2>
-                                                    <select class="selector" name="" id="">
-                                                        <option value="">New York City, NY</option>
-                                                        <option value="">Los Angeles, CA</option>
-                                                        <option value="">Chicago, IL</option>
-                                                        <option value="">Houston, TX</option>
-                                                        <option value="">Phoenix, AZ</option>
-                                                        <option value="">Philadelphia, PA</option>
-                                                        <option value="">San Antonio, TX</option>
-                                                        <option value="">San Diego, CA</option>
-                                                        <option value="">Dallas, TX</option>
-                                                        <option value="">San Jose, CA</option>
-                                                    </select>
-                                                    <h2 class="p-5 pl-0">Property Category</h2>
-                                                    <select class="selector" name="" id="">
-                                                        <option value="">House</option>
-                                                        <option value="">Apartment</option>
-                                                        <option value="">Townhome</option>
-                                                        <option value="">Office</option>
-                                                        <option value="">Villa</option>
-                                                        <option value="">Bungalow</option>
-                                                        <option value="">Loft</option>
-                                                    </select>
+                                    <div class="selecting__forms ">
+                                        <div class="selecting__select ">
+                                                <div class="selecting__form lg:grid lg:grid-cols-1 md:grid md:grid-cols-2 md:gap-6">
+                                                    <div>
+                                                        <h2 class="p-3 pl-0">City</h2>
+                                                        <select class="selector" name="" id="">
+                                                            <option value="">New York City, NY</option>
+                                                            <option value="">Los Angeles, CA</option>
+                                                            <option value="">Chicago, IL</option>
+                                                            <option value="">Houston, TX</option>
+                                                            <option value="">Phoenix, AZ</option>
+                                                            <option value="">Philadelphia, PA</option>
+                                                            <option value="">San Antonio, TX</option>
+                                                            <option value="">San Diego, CA</option>
+                                                            <option value="">Dallas, TX</option>
+                                                            <option value="">San Jose, CA</option>
+                                                        </select>
+                                                    </div>
+                                                    <div>
+                                                        <h2 class="p-3 pl-0">Property Category</h2>
+                                                        <select class="selector" name="" id="">
+                                                            <option value="">House</option>
+                                                            <option value="">Apartment</option>
+                                                            <option value="">Townhome</option>
+                                                            <option value="">Office</option>
+                                                            <option value="">Villa</option>
+                                                            <option value="">Bungalow</option>
+                                                            <option value="">Loft</option>
+                                                        </select>
+                                                    </div>    
                                                 </div>
                                         </div>
-                                        <div class="selecting__radiobutton">
-                                            <h2 class="p-5 pl-0">Number of Bedrooms</h2>
-                                            <div class="selecting__radiobutton__wrap">
-                                                <ul>
-                                                    <!-- <li><div><input type="checkbox" class="accent-primary"> Room 1</div></li>
-                                                    <li><div><input type="checkbox" class="accent-primary"> Room 2</div></li>
-                                                    <li><div><input type="checkbox" class="accent-primary"> Room 3</div></li>
-                                                    <li><div><input type="checkbox" class="accent-primary"> Room 4</div></li>
-                                                    <li><div><input type="checkbox" class="accent-primary"> Room 5</div></li>
-                                                    <li><div><input type="checkbox" class="accent-primary"> Room 6</div></li> -->
-                                                </ul>
-                                            </div>
-                                                <h2 class="p-5 pl-0">Number of Bathrooms</h2>
+                                        <!-- radiobutton for bedrooms -->
+                                        <div class="selecting__radiobutton lg:grid lg:grid-cols-1 md:grid md:grid-cols-2 md:gap-6">
+                                            <div>
+                                                <h2 class="p-5 pl-0">Number of Bedrooms</h2>
                                                 <div class="selecting__radiobutton__wrap">
                                                     <ul>
                                                         <li>
@@ -245,54 +240,95 @@
                                                                 <input type="checkbox" id="checkbox"><label for="checkbox"> Room 6</label><span class="checkmark"></span>
                                                             </label>
                                                         </li>
-                                                        <!-- <li><div><input type="checkbox" class="accent-primary"> Bathroom 1</div></li>
-                                                        <li><div><input type="checkbox" class="accent-primary"> Bathroom 2</div></li>
-                                                        <li><div><input type="checkbox" class="accent-primary"> Bathroom 3</div></li>
-                                                        <li><div><input type="checkbox" class="accent-primary"> Bathroom 4</div></li>
-                                                        <li><div><input type="checkbox" class="accent-primary"> Bathroom 5</div></li>
-                                                        <li><div><input type="checkbox" class="accent-primary"> Bathroom 6</div></li> -->
                                                     </ul>
                                                 </div>
-                                        </div>
-                                        <h2 class="pl-8">Square Feet</h2>
-                                        <div class="range">
-                                            <div class="range__slider">
-                                                <span class="range__selected"></span>
-                                              </div>
-                                              <div class="range__input accent-primary">
-                                                <input type="range" class="min" min="0" max="1000" value="300" step="10">
-                                                <input type="range" class="max" min="0" max="1000" value="700" step="10">
-                                              </div>
-                                              <div class="range__sqft">
-                                                <h3 class="p-3 text-slate-500">300 sq. ft. - 1000 sq. ft.</h3>
-                                              </div>
-                                              <div class="range__price hidden">      
-                                                  <input type="number" name="min" value="300">     
-                                                  <label for="max"> sq. ft.</label> 
-                                                  <input type="number" name="max" value="700">    
-                                                  <label for="max"> sq. ft.</label>
-                                              </div>
-                                        </div>
-                                        <h2 class="pl-8">Price</h2>
-                                        <div class="ranges">
-                                            <div class="range-slider">
-                                                <span class="range-selected"></span>
-                                              </div>
-                                              <div class="range-input accent-primary">
-                                                <input type="range" class="min1" min="0" max="1000" value="300" step="10">
-                                                <input type="range" class="max1" min="0" max="1000" value="700" step="10">
-                                              </div>
-                                              <div class="range-sqft">
-                                                <h3 class="p-3 text-slate-500">Range: $1000 - 10,000</h3>
-                                              </div>
-                                              <div class="range-price hidden">      
-                                                  <input type="number" name="min1" value="300">     
-                                                  <label for="max"> sq. ft.</label> 
-                                                  <input type="number" name="max1" value="700">    
-                                                  <label for="max"> sq. ft.</label>
-                                              </div>
+                                            </div>
+                                            <!-- radiobutton for bathroom -->
+                                            <div>
+                                                <h2 class="p-5 pl-0">Number of Bathrooms</h2>
+                                                <div class="selecting__radiobutton__wrap">
+                                                    <ul class="grid grid-cols-2">
+                                                        <li>
+                                                            <label class="reminder">
+                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 1</label><span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label class="reminder">
+                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 2</label><span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label class="reminder">
+                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 3</label><span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label class="reminder">
+                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 4</label><span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label class="reminder">
+                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 5</label><span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label class="reminder">
+                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 6</label><span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                         
+                                        <div class="lg:grid lg:grid-cols-1 md:grid md:grid-cols-2">
+                                                <!-- track ranges 1 -->
+                                                <div>
+                                                    <h2 class="p-4">Square Feet</h2>
+                                                    <div class="range">
+                                                        <div class="range__slider">
+                                                            <span class="range__selected"></span>
+                                                        </div>
+                                                        <div class="range__input accent-primary">
+                                                            <input type="range" class="min" min="0" max="1000" value="300" step="10">
+                                                            <input type="range" class="max" min="0" max="1000" value="700" step="10">
+                                                        </div>
+                                                        <div class="range__sqft">
+                                                            <h3 class="text-slate-500 text-[20px] pt-[10px]">300 sq. ft. - 1000 sq. ft.</h3>
+                                                        </div>
+                                                        <div class="range__price hidden">      
+                                                            <input type="number" name="min" value="300">     
+                                                            <label for="max"> sq. ft.</label> 
+                                                            <input type="number" name="max" value="700">    
+                                                            <label for="max"> sq. ft.</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <!-- track ranges 2 -->
+                                                <div>
+                                                    <h2 class="p-4">Price</h2>
+                                                    <div class="ranges">
+                                                        <div class="range-slider">
+                                                            <span class="range-selected"></span>
+                                                        </div>
+                                                        <div class="range-input accent-primary">
+                                                            <input type="range" class="min1" min="0" max="1000" value="300" step="10">
+                                                            <input type="range" class="max1" min="0" max="1000" value="700" step="10">
+                                                        </div>
+                                                        <div class="range-sqft">
+                                                            <h3 class="text-slate-500 text-[20px] pt-[10px]">Range: $1000 - 10,000</h3>
+                                                        </div>
+                                                        <div class="range-price hidden">      
+                                                            <input type="number" name="min1" value="300">     
+                                                            <label for="max"> sq. ft.</label> 
+                                                            <input type="number" name="max1" value="700">    
+                                                            <label for="max"> sq. ft.</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

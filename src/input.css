@@ -288,6 +288,155 @@
         * { @apply select-none; }
         .homeClientSlider_logos img{ @apply w-[236px] max-h-[104px] pr-[24px] object-scale-down; }
     }
+
+    /* PROPERTIES STYLES */
+    .properties{
+        @apply pt-9 
+    }
+    .properties__card__img img{
+        @apply rounded-lg w-[100%] object-cover
+    }
+    .properties__card ul{
+        @apply pb-2 flex flex gap-2
+    }
+    .properties__card ul li{
+        @apply text-[16px] 
+    }
+    .properties__card{
+        @apply pb-7 
+    }
+    .properties__card p{
+        @apply pb-2 pt-4 
+    }
+    .selecting{
+        @apply bg-l_gray rounded-md p-2 md:w-[110%]
+    }
+    .selecting__form{
+        @apply p-[10px] 
+    }
+    .selecting__forms h2{
+        @apply  font-medium text-[23px]
+    }
+    .selecting .selector{
+        @apply border-[1px] border-dark rounded-md bg-light p-[21.5px] text-gray w-[100%] text-[16px]
+    }
+    .selecting__radiobutton{
+      @apply  p-[10px]  w-[100%] text-[16px]
+    }
+    .selecting__radiobutton__wrap ul{
+        @apply border-[1px] gap-2 p-5 bg-light border-dark text-gray  rounded-md grid grid-cols-2 
+    }
+    .pagination__list{
+        @apply flex gap-4 text-lg justify-center 
+    }
+    .pagination__list li{
+        @apply  bg-light shadow-md p-3 rounded-md h-9 leading-3
+    }
+    .pagination__list li:hover{
+        @apply  bg-primary text-light shadow-md p-3 rounded-md h-9 leading-3
+    }
+
+    /* END PROPERTY STYLES */
+
+    /* reminders styles */
+    .reminder {
+        @apply relative block ml-[10px] pl-[35px] mb-5 cursor-pointer text-lg select-none;
+        input[type="checkbox"]{
+            @apply absolute h-0 w-0 opacity-0 cursor-pointer;
+        }
+        span.checkmark{
+            @apply absolute top-0 left-0 h-[20px] w-[20px] bg-light_2;
+        }
+        span.checkmark:after {
+            @apply hidden absolute content-['']
+            ty-a tx-a w-[7px] h-[17px] rotate-45
+          border-light border-r-[2px] border-b-[2px];
+        }
+        input:checked ~ .checkmark:after {
+            @apply block;
+        }
+    }
+
+    .reminder:hover input ~ .checkmark {
+        @apply bg-light_2;
+    }
+    .reminder input:checked ~ .checkmark{
+        @apply animate-onCheck bg-primary;
+    }
+    .reminder input:not(:checked) ~ .checkmark{
+        @apply animate-unCheck;
+    }
+
+    /* RANGE 1 STYLES */
+    .range{
+        @apply m-3 lg:p-10 rounded-md bg-light p-6 border 
+    }
+    .range__slider{
+        @apply h-[5px] relative bg-slate-300 rounded-[2px]
+    }
+    .range__selected{
+        @apply h-[100%] left-[30%] right-[30%] absolute bg-primary rounded-[5px] 
+    }
+    .range__input{
+        @apply relative;
+    }
+    .range__input input{
+        @apply absolute /* to change to absolute */ w-[100%] h-[5px] top-[-7px] bg-transparent pointer-events-none appearance-none
+    }
+    .range__input input::-webkit-slider-thumb{
+        @apply h-[20px] w-[20px] rounded-[50%] pointer-events-auto select-none
+    }
+    .range__input input::-moz-range-thumb{
+        @apply h-[50px] w-[50px] rounded-[50%] pointer-events-auto select-none appearance-none
+    }
+    .range__price{
+        @apply mx-[0] my-[30px] w-[100%] flex justify-center items-center
+    }
+    .range__price label{
+        @apply mr-[5px]
+    }
+    .range__price input{
+        @apply w-[40px] p-[5px]
+    }
+    .range__price input:first-of-type{
+        @apply mr-[15px]
+    }
+
+    /* END RANGE*/
+    /* END RANGE 2*/
+    .ranges{
+        @apply m-3 lg:p-10 rounded-md bg-light p-6 border
+    }
+    .range-slider{
+        @apply h-[5px] relative bg-slate-300 rounded-[2px]
+    }
+    .range-selected{
+        @apply h-[100%] left-[30%] right-[30%] absolute bg-primary rounded-[5px] 
+    }
+    .range-input{
+        @apply relative;
+    }
+    .range-input input{
+        @apply absolute /* to change to absolute */ w-[100%] h-[5px] top-[-7px] bg-transparent pointer-events-none appearance-none
+    }
+    .range-input input::-webkit-slider-thumb{
+        @apply h-[20px] w-[20px] rounded-[50%] pointer-events-auto select-none
+    }
+    .range-input input::-moz-range-thumb{
+        @apply h-[50px] w-[50px] rounded-[50%] pointer-events-auto select-none appearance-none
+    }
+    .range-price{
+        @apply mx-[0] my-[30px] w-[100%] flex justify-center items-center
+    }
+    .range-price label{
+        @apply mr-[5px]
+    }
+    .range-price input{
+        @apply w-[40px] p-[5px]
+    }
+    .range-price input:first-of-type{
+        @apply mr-[15px]
+    }
 }
 
 @layer utilities{
