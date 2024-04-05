@@ -109,7 +109,7 @@
     .homeFeaturedProperties{
         .sectionHeading p{ @apply text-base ls-3; }
         .tns-outer{
-            @apply relative pb-12;
+            @apply relative pb-12 !important;
             .tns-nav{
                 @apply absolute content-[''] bottom-1 left-1/2 -translate-x-1/2 z-10 flex gap-[14px];
                 button{
@@ -302,7 +302,7 @@
     /* SCHEDULE FORM */ 
     
     .schedule__tour .form__wrapper input, textarea{
-        @apply block w-full py-[0.625rem] px-[0.875rem] xl:py-[0.9rem] xl:px-[1.875rem] border-dark border-[1px] bg-light
+        @apply block w-full py-[0.625rem] px-[0.875rem] xl:py-[0.9rem] xl:px-[1.5rem] border-dark border-[1px] bg-light
         text-[1rem] rounded-[0.313rem] outline-none
     }   
 
@@ -325,7 +325,7 @@
     }
 
     .floor_plans_accordion.active .floor__plan__img {
-        @apply block
+        @apply h-full transition-all
     }
 
     /* house demo */
@@ -348,7 +348,7 @@
         @apply content-['☆']
     }
 
-    .form__identity input {
+    .form__identity input, textarea {
         @apply block w-full py-[0.625rem] px-[0.85rem] xl:py-[0.9rem] xl:px-[1.3rem] border-dark border-[1px] bg-light text-gray
         text-[1rem] rounded-[0.313rem] outline-none
     }
@@ -420,6 +420,58 @@
     }
     .reminder input:not(:checked) ~ .checkmark{
         @apply animate-unCheck;
+    }
+
+    .propertyCheckout{
+        .sectionHeading p{ @apply text-base ls-3; }
+        .tns-outer{
+            @apply relative pb-12 !important;
+            .tns-nav{
+                @apply absolute content-[''] bottom-1 left-1/2 -translate-x-1/2 z-10 flex gap-[14px];
+                button{
+                    @apply relative w-[16px] h-[16px] rounded-full bg-transparent
+                    outline-[1px] outline-homeFeaturedProperties_Nav/40
+                    ring-[1px] ring-homeFeaturedProperties_Nav_outline dark:ring-light/70;
+                }
+                button::before{
+                    @apply absolute content-[''] z-[11] ty-a tx-a
+                    w-[10px] h-[10px] bg-homeFeaturedProperties_Nav/40 dark:bg-light/60 rounded-full;
+                }
+                button.tns-nav-active{ @apply ring-primary}
+                button:before.tns-nav-active{ @apply bg-primary;}
+                button::before:hover{ @apply bg-homeFeaturedProperties_Nav }
+            }
+        }
+        
+        .propertyCheckout__entries{
+            @apply flex gap-6 select-none;
+            .propertyCheckout__card{
+                @apply bg-transparent dark:bg-l_gray rounded-[10px] mb-6 lg:mb-0 md:max-w-[416px] mx-auto;
+                .card__img{
+                    @apply relative rounded-t-[10px] overflow-hidden mb-4 dark:no-mb;
+                    img{ @apply w-full object-cover transition-all duration-[0.6s] ease-linear; }
+                    .price{
+                        @apply bg-light p-property_entry_price no-mb rounded-[5px]
+                        ft-md text-property_entry_price font-text-inter text-dark_2
+                        absolute left-[16px] bottom-[16px];
+                    }
+                }
+                .card__text{
+                    @apply f-col items-start dark:p-3;
+                    a{ @apply text-dark text-[23px] font-text-inter ft-md lh-130 capitalize mb-4; }
+                    p.location{  @apply text-fs-19 ft-nm lh-140 text-dark font-text-inter mb-2 }
+                    ul{
+                        @apply pl-0  mb-4 flex;
+                        li{
+                            @apply mr-5 flex items-center gap-2;
+                            *{ @apply text-dark_2; }
+                            span{ @apply ft-md text-fs-16_xl text-nowrap lh-150 font-text-inter;}
+                        }
+                    }
+                }
+            }
+            .propertyCheckout__card:hover .card__img img { @apply scale-110 transition-all duration-[0.6s] ease-linear; }
+        }
     }
 }
 
