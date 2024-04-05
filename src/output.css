@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -211,6 +211,8 @@ textarea {
   /* 1 */
   line-height: inherit;
   /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
   color: inherit;
   /* 1 */
   margin: 0;
@@ -234,9 +236,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -552,6 +554,10 @@ p {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 ::backdrop {
@@ -602,6 +608,10 @@ p {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 .container {
@@ -1009,10 +1019,10 @@ p {
     letter-spacing: 0.03em;
   }
   .tns-outer {
-    position: relative;
+    position: relative !important;
   }
   .tns-outer {
-    padding-bottom: 3rem;
+    padding-bottom: 3rem !important;
   }
   .tns-outer{
     .tns-nav {
@@ -1849,6 +1859,9 @@ p {
       margin-right: 12px;
     }
     .homeClientStories__card {
+      width: 100%;
+    }
+    .homeClientStories__card {
       overflow: hidden;
     }
     .homeClientStories__card {
@@ -1863,6 +1876,26 @@ p {
     }
     .homeClientStories__card {
       font-family: Inter, sans-serif;
+    }
+    @media (min-width: 768px) {
+      .homeClientStories__card {
+        width: 324px;
+      }
+    }
+    @media (min-width: 992px) {
+      .homeClientStories__card {
+        width: 288px;
+      }
+    }
+    @media (min-width: 1200px) {
+      .homeClientStories__card {
+        width: 348px;
+      }
+    }
+    @media (min-width: 1400px) {
+      .homeClientStories__card {
+        width: 408px;
+      }
     }
     .homeClientStories__card{
       img.storiesQuoteSym {
@@ -1886,40 +1919,53 @@ p {
       img.storiesClientImg {
         padding-top: 50px;
       }
-      h4.storiesName {
+      img.storiesClientImg {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      h4.storiesClientName {
         margin-bottom: 0.5rem;
       }
-      h4.storiesName {
+      h4.storiesClientName {
         font-size: clamp(19px, 1.2vw, 32px);
       }
-      h4.storiesName {
+      h4.storiesClientName {
         --tw-text-opacity: 1;
         color: rgb(13 13 13 / var(--tw-text-opacity));
       }
-      h4.storiesName {
+      h4.storiesClientName {
         font-weight: 500;
       }
-      h4.storiesName {
+      h4.storiesClientName {
         line-height: 130%;
       }
-      p.storiesQuoteText {
-        margin-bottom: 2px;
+      p.storiesClientQuoteText {
+        margin-bottom: 28px;
       }
-      p.storiesQuoteText {
+      p.storiesClientQuoteText {
         overflow: hidden;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 4;
       }
-      p.storiesQuoteText {
+      p.storiesClientQuoteText {
         text-overflow: ellipsis;
       }
-      p.storiesQuoteText {
+      p.storiesClientQuoteText {
         padding: 0 clamp(18px, 1.66vw, 40px);
       }
-      p.storiesQuoteText {
+      p.storiesClientQuoteText {
+        font-size: 16px;
+      }
+      p.storiesClientQuoteText {
         --tw-text-opacity: 1;
         color: rgb(121 125 134 / var(--tw-text-opacity));
+      }
+      p.storiesClientQuoteText {
+        line-height: 150%;
+      }
+      p.storiesClientQuoteText {
+        letter-spacing: 0.03em;
       }
     }
   }

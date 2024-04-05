@@ -273,7 +273,45 @@
         </div>
     </section>
 
-    <!-- section.homeClientStories -->
+    <section class="homeClientStories py100 bg-l_gray dark:bg-dark_2">
+        <div class="container">
+            <div class="sectionHeading">
+                <h2>OUR CLIENT'S SUCCESS STORIES</h2>
+                <p>Discover how our clients found their dream homes and successful<br> real estate investments with the help of our expert agents.</p>
+            </div>
+            <div class="homeClientStories__wrapper">
+                <!-- .homeClientStories__card*3>img.storiesQuoteSym[src="./img/home/quote.png"]+img.storiesClientImg[src="./img/home/img-$ (2).png"]+h4.storiesClientName{Emily Johnson}+p.storiesClientQuoteText{"The real estate agents were incredibly responsive and helpful throughout the entire process. I couldn't have asked for a better experience."} -->
+                <div class="homeClientStories__card">
+                    <img src="./img/home/quote.png" alt="" class="storiesQuoteSym">
+                    <img src="./img/home/testimonial/img-1.png" alt="" class="w-full">
+                    <img src="./img/home/testimonial/clients/img-1.png" alt="" class="storiesClientImg">
+                    <h4 class="storiesClientName">Emily Johnson</h4>
+                    <p class="storiesClientQuoteText">"The real estate agents were incredibly responsive and helpful throughout the entire process. I couldn't have asked for a better experience."</p>
+                </div>
+                <div class="homeClientStories__card">
+                    <img src="./img/home/quote.png" alt="" class="storiesQuoteSym">
+                    <img src="./img/home/testimonial/img-2.png" alt="" class="w-full">
+                    <img src="./img/home/testimonial/clients/img-2.png" alt="" class="storiesClientImg">
+                    <h4 class="storiesClientName">Sophia Rodriguez</h4>
+                    <p class="storiesClientQuoteText">"The real estate agents were incredibly responsive and helpful throughout the entire process. I couldn't have asked for a better experience."</p>
+                </div>
+                <div class="homeClientStories__card">
+                    <img src="./img/home/quote.png" alt="" class="storiesQuoteSym">
+                    <img src="./img/home/testimonial/img-3.png" alt="" class="w-full">
+                    <img src="./img/home/testimonial/clients/img-3.png" alt="" class="storiesClientImg">
+                    <h4 class="storiesClientName">Emily Johnson</h4>
+                    <p class="storiesClientQuoteText">"The real estate agents were incredibly responsive and helpful throughout the entire process. I couldn't have asked for a better experience."</p>
+                </div>
+                <div class="homeClientStories__card">
+                    <img src="./img/home/quote.png" alt="" class="storiesQuoteSym">
+                    <img src="./img/home/testimonial/img-1.png" alt="" class="w-full">
+                    <img src="./img/home/testimonial/clients/img-1.png" alt="" class="storiesClientImg">
+                    <h4 class="storiesClientName">Emily Johnson</h4>
+                    <p class="storiesClientQuoteText">"The real estate agents were incredibly responsive and helpful throughout the entire process. I couldn't have asked for a better experience."</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="homeAgents py100 bg-light dark:bg-dark">
         <div class="container">
@@ -496,7 +534,27 @@
         });
 
         //clients success slider
-
+        var homeClientTestimonies = tns({
+            container: ".homeClientStories__wrapper",
+            items: 1,
+            loop: true,
+            center: false,
+            autoplay: true,
+            autoplayHoverPause: true,
+            autoplayButtonOutput: false,
+            controls: false,
+            nav: true,
+            speed: 750,
+            autoplayTimeout: 3000,
+            preventActionWhenRunning: true,
+            mouseDrag: true,
+            touch: true,
+            navAsThumbnails: true,
+            responsive: {
+                1200: { items: 3, center: true, },
+                768:  { items: 2, },
+            }
+        });
 
         // real estate agents slider
         var agentsSlider = tns({
