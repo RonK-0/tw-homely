@@ -63,7 +63,7 @@ module.exports = {
         'blog_entry_date' : 'clamp(12px, 1.5vw, 16px)',
         'blog_entry_fa' : 'clamp(20px,1.25vw,30vw)',
 
-        'prop_banner_h1': 'clamp(64px, 3.5vw, 100px)',
+        'prop_banner_h1': 'clamp(44px, 3.5vw, 100px)',
         'prop_title': 'clamp(24px, 4vw, 40px)',
         'play_btn': 'clamp(24px, 1.66vw, 42px)',
 

@@ -53,8 +53,8 @@
 
     <section class="propBanner bg-prop_details_bg bg-cover bg-center">
         <div class="container">
-            <div class="propBanner__wrapper h-[55vh] f-col-center">
-                <h1 class="text-center text-prop_banner_h1 ft-sb text-light uppercase mt-24">Property Details</h1>
+            <div class="propBanner__wrapper h-[60vh] xl:h-[55vh] f-col-center">
+                <h1 class="text-center text-prop_banner_h1 ft-sb text-light uppercase mt-20 xl:mt-24">Property Details</h1>
             </div>
         </div>
     </section>
@@ -112,7 +112,7 @@
         <div class="container">
             <div class="property_sched__info__wrapper grid xl:grid-cols-[_26rem,_1fr] gap-6">
 
-                <!-- w-[33%] -->
+                <!-- LEFT SIDE FORM - w-[33%]-->
                 <div class="schedule__tour font-text-inter">
                     <div class="contact bg-l_blue p-[2rem] rounded-[0.65rem] mb-[1.5rem]">
                         <h2 class="mb-[16px] ft-md text-lg xl:text-2xl">Schedule a Tour</h2>
@@ -128,7 +128,8 @@
                                 </div>
                                 <input type="tel" name="phone" placeholder="Your Phone Number">
                                 <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>   
-                                <a href="#" class="bg-primary border-[2px] text-light border-primary p-[1.2rem] text-[1.188rem] hover:bg-light hover:text-primary text-center rounded-[0.32rem] block w-full">Sumbit A Tour Request</a> 
+                                <a href="#" class="bg-primary border-[2px] text-light border-primary p-[1.2rem] text-[1.188rem] hover:bg-light hover:text-primary text-center rounded-[0.32rem] block w-full">Submit A Tour Request
+                                </a> 
                             </div>
                         </form>
                     </div>
@@ -147,7 +148,7 @@
                     </div>
                 </div>
 
-                <!-- w-[67%] -->
+                <!-- RIGHT SIDE INFORMATION - w-[67%]-->
                 <div class="house__information__reviews font-text-inter">
                     <div class="house__info bg-l_blue p-[16px] xs:p-[32px] rounded-[0.65rem] mb-[2rem]">
                         <h2 class="mb-[16px] ft-md text-2xl">Details</h2>
@@ -326,27 +327,47 @@
                         </div>
                     </div>
 
-                    <div class="add__review bg-l_blue p-[16px] xs:p-[32px] rounded-[0.65rem] mb-[2rem] ">
+                    <div class="add__review bg-l_blue p-[16px] xs:p-[32px] rounded-[0.65rem] mb-[2rem] font-text-inter">
                         <h2 class="ft-md text-2xl mb-[16px]">Add A Review</h2>
                 
-                        <div class="flex items-center gap-5 mb-5">
+                        <div class="flex items-center gap-[12px] mb-5">
                             <div class="rating">
                                 <h2 class="ft-md text-2xl">Rating</h2>
                             </div>
-                            <div class="star__form">
-                                <fieldset>
-                                    <span class="star-cb-group">
-                                        <input type="radio" id="rating-0" name="rating" value="0"><label for="rating-5"></label>
-                                        <input type="radio" id="rating-1" name="rating" value="1"><label for="rating-4"></label>
-                                        <input type="radio" id="rating-2" name="rating" value="2"><label for="rating-3"></label>
-                                        <input type="radio" id="rating-3" name="rating" value="3"><label for="rating-2"></label>
-                                        <input type="radio" id="rating-4" name="rating" value="4" checked="checked"><label for="rating-1"></label>
-                                        <input type="radio" id="rating-5" name="rating" value="5" class="star-cb-clear"><label for="rating-0"></label>
-                                    </span>
-                                </fieldset>
-                            </div>
-                        </div>
 
+                            <label class="star__reviews">
+                                
+                                <input type="radio" id="rating-0" name="rating" value="0">
+                                <label class="rating-0" for="rating-0" class="opacity-0">
+                                    <button id="star-0" class="fa-solid fa-star"></button>
+                                </label>
+
+                                <input type="radio" id="rating-1" name="rating" value="1" checked="checked">
+                                <label for="rating-1">
+                                    <button id="star-1" class="star fa-solid fa-star text-primary"></button>
+                                </label>
+
+                                <input type="radio" id="rating-2" name="rating" value="2">
+                                <label for="rating-2">
+                                    <button id="star-2" class="star fa-regular fa-star text-gray"></button>
+                                </label>
+
+                                <input type="radio" id="rating-3" name="rating" value="3">
+                                <label for="rating-3">
+                                    <button id="star-3" class="star fa-regular fa-star text-gray"></button>
+                                </label>
+
+                                <input type="radio" id="rating-4" name="rating" value="4">
+                                <label for="rating-4">
+                                    <button id="star-4" class="star fa-regular fa-star text-gray"></button>
+                                </label>
+
+                                <input type="radio" id="rating-5" name="rating" value="5">
+                                <label for="rating-5">
+                                    <button id="star-5" class="star fa-regular fa-star text-gray"></button>
+                                </label>
+                            </label>
+                        </div>
                         <form action="">
                             <div class="form__review mb-5">
                                 <div class="form__identity mb-5 grid gap-3 grid-cols-1 xl:grid-cols-2 xl:gap-5">
@@ -354,12 +375,12 @@
                                     <input type="email" name="email" placeholder="Your Email"> 
                                 </div>
                                 <label class="reminder">
-                                    <input type="checkbox" id="checkbox"><label for="checkbox" class="mb-3">Keep me posted via email for future comments on this website</label>
+                                    <input type="checkbox" id="checkbox"><label for="checkbox" class="mb-3 relative bottom-[0.2rem]">Keep me posted via email for future comments on this website</label>
                                     <span class="checkmark"></span>
                                 </label>
                                 <textarea name="review" id="" cols="30" rows="10" placeholder="Review"></textarea>
                             </div>
-                            <a href="#"  class="bg-primary border-[2px] text-light border-primary p-[1.2rem] text-[1.188rem] hover:bg-light hover:text-primary text-center rounded-[0.32rem] block w-full">Sumbit Review</a>
+                            <a href="#"  class="bg-primary border-[2px] text-light border-primary p-[1.2rem] text-[1.188rem] hover:bg-light hover:text-primary text-center rounded-[0.32rem] block w-full">Submit Review</a>
                         </form>
                     </div>
                 </div>

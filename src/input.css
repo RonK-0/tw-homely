@@ -363,6 +363,30 @@
         @apply text-[14px] xl:text-[19px] cursor-pointer text-gray;
     }
 
+    /* stars rating */
+
+    .star__reviews {
+        @apply relative flex mb-[0.2rem] text-[23px];
+        input {
+            @apply absolute h-0 w-0 opacity-0;
+        }
+        label {
+            @apply block cursor-pointer;
+        }
+        label:not(.rating-0){
+            @apply mr-2.5;
+        }
+        label.rating-0, label.rating-0 i, label.rating-0 i.fa-star::before{
+            @apply block text-transparent w-[12px] mr-2;
+        }
+
+        i {
+            @apply cursor-pointer;
+        }
+        
+    }
+
+
     /* checkbox */
 
     .reminder {

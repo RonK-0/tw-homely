@@ -1633,11 +1633,6 @@ p {
 
 /* add review star */
 
-.star-cb-group input > label:before {
-  --tw-content: '☆';
-  content: var(--tw-content);
-}
-
 .form__identity input {
   display: block;
   width: 100%;
@@ -1683,6 +1678,51 @@ p {
 @media (min-width: 1200px) {
   .form__review label {
     font-size: 19px;
+  }
+}
+
+/* stars rating */
+
+.star__reviews {
+  position: relative;
+  margin-bottom: 0.2rem;
+  display: flex;
+  font-size: 23px;
+  input {
+    position: absolute;
+  }
+  input {
+    height: 0px;
+  }
+  input {
+    width: 0px;
+  }
+  input {
+    opacity: 0;
+  }
+  label {
+    display: block;
+  }
+  label {
+    cursor: pointer;
+  }
+  label:not(.rating-0) {
+    margin-right: 0.625rem;
+  }
+  label.rating-0, label.rating-0 i, label.rating-0 i.fa-star::before {
+    margin-right: 0.5rem;
+  }
+  label.rating-0, label.rating-0 i, label.rating-0 i.fa-star::before {
+    display: block;
+  }
+  label.rating-0, label.rating-0 i, label.rating-0 i.fa-star::before {
+    width: 12px;
+  }
+  label.rating-0, label.rating-0 i, label.rating-0 i.fa-star::before {
+    color: transparent;
+  }
+  i {
+    cursor: pointer;
   }
 }
 
@@ -1828,6 +1868,10 @@ p {
   position: relative;
 }
 
+.bottom-\[0\.2rem\] {
+  bottom: 0.2rem;
+}
+
 .left-\[50\%\] {
   left: 50%;
 }
@@ -1938,8 +1982,8 @@ p {
   margin-right: 30px;
 }
 
-.mt-24 {
-  margin-top: 6rem;
+.mt-20 {
+  margin-top: 5rem;
 }
 
 .line-clamp-5 {
@@ -1981,8 +2025,12 @@ p {
   height: 4rem;
 }
 
-.h-\[55vh\] {
-  height: 55vh;
+.h-\[50vh\] {
+  height: 50vh;
+}
+
+.h-\[60vh\] {
+  height: 60vh;
 }
 
 .w-\[100\%\] {
@@ -2083,6 +2131,10 @@ p {
 
 .gap-7 {
   gap: 1.75rem;
+}
+
+.gap-\[12px\] {
+  gap: 12px;
 }
 
 .gap-\[30px\] {
@@ -2364,7 +2416,7 @@ p {
 }
 
 .text-prop_banner_h1 {
-  font-size: clamp(64px, 3.5vw, 100px);
+  font-size: clamp(44px, 3.5vw, 100px);
 }
 
 .text-prop_title {
@@ -2416,6 +2468,10 @@ p {
 .text-primary {
   --tw-text-opacity: 1;
   color: rgb(165 122 90 / var(--tw-text-opacity));
+}
+
+.opacity-0 {
+  opacity: 0;
 }
 
 .filter {
@@ -2802,12 +2858,20 @@ p {
     margin-right: 35px;
   }
 
+  .xl\:mt-24 {
+    margin-top: 6rem;
+  }
+
   .xl\:flex {
     display: flex;
   }
 
   .xl\:hidden {
     display: none;
+  }
+
+  .xl\:h-\[55vh\] {
+    height: 55vh;
   }
 
   .xl\:grid-cols-2 {
