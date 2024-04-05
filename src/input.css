@@ -53,6 +53,7 @@
         @apply tracking-[0.03rem]
     }
     .tns-visually-hidden { @apply hidden; }
+    .tns-outer { @apply w-full overflow-hidden mx-a; }
 }
 
 @layer components{
@@ -82,7 +83,7 @@
     /* HOME */
     .homeBanner_categorySlider{
         @apply absolute w-full bottom-[3vw] lg:bottom-[1vw] xl:bottom-[1.5vw] tx-a;
-        .tns-outer{ @apply w-full xl:max-w-bannerSlider_card_bg overflow-x-hidden mx-a relative select-none; }
+        .tns-outer{ @apply xl:max-w-bannerSlider_card_bg relative; }
         .homeBanner_categorySlider__wrapper{
             @apply w-full flex gap-8 relative mx-a;
             .categorySlider_card{
@@ -99,20 +100,20 @@
             }
         }
     }
-
-
     
     .sectionHeading {
         @apply text-center mb-heading_margin_bottom;
-        h2{ @apply font-text-poppins text-[32px] sm:text-[38px] md:text-heading_h2 ft-sb uppercase  lh-120 -ls-1 mb-2 sm:mb-4; }
-        p{ @apply font-text-inter text-base lh-140 text-gray dark:text-light_2  mb-4 sm:mb-6 md:mb-9 xl:mb-0; }
+        h2{ @apply font-text-poppins ft-sb uppercase lh-120 -ls-1
+            text-[32px] sm:text-[38px] md:text-heading_h2  mb-2; }
+        p{ @apply font-text-inter text-base lh-140 text-gray dark:text-light_2
+            mb-4 sm:mb-6 md:mb-9 xl:mb-0; }
         br{ @apply hidden md:inline-block;}
     }
 
     .homeFeaturedProperties{
-        .sectionHeading{ h2{ @apply mb-2; }  p{ @apply text-base ls-3; } } 
+        .sectionHeading p{ @apply text-base ls-3; }
         .tns-outer{
-            @apply w-full overflow-x-hidden overflow-y-clip mx-a relative pb-12;
+            @apply relative pb-12;
             .tns-nav{
                 @apply absolute content-[''] bottom-1 left-1/2 -translate-x-1/2 z-10 flex gap-[14px];
                 button{
@@ -162,20 +163,23 @@
     }
 
     /* one stop property solution to be added */
-
-    .homePropertySolution__wrapper{
-        @apply grid grid-cols-3 gap-[24px];
-        .homePropertySolution__card{
-            @apply bg-l_gray rounded-[20px] cursor-pointer
-            py-[32px] px-[12px] mb-[32px] lg:no-mb sm:p-propertySolution_p
-            f-col-center text-center;
-            img{ @apply mb-6; }
-            h4{ @apply ft-sb fs-33 font-text-inter text-dark mb-4; }            
-            p{ @apply text-gray fs-16 mb-6 overflow-hidden font-text-inter line-clamp-3 text-ellipsis; }
+    .homeSolution{
+        .sectionHeading p{ @apply no-mb; }
+        .homeSolution__wrapper{
+            @apply flex flex-wrap justify-center lg:flex-nowrap gap-[24px];
+            .homeSolution__card{
+                @apply bg-l_gray f-col-center text-center rounded-[20px] cursor-pointer
+                w-full md:max-w-[336px] lg:max-w-[416px]
+                py-[32px] px-[12px] mb-[32px] lg:no-mb sm:p-propertySolution_p;
+                img{ @apply mb-3 sm:mb-6; }
+                h4{ @apply ft-sb fs-33 font-text-inter lh-120 text-dark 
+                    mb-[10px] md:mb-3 lg:mb-[15px] xl:mb-4; }            
+                p{ @apply text-gray fs-16 mb-3 sm:mb-6 overflow-hidden font-text-inter lh-130 line-clamp-3 text-ellipsis; }
+            }
+            .homeSolution__card:hover h4{ @apply text-primary; }
         }
-        .homePropertySolution__card:hover h4{ @apply text-primary; }
     }
-
+    
     .homeDreamHome__wrapper{
         @apply grid grid-cols-2 lg:grid-cols-3 gap-[25px];
         .homeDreamHome__entry{
@@ -185,8 +189,6 @@
         .homeDreamHome__entry:hover img { @apply scale-110 transition-all duration-[0.6s] ease-linear; }
     }
     
-
-
     .homeTopRatedProperties__entries{
         @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6;
         .homeTopRatedProperties__card{
@@ -218,7 +220,29 @@
     }
 
     /* client success stories to be added */
-    /* real estate agents to be added */
+
+    .homeAgents{
+        .homeAgents__wrapper{
+            @apply flex;
+            .homeAgents__card{
+                @apply f-col-center py-8 px-4 mx-3 my-0 select-none
+                w-full md:w-[324px] lg:w-[288px] xl:w-[255px] 2xl:w-[300px]
+                rounded-[10px] font-text-inter bg-l_gray;
+                img{ @apply mb-2; }
+                h4.agentName{ @apply ft-md text-[23px] lh-130 capitalize text-dark mb-[1px]; }
+                p.agentDesignation{ @apply ft-md text-[16px] lh-140 ls-2 text-gray mb-[18px]; }
+                div.agentSocials{
+                    @apply flex f-center no-mb p-0;
+                    a{
+                        @apply mx-2;
+                        i{ @apply text-[24px] text-d_gray; }
+                        i:hover{ @apply text-primary; }
+                    }
+                }
+            }
+        }
+    }
+
 
     .homeBlogEntries{
         @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6;
@@ -254,9 +278,8 @@
         .homeBlogEntries__card:hover .card__img img { @apply scale-110 transition-all duration-[0.6s] ease-linear; }
     }
     
-    .homeClientSlider *{@apply select-none}
     .homeClientSlider{
-        .tns-outer{ @apply w-full overflow-hidden mx-a; }
+        * { @apply select-none; }
         .homeClientSlider_logos img{ @apply w-[236px] max-h-[104px] pr-[24px] object-scale-down; }
     }
 }

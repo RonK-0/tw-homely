@@ -176,28 +176,28 @@
         </div>
     </section>
 
-    <section class="homeSolution py100">
+    <section class="homeSolution py100 bg-light dark:bg-dark">
         <div class="container">
             <div class="sectionHeading">
                 <h2>YOUR ONE-STOP PROPERTY SOLUTION</h2>
                 <p>Discover a hassle-free way to buy, sell, or rent your dream<br> property with our all-in-one real estate solution.</p>
             </div>
-            <div class="homePropertySolution__wrapper">
-                <div class="homePropertySolution__card">
+            <div class="homeSolution__wrapper">
+                <div class="homeSolution__card">
                     <img src="./img/home/icons/house-icon-2.png" alt="">
-                    <h4>Buy a property</h4>
+                    <h4>Buy a Property</h4>
                     <p>Discover a hassle-free way to buy, sell, or rent your dream property with our all-in-one real estate solution.</p>
                     <button class="btn bg--light-p">View Properties</button>
                 </div>
-                <div class="homePropertySolution__card">
+                <div class="homeSolution__card">
                     <img src="./img/home/icons/deal-icon-2.png" alt="">
-                    <h4>Sell a property</h4>
+                    <h4>Sell a Property</h4>
                     <p>Discover a hassle-free way to buy, sell, or rent your dream property with our all-in-one real estate solution.</p>
                     <button class="btn bg--light-p">Place An Add</button>
                 </div>
-                <div class="homePropertySolution__card">
+                <div class="homeSolution__card">
                     <img src="./img/home/icons/house-icon-2.png" alt="">
-                    <h4>Rent a property</h4>
+                    <h4>Rent a Property</h4>
                     <p>Discover a hassle-free way to buy, sell, or rent your dream property with our all-in-one real estate solution.</p>
                     <button class="btn bg--light-p">View Properties</button>
                 </div>
@@ -223,7 +223,7 @@
         </div>
     </section>
         
-    <section class="homeTopRatedProperties py100">
+    <section class="homeTopRatedProperties py100 bg-light dark:bg-dark">
         <div class="container">
             <div class="sectionHeading">
                 <h2>OUR TOP-RATED PROPERTIES</h2>
@@ -275,7 +275,71 @@
 
     <!-- section.homeClientStories -->
 
-    <!-- section.homeRealEstateAgents -->
+    <section class="homeAgents py100 bg-light dark:bg-dark">
+        <div class="container">
+            <div class="sectionHeading">
+                <h2>MEET OUR REAL ESTATE AGENTS</h2>
+                <p>Meet our team of experienced and professional real estate agents <br>ready to help you with your property needs.</p>
+            </div>
+            <div class="homeAgents__wrapper">
+                <div class="homeAgents__card">
+                    <img src="./img/home/agents/img-4 (1).png" alt="">
+                    <h4 class="agentName">Richard Johnson</h4>
+                    <p class="agentDesignation">Real Estate Broker</p>
+                    <div class="agentSocials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-basketball-ball"></i></a>
+                    </div>
+                </div>
+                <div class="homeAgents__card">
+                    <img src="./img/home/agents/img-5 (1).png" alt="">
+                    <h4 class="agentName">Rebecca Robinson</h4>
+                    <p class="agentDesignation">Real Estate Broker</p>
+                    <div class="agentSocials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-basketball-ball"></i></a>
+                    </div>
+                </div>
+                <div class="homeAgents__card">
+                    <img src="./img/home/agents/img-6 (1).png" alt="">
+                    <h4 class="agentName">Susan Hernandez</h4>
+                    <p class="agentDesignation">Real Estate Broker</p>
+                    <div class="agentSocials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-basketball-ball"></i></a>
+                    </div>
+                </div>
+                <div class="homeAgents__card">
+                    <img src="./img/home/agents/img-7 (1).png" alt="">
+                    <h4 class="agentName">William Martinez</h4>
+                    <p class="agentDesignation">Real Estate Broker</p>
+                    <div class="agentSocials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-basketball-ball"></i></a>
+                    </div>
+                </div>
+                <div class="homeAgents__card">
+                    <img src="./img/home/agents/img-5 (1).png" alt="">
+                    <h4 class="agentName">Rebecca Robinson</h4>
+                    <p class="agentDesignation">Real Estate Broker</p>
+                    <div class="agentSocials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-basketball-ball"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     
     <section class="homeBlog bg-l_gray dark:bg-dark_2 py100">
@@ -387,12 +451,13 @@
     <script src="./js/script.js"></script>
     <script src="./vendor/tiny-slider/tiny-slider.js"></script>
     <script>
+        // banner categories slider
         var bannerCategorySlider = tns({
             container: ".homeBanner_categorySlider__wrapper",
             items: 1,
             loop: true,
             autoplay: true,
-            autoplayHoverPause: false,
+            autoplayHoverPause: true,
             autoplayButtonOutput: false,
             controls: false,
             nav: false,
@@ -402,27 +467,21 @@
             mouseDrag: true,
             touch: true,
             responsive: {
-                1200: {
-                    items: 5
-                },
-                992:{
-                    items: 4
-                },
-                768: {
-                    items: 3
-                },
-                490: {
-                    items: 2
-                },
+                1200: { items: 5 },
+                992:  { items: 4 },
+                768:  { items: 3 },
+                490:  { items: 2 },
             }
         });
+
+        // featured top properties slider
         var featuredTopRatedProperties = tns({
             container: ".homeFeaturedProperties__entries",
             items: 1,
             loop: true,
             center: false,
             autoplay: true,
-            autoplayHoverPause: false,
+            autoplayHoverPause: true,
             autoplayButtonOutput: false,
             controls: false,
             nav: true,
@@ -433,21 +492,43 @@
             touch: true,
             navAsThumbnails: true,
             responsive: {
-                1200: {
-                    items: 3,
-                    center: true,
-                },
-                768: {
-                    items: 2,
-                },
+                1200: { items: 3, center: true, },
+                768:  { items: 2, },
             }
         });
+
+        //clients success slider
+
+
+        // real estate agents slider
+        var agentsSlider = tns({
+            container: ".homeAgents__wrapper",
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+            autoplayButtonOutput: false,
+            controls: false,
+            nav: false,
+            speed: 750,
+            autoplayTimeout: 2500,
+            preventActionWhenRunning: true,
+            mouseDrag: true,
+            touch: true,
+            responsive: {
+                1200: { items: 4 },
+                992:  { items: 3 },
+                768:  { items: 2 },
+            }
+        });
+
+        // client logos slider
         var clientSlider = tns({
             container: ".homeClientSlider_logos",
             items: 1,
             loop: true,
             autoplay: true,
-            autoplayHoverPause: false,
+            autoplayHoverPause: true,
             autoplayButtonOutput: false,
             controls: false,
             nav: false,
@@ -457,18 +538,10 @@
             mouseDrag: true,
             touch: true,
             responsive: {
-                1200: {
-                    items: 5
-                },
-                992: {
-                    items: 4
-                },
-                768: {
-                    items: 3
-                },
-                576: {
-                    items: 2
-                },
+                1200: { items: 5 },
+                992:  { items: 4 },
+                768:  { items: 3 },
+                576:  { items: 2 },
             }
         });
 
