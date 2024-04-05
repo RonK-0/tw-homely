@@ -70,7 +70,7 @@ module.exports = {
 
         'prop_banner_h1': 'clamp(44px, 3.5vw, 100px)',
         'prop_title': 'clamp(24px, 4vw, 40px)',
-        'play_btn': 'clamp(24px, 1.66vw, 42px)',
+        'play_btn': 'clamp(24px, 1.88vw, 42px)',
 
         'button' : 'clamp(16px, 1vw, 24px)',
       },
@@ -126,9 +126,11 @@ module.exports = {
       width:{
         'bannerSlider_card_bg' : 'calc(100% + calc(1.5 * calc(1.5rem * 0.5)))',
         'tel_icon' : 'clamp(24px, 10vw, 38px)',
+        'play_button' : 'clamp(48px, 3.333vw, 84px)',
       },
       height:{
         'tel_icon' : 'clamp(24px, 10vw, 38px)',
+        'play_button' : 'clamp(48px, 3.333vw, 84px)',
       },
       maxWidth:{
         'bannerSlider_card_bg' : 'calc(85% + calc(1.5rem * 0.5))',
