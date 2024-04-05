@@ -75,12 +75,23 @@ module.exports = {
       },
       animation: {
         // 'bannerSlide': 'bannerSlide 15s ease forwards',
+        'onCheck': 'onCheck 0.2s ease',
+        'unCheck': 'unCheck 0.2s ease',
       },
       keyframes: {
         // 'bannerSlide': {
         //   '0%' : {'background-position': '25% 0%'},
         //   '100%' : {'background-position': '40% 80%'}
         // },
+        'onCheck': {
+          '0%' : {'scale': '0'},
+          '100%' : {'scale': '1'}
+        },
+        'unCheck': {
+          '0%' : {'scale': '1'},
+          '50%' : {'scale': '0'},
+          '100%' : {'scale': '1'}
+        },
       },
       boxShadow:{
         'top_button_shadow'     : '4px 4px 10px rgba(0, 0, 0, 0.2)',

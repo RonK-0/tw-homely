@@ -333,11 +333,11 @@
         @apply border-[1px] border-dark rounded-md bg-light p-[21.5px] text-gray w-[100%] text-[16px]
     }
     .selecting__radiobutton{
-      @apply  p-8  w-[100%] text-[16px]
+      @apply  p-7  w-[100%] text-[16px]
     }
-    .selecting__radiobutton__wrap ul{
-        @apply border-[1px] bg-light border-dark text-gray p-7 pl-10 rounded-md grid grid-cols-2 gap-7
-    }
+    /* .selecting__radiobutton__wrap ul{
+        @apply border-[1px] bg-light border-dark text-gray p-6 pl-10 rounded-md grid grid-cols-2 gap-7
+    } */
     .pagination__list{
         @apply flex gap-4 text-lg justify-center 
     }
@@ -349,29 +349,94 @@
     }
 
     /* END PROPERTY STYLES */
-   
-    /* RANGE STYLES */
+
+    /* reminders styles */
+    .reminder {
+        @apply relative block ml-[10px] pl-[35px] mb-5 cursor-pointer text-lg select-none;
+        input[type="checkbox"]{
+            @apply absolute h-0 w-0 opacity-0 cursor-pointer;
+        }
+        span.checkmark{
+            @apply absolute top-0 left-0 h-[20px] w-[20px] bg-light_2;
+        }
+        span.checkmark:after {
+            @apply hidden absolute content-['']
+            ty-a tx-a w-[7px] h-[17px] rotate-45
+          border-light border-r-[2px] border-b-[2px];
+        }
+        input:checked ~ .checkmark:after {
+            @apply block;
+        }
+    }
+    
+    .reminder:hover input ~ .checkmark {
+        @apply bg-light_2;
+    }
+    .reminder input:checked ~ .checkmark{
+        @apply animate-onCheck bg-primary;
+    }
+    .reminder input:not(:checked) ~ .checkmark{
+        @apply animate-unCheck;
+    }
+
+    /* RANGE 1 STYLES */
     .range{
         @apply m-7 rounded-md bg-light p-10 border
     }
+    .range__slider{
+        @apply h-[5px] relative bg-slate-300 rounded-[2px]
+    }
+    .range__selected{
+        @apply h-[100%] left-[30%] right-[30%] absolute bg-primary rounded-[5px] 
+    }
+    .range__input{
+        @apply relative;
+    }
+    .range__input input{
+        @apply absolute /* to change to absolute */ w-[100%] h-[5px] top-[-7px] bg-transparent pointer-events-none appearance-none
+    }
+    .range__input input::-webkit-slider-thumb{
+        @apply h-[20px] w-[20px] rounded-[50%] pointer-events-auto select-none
+    }
+    .range__input input::-moz-range-thumb{
+        @apply h-[50px] w-[50px] rounded-[50%] pointer-events-auto select-none appearance-none
+    }
+    .range__price{
+        @apply mx-[0] my-[30px] w-[100%] flex justify-center items-center
+    }
+    .range__price label{
+        @apply mr-[5px]
+    }
+    .range__price input{
+        @apply w-[40px] p-[5px]
+    }
+    .range__price input:first-of-type{
+        @apply mr-[15px]
+    }
+    
+    /* END RANGE*/
+    /* END RANGE 2*/
+    .ranges{
+        @apply m-7 rounded-md bg-light p-10 border
+    }
     .range-slider{
-        @apply h-[5px] relative bg-white rounded-[2px]
+        @apply h-[5px] relative bg-slate-300 rounded-[2px]
     }
     .range-selected{
-        @apply h-[100%] left-[30%] right-[30%] absolute bg-primary rounded-[5px]
+        @apply h-[100%] left-[30%] right-[30%] absolute bg-primary rounded-[5px] 
     }
     .range-input{
         @apply relative;
     }
     .range-input input{
-        @apply absolute w-[100%] h-[5px] top-[-7px] bg-none pointer-events-none select-none
+        @apply absolute /* to change to absolute */ w-[100%] h-[5px] top-[-7px] bg-transparent pointer-events-none appearance-none
     }
-    .range-input input::-webkit-slider-thumb{
-        @apply h-[20px] w-[20px] rounded-[50%] bg-primary pointer-events-auto 
+    /* .range-input input::-webkit-slider-thumb{
+        @apply h-[20px] w-[20px] rounded-[50%] pointer-events-auto select-none
     }
     .range-input input::-moz-range-thumb{
-        @apply h-[20px] w-[20px] rounded-[50%] bg-primary  pointer-events-auto select-none appearance-none
-    }
+        @apply h-[50px] w-[50px] rounded-[50%] pointer-events-auto select-none appearance-none
+    } */
     .range-price{
         @apply mx-[0] my-[30px] w-[100%] flex justify-center items-center
     }
@@ -384,8 +449,6 @@
     .range-price input:first-of-type{
         @apply mr-[15px]
     }
-    
-    /* END */
 }
 
 @layer utilities{
@@ -441,6 +504,7 @@
     .mx-a{ @apply mx-auto }
 
     .tx-a{ @apply left-1/2 -translate-x-1/2 }
+    .ty-a{ @apply top-1/2 -translate-y-1/2 }
 
     .py-5v{ @apply py-[5vh] }
     .py-10v{ @apply py-[10vh] }

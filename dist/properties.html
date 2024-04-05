@@ -61,9 +61,9 @@
     </section>
 
     <!-- properties -->
-    <section class="properties sm: pb-10 md:pb-10 lg:pb-10">
+    <section class="properties sm:pb-10 md:pb-10 lg:pb-10">
         <div class="container">
-            <div class="properties__wrapper lg:grid lg:grid-cols-2 lg:justify-items-center">
+            <div class="properties__wrapper sm:pb-10 lg:grid lg:grid-cols-2 lg:justify-items-center">
                 <div class="properties__contents">
                     <div class="properties__items md:grid md:grid-cols-2 md:gap-4 lg:w-[130%] lg:grid lg:grid-cols-2 lg:justify-items-center">
                         <!-- properties-card-1 -->
@@ -204,41 +204,95 @@
                                             <h2 class="p-5 pl-0">Number of Bedrooms</h2>
                                             <div class="selecting__radiobutton__wrap">
                                                 <ul>
-                                                    <li><div><input type="checkbox" class="accent-primary"> Room 1</div></li>
+                                                    <!-- <li><div><input type="checkbox" class="accent-primary"> Room 1</div></li>
                                                     <li><div><input type="checkbox" class="accent-primary"> Room 2</div></li>
                                                     <li><div><input type="checkbox" class="accent-primary"> Room 3</div></li>
                                                     <li><div><input type="checkbox" class="accent-primary"> Room 4</div></li>
                                                     <li><div><input type="checkbox" class="accent-primary"> Room 5</div></li>
-                                                    <li><div><input type="checkbox" class="accent-primary"> Room 6</div></li>
+                                                    <li><div><input type="checkbox" class="accent-primary"> Room 6</div></li> -->
                                                 </ul>
                                             </div>
                                                 <h2 class="p-5 pl-0">Number of Bathrooms</h2>
                                                 <div class="selecting__radiobutton__wrap">
                                                     <ul>
-                                                        <li><div><input type="checkbox" class="accent-primary"> Bathroom 1</div></li>
+                                                        <li>
+                                                            <label class="reminder">
+                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Room 1</label><span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label class="reminder">
+                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Room 2</label><span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label class="reminder">
+                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Room 3</label><span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label class="reminder">
+                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Room 4</label><span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label class="reminder">
+                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Room 5</label><span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label class="reminder">
+                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Room 6</label><span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <!-- <li><div><input type="checkbox" class="accent-primary"> Bathroom 1</div></li>
                                                         <li><div><input type="checkbox" class="accent-primary"> Bathroom 2</div></li>
                                                         <li><div><input type="checkbox" class="accent-primary"> Bathroom 3</div></li>
                                                         <li><div><input type="checkbox" class="accent-primary"> Bathroom 4</div></li>
                                                         <li><div><input type="checkbox" class="accent-primary"> Bathroom 5</div></li>
-                                                        <li><div><input type="checkbox" class="accent-primary"> Bathroom 6</div></li>
+                                                        <li><div><input type="checkbox" class="accent-primary"> Bathroom 6</div></li> -->
                                                     </ul>
                                                 </div>
                                         </div>
+                                        <h2 class="pl-8">Square Feet</h2>
                                         <div class="range">
-                                            <div class="range-slider">
-                                                <span class="range-selected"></span>
+                                            <div class="range__slider">
+                                                <span class="range__selected"></span>
                                               </div>
-                                              <div class="range-input">
-                                                <input type="range" class="min accent-primary" min="0" max="1000" value="300" step="10">
-                                                <input type="range" class="max accent-primary" min="0" max="1000" value="300" step="10">
+                                              <div class="range__input accent-primary">
+                                                <input type="range" class="min" min="0" max="1000" value="300" step="10">
+                                                <input type="range" class="max" min="0" max="1000" value="700" step="10">
                                               </div>
-                                              <div class="range-price hidden">      
+                                              <div class="range__sqft">
+                                                <h3 class="p-3 text-slate-500">300 sq. ft. - 1000 sq. ft.</h3>
+                                              </div>
+                                              <div class="range__price hidden">      
                                                   <input type="number" name="min" value="300">     
                                                   <label for="max"> sq. ft.</label> 
                                                   <input type="number" name="max" value="700">    
                                                   <label for="max"> sq. ft.</label>
                                               </div>
                                         </div>
+                                        <h2 class="pl-8">Price</h2>
+                                        <div class="ranges">
+                                            <div class="range-slider">
+                                                <span class="range-selected"></span>
+                                              </div>
+                                              <div class="range-input accent-primary">
+                                                <input type="range" class="min1" min="0" max="1000" value="300" step="10">
+                                                <input type="range" class="max1" min="0" max="1000" value="700" step="10">
+                                              </div>
+                                              <div class="range-sqft">
+                                                <h3 class="p-3 text-slate-500">Range: $1000 - 10,000</h3>
+                                              </div>
+                                              <div class="range-price hidden">      
+                                                  <input type="number" name="min1" value="300">     
+                                                  <label for="max"> sq. ft.</label> 
+                                                  <input type="number" name="max1" value="700">    
+                                                  <label for="max"> sq. ft.</label>
+                                              </div>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -298,11 +352,12 @@
     
     <script src="./js/script.js"></script>
     <script src="./vendor/tiny-slider/tiny-slider.js"></script>
+
     <script>
         let rangeMin = 100;
-        const range = document.querySelector(".range-selected");
-        const rangeInput = document.querySelectorAll(".range-input input");
-        const rangePrice = document.querySelectorAll(".range-price input");
+        const range = document.querySelector(".range__selected");
+        const rangeInput = document.querySelectorAll(".range__input input");
+        const rangePrice = document.querySelectorAll(".range__price input");
         rangeInput.forEach((input) => {
         input.addEventListener("input", (e) => {
             let minRange = parseInt(rangeInput[0].value);
@@ -321,7 +376,36 @@
             }
         });
         });
-   
+        const ranges = document.querySelector(".range-selected");
+        const range_Input = document.querySelectorAll(".range-input input");
+        const range_Price = document.querySelectorAll(".range-price input");
+        range_Input.forEach((input) => {
+        input.addEventListener("input", (e) => {
+            let min_Range = parseInt(range_Input[0].value);
+            let max_Range = parseInt(range_Input[1].value);
+            if (max_Range - min_Range < rangeMin) {     
+            if (e.target.className === "min1") {
+                range_Input[0].value = max_Range - rangeMin;        
+            } else {
+                range_Input[1].value = min_Range + rangeMin;        
+            }
+            } else {
+            range_Price[0].value = min_Range;
+            range_Price[1].value = max_Range;
+            ranges.style.left = (min_Range / range_Input[0].max) * 100 + "%";
+            ranges.style.right = 100 - (max_Range / range_Input[1].max) * 100 + "%";
+            }
+        });
+        });
+        
     </script>
 </body>
 </html>
+
+<!-- 
+<label class="reminder">
+    <input type="checkbox" id="checkbox"><label for="checkbox">Room 1</label><span class="checkmark"></span>
+</label>
+
+
+ -->
