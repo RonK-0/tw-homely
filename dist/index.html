@@ -32,7 +32,7 @@
                 <a href="./index.html" class="xl:mr-[35px]"><img src="./img/logo.png" alt=""></a>
                 <div>
                     <button class="burger p-[10px] text-[24px] block xl:hidden"><i class="fas fa-bars"></i></button>
-                    <ul class="nav__links hidden xl:flex flex-col xl:flex-row xl:justify-between gap-[30px]">
+                    <ul class="nav__links hidden xl:flex flex-col xl:flex-row xl:justify-between gap-[30px] relative top-[-1px] left-[1px]">
                         <li class="nav__link_item"><a href="#" class="active">Home</a></li>
                         <li class="nav__link_item"><a href="#">About</a></li>
                         <li class="nav__link_item"><a href="#">Properties</a></li>
@@ -40,31 +40,67 @@
                         <li class="nav__link_item mr-[30px]"><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div class="hidden xl:flex justify-end gap-[clamp(12px,0.83vw,20px)] text-[clamp(20px,1.25vw,36px)] ">
-                    <a href="tel:123"><i class="fas fa-phone text-primary text-[32px]"></i></a>
-                    <a href="tel:123"><span class="ft-md hover:text-primary">+1 234 567 890</span></a>
-                </div>
+                <a href="tel:123"class="hidden xl:flex items-center justify-end gap-[clamp(12px,0.83vw,12px)] text-[clamp(20px,1.25vw,36px)] "><object data="./img/phone.svg" class="relative top-[-3px]"></object><span class="ft-md hover:text-primary no-mb lh-100 text-nowrap">+1 234 567 890</span></a>
             </nav>
         </div>
     </header>
  
 
     <!-- CONTENT START -->
-
-
-    <section class="homeBanner bg-home_banner_bg bg-cover bg-center">
+    <section class="homeBanner bg-home_banner_bg bg-cover bg-center relative">
         <div class="container">
-            <div class="homeBanner__wrapper h-[100vh] f-col-center">
+            <div class="homeBanner__wrapper h-[100vh] f-col-center relative">
                 <h1 class="text-center text-banner_h1 ft-b text-light uppercase lh-120">Find Your Dream<br>Home With Us</h1>
                 <button class="btn bg--primary-w">Find Home</button>
 
-                <!-- ADD BANNER BOTTOM SLIDER HERE -->
+                <div class="homeBanner_categorySlider_bg bg-l_gray dark:bg-dark_2 rounded-t-[30px] w-bannerSlider_card_bg h-[11vw] lg:h-[7.75vw] xl:h-[7vw] 2xl:h-[5.5vw] absolute content-[''] bottom-[-1px] left-1/2 -translate-x-1/2">
+                </div>
+                <div class="homeBanner_categorySlider">
+                    <div class="container">
+                        <div class="homeBanner_categorySlider__wrapper">
+                            <div class="categorySlider_card">
+                                <object data="./img/home/icons/home.svg"></object>
+                                <h4>House</h4>
+                                <p>6 Properties</p>
+                            </div>
+                            <div class="categorySlider_card">
+                                <object data="./img/home/icons/apartments.svg"></object>
+                                <h4>Apartments</h4>
+                                <p>5 Properties</p>
+                            </div>
+                            <div class="categorySlider_card">
+                                <object data="./img/home/icons/office.svg"></object>
+                                <h4>Office</h4>
+                                <p>3 Properties</p>
+                            </div>
+                            <div class="categorySlider_card">
+                                <object data="./img/home/icons/villa.svg"></object>
+                                <h4>Villa</h4>
+                                <p>6 Properties</p>
+                            </div>
+                            <div class="categorySlider_card">
+                                <object data="./img/home/icons/townhome.svg"></object>
+                                <h4>Townhme</h4>
+                                <p>16 Properties</p>
+                            </div>
+                            <div class="categorySlider_card">
+                                <object data="./img/home/icons/bungalow.svg"></object>
+                                <h4>Bungalow</h4>
+                                <p>2 Properties</p>
+                            </div>
+                            <div class="categorySlider_card">
+                                <object data="./img/home/icons/loft.svg"></object>
+                                <h4>Loft</h4>
+                                <p>7 Properties</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-
-    <section class="homeFeaturedProperties">
+    <section class="homeFeaturedProperties pt-[50px] pb-[32.5px] md:pb-[65px] bg-l_gray dark:bg-dark_2">
         <div class="container">
             <div class="sectionHeading">
                 <h2>CHECK OUT OUR FEATURED PROPERTIES</h2>
@@ -72,25 +108,12 @@
             </div>
             <div class="homeFeaturedProperties__entries">
                 <div class="homeFeaturedProperties__card">
-                    <div class="card__img"><img src="./img/home/img-10.png" alt=""><span class="price">$80,000</span></div>
+                    <div class="card__img"><img src="./img/home/img-1.png" alt=""><span class="price">$90,000</span></div>
                     <div class="card__text">
-                        <a href="#">Park View Residences</a>
-                        <p class="location">678 Ocean View Drive</p>
-                        <ul>
-                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>April 12, 2023</span></li>
-                            <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
-                            <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
-                        </ul>
-                        <button class="btn bg--transparent-p">For Sale</button>
-                    </div>
-                </div>
-                <div class="homeFeaturedProperties__card">
-                    <div class="card__img"><img src="./img/home/img-11.png" alt=""><span class="price">$90,000</span></div>
-                    <div class="card__text">
-                        <a href="#">Ocean Breeze Villas</a>
+                        <a href="#">Mountain View Manor Homes</a>
                         <p class="location">8901 Pinecrest Drive</p>
                         <ul>
-                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>April 12, 2023</span></li>
+                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
                             <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
                             <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
                         </ul>
@@ -98,12 +121,12 @@
                     </div>
                 </div>
                 <div class="homeFeaturedProperties__card">
-                    <div class="card__img"><img src="./img/home/img-12.png" alt=""><span class="price">$5,000/Mo</span></div>
+                    <div class="card__img"><img src="./img/home/img-2.png" alt=""><span class="price">$4,600/Mo</span></div>
                     <div class="card__text">
-                        <a href="#">Forest Heights Homes</a>
-                        <p class="location">678 Ocean View Drive</p>
+                        <a href="#">Riverfront Landing Townhomes</a>
+                        <p class="location">9012 Riverfront Way</p>
                         <ul>
-                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>April 12, 2023</span></li>
+                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
                             <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
                             <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
                         </ul>
@@ -111,12 +134,12 @@
                     </div>
                 </div>
                 <div class="homeFeaturedProperties__card">
-                    <div class="card__img"><img src="./img/home/img-10.png" alt=""><span class="price">$80,000</span></div>
+                    <div class="card__img"><img src="./img/home/img-3.png" alt=""><span class="price">$80,000</span></div>
                     <div class="card__text">
-                        <a href="#">Park View Residences</a>
-                        <p class="location">678 Ocean View Drive</p>
+                        <a href="#">Lakeside Terrace Villas</a>
+                        <p class="location">9012 Riverfront Way</p>
                         <ul>
-                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>April 12, 2023</span></li>
+                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
                             <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
                             <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
                         </ul>
@@ -124,12 +147,12 @@
                     </div>
                 </div>
                 <div class="homeFeaturedProperties__card">
-                    <div class="card__img"><img src="./img/home/img-11.png" alt=""><span class="price">$90,000</span></div>
+                    <div class="card__img"><img src="./img/home/img-11.png" alt=""><span class="price">$4,600/Mo</span></div>
                     <div class="card__text">
-                        <a href="#">Ocean Breeze Villas</a>
+                        <a href="#">Riverfront Landing Townhomes</a>
                         <p class="location">8901 Pinecrest Drive</p>
                         <ul>
-                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>April 12, 2023</span></li>
+                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
                             <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
                             <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
                         </ul>
@@ -137,12 +160,12 @@
                     </div>
                 </div>
                 <div class="homeFeaturedProperties__card">
-                    <div class="card__img"><img src="./img/home/img-12.png" alt=""><span class="price">$5,000/Mo</span></div>
+                    <div class="card__img"><img src="./img/home/img-10.png" alt=""><span class="price">$4,600/Mo</span></div>
                     <div class="card__text">
-                        <a href="#">Forest Heights Homes</a>
-                        <p class="location">678 Ocean View Drive</p>
+                        <a href="#">Riverfront Landing Townhomes</a>
+                        <p class="location">9012 Riverfront Way</p>
                         <ul>
-                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>April 12, 2023</span></li>
+                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
                             <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
                             <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
                         </ul>
@@ -152,9 +175,55 @@
             </div>
         </div>
     </section>
-    
-    
-    <section class="homeTopRatedProperties py100">
+
+    <section class="homeSolution py100 bg-light dark:bg-dark">
+        <div class="container">
+            <div class="sectionHeading">
+                <h2>YOUR ONE-STOP PROPERTY SOLUTION</h2>
+                <p>Discover a hassle-free way to buy, sell, or rent your dream<br> property with our all-in-one real estate solution.</p>
+            </div>
+            <div class="homeSolution__wrapper">
+                <div class="homeSolution__card">
+                    <img src="./img/home/icons/house-icon-2.png" alt="">
+                    <h4>Buy a Property</h4>
+                    <p>Discover a hassle-free way to buy, sell, or rent your dream property with our all-in-one real estate solution.</p>
+                    <button class="btn bg--light-p">View Properties</button>
+                </div>
+                <div class="homeSolution__card">
+                    <img src="./img/home/icons/deal-icon-2.png" alt="">
+                    <h4>Sell a Property</h4>
+                    <p>Discover a hassle-free way to buy, sell, or rent your dream property with our all-in-one real estate solution.</p>
+                    <button class="btn bg--light-p">Place An Add</button>
+                </div>
+                <div class="homeSolution__card">
+                    <img src="./img/home/icons/house-icon-2.png" alt="">
+                    <h4>Rent a Property</h4>
+                    <p>Discover a hassle-free way to buy, sell, or rent your dream property with our all-in-one real estate solution.</p>
+                    <button class="btn bg--light-p">View Properties</button>
+                </div>
+                <!-- CARDS TO BE ADDED -->
+            </div>
+        </div>
+    </section>
+
+    <section class="homeDreamHome py100 bg-l_gray dark:bg-dark_2">
+        <div class="container">
+            <div class="sectionHeading">
+                <h2>DISCOVER YOUR DREAM HOME</h2>
+                <p>Discover a hassle-free way to buy, sell, or rent your dream<br> property with our all-in-one real estate solution.</p>
+            </div>
+            <div class="homeDreamHome__wrapper">
+                <div class="homeDreamHome__entry"><img src="./img/home/img-4.png" alt=""></div>
+                <div class="homeDreamHome__entry"><img src="./img/home/img-5.png" alt=""></div>
+                <div class="homeDreamHome__entry"><img src="./img/home/img-6.png" alt=""></div>
+                <div class="homeDreamHome__entry"><img src="./img/home/img-7.png" alt=""></div>
+                <div class="homeDreamHome__entry"><img src="./img/home/img-8.png" alt=""></div>
+                <div class="homeDreamHome__entry"><img src="./img/home/img-9.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+        
+    <section class="homeTopRatedProperties py100 bg-light dark:bg-dark">
         <div class="container">
             <div class="sectionHeading">
                 <h2>OUR TOP-RATED PROPERTIES</h2>
@@ -167,7 +236,7 @@
                         <a href="#">Park View Residences</a>
                         <p class="location">678 Ocean View Drive</p>
                         <ul>
-                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>April 12, 2023</span></li>
+                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
                             <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
                             <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
                         </ul>
@@ -180,7 +249,7 @@
                         <a href="#">Ocean Breeze Villas</a>
                         <p class="location">8901 Pinecrest Drive</p>
                         <ul>
-                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>April 12, 2023</span></li>
+                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
                             <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
                             <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
                         </ul>
@@ -193,7 +262,7 @@
                         <a href="#">Forest Heights Homes</a>
                         <p class="location">678 Ocean View Drive</p>
                         <ul>
-                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>April 12, 2023</span></li>
+                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
                             <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
                             <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
                         </ul>
@@ -204,13 +273,74 @@
         </div>
     </section>
 
-
-
     <!-- section.homeClientStories -->
 
-    <!-- section.homeAgents -->
-
-    
+    <section class="homeAgents py100 bg-light dark:bg-dark">
+        <div class="container">
+            <div class="sectionHeading">
+                <h2>MEET OUR REAL ESTATE AGENTS</h2>
+                <p>Meet our team of experienced and professional real estate agents <br>ready to help you with your property needs.</p>
+            </div>
+            <div class="homeAgents__wrapper">
+                <div class="homeAgents__card">
+                    <img src="./img/home/agents/img-4 (1).png" alt="">
+                    <h4 class="agentName">Richard Johnson</h4>
+                    <p class="agentDesignation">Real Estate Broker</p>
+                    <div class="agentSocials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-basketball-ball"></i></a>
+                    </div>
+                </div>
+                <div class="homeAgents__card">
+                    <img src="./img/home/agents/img-5 (1).png" alt="">
+                    <h4 class="agentName">Rebecca Robinson</h4>
+                    <p class="agentDesignation">Real Estate Broker</p>
+                    <div class="agentSocials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-basketball-ball"></i></a>
+                    </div>
+                </div>
+                <div class="homeAgents__card">
+                    <img src="./img/home/agents/img-6 (1).png" alt="">
+                    <h4 class="agentName">Susan Hernandez</h4>
+                    <p class="agentDesignation">Real Estate Broker</p>
+                    <div class="agentSocials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-basketball-ball"></i></a>
+                    </div>
+                </div>
+                <div class="homeAgents__card">
+                    <img src="./img/home/agents/img-7 (1).png" alt="">
+                    <h4 class="agentName">William Martinez</h4>
+                    <p class="agentDesignation">Real Estate Broker</p>
+                    <div class="agentSocials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-basketball-ball"></i></a>
+                    </div>
+                </div>
+                <div class="homeAgents__card">
+                    <img src="./img/home/agents/img-5 (1).png" alt="">
+                    <h4 class="agentName">Rebecca Robinson</h4>
+                    <p class="agentDesignation">Real Estate Broker</p>
+                    <div class="agentSocials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-basketball-ball"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
     <section class="homeBlog bg-l_gray dark:bg-dark_2 py100">
         <div class="container">
             <div class="sectionHeading">
@@ -265,13 +395,12 @@
             </div>
         </div>
     </section>
-
     <!-- CONTENT END -->
 
     <footer class="footer bg-footer_bg bg-cover bg-no-repeat bg-center font-text-inter">
         <div class="container">
             <div class="footer__wrapper text-light pt-[100px] pb-[30px]">
-                <button class="toggleBtn block mx-a my-0 p-[3px] rounded-full bg-transparent dark:bg-light leading-none"><i class="fas fa-circle-half-stroke text-light dark:text-dark_2 leading-none"></i></button>
+                <button class="toggleBtn block mx-a my-0 p-0 rounded-full leading-none"><i class="fas fa-circle-half-stroke text-light dark:text-dark dark:bg-light rounded-full leading-none"></i></button>
 
                 <div class="footer__top f-col-center mb-10 md:mb-8 text-center">
                     <h2 class="mb-4 text-[24px] md:text-[clamp(32px,2.2vw,64px)] ft-b lh-120">FIND YOUR DREAM HOME TODAY WITH OUR <br class="hidden md:inline-block">EXTENSIVE PROPERTY COLLECTION</h2>
@@ -320,37 +449,84 @@
     <script src="./js/script.js"></script>
     <script src="./vendor/tiny-slider/tiny-slider.js"></script>
     <script>
+        // banner categories slider
+        var bannerCategorySlider = tns({
+            container: ".homeBanner_categorySlider__wrapper",
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+            autoplayButtonOutput: false,
+            controls: false,
+            nav: false,
+            speed: 750,
+            autoplayTimeout: 2500,
+            preventActionWhenRunning: true,
+            mouseDrag: true,
+            touch: true,
+            responsive: {
+                1200: { items: 5 },
+                992:  { items: 4 },
+                768:  { items: 3 },
+                490:  { items: 2 },
+            }
+        });
+
+        // featured top properties slider
         var featuredTopRatedProperties = tns({
             container: ".homeFeaturedProperties__entries",
             items: 1,
             loop: true,
+            center: false,
             autoplay: true,
-            autoplayHoverPause: false,
+            autoplayHoverPause: true,
             autoplayButtonOutput: false,
             controls: false,
-            // nav: false,
-            speed: 5000,
-            autoplayTimeout: 1000,
+            nav: true,
+            speed: 750,
+            autoplayTimeout: 3000,
             preventActionWhenRunning: true,
             mouseDrag: true,
             touch: true,
             navAsThumbnails: true,
-            // navContainer:'#clientSlider_nav_small',
             responsive: {
-                1200: {
-                    items: 3
-                },
-                768: {
-                    items: 2
-                },
+                1200: { items: 3, center: true, },
+                768:  { items: 2, },
             }
         });
+
+        //clients success slider
+
+
+        // real estate agents slider
+        var agentsSlider = tns({
+            container: ".homeAgents__wrapper",
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+            autoplayButtonOutput: false,
+            controls: false,
+            nav: false,
+            speed: 750,
+            autoplayTimeout: 2500,
+            preventActionWhenRunning: true,
+            mouseDrag: true,
+            touch: true,
+            responsive: {
+                1200: { items: 4 },
+                992:  { items: 3 },
+                768:  { items: 2 },
+            }
+        });
+
+        // client logos slider
         var clientSlider = tns({
             container: ".homeClientSlider_logos",
             items: 1,
             loop: true,
             autoplay: true,
-            autoplayHoverPause: false,
+            autoplayHoverPause: true,
             autoplayButtonOutput: false,
             controls: false,
             nav: false,
@@ -359,22 +535,11 @@
             preventActionWhenRunning: true,
             mouseDrag: true,
             touch: true,
-            navAsThumbnails: true,
-            // navContainer:'#clientSlider_nav_small',
             responsive: {
-                1200: {
-                    items: 5
-                },
-                992: {
-                    items: 4
-                },
-                
-                768: {
-                    items: 3
-                },
-                576: {
-                    items: 2
-                },
+                1200: { items: 5 },
+                992:  { items: 4 },
+                768:  { items: 3 },
+                576:  { items: 2 },
             }
         });
 
