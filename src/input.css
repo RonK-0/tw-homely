@@ -219,11 +219,12 @@
         .homeClientStories__wrapper{
             @apply flex;
             .homeClientStories__card{
-                @apply relative bg-light rounded-[10px] mx-[12px] overflow-hidden font-text-inter text-center;
+                @apply relative bg-light rounded-[10px] mx-[12px] overflow-hidden font-text-inter text-center
+                w-full md:w-[324px] lg:w-[288px] xl:w-[348px] 2xl:w-[408px];
                 img.storiesQuoteSym { @apply absolute top-0 left-0 z-10; }
-                img.storiesClientImg { @apply pt-[50px] mt-[-100px] mb-2; }
-                h4.storiesName { @apply ft-md text-bannerSlider_card_heading lh-130 text-dark mb-2; }
-                p.storiesQuoteText {@apply p-testimonial_text text-gray line-clamp-4 text-ellipsis mb-[2px]; }
+                img.storiesClientImg { @apply pt-[50px] mt-[-100px] mb-2 mx-a; }
+                h4.storiesClientName { @apply ft-md text-bannerSlider_card_heading lh-130 text-dark mb-2; }
+                p.storiesClientQuoteText {@apply p-testimonial_text text-gray line-clamp-4 text-ellipsis mb-[28px] lh-150 text-[16px] ls-3; }
             }
         }
     }
