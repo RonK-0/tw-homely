@@ -294,13 +294,14 @@
         @apply pt-9 
     }
     .properties__card__img img{
-        @apply rounded-lg w-[100%] object-cover
+        @apply rounded-lg w-[100%] object-cover 
     }
     .properties__card ul{
         @apply pb-2 flex flex gap-2
     }
     .properties__card ul li{
-        @apply text-[16px] 
+        @apply text-[16px] flex flex gap-2
+        
     }
     .properties__card{
         @apply pb-7 
@@ -417,7 +418,7 @@
         @apply relative;
     }
     .range-input input{
-        @apply absolute /* to change to absolute */ w-[100%] h-[5px] top-[-7px] bg-transparent pointer-events-none appearance-none
+        @apply absolute /* to change to absolute */ w-[100%] h-[5px] top-[-7px] bg-transparent pointer-events-none appearance-none 
     }
     .range-input input::-webkit-slider-thumb{
         @apply h-[20px] w-[20px] rounded-[50%] pointer-events-auto select-none
