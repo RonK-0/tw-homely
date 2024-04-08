@@ -139,7 +139,7 @@
         }
         .homeFeaturedProperties__entries{
             @apply flex gap-6 select-none;
-            .homeFeaturedProperties__card{
+            .homeFeaturedProperties__card2{
                 @apply bg-transparent dark:bg-l_gray rounded-[10px] mb-6 lg:mb-0 md:max-w-[416px] mx-auto;
                 .card__img{
                     @apply relative rounded-t-[10px] overflow-hidden mb-4 dark:no-mb;
@@ -474,22 +474,56 @@
 
 
 /* PROPERTIES PAGE - START */
+    .properties__wrapper{
+        @apply grid xl:grid-cols-[_2fr,_1fr] gap-6;
+        .properties__cards{
+            @apply grid md:grid-cols-2 gap-x-6 select-none;
+            .properties__card{
+                @apply bg-transparent dark:bg-l_gray rounded-[10px] md:max-w-[416px] mx-auto;
+                .card__img{
+                    @apply relative rounded-[10px] overflow-hidden mb-4 dark:no-mb;
+                    img{ @apply w-full object-cover transition-all duration-[0.6s] ease-linear; }
+                    .price{
+                        @apply bg-light p-property_entry_price no-mb rounded-[5px]
+                        ft-md text-property_entry_price font-text-inter text-dark_2
+                        absolute left-[16px] bottom-[16px];
+                    }
+                }
+                .card__text{
+                    @apply f-col items-start dark:p-3 mb-6;
+                    a{ @apply text-dark text-[23px] font-text-inter ft-md lh-130 capitalize mb-4; }
+                    p.location{  @apply text-fs-19 ft-nm lh-140 text-dark font-text-inter mb-2 }
+                    ul{
+                        @apply pl-0  mb-4 flex;
+                        li{
+                            @apply mr-5 flex items-center gap-2;
+                            *{ @apply text-dark_2; }
+                            span{ @apply ft-md text-fs-16_xl text-nowrap lh-150 font-text-inter;}
+                        }
+                    }
+                }
+            }
+            .properties__card:hover .card__img img { @apply scale-110 transition-all duration-[0.6s] ease-linear; }
+            
+        }
+    }
+
     .properties{
         @apply pt-9 
     }
-    .properties__card__img img{
+    .properties__card2__img img{
         @apply rounded-lg w-[100%] object-cover 
     }
-    .properties__card ul{
+    .properties__card2 ul{
         @apply pb-2 flex gap-2
     }
-    .properties__card ul li{
+    .properties__card2 ul li{
         @apply text-[16px] flex gap-2
     }
-    .properties__card{
+    .properties__card2{
         @apply pb-7 
     }
-    .properties__card p{
+    .properties__card2 p{
         @apply pb-2 pt-4 
     }
     .selecting{
@@ -511,16 +545,19 @@
         @apply border-[1px] gap-2 p-5 bg-light border-dark text-gray  rounded-md grid grid-cols-2 
     }
     .pagination__list{
-        @apply flex gap-4 text-lg justify-center 
+        @apply flex gap-4 text-lg justify-center text-dark;
     }
     .pagination__list li{
-        @apply  bg-light shadow-md p-3 rounded-md h-9 leading-3
+        @apply  bg-light shadow-property_page_button_shadow 
+        p-3 rounded-md h-9 leading-3 text-dark
     }
     .pagination__list li:hover{
-        @apply  bg-primary text-light shadow-md p-3 rounded-md h-9 leading-3
+        @apply  bg-primary text-light p-3 rounded-md h-9 leading-3
+    }
+    .pagination__list li.active{
+        @apply bg-primary text-light;
     }
 
-    /* END PROPERTY STYLES */
 
     /* bathrooms styles */
     label.bathrms {
@@ -688,6 +725,7 @@
 
     .py100{ @apply py-py100; }
     
+    .fs-40{ @apply text-[25px] xs:text-[35px] xl:text-[40px]; }
     .fs-33{ @apply text-[21px] lg:text-[28px] xl:text-fs-33}
     .fs-28{ @apply text-[18px] xl:text-[28px]}
     .fs-23{ @apply text-[23px] md:text-[18px] xl:text-[23px] }

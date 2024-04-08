@@ -10,7 +10,7 @@ module.exports = {
         // 'lg': '1024px',
         // 'xl': '1280px',
         // '2xl': '1536px',
-        // 'xs': '490px',
+        'xs': '490px',
         'sm': '576px',
         'md': '768px',
         'lg': '992px',
@@ -61,7 +61,7 @@ module.exports = {
         'bannerSlider_card_details' : 'clamp(13px, 0.83vw, 20px)',
         'heading_h2' : 'clamp(36px, 2.5vw, 64px)',
 
-        'property_entry_price' : 'clamp(16px, 0.9vw, 24px)',
+        'property_entry_price' : 'clamp(16px, 1vw, 24px)',
 
         'blog_category_label' : 'clamp(15px,1vw,22px)',
         'blog_entry_title' : 'clamp(18px, 1.22vw, 32px)',
@@ -107,7 +107,7 @@ module.exports = {
       },
       boxShadow:{
         'top_button_shadow'     : '4px 4px 10px rgba(0, 0, 0, 0.2)',
-
+        'property_page_button_shadow' : '42px 42px 24px rgba(0, 0, 0, 0.01),24px 24px 20px rgba(0, 0, 0, 0.03), 11px 11px 15px rgba(0, 0, 0, 0.04), 3px 3px 8px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05);',
       },
       padding:{
         'container_p' : 'calc(1.5rem * 0.5)',
