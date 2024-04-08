@@ -3463,11 +3463,6 @@ input, input::placeholder, textarea::placeholder {
   order: -9999;
 }
 
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .my-0 {
   margin-top: 0px;
   margin-bottom: 0px;

@@ -87,7 +87,7 @@
                     </div>
                 </div>
 
-                <div class="house__detail__slider__thumbnails flex flex-row gap-5 mx-4" id="house__slider__nav__small">
+                <div class="house__detail__slider__thumbnails flex flex-row gap-5" id="house__slider__nav__small">
                     <button><img src="../dist/img/property_details/banner-house-1.png" alt="" class="rounded-[0.625rem]"></button>
                     <button><img src="../dist/img/property_details/banner-house-2.png" alt="" class="rounded-[0.625rem]"></button>
                     <button><img src="../dist/img/property_details/banner-house-3.png" alt="" class="rounded-[0.625rem]"></button>
@@ -519,13 +519,13 @@
                 container: selector+'__thumbnails',
                 items: 4,
                 controls: false,
-                loop: false,
+                loop: true,
                 slideBy: 1,
                 nav: false,
                 mouseDrag: true,
                 touch: true,
                 responsive: {
-                    768: { items: 4, },
+                    768: { items: 4, center: true, },
                     490:  { items: 2, },
                 }
             });
