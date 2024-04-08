@@ -21,6 +21,8 @@ module.exports = {
         transparent_bg: "url('../dist/img/transparent.png')",
         home_banner_bg: "url('../dist/img/home/banner-bg.png')",
         footer_bg: "url('../dist/img/footer-bg.png')",
+        prop_details_bg: "url('../dist/img/inner-banner-bg.png')",
+        img_overlay: "url('../dist/img/property_details/house-demo.png')",
       },
       colors:{
         dark: "#0D0D0D",
@@ -33,6 +35,7 @@ module.exports = {
         primary: "#A57A5A",
         homeFeaturedProperties_Nav: '#c9cbcc',
         homeFeaturedProperties_Nav_outline: 'rgba(44, 45, 47, 0.2)',
+        l_blue: "#F0F2F4",
       },
       fontFamily: {
         'text-poppins': ["Poppins", "sans-serif"],
@@ -64,6 +67,10 @@ module.exports = {
         'blog_entry_title' : 'clamp(18px, 1.22vw, 32px)',
         'blog_entry_date' : 'clamp(12px, 1.5vw, 16px)',
         'blog_entry_fa' : 'clamp(20px,1.25vw,30px)',
+
+        'prop_banner_h1': 'clamp(44px, 3.5vw, 100px)',
+        'prop_title': 'clamp(24px, 4vw, 40px)',
+        'play_btn': 'clamp(24px, 1.88vw, 42px)',
 
         'button' : 'clamp(16px, 1vw, 24px)',
       },
@@ -119,9 +126,11 @@ module.exports = {
       width:{
         'bannerSlider_card_bg' : 'calc(100% + calc(1.5 * calc(1.5rem * 0.5)))',
         'tel_icon' : 'clamp(24px, 10vw, 38px)',
+        'play_button' : 'clamp(48px, 3.333vw, 84px)',
       },
       height:{
         'tel_icon' : 'clamp(24px, 10vw, 38px)',
+        'play_button' : 'clamp(48px, 3.333vw, 84px)',
       },
       maxWidth:{
         'bannerSlider_card_bg' : 'calc(85% + calc(1.5rem * 0.5))',

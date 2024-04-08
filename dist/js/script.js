@@ -27,8 +27,8 @@ togglebtn.addEventListener("click", ()=>{
 
 // on scroll show back to top button
 window.onscroll = function() { 
-    var btt = document.querySelector('.backTop');
-    var pageBanner = document.querySelector('.homeBanner');
+    var btt = document.querySelector('.back-to-top');
+    var pageBanner = document.querySelector('#pageBanner');
     var bannerHeight = pageBanner.offsetHeight*0.025;
     if ( window.scrollY > bannerHeight ) { btt.classList.add("shown"); }
     else { btt.classList.remove("shown"); }
@@ -36,3 +36,5 @@ window.onscroll = function() {
 
 // scroll to top function
 function scrollToTop(){ window.scrollTo(0,0); }
+
+

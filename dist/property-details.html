@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homely - Property Details</title>
+    <link href="../src/output.css" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon-dark.png">
+
+    <!-- INTER FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- POPPINS FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+
+    <!-- AOS -->
+    <!-- <link href="./vendor/aos/aos.css" rel="stylesheet">
+    <script src="./vendor/aos/aos.js"></script> -->
+
+    <!-- TINY SLIDER -->
+    <link rel="stylesheet" href="./vendor/tiny-slider/tiny-slider.css"/>
+
+</head>
+<body id="top" class="property-details-page bg-light dark:bg-dark dark:text-light">
+    <header class="header text-dark absolute top-0 l-0 z-[999] w-full py-[20px] pt-[25px]">
+        <div class="container">
+            <nav class="header__wrapper flex f-between-center relative">
+                <a href="./index.html" class="xl:mr-[35px]"><img src="./img/logo.png" alt=""></a>
+                <div>
+                    <button class="burger p-[10px] text-[24px] block xl:hidden"><i class="fas fa-bars"></i></button>
+                    <ul class="nav__links hidden xl:flex flex-col xl:flex-row xl:justify-between gap-[30px] relative top-[-1px] left-[1px]">
+                        <li class="nav__link_item"><a href="./index.html">Home</a></li>
+                        <li class="nav__link_item"><a href="./about.html">About</a></li>
+                        <li class="nav__link_item"><a href="#">Properties</a></li>
+                        <li class="nav__link_item"><a href="./property-details.html" class="active">Property Details</a></li>
+                        <li class="nav__link_item mr-[30px]"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <a href="tel:123"class="hidden xl:flex items-center justify-end gap-[clamp(12px,0.83vw,12px)] text-[clamp(20px,1.25vw,36px)] "><object data="./img/phone.svg" class="relative top-[-3px]"></object><span class="ft-md hover:text-primary no-mb lh-100 text-nowrap">+1 234 567 890</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BANNER -->
+
+    <section class="propBanner bg-prop_details_bg bg-cover bg-center" id="pageBanner">
+        <div class="container">
+            <div class="propBanner__wrapper h-[60vh] xl:h-[55vh] f-col-center">
+                <h1 class="text-center text-prop_banner_h1 ft-sb text-light uppercase mt-20 xl:mt-24">Property Details</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER END -->
+
+    <!-- PROPERTY SLIDER -->
+
+    <section class="property__detail py-8 xl:py-[4rem]">
+        <div class="container">
+            <h1 class="ft-sb text-prop_title uppercase mb-[1.125rem] xl:mb-8 text-dark dark:text-light">Forest Heights Homes</h1>
+            <div class="house__detail xl:flex flex-col">
+                <div class="house__detail_wrapper mb-[1.3rem] overflow-hidden rounded-[0.625rem]">
+                    <div class="house__detail__slider">
+                        <div id="house-1-content" class="house__item">
+                            <img src="../dist/img/property_details/banner-house-1.png" alt="">
+                        </div>
+
+                        <div id="house-2-content"class="house__item">
+                            <img src="../dist/img/property_details/banner-house-2.png" alt="">
+                        </div>
+
+                        <div id="house-3-content" class="house__item">
+                            <img src="../dist/img/property_details/banner-house-3.png" alt="">
+                        </div>
+                        
+                        <div id="house-4-content" class="house__item ">
+                            <img src="../dist/img/property_details/banner-house-4.png" alt="">
+                        </div>
+                        
+                        <div id="house-5-content" class="house__item">
+                            <img src="../dist/img/property_details/banner-house-5.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="house__detail__slider__thumbnails flex flex-row gap-5" id="house__slider__nav__small">
+                    <button><img src="../dist/img/property_details/banner-house-1.png" alt="" class="rounded-[0.625rem]"></button>
+                    <button><img src="../dist/img/property_details/banner-house-2.png" alt="" class="rounded-[0.625rem]"></button>
+                    <button><img src="../dist/img/property_details/banner-house-3.png" alt="" class="rounded-[0.625rem]"></button>
+                    <button><img src="../dist/img/property_details/banner-house-4.png" alt="" class="rounded-[0.625rem]"></button>
+                    <button><img src="../dist/img/property_details/banner-house-5.png" alt="" class="rounded-[0.625rem]"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROPERTY SLIDER END -->
+
+    <!-- PROPERTY SCHEDULE AND INFORMATION -->
+
+    <section class="property__sched__info py-8 xl:pb-[4.5rem]">
+        <div class="container">
+            <div class="property_sched__info__wrapper grid xl:grid-cols-[_26rem,_1fr] gap-6">
+
+                <!-- LEFT SIDE FORM - w-[33%]-->
+                <div class="schedule__tour font-text-inter">
+                    <div class="contact bg-l_blue p-8 rounded-[0.65rem] mb-6">
+                        <h2 class="mb-4 ft-md text-lg xl:text-2xl">Schedule a Tour</h2>
+                        <form action="">
+                            <div class="form__wrapper flex xl:f-col flex-wrap gap-3 xl:gap-7">
+                                <div class="flex f-col md:flex-row xl:f-col gap-3 xl:gap-7 w-full">
+                                    <input type="date" name="date">
+                                    <input type="time" name="time">
+                                </div>
+                                <div class="flex f-col md:flex-row xl:f-col gap-3 xl:gap-7 w-full">
+                                    <input type="text" name="name" placeholder="Your Name">
+                                    <input type="email" name="email" placeholder="Your Email">
+                                </div>
+                                <input type="tel" name="phone" placeholder="Your Phone Number">
+                                <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>   
+                                <button class="btn bg--primary-w-BIG">Submit A Tour Request
+                                </a> 
+                            </div>
+                        </form>
+                    </div>
+                    <div class="broker bg-l_blue rounded-[0.65rem]">
+                        <div class="broker__wrapper py-[1.875rem] flex flex-col items-center gap-1 xl:gap-2">
+                            <img src="../dist/img/home/testimonial/clients/img-2.png" alt="">
+                            <h5 class="text-lg xl:text-[1.438rem] ft-md">Rebecca Robinson</h5>
+                            <small class="text-fs-16 text-gray mb-2 ft-md xl:text-fs-16_md xl:mb-3">Real Estate Broker</small>
+                            <ul class="flex gap-6">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa-solid fa-basketball"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE INFORMATION - w-[67%]-->
+                <div class="house__information__reviews font-text-inter">
+                    <div class="house__info bg-l_blue p-4 sm:p-8 rounded-[0.65rem] mb-8">
+                        <h2 class="mb-4 ft-md text-2xl">Details</h2>
+                        <ul class="grid sm:grid-cols-2 md:grid-cols-3 items-center">
+                            <li>
+                                <img src="../dist/img/property_details/icons/bed.png" alt="">
+                                <h3 class="text-xl">2 Bed Rooms</h3>
+                            </li>
+                            <li>
+                                <img src="../dist/img/property_details/icons/toom.png" alt="">
+                                <h3 class="text-xl">2 Bath Rooms</h3>
+                            </li>
+                            <li>
+                                <img src="../dist/img/property_details/icons/scale.png" alt="">
+                                <h3 class="text-xl">200 sq. ft.</h3>
+                            </li>
+                            <li>
+                                <img src="../dist/img/property_details/icons/brick-wall.png" alt="">
+                                <h3 class="text-xl">Year Build 2014</h3>
+                            </li>
+                            <li>
+                                <img src="../dist/img/property_details/icons/garage.png" alt="">
+                                <h3 class="text-xl">Garages</h3>
+                            </li>
+                            <li>
+                                <img src="../dist/img/property_details/icons/home.png" alt="">
+                                <h3 class="text-xl">Type House</h3>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="house__overview bg-l_blue p-4 sm:p-8 rounded-[0.65rem] mb-8">
+                        <h2 class="ft-md text-2xl mb-4">Overview</h2>
+                        <p class="mb-0 text-gray text-[16px] ls-3 line-clamp-5 text-ellipsis lg:line-clamp-none">Forest Heights Homes is a residential community located in Calgary, Alberta, Canada. It offers a variety of housing options including single-family homes, townhouses, and apartments. The community is known for its beautiful green spaces, parks, and playgrounds, providing residents with a peaceful and relaxing environment. It is also conveniently located near shopping centers, restaurants, schools, and public transportation.
+                        </p>
+                    </div>
+
+                    <div class="house__location bg-l_blue p-4 sm:p-8 rounded-[0.65rem] mb-8">
+                        <h2 class="ft-md text-2xl mb-4">Location</h2>
+                        <span class="text-gray mb-1 text-fs-16">678 Ocean View Drive</span>
+                        <div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.6395364528967!2d-122.08626633780452!3d37.421994070413874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba02425dad8f%3A0x6c296c66619367e0!2sGoogleplex!5e0!3m2!1sen!2ske!4v1585314748051!5m2!1sen!2ske" height="300" width="100%"  style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="house__floor_plans bg-l_blue p-4 sm:p-8 rounded-[0.65rem] mb-8">
+                        <h2 class="ft-md text-2xl mb-4">Floor Plans</h2>
+                        <div class="floor__plans__wrapper flex flex-col flex-wrap gap-3">
+                            <div class="floor_plans_accordion">
+                                <div class="floor_plans_info">
+                                    <span><i class="fa-solid fa-angle-down"></i>First Floor</span>  
+                                    <ul class="">
+                                        <li>Rooms: 2</li>
+                                        <li>Baths: 2</li>
+                                        <li>Size: 200 sq. ft.</li>
+                                    </ul>  
+                                </div>
+                                <div class="floor__plan__img">
+                                    <img src="../dist/img/property_details/blue-print.png" alt="">
+                                </div>                        
+                            </div>
+                            <div class="floor_plans_accordion">
+                                <div class="floor_plans_info">
+                                    <span><i class="fa-solid fa-angle-down"></i>Second Floor</span>  
+                                    <ul class="">
+                                        <li>Rooms: 2</li>
+                                        <li>Baths: 2</li>
+                                        <li>Size: 200 sq. ft.</li>
+                                    </ul>  
+                                </div>
+                                <div class="floor__plan__img">
+                                    <img src="../dist/img/property_details/blue-print.png" alt="">
+                                </div>                        
+                            </div>
+                            <div class="floor_plans_accordion">
+                                <div class="floor_plans_info">
+                                        <span><i class="fa-solid fa-angle-down"></i>Third Floor</span>  
+                                        <ul class="">
+                                        <li>Rooms: 2</li>
+                                        <li>Baths: 2</li>
+                                        <li>Size: 200 sq. ft.</li>
+                                    </ul>  
+                                </div>
+                                <div class="floor__plan__img">
+                                    <img src="../dist/img/property_details/blue-print.png" alt="">
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="house__demo bg-l_blue p-4 sm:p-8 rounded-[0.65rem] mb-8">
+                        <h2 class="ft-md text-2xl mb-4">Video</h2>
+                        <div class="img-box">   
+                            <div class="overlay">
+                                <button class="play-btn">
+                                    <i class="fa-solid fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="video-box">
+                            <video controls=""><source src="https://vjs.zencdn.net/v/oceans.mp4?HD" type="video/mp4"></video>
+                        </div>
+                    </div>
+
+                    <div class="house__reviews bg-l_blue p-4 sm:p-8 rounded-[0.65rem] mb-8">
+                        <h2 class="ft-md text-2xl mb-4">(3 Reviews)</h2>
+                        <div class="customer__reviews mb-8">
+                            <div class="customer__user flex justify-between items-center mb-4">
+                                <div class="customer__info flex items-center gap-3 sm:gap-7">
+                                    <img src="../dist/img/property_details/review-1.png" alt="">
+                                    <div>
+                                        <h4 class="text-[16px] ft-md mb-2">Sarah M</h4>
+                                        <p class="text-[13px] sm:text-[16px] ft-normal">May 10, 2023</p>
+                                    </div>
+                                </div>
+                                <div class="customer__stars flex gap-3">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p>"My family and I have been living in Forest Heights Homes for the past 2 years and we absolutely love it here. The community is safe and welcoming, and the amenities are top-notch. The management team is also very responsive and helpful."</p>   
+                        </div>
+
+                        <div class="customer__reviews mb-8">
+                            <div class="customer__user flex justify-between items-center mb-4">
+                                <div class="customer__info flex items-center gap-3 sm:gap-7">
+                                    <img src="../dist/img/property_details/review-2.png" alt="">
+                                    <div>
+                                        <h4 class="text-[16px] ft-md mb-2">John D</h4>
+                                        <p>May 12, 2023</p>
+                                    </div>
+                                </div>
+                                <div class="customer__stars flex gap-3">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p>"I had a great experience renting a home in Forest Heights. The property was well-maintained, and the leasing process was easy and straightforward. I highly recommend Forest Heights Homes for anyone looking for a comfortable and convenient place to live."</p>   
+                        </div>
+
+                        <div class="customer__reviews mb-8">
+                            <div class="customer__user flex justify-between items-center mb-4">
+                                <div class="customer__info flex items-center gap-3 sm:gap-7">
+                                    <img src="../dist/img/property_details/review-3.png" alt="">
+                                    <div>
+                                        <h4 class="text-[16px] ft-md mb-2">Emily P</h4>
+                                        <p>May 14, 2023</p>
+                                    </div>
+                                </div>
+                                <div class="customer__stars flex gap-3">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p>"I recently purchased a home in Forest Heights and couldn't be happier with my decision. The community is peaceful, the homes are beautiful, and the location is unbeatable. Highly recommend!"</p>   
+                        </div>
+                    </div>
+
+                    <div class="add__review bg-l_blue p-4 sm:p-8 rounded-[0.65rem] mb-8 font-text-inter">
+                        <h2 class="ft-md text-2xl mb-4">Add A Review</h2>
+                
+                        <div class="flex items-center gap-[12px] mb-5">
+                            <div class="rating"> <h2 class="ft-md text-2xl">Rating</h2> </div>
+
+                            <label class="star__reviews">
+                                <input type="radio" id="rating-0" name="rating" value="0">
+                                <label class="rating-0" for="rating-0" class="opacity-0">
+                                    <button id="star-0" class="fa-solid fa-star"></button>
+                                </label>
+
+                                <input type="radio" id="rating-1" name="rating" value="1" checked="checked">
+                                <label for="rating-1">
+                                    <button id="star-1" class="star fa-solid fa-star text-primary active"></button>
+                                </label>
+
+                                <input type="radio" id="rating-2" name="rating" value="2">
+                                <label for="rating-2">
+                                    <button id="star-2" class="star fa-regular fa-star"></button>
+                                </label>
+
+                                <input type="radio" id="rating-3" name="rating" value="3">
+                                <label for="rating-3">
+                                    <button id="star-3" class="star fa-regular fa-star"></button>
+                                </label>
+
+                                <input type="radio" id="rating-4" name="rating" value="4">
+                                <label for="rating-4">
+                                    <button id="star-4" class="star fa-regular fa-star"></button>
+                                </label>
+
+                                <input type="radio" id="rating-5" name="rating" value="5">
+                                <label for="rating-5">
+                                    <button id="star-5" class="star fa-regular fa-star"></button>
+                                </label>
+                            </label>
+                        </div>
+                        <form action="">
+                            <div class="form__review mb-5">
+                                <div class="form__identity mb-5 grid gap-3 grid-cols-1 lg:grid-cols-2 lg:gap-5">
+                                    <input type="text" name="name" placeholder="Your Name">
+                                    <input type="email" name="email" placeholder="Your Email"> 
+                                </div>
+                                <label class="reminder">
+                                    <input type="checkbox" id="checkbox">
+                                    <label for="checkbox" class="checkbox__label relative">
+                                        <span class="checkmark"></span>
+                                        Keep me posted via email for future comments on this website
+                                    </label>
+                                </label>
+                                <textarea name="review" id="" cols="30" rows="10" placeholder="Review" class="max-h-[240px]"></textarea>
+                            </div>
+                            <a href="#"  class="btn bg--primary-w-BIG">Submit Review</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROPERTY SCHEDULE AND INFORMATION END -->
+
+    <!-- PROPERTY CHECKOUT -->
+
+    <section class="propertyCheckout py100 bg-l_gray dark:bg-dark_2">
+        <div class="container">
+            <div class="sectionHeading text-left">
+                <h2>RELATED PROPERTIES</h2>
+            </div>
+            <div class="propertyCheckout__entries">
+                <div class="propertyCheckout__card">
+                    <div class="card__img"><img src="./img/home/img-1.png" alt=""><span class="price">$90,000</span></div>
+                    <div class="card__text">
+                        <a href="#">Mountain View Manor Homes</a>
+                        <p class="location">8901 Pinecrest Drive</p>
+                        <ul>
+                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                            <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                            <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                        </ul>
+                        <button class="btn bg--transparent-p">For Rent</button>
+                    </div>
+                </div>
+                <div class="propertyCheckout__card">
+                    <div class="card__img"><img src="./img/home/img-2.png" alt=""><span class="price">$4,600/Mo</span></div>
+                    <div class="card__text">
+                        <a href="#">Riverfront Landing Townhomes</a>
+                        <p class="location">9012 Riverfront Way</p>
+                        <ul>
+                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                            <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                            <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                        </ul>
+                        <button class="btn bg--transparent-p">For Sale</button>
+                    </div>
+                </div>
+                <div class="propertyCheckout__card">
+                    <div class="card__img"><img src="./img/home/img-3.png" alt=""><span class="price">$80,000</span></div>
+                    <div class="card__text">
+                        <a href="#">Lakeside Terrace Villas</a>
+                        <p class="location">9012 Riverfront Way</p>
+                        <ul>
+                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                            <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                            <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                        </ul>
+                        <button class="btn bg--transparent-p">For Sale</button>
+                    </div>
+                </div>
+                <div class="propertyCheckout__card">
+                    <div class="card__img"><img src="./img/home/img-11.png" alt=""><span class="price">$4,600/Mo</span></div>
+                    <div class="card__text">
+                        <a href="#">Riverfront Landing Townhomes</a>
+                        <p class="location">8901 Pinecrest Drive</p>
+                        <ul>
+                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                            <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                            <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                        </ul>
+                        <button class="btn bg--transparent-p">For Rent</button>
+                    </div>
+                </div>
+                <div class="propertyCheckout__card">
+                    <div class="card__img"><img src="./img/home/img-10.png" alt=""><span class="price">$4,600/Mo</span></div>
+                    <div class="card__text">
+                        <a href="#">Riverfront Landing Townhomes</a>
+                        <p class="location">9012 Riverfront Way</p>
+                        <ul>
+                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                            <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                            <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                        </ul>
+                        <button class="btn bg--transparent-p">For Sale</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROPERTY CHECKOUT END -->
+
+    <footer class="footer bg-footer_bg bg-cover bg-no-repeat bg-center font-text-inter">
+        <div class="container">
+            <div class="footer__wrapper text-light pt-[100px] pb-[30px]">
+                <button class="toggleBtn block mx-a my-0 p-0 rounded-full leading-none"><i class="fas fa-circle-half-stroke text-light dark:text-dark dark:bg-light rounded-full leading-none"></i></button>
+
+                <div class="footer__top f-col-center mb-10 md:mb-8 text-center">
+                    <h2 class="mb-4 text-[24px] md:text-[clamp(32px,2.2vw,64px)] ft-b lh-120 text-light dark:text-light">FIND YOUR DREAM HOME TODAY WITH OUR <br class="hidden md:inline-block">EXTENSIVE PROPERTY COLLECTION</h2>
+                    <button class="btn bg--primary-w ft-sb">View Properties</button>
+                </div>
+                <div class="footer__middle flex flex-wrap lg:flex-nowrap lg:justify-between">
+                    <div class="lg:order-1 mb-[54px] w-full lg:w-[25%] text-wrap px-0 lg:px-2">
+                        <h3 class="text-[28px] mb-3 ft-md">LOCATION</h3>
+                        <p class="fs-19 lh-130 mb-3">123 Street, Your City, State and Country.</p>
+                        <p class="fs-19 lh-130 mb-10">123 Street, Your City, State and Country.</p>
+                        <h3 class="text-[28px] mb-4 ft-md">TIMING</h3>
+                        <p class="fs-19 lh-130 mb-3 ft-md -ls-2">Mon-Sat, 9AM - 5PM</p>
+                        <p class="fs-19 lh-130 ft-md -ls-2">Sunday Off</p>
+                    </div>
+                    <div class="order-first lg:order-2 lg:mx-auto w-full lg:w-[33.33%] mb-12 lg:mt-[150px] lg:mb-[90px] px-0 lg:px-2">
+                        <h3 class="fs-23 ft-md mb-4">Subscribe Our Newsletter</h3>
+                        <form action="" class="w-full flex justify-between bg-light dark:bg-dark_2 py-[12px] px-[24px] rounded-[10px] fs-19">
+                            <input type="email" placeholder="Your Email" id="footerEmailInput" class="w-full bg-light dark:bg-dark_2 text-d_gray dark:text-light_2">
+                            <button class="text-d_gray dark:text-light_2 text-[24px] leading-none mr-1"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                    <div class="lg:order-3 mb-[54px] w-full lg:w-[25%] text-wrap f-col px-0 lg:px-2">
+                        <h3 class="text-[28px] mb-3 ft-md">CONTACT US</h3>
+                        <a href="tel:123" class="mb-3"><span class="ft-sb hover:text-primary">+1 123 456 789</span></a>
+                        <a href="tel:123" class="mb-3"><span class="ft-sb hover:text-primary">+1 123 456 789</span></a>
+                        <a href="mailto:info@homelyexample.com" class="mb-8"><span class="ft-md hover:text-primary">info@homelyexample.com</span></a>
+
+                        <h3 class="text-[28px] mb-3">FOLLOW US</h3>
+                        <ul class="flex text-[24px] gap-3">
+                            <li><a href="#" class="fab fa-facebook-f"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fas fa-basketball"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-center fs-19">&copy;2024 Homely, All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="backTop"><button class="back-to-top fas fa-angle-up" onclick="scrollToTop()"></button></div>
+    
+    <script src="./js/script.js"></script>
+    <script src="./vendor/tiny-slider/tiny-slider.js"></script>
+    <script>
+        // double banner slider
+        function Slider(selector) {
+            this.slider = tns({
+                container: selector,
+                items: 1,
+                controls: false,
+                lazyload: false,
+                slideBy: 'page',
+                loop: true,
+                mouseDrag: true,
+                touch: true,
+                navContainer: selector+'__thumbnails',
+            });
+            this.thumbnails = tns({
+                container: selector+'__thumbnails',
+                items: 4,
+                controls: false,
+                loop: true,
+                slideBy: 1,
+                nav: false,
+                mouseDrag: true,
+                touch: true,
+                responsive: {
+                    768: { items: 4, center: true, },
+                    490:  { items: 2, },
+                }
+            });
+            
+            this.slider.events.on('indexChanged', function(evt) {
+                // hack beacause of strange idexes from tns slider
+                var indexToGoTo = evt.index > this.slider.getInfo().slideCount ? 0 : evt.index - 1;
+                this.thumbnails.goTo(indexToGoTo);
+            });
+        }
+
+        Slider(".house__detail__slider");
+
+        // featured top properties slider
+        var featuredTopRatedProperties = tns({
+            container: ".propertyCheckout__entries",
+            items: 1,
+            loop: true,
+            center: false,
+            autoplay: true,
+            autoplayHoverPause: true,
+            autoplayButtonOutput: false,
+            controls: false,
+            nav: true,
+            speed: 750,
+            autoplayTimeout: 3000,
+            preventActionWhenRunning: true,
+            mouseDrag: true,
+            touch: true,
+            navAsThumbnails: true,
+            responsive: {
+                1200: { items: 3, center: true, },
+                768:  { items: 2, },
+            }
+        });
+
+        // accordion
+        const accordion = document.querySelectorAll(".floor_plans_accordion");
+        accordion.forEach((accordion) => {
+            accordion.addEventListener("click", ()=>{
+                accordion.classList.toggle("active");
+            });
+        });
+
+        //image to video
+        const demo = document.querySelector('.house__demo');
+        demo.addEventListener("click", () => {
+            demo.classList.add('active');
+        });
+
+        // add review star
+        function updateStars(hoveredIndex) {
+            // Convert hoveredIndex to a number if it's a string
+            hoveredIndex = Number(hoveredIndex);
+
+            // Iterate over all star elements
+            for (let i = 1; i <= 5; i++) {
+                const star = document.getElementById(`star-${i}`);
+                if (i <= hoveredIndex) {
+                    // Apply 'text-primary' and 'fa-solid' for stars up to and including the hovered star
+                    star.classList.add('active', 'fa-solid');
+                    star.classList.remove('fa-regular');
+                } else {
+                    // Apply 'text-gray' and 'fa-regular' for stars after the hovered star
+                    star.classList.add('fa-regular');
+                    star.classList.remove('active', 'fa-solid');
+                }
+            }
+        }
+
+        // Add event listeners to each star
+        for (let i = 0; i <= 5; i++) {
+            const star = document.getElementById(`star-${i}`);
+            star.addEventListener("mouseover", () => updateStars(i));
+        }
+    </script>
+</body>
+</html>
