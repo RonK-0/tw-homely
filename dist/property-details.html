@@ -32,15 +32,19 @@
                 <a href="./index.html" class="xl:mr-[35px]"><img src="./img/logo.png" alt=""></a>
                 <div>
                     <button class="burger p-[10px] text-[24px] block xl:hidden"><i class="fas fa-bars"></i></button>
-                    <ul class="nav__links hidden xl:flex flex-col xl:flex-row xl:justify-between gap-[30px] relative top-[-1px] left-[1px]">
+                    <ul class="nav__links hidden xl:flex flex-col xl:flex-row xl:justify-between gap-[30px]">
                         <li class="nav__link_item"><a href="./index.html">Home</a></li>
                         <li class="nav__link_item"><a href="./about.html">About</a></li>
-                        <li class="nav__link_item"><a href="./properties.html">Properties</a></li>
-                        <li class="nav__link_item"><a href="./property-details.html" class="active">Property Details</a></li>
+                        <li class="nav__link_item"><a href="./properties.html" class="active">Properties</a></li>
+                        <li class="nav__link_item"><a href="./property-details.html">Property Details</a></li>
                         <li class="nav__link_item mr-[30px]"><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <a href="tel:123"class="hidden xl:flex items-center justify-end gap-[clamp(12px,0.83vw,12px)] text-[clamp(20px,1.25vw,36px)] "><object data="./img/phone.svg" class="relative top-[-3px]"></object><span class="ft-md hover:text-primary no-mb lh-100 text-nowrap">+1 234 567 890</span></a>
+                <div class="hidden xl:flex justify-end gap-[clamp(12px,0.83vw,20px)] text-[clamp(20px,1.25vw,36px)] ">
+                    <a href="tel:123"><i class="fas fa-phone text-primary text-[32px]"></i></a>
+                    <!-- <button class="toggleBtn block mx-a my-0 p-0 rounded-full leading-none"><i class="fas fa-circle-half-stroke text-light dark:text-dark dark:bg-light rounded-full leading-none"></i></button> -->
+                    <a href="tel:123"><span class="ft-md hover:text-primary">+1 234 567 890</span></a>
+                </div>
             </nav>
         </div>
     </header>

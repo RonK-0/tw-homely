@@ -108,6 +108,7 @@ module.exports = {
       boxShadow:{
         'top_button_shadow'     : '4px 4px 10px rgba(0, 0, 0, 0.2)',
         'property_page_button_shadow' : '42px 42px 24px rgba(0, 0, 0, 0.01),24px 24px 20px rgba(0, 0, 0, 0.03), 11px 11px 15px rgba(0, 0, 0, 0.04), 3px 3px 8px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05);',
+        'property_page_button_shadow_dark' : '42px 42px 24px rgba(255, 255, 255, 0.01),24px 24px 20px rgba(255, 255, 255, 0.03), 11px 11px 15px rgba(255, 255, 255, 0.04), 3px 3px 8px rgba(255, 255, 255, 0.05), 0px 0px 0px rgba(255, 255, 255, 0.05);',
       },
       padding:{
         'container_p' : 'calc(1.5rem * 0.5)',

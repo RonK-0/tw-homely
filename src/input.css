@@ -42,7 +42,7 @@
         /* overflow-hidden */
         text-text_xs sm:text-text_sm md:text-text_md lg:text-text_lg
     }
-    *, body, h1, h2, h3, h4, p, form, input, a, span{
+    *, body, h1, h2, h3, h4, p, form, input, a, button, ul, li, span{
         @apply transition-all duration-300 ease-in-out
     }
     button{ @apply cursor-pointer }
@@ -139,10 +139,10 @@
         }
         .homeFeaturedProperties__entries{
             @apply flex gap-6 select-none;
-            .homeFeaturedProperties__card2{
+            .homeFeaturedProperties__card{
                 @apply bg-transparent dark:bg-l_gray rounded-[10px] mb-6 lg:mb-0 md:max-w-[416px] mx-auto;
                 .card__img{
-                    @apply relative rounded-t-[10px] overflow-hidden mb-4 dark:no-mb;
+                    @apply relative rounded-t-[10px] overflow-hidden mb-4;
                     img{ @apply w-full object-cover transition-all duration-[0.6s] ease-linear; }
                     .price{
                         @apply bg-light p-property_entry_price no-mb rounded-[5px]
@@ -151,11 +151,11 @@
                     }
                 }
                 .card__text{
-                    @apply f-col items-start dark:p-3;
+                    @apply f-col items-start dark:pl-3 dark:pb-3;
                     a{ @apply text-dark text-[23px] font-text-inter ft-md lh-130 capitalize mb-4; }
                     p.location{  @apply text-fs-19 ft-nm lh-140 text-dark font-text-inter mb-2 }
                     ul{
-                        @apply pl-0  mb-4 flex;
+                        @apply pl-0  mb-4 flex flex-wrap sm:flex-nowrap;
                         li{
                             @apply mr-5 flex items-center gap-2;
                             *{ @apply text-dark_2; }
@@ -199,7 +199,7 @@
         .homeTopRatedProperties__card{
             @apply bg-light rounded-[10px] mb-6 lg:mb-0 w-full md:max-w-[416px] mx-auto select-none;
             .card__img{
-                @apply relative rounded-t-[10px] overflow-hidden mb-4 dark:no-mb;
+                @apply relative rounded-t-[10px] overflow-hidden mb-4;
                 img{@apply w-full object-cover transition-all duration-[0.6s] ease-linear; }
                 .price{
                     @apply bg-light p-property_entry_price no-mb rounded-[5px]
@@ -208,11 +208,11 @@
                 }
             }
             .card__text{
-                @apply f-col items-start dark:p-3;
+                @apply f-col items-start dark:pl-3 dark:pb-3;
                 a{ @apply text-dark text-[23px] font-text-inter ft-md lh-130 capitalize mb-4; }
                 p.location{ @apply text-fs-19 ft-nm lh-140 text-dark font-text-inter mb-2 }
                 ul{
-                    @apply pl-0  mb-4 flex;
+                    @apply pl-0  mb-4 flex flex-wrap sm:flex-nowrap;
                     li{
                         @apply mr-5 flex items-center gap-2;
                         *{ @apply text-dark_2; }
@@ -289,6 +289,7 @@
                         i{ @apply text-blog_entry_fa; }
                     }
                 }
+                button{@apply ft-sb;}
             }
         }
         .homeBlogEntries__card:hover .card__img img { @apply scale-110 transition-all duration-[0.6s] ease-linear; }
@@ -445,7 +446,7 @@
             .propertyCheckout__card{
                 @apply bg-transparent dark:bg-l_gray rounded-[10px] mb-6 lg:mb-0 md:max-w-[416px] mx-auto;
                 .card__img{
-                    @apply relative rounded-t-[10px] overflow-hidden mb-4 dark:no-mb;
+                    @apply relative rounded-t-[10px] overflow-hidden mb-4;
                     img{ @apply w-full object-cover transition-all duration-[0.6s] ease-linear; }
                     .price{
                         @apply bg-light p-property_entry_price no-mb rounded-[5px]
@@ -454,11 +455,11 @@
                     }
                 }
                 .card__text{
-                    @apply f-col items-start dark:p-3;
+                    @apply f-col items-start dark:pl-3 dark:pb-3;
                     a{ @apply text-dark text-[23px] font-text-inter ft-md lh-130 capitalize mb-4; }
                     p.location{  @apply text-fs-19 ft-nm lh-140 text-dark font-text-inter mb-2 }
                     ul{
-                        @apply pl-0  mb-4 flex;
+                        @apply pl-0  mb-4 flex flex-wrap sm:flex-nowrap;
                         li{
                             @apply mr-5 flex items-center gap-2;
                             *{ @apply text-dark_2; }
@@ -475,13 +476,13 @@
 
 /* PROPERTIES PAGE - START */
     .properties__wrapper{
-        @apply grid xl:grid-cols-[_2fr,_1fr] gap-6;
+        @apply grid xl:grid-cols-[_2fr,_416px] gap-6;
         .properties__cards{
-            @apply grid md:grid-cols-2 gap-x-6 select-none;
+            @apply hidden md:grid-cols-2 gap-x-6 gap-y-10 mb-10 select-none;
             .properties__card{
-                @apply bg-transparent dark:bg-l_gray rounded-[10px] md:max-w-[416px] mx-auto;
+                @apply bg-transparent dark:bg-l_gray rounded-[10px] w-full md:max-w-[416px] mx-auto;
                 .card__img{
-                    @apply relative rounded-[10px] overflow-hidden mb-4 dark:no-mb;
+                    @apply relative rounded-[10px] overflow-hidden mb-4;
                     img{ @apply w-full object-cover transition-all duration-[0.6s] ease-linear; }
                     .price{
                         @apply bg-light p-property_entry_price no-mb rounded-[5px]
@@ -490,21 +491,43 @@
                     }
                 }
                 .card__text{
-                    @apply f-col items-start dark:p-3 mb-6;
+                    @apply f-col items-start dark:pl-3 dark:pb-3;
                     a{ @apply text-dark text-[23px] font-text-inter ft-md lh-130 capitalize mb-4; }
-                    p.location{  @apply text-fs-19 ft-nm lh-140 text-dark font-text-inter mb-2 }
+                    p.location{  @apply text-base ft-nm lh-140 text-dark font-text-inter mb-2 }
                     ul{
-                        @apply pl-0  mb-4 flex;
+                        @apply pl-0  mb-4 flex flex-wrap sm:flex-nowrap;
                         li{
-                            @apply mr-5 flex items-center gap-2;
+                            @apply mr-[14px] flex items-center gap-3 ls-2 lh-140;
                             *{ @apply text-dark_2; }
-                            span{ @apply ft-md text-fs-16_xl text-nowrap lh-150 font-text-inter;}
+                            span{ @apply text-base text-nowrap font-text-inter;}
                         }
                     }
                 }
             }
             .properties__card:hover .card__img img { @apply scale-110 transition-all duration-[0.6s] ease-linear; }
-            
+        }
+        .properties__cards.active{ @apply grid; }
+        .properties__page__selection{
+            @apply text-center pt-[30px];
+            .properties__page__selection__list{
+                @apply flex justify-center items-start gap-5 mb-4;
+                li{
+                    @apply f-col-center rounded-[10px]
+                    shadow-property_page_button_shadow dark:shadow-property_page_button_shadow_dark
+                    bg-light hover:bg-primary dark:bg-gray
+                    w-[40px] h-[40px] block;
+                    button{
+                        @apply bg-transparent w-[40px] h-[40px]
+                        text-[21px] lh-140 text-center 
+                        text-dark dark:text-light;
+                    }
+                    button.fas{ @apply text-[22px]; }
+                }
+                li:hover, li.active{
+                    @apply bg-primary text-light;
+                    button{@apply text-light;}
+                }
+            }
         }
     }
 
@@ -661,7 +684,7 @@
     .btn{
         @apply inline-block
         font-text-inter text-button
-        leading-[130%] ft-md text-center
+        leading-[130%] text-center ft-sb
         p-button rounded-[5px]
         border-[1px] border-transparent
         transition-all duration-500 ease-in-out;
@@ -688,7 +711,7 @@
     }
     .btn.bg--primary-w-BIG{
         @apply text-light hover:text-primary
-        text-[19px] text-center
+        text-[19px] text-center ft-nm
         bg-primary hover:bg-light 
         border-[2px]  border-primary py-[20px] px-0
         rounded-[0.32rem] block w-full

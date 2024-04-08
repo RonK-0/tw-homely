@@ -42,6 +42,7 @@
                 </div>
                 <div class="hidden xl:flex justify-end gap-[clamp(12px,0.83vw,20px)] text-[clamp(20px,1.25vw,36px)] ">
                     <a href="tel:123"><i class="fas fa-phone text-primary text-[32px]"></i></a>
+                    <!-- <button class="toggleBtn block mx-a my-0 p-0 rounded-full leading-none"><i class="fas fa-circle-half-stroke text-light dark:text-dark dark:bg-light rounded-full leading-none"></i></button> -->
                     <a href="tel:123"><span class="ft-md hover:text-primary">+1 234 567 890</span></a>
                 </div>
             </nav>
@@ -57,91 +58,442 @@
         </div>
     </section>
 
-    <section class="properties py100">
+    <section class="properties py100 bg-light dark:bg-dark_2">
         <div class="container">
             <div class="properties__wrapper grid xl:grid-cols-[_2fr, _1fr] gap-6">
-                <div class="properties__cards">
-                    <div class="properties__card">
-                        <div class="card__img"><img src="./img/home/img-11.png" alt=""><span class="price">$90,000</span></div>
-                        <div class="card__text">
-                            <a href="#">Ocean Breeze Villas</a>
-                            <p class="location">8901 Pinecrest Drive</p>
-                            <ul>
-                                <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
-                                <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
-                                <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
-                            </ul>
-                            <button class="btn bg--transparent-p">For Rent</button>
+                <div class="properties__properties">
+                    <div class="properties__cards active" id="properties__cards_p_1">
+                        <!-- properties-card-1 -->
+                        <div class="properties__card">
+                            <div class="card__img"><img src="./img/property/img-11.png" alt=""><span class="price">$90,000</span></div>
+                            <div class="card__text">
+                                <a href="#">Ocean Breeze Villas</a>
+                                <p class="location">8901 Pinecrest Drive</p>
+                                <ul>
+                                    <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                                    <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                                    <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                                </ul>
+                                <button class="btn bg--transparent-p">For Sale</button>
+                            </div>
+                        </div>
+                        <!-- properties-card-2 -->
+                        <div class="properties__card">
+                            <div class="card__img"><img src="./img/property/img-12.png" alt=""><span class="price">$4,600/Mo</span></div>
+                            <div class="card__text">
+                                <a href="#">Forest Heights Homes</a>
+                                <p class="location">9012 Riverfront Way</p>
+                                <ul>
+                                    <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                                    <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                                    <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                                </ul>
+                                <button class="btn bg--transparent-p">For Rent</button>
+                            </div>
+                        </div>
+                        <!-- properties-card-3 -->
+                        <div class="properties__card">
+                            <div class="card__img"><img src="./img/property/img-10.png" alt=""><span class="price">$80,000</span></div>
+                            <div class="card__text">
+                                <a href="#">Park View Residences</a>
+                                <p class="location">678 Ocean View Drive</p>
+                                <ul>
+                                    <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                                    <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                                    <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                                </ul>
+                                <button class="btn bg--transparent-p">For Sale</button>
+                            </div>
+                        </div>
+                        <!-- properties-card-4 -->
+                        <div class="properties__card">
+                            <div class="card__img"><img src="./img/property/img-13.png" alt=""><span class="price">$80,000</span></div>
+                            <div class="card__text">
+                                <a href="#">Riverfront Landing Townhomes</a>
+                                <p class="location">678 Ocean View Drive</p>
+                                <ul>
+                                    <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                                    <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                                    <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                                </ul>
+                                <button class="btn bg--transparent-p">For Sale</button>
+                            </div>
+                        </div>
+                        <!-- properties-card-5 -->
+                        <div class="properties__card">
+                            <div class="card__img"><img src="./img/property/img-15.png" alt=""><span class="price">$90,000</span></div>
+                            <div class="card__text">
+                                <a href="#">Skyline Towers Condos</a>
+                                <p class="location">678 Ocean View Drive</p>
+                                <ul>
+                                    <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                                    <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                                    <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                                </ul>
+                                <button class="btn bg--transparent-p">For Rent</button>
+                            </div>
+                        </div>
+                        <!-- properties-card-6 -->
+                        <div class="properties__card">
+                            <div class="card__img"><img src="./img/property/img-16.png" alt=""><span class="price">$90,000</span></div>
+                            <div class="card__text">
+                                <a href="#">Hillcrest Heights Duplexes</a>
+                                <p class="location">678 Ocean View Drive</p>
+                                <ul>
+                                    <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                                    <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                                    <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                                </ul>
+                                <button class="btn bg--transparent-p">For Sale</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="properties__card">
-                        <div class="card__img"><img src="./img/home/img-12.png" alt=""><span class="price">$4,600/Mo</span></div>
-                        <div class="card__text">
-                            <a href="#">Forest Heights Homes</a>
-                            <p class="location">9012 Riverfront Way</p>
-                            <ul>
-                                <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
-                                <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
-                                <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
-                            </ul>
-                            <button class="btn bg--transparent-p">For Rent</button>
+                    <div class="properties__cards" id="properties__cards_p_2">
+                        <!-- properties-card-1 -->
+                        <div class="properties__card">
+                            <div class="card__img"><img src="./img/property/img-13.png" alt=""><span class="price">$80,000</span></div>
+                            <div class="card__text">
+                                <a href="#">Riverfront Landing Townhomes</a>
+                                <p class="location">678 Ocean View Drive</p>
+                                <ul>
+                                    <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                                    <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                                    <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                                </ul>
+                                <button class="btn bg--transparent-p">For Sale</button>
+                            </div>
+                        </div>
+                        <!-- properties-card-2 -->
+                        <div class="properties__card">
+                            <div class="card__img"><img src="./img/property/img-15.png" alt=""><span class="price">$90,000</span></div>
+                            <div class="card__text">
+                                <a href="#">Skyline Towers Condos</a>
+                                <p class="location">678 Ocean View Drive</p>
+                                <ul>
+                                    <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                                    <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                                    <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                                </ul>
+                                <button class="btn bg--transparent-p">For Rent</button>
+                            </div>
+                        </div>
+                        <!-- properties-card-3 -->
+                        <div class="properties__card">
+                            <div class="card__img"><img src="./img/property/img-10.png" alt=""><span class="price">$80,000</span></div>
+                            <div class="card__text">
+                                <a href="#">Park View Residences</a>
+                                <p class="location">678 Ocean View Drive</p>
+                                <ul>
+                                    <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                                    <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                                    <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                                </ul>
+                                <button class="btn bg--transparent-p">For Sale</button>
+                            </div>
+                        </div>
+                        <!-- properties-card-4 -->
+                        <div class="properties__card">
+                            <div class="card__img"><img src="./img/property/img-11.png" alt=""><span class="price">$90,000</span></div>
+                            <div class="card__text">
+                                <a href="#">Ocean Breeze Villas</a>
+                                <p class="location">8901 Pinecrest Drive</p>
+                                <ul>
+                                    <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                                    <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                                    <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                                </ul>
+                                <button class="btn bg--transparent-p">For Rent</button>
+                            </div>
+                        </div>
+                        <!-- properties-card-5 -->
+                        <div class="properties__card">
+                            <div class="card__img"><img src="./img/property/img-12.png" alt=""><span class="price">$4,600/Mo</span></div>
+                            <div class="card__text">
+                                <a href="#">Forest Heights Homes</a>
+                                <p class="location">9012 Riverfront Way</p>
+                                <ul>
+                                    <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                                    <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                                    <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                                </ul>
+                                <button class="btn bg--transparent-p">For Rent</button>
+                            </div>
+                        </div>
+                        <!-- properties-card-6 -->
+                        <div class="properties__card">
+                            <div class="card__img"><img src="./img/property/img-16.png" alt=""><span class="price">$90,000</span></div>
+                            <div class="card__text">
+                                <a href="#">Hillcrest Heights Duplexes</a>
+                                <p class="location">678 Ocean View Drive</p>
+                                <ul>
+                                    <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                                    <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                                    <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                                </ul>
+                                <button class="btn bg--transparent-p">For Sale</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="properties__card">
-                        <div class="card__img"><img src="./img/home/img-10.png" alt=""><span class="price">$80,000</span></div>
-                        <div class="card__text">
-                            <a href="#">Riverfront Landing Townhomes</a>
-                            <p class="location">9012 Riverfront Way</p>
-                            <ul>
-                                <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
-                                <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
-                                <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
-                            </ul>
-                            <button class="btn bg--transparent-p">For Sale</button>
+                    <div class="properties__cards" id="properties__cards_p_3">
+                        <!-- properties-card-1 -->
+                        <div class="properties__card">
+                            <div class="card__img"><img src="./img/property/img-12.png" alt=""><span class="price">$4,600/Mo</span></div>
+                            <div class="card__text">
+                                <a href="#">Forest Heights Homes</a>
+                                <p class="location">9012 Riverfront Way</p>
+                                <ul>
+                                    <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                                    <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                                    <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                                </ul>
+                                <button class="btn bg--transparent-p">For Rent</button>
+                            </div>
+                        </div>
+                        <!-- properties-card-2 -->
+                        <div class="properties__card">
+                            <div class="card__img"><img src="./img/property/img-11.png" alt=""><span class="price">$90,000</span></div>
+                            <div class="card__text">
+                                <a href="#">Ocean Breeze Villas</a>
+                                <p class="location">8901 Pinecrest Drive</p>
+                                <ul>
+                                    <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                                    <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                                    <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                                </ul>
+                                <button class="btn bg--transparent-p">For Rent</button>
+                            </div>
+                        </div>
+                        <!-- properties-card-3 -->
+                        <div class="properties__card">
+                            <div class="card__img"><img src="./img/property/img-16.png" alt=""><span class="price">$90,000</span></div>
+                            <div class="card__text">
+                                <a href="#">Hillcrest Heights Duplexes</a>
+                                <p class="location">678 Ocean View Drive</p>
+                                <ul>
+                                    <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                                    <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                                    <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                                </ul>
+                                <button class="btn bg--transparent-p">For Sale</button>
+                            </div>
+                        </div>
+                        <!-- properties-card-4 -->
+                        <div class="properties__card">
+                            <div class="card__img"><img src="./img/property/img-13.png" alt=""><span class="price">$80,000</span></div>
+                            <div class="card__text">
+                                <a href="#">Riverfront Landing Townhomes</a>
+                                <p class="location">678 Ocean View Drive</p>
+                                <ul>
+                                    <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                                    <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                                    <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                                </ul>
+                                <button class="btn bg--transparent-p">For Sale</button>
+                            </div>
+                        </div>
+                        <!-- properties-card-5 -->
+                        <div class="properties__card">
+                            <div class="card__img"><img src="./img/property/img-15.png" alt=""><span class="price">$90,000</span></div>
+                            <div class="card__text">
+                                <a href="#">Skyline Towers Condos</a>
+                                <p class="location">678 Ocean View Drive</p>
+                                <ul>
+                                    <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                                    <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                                    <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                                </ul>
+                                <button class="btn bg--transparent-p">For Rent</button>
+                            </div>
+                        </div>
+                        <!-- properties-card-6 -->
+                        <div class="properties__card">
+                            <div class="card__img"><img src="./img/property/img-10.png" alt=""><span class="price">$80,000</span></div>
+                            <div class="card__text">
+                                <a href="#">Park View Residences</a>
+                                <p class="location">678 Ocean View Drive</p>
+                                <ul>
+                                    <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                                    <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                                    <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                                </ul>
+                                <button class="btn bg--transparent-p">For Sale</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="properties__card">
-                        <div class="card__img"><img src="./img/home/img-3.png" alt=""><span class="price">$80,000</span></div>
-                        <div class="card__text">
-                            <a href="#">Lakeside Terrace Villas</a>
-                            <p class="location">9012 Riverfront Way</p>
-                            <ul>
-                                <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
-                                <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
-                                <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                    <div class="properties__page__selection">
+                        <div class="properties__page__selection__wrapper">
+                            <ul class="properties__page__selection__list">
+                                <li><button class="fas fa-chevron-left"></button></li>
+                                <li id="1" class="active"><button>1</button></li>
+                                <li id="2"><button>2</button></li>
+                                <li id="3"><button>3</button></li>
+                                <li><button class="fas fa-chevron-right"></i></button></li>
                             </ul>
-                            <button class="btn bg--transparent-p">For Sale</button>
-                        </div>
-                    </div>
-                    <div class="properties__card">
-                        <div class="card__img"><img src="./img/home/img-11.png" alt=""><span class="price">$4,600/Mo</span></div>
-                        <div class="card__text">
-                            <a href="#">Riverfront Landing Townhomes</a>
-                            <p class="location">8901 Pinecrest Drive</p>
-                            <ul>
-                                <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
-                                <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
-                                <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
-                            </ul>
-                            <button class="btn bg--transparent-p">For Rent</button>
-                        </div>
-                    </div>
-                    <div class="properties__card">
-                        <div class="card__img"><img src="./img/home/img-10.png" alt=""><span class="price">$4,600/Mo</span></div>
-                        <div class="card__text">
-                            <a href="#">Riverfront Landing Townhomes</a>
-                            <p class="location">9012 Riverfront Way</p>
-                            <ul>
-                                <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
-                                <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
-                                <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
-                            </ul>
-                            <button class="btn bg--transparent-p">For Sale</button>
                         </div>
                     </div>
                 </div>
+                
                 <div class="properties__selection">
-
+                    <div class="selecting__wrapper">
+                        <div class="selecting__forms ">
+                            <div class="selecting__select ">
+                                    <div class="selecting__form grid">
+                                        <div>
+                                            <h2 class="p-3 pl-0">City</h2>
+                                            <select class="selector" name="" id="">
+                                                <option value="">New York City, NY</option>
+                                                <option value="">Los Angeles, CA</option>
+                                                <option value="">Chicago, IL</option>
+                                                <option value="">Houston, TX</option>
+                                                <option value="">Phoenix, AZ</option>
+                                                <option value="">Philadelphia, PA</option>
+                                                <option value="">San Antonio, TX</option>
+                                                <option value="">San Diego, CA</option>
+                                                <option value="">Dallas, TX</option>
+                                                <option value="">San Jose, CA</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <h2 class="p-3 pl-0">Property Category</h2>
+                                            <select class="selector" name="" id="">
+                                                <option value="">House</option>
+                                                <option value="">Apartment</option>
+                                                <option value="">Townhome</option>
+                                                <option value="">Office</option>
+                                                <option value="">Villa</option>
+                                                <option value="">Bungalow</option>
+                                                <option value="">Loft</option>
+                                            </select>
+                                        </div>    
+                                    </div>
+                            </div>
+                            <!-- radiobutton for bedrooms -->
+                            <div class="selecting__radiobutton lg:grid lg:grid-cols-1">
+                                <div>
+                                    <h2 class="p-5 pl-0">Number of Bedrooms</h2>
+                                    <div class="selecting__radiobutton__wrap">
+                                        <ul>
+                                            <li>
+                                                <label class="bathrms">
+                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Room 1</label><span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="bathrms">
+                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Room 2</label><span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="bathrms">
+                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Room 3</label><span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="bathrms">
+                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Room 4</label><span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="bathrms">
+                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Room 5</label><span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="bathrms">
+                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Room 6</label><span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- radiobutton for bathroom -->
+                                <div>
+                                    <h2 class="p-5 pl-0">Number of Bathrooms</h2>
+                                    <div class="selecting__radiobutton__wrap">
+                                        <ul class="grid grid-cols-2">
+                                            <li>
+                                                <label class="bathrms">
+                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 1</label><span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="bathrms">
+                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 2</label><span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="bathrms">
+                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 3</label><span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="bathrms">
+                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 4</label><span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="bathrms">
+                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 5</label><span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="bathrms">
+                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 6</label><span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="lg:grid lg:grid-cols-1 ">
+                                <!-- track ranges 1 -->
+                                <div>
+                                    <h2 class="p-4">Square Feet</h2>
+                                    <div class="range">
+                                        <div class="range__slider transition-none">
+                                            <span class="range__selected" class="transition-none"></span>
+                                        </div>
+                                        <div class="range__input accent-primary">
+                                            <input type="range" class="min" min="0" max="1000" value="300" step="10">
+                                            <input type="range" class="max" min="0" max="1000" value="700" step="10">
+                                        </div>
+                                        <div class="range__sqft">
+                                            <h3 class="text-slate-500 text-[20px] pt-[10px]">300 sq. ft. - 1000 sq. ft.</h3>
+                                        </div>
+                                        <div class="range__price hidden">      
+                                            <input type="number" name="min" value="300">     
+                                            <label for="max"> sq. ft.</label> 
+                                            <input type="number" name="max" value="700">    
+                                            <label for="max"> sq. ft.</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- track ranges 2 -->
+                                <div>
+                                    <h2 class="p-4">Price</h2>
+                                    <div class="ranges">
+                                        <div class="range-slider">
+                                            <span class="range-selected"></span>
+                                        </div>
+                                        <div class="range-input accent-primary">
+                                            <input type="range" class="min1" min="0" max="1000" value="300" step="10">
+                                            <input type="range" class="max1" min="0" max="1000" value="700" step="10">
+                                        </div>
+                                        <div class="range-sqft">
+                                            <h3 class="text-slate-500 text-[20px] pt-[10px]">Range: $1000 - 10,000</h3>
+                                        </div>
+                                        <div class="range-price hidden">      
+                                            <input type="number" name="min1" value="300">     
+                                            <label for="max"> sq. ft.</label> 
+                                            <input type="number" name="max1" value="700">    
+                                            <label for="max"> sq. ft.</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 
@@ -243,6 +595,21 @@
             ranges.style.right = 100 - (max_Range / range_Input[1].max) * 100 + "%";
             }
         });
+        });
+        const propertyPage = document.querySelectorAll(".properties__page__selection__list li");
+        const propertyPageContent = document.querySelectorAll(".properties__cards");
+        propertyPage.forEach((menuList)=>{
+            menuList.addEventListener("click", ()=>{
+                propertyPage.forEach((menu)=>{
+                    menu.classList.remove("active")
+                })
+                menuList.classList.add("active");
+                const activeContent = document.querySelector(`#properties__cards_p_${menuList.id}`);
+                propertyPageContent.forEach((content)=>{
+                    content.classList.remove("active")
+                })
+                activeContent.classList.add("active")
+            })
         });
         
     </script>
