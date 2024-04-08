@@ -129,6 +129,7 @@ module.exports = {
         'play_button' : 'clamp(48px, 3.333vw, 84px)',
       },
       height:{
+        'insidePageBanner' : 'clamp(350px, 26.042vw, 600px)',
         'tel_icon' : 'clamp(24px, 10vw, 38px)',
         'play_button' : 'clamp(48px, 3.333vw, 84px)',
       },

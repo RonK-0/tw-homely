@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homely - Real Estate HTML5 Template</title>
+    <title>Homely - Properties</title>
     <link href="../src/output.css" rel="stylesheet">
 
     <link rel="shortcut icon" type="image/x-icon" href="./img/favicon-dark.png">
@@ -47,25 +47,21 @@
             </nav>
         </div>
     </header>
- 
-
-    <!-- CONTENT START -->
-
-
-    <section class="homeBanner bg-home_banner_bg bg-cover bg-center">
+   
+    <!-- start of properties -->
+    <section class="propBanner" id="pageBanner">
         <div class="container">
-            <div class="homeBanner__wrapper h-[50vh] f-col-center">
-                <h1 class="text-center text-banner_h1 ft-b text-light uppercase">properties</h1>
+            <div class="propBanner__wrapper">
+                <h2>properties</h2>
             </div>
         </div>
     </section>
 
-    <!-- properties -->
-    <section class="properties sm:pb-10 md:pb-10 lg:pb-10">
+    <section class="properties py100">
         <div class="container">
-            <div class="properties__wrapper sm:pb-10 lg:grid lg:grid-cols-2 lg:justify-items-center">
+            <div class="properties__wrapper sm:pb-10 xl:grid xl:grid-cols-2 xl:justify-items-center">
                 <div class="properties__contents">
-                    <div class="properties__items md:grid md:grid-cols-2 md:gap-7 lg:w-[130%] lg:grid lg:grid-cols-2 lg:justify-items-center">
+                    <div class="properties__items md:grid md:grid-cols-2 md:gap-7 xl:w-[130%] xl:grid xl:grid-cols-2 xl:justify-items-center">
                         <!-- properties-card-1 -->
                         <div class="properties__card">
                             <div class="properties__card__img relative ">
@@ -79,7 +75,7 @@
                                 <li><img src="./img/home/icons/bath.svg" alt="">2 Baths </li>
                                 <li><img src="./img/home/icons/size.svg" alt="">100 sqft</li>
                             </ul>
-                            <a href="#" class="btn bg--secondary">For Sale</a>
+                            <a href="#" class="btn bg--transparent-p">For Sale</a>
                         </div>
                        <!-- properties-card-2 -->
                         <div class="properties__card">
@@ -94,7 +90,7 @@
                                 <li><img src="./img/home/icons/bath.svg" alt="">2 Baths </li>
                                 <li><img src="./img/home/icons/size.svg" alt="">100 sqft</li>
                             </ul>
-                            <a href="#" class="btn bg--secondary">For Rent</a>
+                            <a href="#" class="btn bg--transparent-p">For Rent</a>
                         </div>
                         <!-- properties-card-3 -->
                         <div class="properties__card">
@@ -109,7 +105,7 @@
                                 <li><img src="./img/home/icons/bath.svg" alt="">2 Baths </li>
                                 <li><img src="./img/home/icons/size.svg" alt="">100 sqft</li>
                             </ul>
-                            <a href="#" class="btn bg--secondary">For Sale</a>
+                            <a href="#" class="btn bg--transparent-p">For Sale</a>
                         </div>
                         <!-- properties-card-4 -->
                         <div class="properties__card">
@@ -124,7 +120,7 @@
                                 <li><img src="./img/home/icons/bath.svg" alt="">2 Baths </li>
                                 <li><img src="./img/home/icons/size.svg" alt="">100 sqft</li>
                             </ul>
-                            <a href="#" class="btn bg--secondary">For Sale</a>
+                            <a href="#" class="btn bg--transparent-p">For Sale</a>
                         </div>
                         <!-- properties-card-5 -->
                         <div class="properties__card">
@@ -139,7 +135,7 @@
                                 <li><img src="./img/home/icons/bath.svg" alt="">2 Baths </li>
                                 <li><img src="./img/home/icons/size.svg" alt="">100 sqft</li>
                             </ul>
-                            <a href="#" class="btn bg--secondary">For Sale</a>
+                            <a href="#" class="btn bg--transparent-p">For Sale</a>
                         </div>
                         <!-- properties-card-6 -->
                         <div class="properties__card">
@@ -154,13 +150,13 @@
                                 <li><img src="./img/home/icons/bath.svg" alt="">2 Baths </li>
                                 <li><img src="./img/home/icons/size.svg" alt="">100 sqft</li>
                             </ul>
-                            <a href="#" class="btn bg--secondary">For Sale</a>
+                            <a href="#" class="btn bg--transparent-p">For Sale</a>
                         </div>
                         <!-- page -->
                         <div class="pagination pb-10 md:translate-x-[10rem]">
                             <div class="pagination__wrapper">
                                     <ul class="pagination__list">
-                                        <li><a href="#"><</a></li>
+                                        <li><a href="#"></a></li>
                                         <li><a href="#" class="active">1</a></li>
                                         <li><a href="#">2</a></li>
                                         <li><a href="#">3</a></li>
@@ -170,180 +166,182 @@
                             </div>
                         </div>
                     </div>
-                        <div class="selecting  pb-[3px] md:translate-x-[-4rem] md:w-[118%] lg:translate-x-[7.5rem] lg:w-[65%] lg:h-[92%]">
-                                <div class="selecting__wrapper">
-                                    <div class="selecting__forms ">
-                                        <div class="selecting__select ">
-                                                <div class="selecting__form lg:grid lg:grid-cols-1">
-                                                    <div>
-                                                        <h2 class="p-3 pl-0">City</h2>
-                                                        <select class="selector" name="" id="">
-                                                            <option value="">New York City, NY</option>
-                                                            <option value="">Los Angeles, CA</option>
-                                                            <option value="">Chicago, IL</option>
-                                                            <option value="">Houston, TX</option>
-                                                            <option value="">Phoenix, AZ</option>
-                                                            <option value="">Philadelphia, PA</option>
-                                                            <option value="">San Antonio, TX</option>
-                                                            <option value="">San Diego, CA</option>
-                                                            <option value="">Dallas, TX</option>
-                                                            <option value="">San Jose, CA</option>
-                                                        </select>
-                                                    </div>
-                                                    <div>
-                                                        <h2 class="p-3 pl-0">Property Category</h2>
-                                                        <select class="selector" name="" id="">
-                                                            <option value="">House</option>
-                                                            <option value="">Apartment</option>
-                                                            <option value="">Townhome</option>
-                                                            <option value="">Office</option>
-                                                            <option value="">Villa</option>
-                                                            <option value="">Bungalow</option>
-                                                            <option value="">Loft</option>
-                                                        </select>
-                                                    </div>    
-                                                </div>
-                                        </div>
-                                        <!-- radiobutton for bedrooms -->
-                                        <div class="selecting__radiobutton lg:grid lg:grid-cols-1">
+                    <div class="selecting pb-[3px] md:translate-x-[-4rem] md:w-[118%] xl:translate-x-[7.5rem] xl:w-[65%] xl:h-[92%]">
+                        <div class="selecting__wrapper">
+                            <div class="selecting__forms ">
+                                <div class="selecting__select ">
+                                        <div class="selecting__form grid">
                                             <div>
-                                                <h2 class="p-5 pl-0">Number of Bedrooms</h2>
-                                                <div class="selecting__radiobutton__wrap">
-                                                    <ul>
-                                                        <li>
-                                                            <label class="reminder">
-                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Room 1</label><span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="reminder">
-                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Room 2</label><span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="reminder">
-                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Room 3</label><span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="reminder">
-                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Room 4</label><span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="reminder">
-                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Room 5</label><span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="reminder">
-                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Room 6</label><span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                                <h2 class="p-3 pl-0">City</h2>
+                                                <select class="selector" name="" id="">
+                                                    <option value="">New York City, NY</option>
+                                                    <option value="">Los Angeles, CA</option>
+                                                    <option value="">Chicago, IL</option>
+                                                    <option value="">Houston, TX</option>
+                                                    <option value="">Phoenix, AZ</option>
+                                                    <option value="">Philadelphia, PA</option>
+                                                    <option value="">San Antonio, TX</option>
+                                                    <option value="">San Diego, CA</option>
+                                                    <option value="">Dallas, TX</option>
+                                                    <option value="">San Jose, CA</option>
+                                                </select>
                                             </div>
-                                            <!-- radiobutton for bathroom -->
                                             <div>
-                                                <h2 class="p-5 pl-0">Number of Bathrooms</h2>
-                                                <div class="selecting__radiobutton__wrap">
-                                                    <ul class="grid grid-cols-2">
-                                                        <li>
-                                                            <label class="reminder">
-                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 1</label><span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="reminder">
-                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 2</label><span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="reminder">
-                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 3</label><span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="reminder">
-                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 4</label><span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="reminder">
-                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 5</label><span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="reminder">
-                                                                <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 6</label><span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                                <h2 class="p-3 pl-0">Property Category</h2>
+                                                <select class="selector" name="" id="">
+                                                    <option value="">House</option>
+                                                    <option value="">Apartment</option>
+                                                    <option value="">Townhome</option>
+                                                    <option value="">Office</option>
+                                                    <option value="">Villa</option>
+                                                    <option value="">Bungalow</option>
+                                                    <option value="">Loft</option>
+                                                </select>
+                                            </div>    
+                                        </div>
+                                </div>
+                                <!-- radiobutton for bedrooms -->
+                                <div class="selecting__radiobutton lg:grid lg:grid-cols-1">
+                                    <div>
+                                        <h2 class="p-5 pl-0">Number of Bedrooms</h2>
+                                        <div class="selecting__radiobutton__wrap">
+                                            <ul>
+                                                <li>
+                                                    <label class="bathrms">
+                                                        <input type="checkbox" id="checkbox"><label for="checkbox"> Room 1</label><span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="bathrms">
+                                                        <input type="checkbox" id="checkbox"><label for="checkbox"> Room 2</label><span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="bathrms">
+                                                        <input type="checkbox" id="checkbox"><label for="checkbox"> Room 3</label><span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="bathrms">
+                                                        <input type="checkbox" id="checkbox"><label for="checkbox"> Room 4</label><span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="bathrms">
+                                                        <input type="checkbox" id="checkbox"><label for="checkbox"> Room 5</label><span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="bathrms">
+                                                        <input type="checkbox" id="checkbox"><label for="checkbox"> Room 6</label><span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- radiobutton for bathroom -->
+                                    <div>
+                                        <h2 class="p-5 pl-0">Number of Bathrooms</h2>
+                                        <div class="selecting__radiobutton__wrap">
+                                            <ul class="grid grid-cols-2">
+                                                <li>
+                                                    <label class="bathrms">
+                                                        <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 1</label><span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="bathrms">
+                                                        <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 2</label><span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="bathrms">
+                                                        <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 3</label><span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="bathrms">
+                                                        <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 4</label><span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="bathrms">
+                                                        <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 5</label><span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="bathrms">
+                                                        <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 6</label><span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="lg:grid lg:grid-cols-1 ">
+                                    <!-- track ranges 1 -->
+                                    <div>
+                                        <h2 class="p-4">Square Feet</h2>
+                                        <div class="range">
+                                            <div class="range__slider transition-none">
+                                                <span class="range__selected" class="transition-none"></span>
+                                            </div>
+                                            <div class="range__input accent-primary">
+                                                <input type="range" class="min" min="0" max="1000" value="300" step="10">
+                                                <input type="range" class="max" min="0" max="1000" value="700" step="10">
+                                            </div>
+                                            <div class="range__sqft">
+                                                <h3 class="text-slate-500 text-[20px] pt-[10px]">300 sq. ft. - 1000 sq. ft.</h3>
+                                            </div>
+                                            <div class="range__price hidden">      
+                                                <input type="number" name="min" value="300">     
+                                                <label for="max"> sq. ft.</label> 
+                                                <input type="number" name="max" value="700">    
+                                                <label for="max"> sq. ft.</label>
                                             </div>
                                         </div>
-                                        
-                                        <div class="lg:grid lg:grid-cols-1 ">
-                                                <!-- track ranges 1 -->
-                                                <div>
-                                                    <h2 class="p-4">Square Feet</h2>
-                                                    <div class="range">
-                                                        <div class="range__slider">
-                                                            <span class="range__selected"></span>
-                                                        </div>
-                                                        <div class="range__input accent-primary">
-                                                            <input type="range" class="min" min="0" max="1000" value="300" step="10">
-                                                            <input type="range" class="max" min="0" max="1000" value="700" step="10">
-                                                        </div>
-                                                        <div class="range__sqft">
-                                                            <h3 class="text-slate-500 text-[20px] pt-[10px]">300 sq. ft. - 1000 sq. ft.</h3>
-                                                        </div>
-                                                        <div class="range__price hidden">      
-                                                            <input type="number" name="min" value="300">     
-                                                            <label for="max"> sq. ft.</label> 
-                                                            <input type="number" name="max" value="700">    
-                                                            <label for="max"> sq. ft.</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            <!-- track ranges 2 -->
-                                                <div>
-                                                    <h2 class="p-4">Price</h2>
-                                                    <div class="ranges">
-                                                        <div class="range-slider">
-                                                            <span class="range-selected"></span>
-                                                        </div>
-                                                        <div class="range-input accent-primary">
-                                                            <input type="range" class="min1" min="0" max="1000" value="300" step="10">
-                                                            <input type="range" class="max1" min="0" max="1000" value="700" step="10">
-                                                        </div>
-                                                        <div class="range-sqft">
-                                                            <h3 class="text-slate-500 text-[20px] pt-[10px]">Range: $1000 - 10,000</h3>
-                                                        </div>
-                                                        <div class="range-price hidden">      
-                                                            <input type="number" name="min1" value="300">     
-                                                            <label for="max"> sq. ft.</label> 
-                                                            <input type="number" name="max1" value="700">    
-                                                            <label for="max"> sq. ft.</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                    </div>
+                                    <!-- track ranges 2 -->
+                                    <div>
+                                        <h2 class="p-4">Price</h2>
+                                        <div class="ranges">
+                                            <div class="range-slider">
+                                                <span class="range-selected"></span>
+                                            </div>
+                                            <div class="range-input accent-primary">
+                                                <input type="range" class="min1" min="0" max="1000" value="300" step="10">
+                                                <input type="range" class="max1" min="0" max="1000" value="700" step="10">
+                                            </div>
+                                            <div class="range-sqft">
+                                                <h3 class="text-slate-500 text-[20px] pt-[10px]">Range: $1000 - 10,000</h3>
+                                            </div>
+                                            <div class="range-price hidden">      
+                                                <input type="number" name="min1" value="300">     
+                                                <label for="max"> sq. ft.</label> 
+                                                <input type="number" name="max1" value="700">    
+                                                <label for="max"> sq. ft.</label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- end of properties -->
+
     <!-- footer -->
     <footer class="footer bg-footer_bg bg-cover bg-no-repeat bg-center font-text-inter">
         <div class="container">
             <div class="footer__wrapper text-light pt-[100px] pb-[30px]">
+                <button class="toggleBtn block mx-a my-0 p-0 rounded-full leading-none"><i class="fas fa-circle-half-stroke text-light dark:text-dark dark:bg-light rounded-full leading-none"></i></button>
+
                 <div class="footer__top f-col-center mb-10 md:mb-8 text-center">
-                    <h2 class="mb-4 text-[24px] md:text-[clamp(32px,2.2vw,64px)] ft-b lh-120">FIND YOUR DREAM HOME TODAY WITH OUR <br class="hidden md:inline-block">EXTENSIVE PROPERTY COLLECTION</h2>
+                    <h2 class="mb-4 text-[24px] md:text-[clamp(32px,2.2vw,64px)] ft-b lh-120 text-light dark:text-light">FIND YOUR DREAM HOME TODAY WITH OUR <br class="hidden md:inline-block">EXTENSIVE PROPERTY COLLECTION</h2>
                     <button class="btn bg--primary-w ft-sb">View Properties</button>
                 </div>
                 <div class="footer__middle flex flex-wrap lg:flex-nowrap lg:justify-between">
@@ -357,9 +355,9 @@
                     </div>
                     <div class="order-first lg:order-2 lg:mx-auto w-full lg:w-[33.33%] mb-12 lg:mt-[150px] lg:mb-[90px] px-0 lg:px-2">
                         <h3 class="fs-23 ft-md mb-4">Subscribe Our Newsletter</h3>
-                        <form action="" class="w-full flex justify-between bg-light py-[12px] px-[24px] rounded-[10px] fs-19">
-                            <input type="email" placeholder="Your Email" id="footerEmailInput" class="w-full">
-                            <button class="text-d_gray text-[24px] leading-none mr-1"><i class="fas fa-paper-plane"></i></button>
+                        <form action="" class="w-full flex justify-between bg-light dark:bg-dark_2 py-[12px] px-[24px] rounded-[10px] fs-19">
+                            <input type="email" placeholder="Your Email" id="footerEmailInput" class="w-full bg-light dark:bg-dark_2 text-d_gray dark:text-light_2">
+                            <button class="text-d_gray dark:text-light_2 text-[24px] leading-none mr-1"><i class="fas fa-paper-plane"></i></button>
                         </form>
                     </div>
                     <div class="lg:order-3 mb-[54px] w-full lg:w-[25%] text-wrap f-col px-0 lg:px-2">
@@ -383,12 +381,9 @@
     </footer>
 
     <div class="backTop"><button class="back-to-top fas fa-angle-up" onclick="scrollToTop()"></button></div>
-
-    <button class="toggleBtn hidden">TOGGLE DARK</button>
     
     <script src="./js/script.js"></script>
-    <script src="./vendor/tiny-slider/tiny-slider.js"></script>
-
+    <!-- <script src="./vendor/tiny-slider/tiny-slider.js"></script> -->
     <script>
         let rangeMin = 100;
         const range = document.querySelector(".range__selected");
@@ -437,11 +432,3 @@
     </script>
 </body>
 </html>
-
-<!-- 
-<label class="reminder">
-    <input type="checkbox" id="checkbox"><label for="checkbox">Room 1</label><span class="checkmark"></span>
-</label>
-
-
- -->
