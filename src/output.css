@@ -2808,23 +2808,25 @@ input, input::placeholder, textarea::placeholder {
     label:not(.rating-0) {
       margin-right: 0.625rem;
     }
-    label.rating-0, label.rating-0 i, label.rating-0 i.fa-star::before {
+    label.rating-0, label.rating-0 i, label.rating-0 button.fa-star::before {
       margin-right: 0.5rem;
     }
-    label.rating-0, label.rating-0 i, label.rating-0 i.fa-star::before {
+    label.rating-0, label.rating-0 i, label.rating-0 button.fa-star::before {
       display: block;
     }
-    label.rating-0, label.rating-0 i, label.rating-0 i.fa-star::before {
+    label.rating-0, label.rating-0 i, label.rating-0 button.fa-star::before {
       width: 12px;
     }
-    label.rating-0, label.rating-0 i, label.rating-0 i.fa-star::before {
+    label.rating-0, label.rating-0 i, label.rating-0 button.fa-star::before {
       color: transparent;
     }
-    label.rating-2, label.rating-3, label.rating-4, label.rating-5{
-      button {
-        --tw-text-opacity: 1;
-        color: rgb(121 125 134 / var(--tw-text-opacity));
-      }
+    #star-1,#star-2,#star-3,#star-4,#star-5 {
+      --tw-text-opacity: 1;
+      color: rgb(121 125 134 / var(--tw-text-opacity));
+    }
+    #star-1.active,#star-2.active,#star-3.active,#star-4.active,#star-5.active {
+      --tw-text-opacity: 1;
+      color: rgb(165 122 90 / var(--tw-text-opacity));
     }
     i {
       cursor: pointer;
@@ -3013,7 +3015,7 @@ input, input::placeholder, textarea::placeholder {
       font-size: 19px;
     }
   }
-  input:checked ~ label.checkmark:after {
+  input:checked ~ label>.checkmark:after {
     display: block;
   }
 }
@@ -3032,7 +3034,7 @@ input, input::placeholder, textarea::placeholder {
   }
 }
 
-.reminder input:not(:checked) ~ label.checkmark {
+.reminder input:not(:checked) ~ label>.checkmark {
   animation: unCheck 0.2s ease;
 }
 
@@ -3046,7 +3048,7 @@ input, input::placeholder, textarea::placeholder {
   }
 }
 
-.reminder input:checked ~ label.checkmark {
+.reminder input:checked ~ label>.checkmark {
   animation: onCheck 0.2s ease;
 }
 

@@ -369,12 +369,13 @@
             input { @apply absolute h-0 w-0 opacity-0; }
             label { @apply block cursor-pointer; }
             label:not(.rating-0){ @apply mr-2.5; }
-            label.rating-0, label.rating-0 i, label.rating-0 i.fa-star::before{
+            label.rating-0, label.rating-0 i, label.rating-0 button.fa-star::before{
                 @apply block text-transparent w-[12px] mr-2;
             }
-            label.rating-2, label.rating-3, label.rating-4, label.rating-5{
-                button{ @apply text-gray }
-            }
+            #star-1,#star-2,#star-3,#star-4,#star-5
+            {@apply text-gray;}
+            #star-1.active,#star-2.active,#star-3.active,#star-4.active,#star-5.active
+            {@apply text-primary;}
             i { @apply cursor-pointer; }
         }
         .form__review{
@@ -402,10 +403,10 @@
             @apply relative pl-[35px]
             text-[14px] sm:text-[19px] text-wrap text-gray;
         }
-        input:checked ~ label.checkmark:after { @apply block; }
+        input:checked ~ label>.checkmark:after { @apply block; }
     }
-    .reminder input:not(:checked) ~ label.checkmark{ @apply animate-unCheck; }
-    .reminder input:checked ~ label.checkmark{ @apply animate-onCheck; }
+    .reminder input:not(:checked) ~ label>.checkmark{ @apply animate-unCheck; }
+    .reminder input:checked ~ label>.checkmark{ @apply animate-onCheck; }
     
     /* property checkout slider */
     .propertyCheckout{
