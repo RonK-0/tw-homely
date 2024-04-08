@@ -57,7 +57,8 @@
     .header .active{ @apply text-primary hover:text-light/50; }
     .nav__links .nav__link_item{ @apply font-text-inter text-[19px] xl:text-[16px] 2xl:text-[19px] ft-nm; }
     .nav__link_item a:hover{ @apply text-primary; }
-    .header .nav__links.show{ @apply block absolute right-0 rounded-[8px] bg-dark py-[15px] px-[20px]; }
+    .header .nav__links{@apply animate-navDown xl:animate-none transition-all duration-500;}
+    .header .nav__links.show{ @apply block absolute right-0 rounded-[8px] bg-dark py-[15px] px-[20px] overflow-hidden animate-navDown transition-all duration-500; }
     .header .nav__links.show>li{ @apply mb-[10px] mr-0; }
     .header object{ @apply w-tel_icon; }
     /* FOOTER */
@@ -476,60 +477,102 @@
 
 /* PROPERTIES PAGE - START */
     .properties__wrapper{
-        @apply grid xl:grid-cols-[_2fr,_416px] gap-6;
-        .properties__cards{
-            @apply hidden md:grid-cols-2 gap-x-6 gap-y-10 mb-10 select-none;
-            .properties__card{
-                @apply bg-transparent dark:bg-l_gray rounded-[10px] w-full md:max-w-[416px] mx-auto;
-                .card__img{
-                    @apply relative rounded-[10px] overflow-hidden mb-4;
-                    img{ @apply w-full object-cover transition-all duration-[0.6s] ease-linear; }
-                    .price{
-                        @apply bg-light p-property_entry_price no-mb rounded-[5px]
-                        ft-md text-property_entry_price font-text-inter text-dark_2
-                        absolute left-[16px] bottom-[16px];
+        @apply grid xl:grid-cols-[_2fr,_356px] 2xl:grid-cols-[_2fr,_416px] gap-6;
+        .properties__properties{
+            .properties__cards{
+                @apply hidden md:grid-cols-2 gap-x-6 gap-y-10 mb-10 select-none animate-page_Swapperoo;
+                .properties__card{
+                    @apply bg-transparent dark:bg-l_gray rounded-[10px] w-full md:max-w-[416px] mx-auto;
+                    .card__img{
+                        @apply relative rounded-[10px] overflow-hidden mb-4;
+                        img{ @apply w-full object-cover transition-all duration-[0.6s] ease-linear; }
+                        .price{
+                            @apply bg-light p-property_entry_price no-mb rounded-[5px]
+                            ft-md text-property_entry_price font-text-inter text-dark_2
+                            absolute left-[16px] bottom-[16px];
+                        }
                     }
-                }
-                .card__text{
-                    @apply f-col items-start dark:pl-3 dark:pb-3;
-                    a{ @apply text-dark text-[23px] font-text-inter ft-md lh-130 capitalize mb-4; }
-                    p.location{  @apply text-base ft-nm lh-140 text-dark font-text-inter mb-2 }
-                    ul{
-                        @apply pl-0  mb-4 flex flex-wrap sm:flex-nowrap;
-                        li{
-                            @apply mr-[14px] flex items-center gap-3 ls-2 lh-140;
-                            *{ @apply text-dark_2; }
-                            span{ @apply text-base text-nowrap font-text-inter;}
+                    .card__text{
+                        @apply f-col items-start dark:pl-3 dark:pb-3;
+                        a{ @apply text-dark text-[23px] font-text-inter ft-md lh-130 capitalize mb-4; }
+                        p.location{  @apply text-base ft-nm lh-140 text-dark font-text-inter mb-2 }
+                        ul{
+                            @apply pl-0  mb-4 flex flex-wrap sm:flex-nowrap;
+                            li{
+                                @apply mr-[14px] flex items-center gap-3 ls-2 lh-140;
+                                *{ @apply text-dark_2; }
+                                span{ @apply text-base text-nowrap font-text-inter;}
+                            }
                         }
                     }
                 }
+                .properties__card:hover .card__img img { @apply scale-110 transition-all duration-[0.6s] ease-linear; }
             }
-            .properties__card:hover .card__img img { @apply scale-110 transition-all duration-[0.6s] ease-linear; }
-        }
-        .properties__cards.active{ @apply grid; }
-        .properties__page__selection{
-            @apply text-center pt-[30px];
-            .properties__page__selection__list{
-                @apply flex justify-center items-start gap-5 mb-4;
-                li{
-                    @apply f-col-center rounded-[10px]
-                    shadow-property_page_button_shadow dark:shadow-property_page_button_shadow_dark
-                    bg-light hover:bg-primary dark:bg-gray
-                    w-[40px] h-[40px] block;
-                    button{
-                        @apply bg-transparent w-[40px] h-[40px]
-                        text-[21px] lh-140 text-center 
-                        text-dark dark:text-light;
+            .properties__cards.active{ @apply grid animate-page_Swapperoo; }
+            .properties__page__selection{
+                @apply text-center pt-[30px];
+                .properties__page__selection__wrapper{
+                    @apply flex justify-center items-start gap-5 mb-4;
+                    .properties__page__selection__list{
+                        @apply flex justify-center items-start gap-5 mb-4;
                     }
-                    button.fas{ @apply text-[22px]; }
+                    li{
+                        @apply f-col-center rounded-[10px]
+                        shadow-property_page_button_shadow dark:shadow-property_page_button_shadow_dark
+                        bg-light hover:bg-primary dark:bg-gray
+                        w-[40px] h-[40px] block;
+                        button{
+                            @apply bg-transparent w-[40px] h-[40px]
+                            text-[21px] lh-140 text-center 
+                            text-dark dark:text-light;
+                        }
+                        button.fas{ @apply text-[22px]; }
+                    }
+                    li:hover, li.active{
+                        @apply bg-primary text-light;
+                        button{@apply text-light;}
+                    }
                 }
-                li:hover, li.active{
-                    @apply bg-primary text-light;
-                    button{@apply text-light;}
+            }
+        }
+
+        .properties__selection__sidebar{
+            .selection__wrapper .selection__forms{
+                @apply grid grid-cols-2 xl:grid-cols-1 gap-6;
+            }
+            @apply p-8 rounded-[10px] bg-l_gray dark:bg-dark_2;
+            h3.title{
+                @apply font-text-inter text-dark dark:text-light_2 ft-md text-[23px] lh-130 capitalize  mb-4;
+            }
+            select.selector{
+                @apply w-full font-text-inter text-[16px] lh-130 text-[#AFB1B6] mb-8
+                bg-light dark:bg-gray border-[1px] border-d_gray rounded-[5px] py-[21.5px] px-6
+                focus:outline-none focus:shadow-none;
+            }
+            ul{
+                @apply flex items-center flex-wrap bg-light dark:bg-gray
+                border-[1px] border-d_gray py-3 px-6 mb-4;
+                li{ @apply py-3 px-0 w-1/2; }
+            }
+            .rms {
+                @apply block relative mb-5 cursor-pointer text-lg select-none;
+                input{ @apply absolute h-0 w-0 opacity-0 cursor-pointer; }
+                .checkmark{ @apply absolute top-0 left-0 h-[20px] w-[20px] bg-light_2; }
+                .checkmark:after {
+                    @apply hidden absolute content-['']
+                    ty-a tx-a w-[7px] h-[17px] rotate-45
+                  border-dark_2 border-r-[2px] border-b-[2px];
                 }
+                label.checkbox__label{
+                    @apply relative pl-[35px]
+                    text-[14px] sm:text-[19px] text-wrap text-gray;
+                }
+                input:checked ~ label>.checkmark:after { @apply block; }
+                /* label.checked>.checkmark:after { @apply block; } */
             }
         }
     }
+    
 
     .properties{
         @apply pt-9 
@@ -583,10 +626,10 @@
 
 
     /* bathrooms styles */
-    label.bathrms {
+    label.rms {
         @apply relative block ml-[10px] pl-[35px] mb-5 cursor-pointer text-lg select-none;
         input[type="checkbox"]{
-            @apply absolute h-0 w-0 opacity-0 cursor-pointer;
+            @apply absolute h-full w-full opacity-0 cursor-pointer;
         }
         span.checkmark{
             @apply absolute top-0 left-0 h-[20px] w-[20px] bg-light_2;
@@ -600,10 +643,10 @@
             @apply block;
         }
     }
-    label.bathrms input:checked ~ .checkmark{
+    label.rms input:checked ~ .checkmark{
         @apply animate-onCheck bg-primary;
     }
-    label.bathrms input:not(:checked) ~ .checkmark{
+    label.rms input:not(:checked) ~ .checkmark{
         @apply animate-unCheck;
     }
 
@@ -692,17 +735,17 @@
     .btn.bg--primary-w{
         @apply bg-primary hover:bg-light
         border-primary hover:border-light 
-        text-light hover:text-primary
+        text-light hover:text-primary;
     }
     .btn.bg--light-p{
         @apply bg-light hover:bg-primary
         border-dark hover:border-transparent 
-        text-dark hover:text-light
+        text-dark hover:text-light;
     }
     .btn.bg--transparent-p{
         @apply bg-transparent hover:bg-primary
         border-dark hover:border-transparent 
-        text-dark hover:text-light
+        text-dark hover:text-light;
     }
     .btn.bg--transparent{
         @apply bg-transparent text-dark

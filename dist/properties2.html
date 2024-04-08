@@ -321,182 +321,171 @@
                         </div>
                     </div>
                     <div class="properties__page__selection">
-                        <div class="properties__page__selection__wrapper">
+                        <ul class="properties__page__selection__wrapper">
+                            <li><button class="fas fa-chevron-left"></button></li>
                             <ul class="properties__page__selection__list">
-                                <li><button class="fas fa-chevron-left"></button></li>
                                 <li id="1" class="active"><button>1</button></li>
                                 <li id="2"><button>2</button></li>
                                 <li id="3"><button>3</button></li>
-                                <li><button class="fas fa-chevron-right"></i></button></li>
                             </ul>
-                        </div>
+                            <li><button class="fas fa-chevron-right"></i></button></li>
+                        </ul>
                     </div>
                 </div>
                 
-                <div class="properties__selection">
-                    <div class="selecting__wrapper">
-                        <div class="selecting__forms ">
-                            <div class="selecting__select ">
-                                    <div class="selecting__form grid">
-                                        <div>
-                                            <h2 class="p-3 pl-0">City</h2>
-                                            <select class="selector" name="" id="">
-                                                <option value="">New York City, NY</option>
-                                                <option value="">Los Angeles, CA</option>
-                                                <option value="">Chicago, IL</option>
-                                                <option value="">Houston, TX</option>
-                                                <option value="">Phoenix, AZ</option>
-                                                <option value="">Philadelphia, PA</option>
-                                                <option value="">San Antonio, TX</option>
-                                                <option value="">San Diego, CA</option>
-                                                <option value="">Dallas, TX</option>
-                                                <option value="">San Jose, CA</option>
-                                            </select>
-                                        </div>
-                                        <div>
-                                            <h2 class="p-3 pl-0">Property Category</h2>
-                                            <select class="selector" name="" id="">
-                                                <option value="">House</option>
-                                                <option value="">Apartment</option>
-                                                <option value="">Townhome</option>
-                                                <option value="">Office</option>
-                                                <option value="">Villa</option>
-                                                <option value="">Bungalow</option>
-                                                <option value="">Loft</option>
-                                            </select>
-                                        </div>    
-                                    </div>
+                <div class="properties__selection__sidebar">
+                    <div class="selection__wrapper">
+                        <div class="selection__forms ">
+                            <div>
+                                <h3 class="title">City</h3>
+                                <select class="selector" name="" id="">
+                                    <option value="">New York City, NY</option>
+                                    <option value="">Los Angeles, CA</option>
+                                    <option value="">Chicago, IL</option>
+                                    <option value="">Houston, TX</option>
+                                    <option value="">Phoenix, AZ</option>
+                                    <option value="">Philadelphia, PA</option>
+                                    <option value="">San Antonio, TX</option>
+                                    <option value="">San Diego, CA</option>
+                                    <option value="">Dallas, TX</option>
+                                    <option value="">San Jose, CA</option>
+                                </select>
                             </div>
+                            <div>
+                                <h3 class="title">Property Category</h3>
+                                <select class="selector" name="" id="">
+                                    <option value="">House</option>
+                                    <option value="">Apartment</option>
+                                    <option value="">Townhome</option>
+                                    <option value="">Office</option>
+                                    <option value="">Villa</option>
+                                    <option value="">Bungalow</option>
+                                    <option value="">Loft</option>
+                                </select>
+                            </div>  
                             <!-- radiobutton for bedrooms -->
-                            <div class="selecting__radiobutton lg:grid lg:grid-cols-1">
-                                <div>
-                                    <h2 class="p-5 pl-0">Number of Bedrooms</h2>
-                                    <div class="selecting__radiobutton__wrap">
-                                        <ul>
-                                            <li>
-                                                <label class="bathrms">
-                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Room 1</label><span class="checkmark"></span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="bathrms">
-                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Room 2</label><span class="checkmark"></span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="bathrms">
-                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Room 3</label><span class="checkmark"></span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="bathrms">
-                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Room 4</label><span class="checkmark"></span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="bathrms">
-                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Room 5</label><span class="checkmark"></span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="bathrms">
-                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Room 6</label><span class="checkmark"></span>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
+                            <div>
+                                <h3 class="title">Number of Bedrooms</h3>
+                                <div class="selection__room">
+                                    <ul class="grid grid-cols-2">
+                                        <li>
+                                            <label class="rms">
+                                                <input type="checkbox" id="roomCheckbox1"><label for="checkbox1"> Room 1</label><span class="checkmark"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="rms">
+                                                <input type="checkbox" id="roomCheckbox2"><label for="checkbox2"> Room 2</label><span class="checkmark"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="rms">
+                                                <input type="checkbox" id="roomCheckbox3"><label for="checkbox3"> Room 3</label><span class="checkmark"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="rms">
+                                                <input type="checkbox" id="roomCheckbox4"><label for="checkbox4"> Room 4</label><span class="checkmark"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="rms">
+                                                <input type="checkbox" id="roomCheckbox5"><label for="checkbox5"> Room 5</label><span class="checkmark"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="rms">
+                                                <input type="checkbox" id="roomCheckbox6"><label for="checkbox6"> Room 6</label><span class="checkmark"></span>
+                                            </label>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <!-- radiobutton for bathroom -->
-                                <div>
-                                    <h2 class="p-5 pl-0">Number of Bathrooms</h2>
-                                    <div class="selecting__radiobutton__wrap">
-                                        <ul class="grid grid-cols-2">
-                                            <li>
-                                                <label class="bathrms">
-                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 1</label><span class="checkmark"></span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="bathrms">
-                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 2</label><span class="checkmark"></span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="bathrms">
-                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 3</label><span class="checkmark"></span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="bathrms">
-                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 4</label><span class="checkmark"></span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="bathrms">
-                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 5</label><span class="checkmark"></span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label class="bathrms">
-                                                    <input type="checkbox" id="checkbox"><label for="checkbox"> Bathroom 6</label><span class="checkmark"></span>
-                                                </label>
-                                            </li>
-                                        </ul>
+                            </div>
+                            <!-- checkboxes for rooms -->
+                            <div>
+                                <h3 class="title">Number of Bathrooms</h3>
+                                <div class="selecting__radiobutton__wrap">
+                                    <ul class="grid grid-cols-2">
+                                        <li>
+                                            <label class="rms">
+                                                <input type="checkbox" id="bathroomCheckbox1"><label for="checkbox"> Bathroom 1</label><span class="checkmark"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="rms">
+                                                <input type="checkbox" id="bathroomCheckbox2"><label for="checkbox"> Bathroom 2</label><span class="checkmark"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="rms">
+                                                <input type="checkbox" id="bathroomCheckbox3"><label for="checkbox"> Bathroom 3</label><span class="checkmark"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="rms">
+                                                <input type="checkbox" id="bathroomCheckbox4"><label for="checkbox"> Bathroom 4</label><span class="checkmark"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="rms">
+                                                <input type="checkbox" id="bathroomCheckbox5"><label for="checkbox"> Bathroom 5</label><span class="checkmark"></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="rms">
+                                                <input type="checkbox" id="bathroomCheckbox6"><label for="checkbox"> Bathroom 6</label><span class="checkmark"></span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- track ranges 1 -->
+                            <div>
+                                <h3 class="title">Square Feet</h3>
+                                <div class="range">
+                                    <div class="range__slider transition-none">
+                                        <span class="range__selected" class="transition-none"></span>
+                                    </div>
+                                    <div class="range__input accent-primary">
+                                        <input type="range" class="min" min="0" max="1000" value="300" step="10">
+                                        <input type="range" class="max" min="0" max="1000" value="700" step="10">
+                                    </div>
+                                    <div class="range__sqft">
+                                        <h3 class="text-slate-500 text-[20px] pt-[10px]">300 sq. ft. - 1000 sq. ft.</h3>
+                                    </div>
+                                    <div class="range__price hidden">      
+                                        <input type="number" name="min" value="300">     
+                                        <label for="max"> sq. ft.</label> 
+                                        <input type="number" name="max" value="700">    
+                                        <label for="max"> sq. ft.</label>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="lg:grid lg:grid-cols-1 ">
-                                <!-- track ranges 1 -->
-                                <div>
-                                    <h2 class="p-4">Square Feet</h2>
-                                    <div class="range">
-                                        <div class="range__slider transition-none">
-                                            <span class="range__selected" class="transition-none"></span>
-                                        </div>
-                                        <div class="range__input accent-primary">
-                                            <input type="range" class="min" min="0" max="1000" value="300" step="10">
-                                            <input type="range" class="max" min="0" max="1000" value="700" step="10">
-                                        </div>
-                                        <div class="range__sqft">
-                                            <h3 class="text-slate-500 text-[20px] pt-[10px]">300 sq. ft. - 1000 sq. ft.</h3>
-                                        </div>
-                                        <div class="range__price hidden">      
-                                            <input type="number" name="min" value="300">     
-                                            <label for="max"> sq. ft.</label> 
-                                            <input type="number" name="max" value="700">    
-                                            <label for="max"> sq. ft.</label>
-                                        </div>
+                            <!-- track ranges 2 -->
+                            <div>
+                                <h3 class="title">Price</h3>
+                                <div class="ranges">
+                                    <div class="range-slider">
+                                        <span class="range-selected"></span>
                                     </div>
-                                </div>
-                                <!-- track ranges 2 -->
-                                <div>
-                                    <h2 class="p-4">Price</h2>
-                                    <div class="ranges">
-                                        <div class="range-slider">
-                                            <span class="range-selected"></span>
-                                        </div>
-                                        <div class="range-input accent-primary">
-                                            <input type="range" class="min1" min="0" max="1000" value="300" step="10">
-                                            <input type="range" class="max1" min="0" max="1000" value="700" step="10">
-                                        </div>
-                                        <div class="range-sqft">
-                                            <h3 class="text-slate-500 text-[20px] pt-[10px]">Range: $1000 - 10,000</h3>
-                                        </div>
-                                        <div class="range-price hidden">      
-                                            <input type="number" name="min1" value="300">     
-                                            <label for="max"> sq. ft.</label> 
-                                            <input type="number" name="max1" value="700">    
-                                            <label for="max"> sq. ft.</label>
-                                        </div>
+                                    <div class="range-input accent-primary">
+                                        <input type="range" class="min1" min="0" max="1000" value="300" step="10">
+                                        <input type="range" class="max1" min="0" max="1000" value="700" step="10">
+                                    </div>
+                                    <div class="range-sqft">
+                                        <h3 class="text-slate-500 text-[20px] pt-[10px]">Range: $1000 - 10,000</h3>
+                                    </div>
+                                    <div class="range-price hidden">      
+                                        <input type="number" name="min1" value="300">     
+                                        <label for="max"> sq. ft.</label> 
+                                        <input type="number" name="max1" value="700">    
+                                        <label for="max"> sq. ft.</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                
             </div>
         </div>
     </section>
@@ -568,10 +557,10 @@
                 rangeInput[1].value = minRange + rangeMin;        
             }
             } else {
-            rangePrice[0].value = minRange;
-            rangePrice[1].value = maxRange;
-            range.style.left = (minRange / rangeInput[0].max) * 100 + "%";
-            range.style.right = 100 - (maxRange / rangeInput[1].max) * 100 + "%";
+                rangePrice[0].value = minRange;
+                rangePrice[1].value = maxRange;
+                range.style.left = (minRange / rangeInput[0].max) * 100 + "%";
+                range.style.right = 100 - (maxRange / rangeInput[1].max) * 100 + "%";
             }
         });
         });
@@ -589,29 +578,55 @@
                 range_Input[1].value = min_Range + rangeMin;        
             }
             } else {
-            range_Price[0].value = min_Range;
-            range_Price[1].value = max_Range;
-            ranges.style.left = (min_Range / range_Input[0].max) * 100 + "%";
-            ranges.style.right = 100 - (max_Range / range_Input[1].max) * 100 + "%";
+                range_Price[0].value = min_Range;
+                range_Price[1].value = max_Range;
+                ranges.style.left = (min_Range / range_Input[0].max) * 100 + "%";
+                ranges.style.right = 100 - (max_Range / range_Input[1].max) * 100 + "%";
             }
         });
         });
+
         const propertyPage = document.querySelectorAll(".properties__page__selection__list li");
         const propertyPageContent = document.querySelectorAll(".properties__cards");
-        propertyPage.forEach((menuList)=>{
-            menuList.addEventListener("click", ()=>{
-                propertyPage.forEach((menu)=>{
-                    menu.classList.remove("active")
-                })
+        let activeIndex = 0;
+
+        function updateActiveContent() {
+            propertyPageContent.forEach((content) => {
+                content.classList.remove("active");
+            });
+            const activeContent = document.querySelector(`#properties__cards_p_${propertyPage[activeIndex].id}`);
+            if(activeContent) {
+                activeContent.classList.add("active");
+            }
+        }
+
+        propertyPage.forEach((menuList, index) => {
+            menuList.addEventListener("click", () => {
+                propertyPage.forEach((menu) => {
+                    menu.classList.remove("active");
+                });
                 menuList.classList.add("active");
-                const activeContent = document.querySelector(`#properties__cards_p_${menuList.id}`);
-                propertyPageContent.forEach((content)=>{
-                    content.classList.remove("active")
-                })
-                activeContent.classList.add("active")
-            })
+                activeIndex = index;
+                updateActiveContent();
+            });
         });
-        
+
+        const leftButton = document.querySelector(".fa-chevron-left");
+        leftButton.addEventListener("click", () => {
+            if (activeIndex > 0) {
+                activeIndex--;
+                propertyPage[activeIndex].click();
+            }
+        });
+
+        const rightButton = document.querySelector(".fa-chevron-right");
+        rightButton.addEventListener("click", () => {
+            if (activeIndex < propertyPage.length - 1) {
+                activeIndex++;
+                propertyPage[activeIndex].click();
+            }
+        });
+
     </script>
 </body>
 </html>

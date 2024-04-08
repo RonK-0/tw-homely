@@ -87,6 +87,8 @@ module.exports = {
       },
       animation: {
         // 'bannerSlide': 'bannerSlide 15s ease forwards',
+        'navDown': 'navDown 0.25s linear',
+        'page_Swapperoo': 'navDown 0.5s ease',
         'onCheck': 'onCheck 0.2s ease',
         'unCheck': 'unCheck 0.2s ease',
       },
@@ -95,6 +97,10 @@ module.exports = {
         //   '0%' : {'background-position': '25% 0%'},
         //   '100%' : {'background-position': '40% 80%'}
         // },
+        'navDown': {
+          '0%' : {'opacity' : '0%'},
+          '100%' : {'opacity' : '100%'}
+        },
         'onCheck': {
           '0%' : {'scale': '0'},
           '100%' : {'scale': '1'}
@@ -102,7 +108,7 @@ module.exports = {
         'unCheck': {
           '0%' : {'scale': '1'},
           '50%' : {'scale': '0'},
-          '100%' : {'scale': '1'}
+          '100%' : {'scale': '1'},
         },
       },
       boxShadow:{
