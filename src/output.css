@@ -2424,6 +2424,10 @@ p {
     --tw-text-opacity: 1;
     color: rgb(121 125 134 / var(--tw-text-opacity));
   }
+  .contact .form__wrapper input:focus, textarea:focus {
+    --tw-text-opacity: 1;
+    color: rgb(33 37 41 / var(--tw-text-opacity));
+  }
   @media (min-width: 1200px) {
     .contact .form__wrapper input, textarea {
       padding-top: 0.9rem;
@@ -2799,7 +2803,6 @@ p {
       #checkbox {
         margin-right: 10px;
       }
-      /* form identity inputs */
       .form__identity input, textarea {
         display: block;
       }
@@ -3048,10 +3051,10 @@ p {
           display: block;
         }
         li {
-          height: 40px;
+          height: 2.5rem;
         }
         li {
-          width: 40px;
+          width: 2.5rem;
         }
         li {
           --tw-bg-opacity: 1;
@@ -3092,10 +3095,10 @@ p {
         }
         li{
           button {
-            height: 40px;
+            height: 2.5rem;
           }
           button {
-            width: 40px;
+            width: 2.5rem;
           }
           button {
             background-color: transparent;
@@ -4184,8 +4187,8 @@ p {
   border-color: rgb(165 122 90 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(165 122 90 / var(--tw-bg-opacity));
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
   padding-left: 0px;
   padding-right: 0px;
   text-align: center;
