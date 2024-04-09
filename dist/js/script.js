@@ -17,7 +17,8 @@ togglebtn.addEventListener("click", ()=>{
 });
 
 // auto close nav menu on click of any link for mobile
-// const menu_entry = document.querySelectorAll("#menu-item");
+// COMMENTED OUT SINCE NAV LINKS ARE DIFFERENT PAGES AND NOT SECTIONS ON THE SAME PAGE
+// const menu_entry = document.querySelectorAll(".nav__link_item");
 // menu_entry.forEach((item) => {
 //     item.addEventListener("click", ()=>{
 //         burg.classList.remove("active");
@@ -36,5 +37,3 @@ window.onscroll = function() {
 
 // scroll to top function
 function scrollToTop(){ window.scrollTo(0,0); }
-
-

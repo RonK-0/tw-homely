@@ -125,6 +125,7 @@ module.exports = {
         'testimonial_text' : '0 clamp(18px, 1.66vw, 40px)',
         'clientSlider_p' : 'clamp(64px, 5.208vw, 200px)',
         'button': 'clamp(8px,0.67vw,16px) clamp(16px,1.25vw,32px)',
+        'text_inputs': 'clamp(10px, 0.83vw, 22px) clamp(14px, 1.1vw, 30px)',
         'py100' : 'clamp(64px, 5.208vw, 200px)',
       },
       margin:{
