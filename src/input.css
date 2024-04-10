@@ -49,6 +49,7 @@
 }
 
 @layer components{
+/* SHARED STUFF - START */
     /* HEADER */
     .header {
         *{ @apply text-light; }
@@ -80,16 +81,17 @@
     }
     .back-to-top.shown{ @apply opacity-100; }
 
+    /* PAGE BANNER (except home page) */
     .propBanner{
-        @apply bg-prop_details_bg bg-cover bg-center;
+        @apply block bg-prop_details_bg bg-cover bg-center;
         .propBanner__wrapper{
-            @apply h-insidePageBanner f-col-center;
+            @apply h-insidePageBanner f-col-center pt-[5.5%] pb-[-5.5%];
             h2{
                 @apply text-center text-[50px] md:text-[60px] xl:text-[69px] lh-120 uppercase -ls-2 text-light ft-sb m-0;
             }
         }
     }
-
+    /* SECTION HEADINGS */
     .sectionHeading {
         @apply text-center mb-heading_margin_bottom;
         h2{ @apply font-text-poppins ft-sb uppercase lh-120 -ls-1
@@ -99,10 +101,11 @@
             mb-4 sm:mb-6 md:mb-9 xl:mb-0; }
         br{ @apply hidden md:inline-block;}
     }
-    /* SHARED SLIDER STUFF */
+    /* SLIDER STUFF */
     .homeFeaturedProperties, .propertyCheckout{
         .tns-outer{
             @apply relative pb-12 !important;
+            .tns-ovh{@apply pb-6 xl:pb-0 !important; }
             .tns-nav{
                 @apply absolute content-[''] bottom-1 left-1/2 -translate-x-1/2 z-10 flex gap-[14px];
                 button{
@@ -120,9 +123,9 @@
             }
         }
     }
-    /* SHARED CARDS STUFF */
+    /* CARDS STUFF */
     .cCard{
-        @apply bg-transparent dark:bg-l_gray r-10p mb-6 lg:mb-0 md:max-w-[416px] mx-auto;
+        @apply bg-transparent dark:bg-l_gray r-10p mb-6 lg:mb-0 w-full xl:max-w-[416px] mx-auto;
         .card__img{
             @apply relative rounded-t-[10px] overflow-hidden mb-4;
             img{ @apply w-full object-cover transition-all duration-[0.6s] ease-linear; }
@@ -141,14 +144,14 @@
                 li{
                     @apply mr-5 flex items-center gap-2;
                     *{ @apply text-dark_2; }
-                    span{ @apply ft-md text-fs-16_xl text-nowrap lh-150 font-text-inter;}
+                    span{ @apply text-base text-nowrap lh-150 font-text-inter;}
                 }
             }
         }
     }
     .cCard:hover .card__img img, .homeBlogEntries__card:hover .card__img img
     { @apply scale-110 transition-all duration-[0.6s] ease-linear; }
-    /* SHARED INPUT CHECKBOX STUFF */
+    /* INPUT CHECKBOX STUFF */
     .reminder, .rms{
         @apply relative pointer text-lg select-none;
         input{ @apply absolute left-0 top-0 h-full w-full opacity-0 z-20; }
@@ -157,6 +160,7 @@
         label.checkbox__label{ @apply relative text-wrap text-gray; }
         input:checked ~ label.checkbox__label>.checkmark:after { @apply block; }
     }
+/* SHARED STUFF - END */
 
 /* HOME PAGE - START */
     /* HOME PAGE - BANNER */
@@ -212,7 +216,7 @@
     }
     /* HOME PAGE - TOP RATED PROPERTIES SECTION */
     .homeTopRatedProperties__entries{
-        @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6;
+        @apply grid lg:grid-cols-2 xl:grid-cols-3 gap-6 justify-center;
         .homeTopRatedProperties__card{ @apply bg-light select-none;} }
     /* HOME PAGE - CLIENT SUCCESS STORIES SLIDER SECTION */
     .homeClientStories{
@@ -397,7 +401,6 @@
     }
 /* PROPERTY DETAILS - END */
 
-
 /* PROPERTIES PAGE - START */
     .properties__wrapper{
         @apply grid xl:grid-cols-[_2fr,_356px] 2xl:grid-cols-[_2fr,_416px] gap-6;
@@ -405,7 +408,10 @@
             .properties__cards{
                 @apply hidden md:grid-cols-2 gap-x-6 gap-y-10 mb-10 select-none;
             }
-            .properties__cards, .properties__cards.active{ @apply grid animate-page_Swapperoo; }
+            .properties__cards, .properties__cards.active{ @apply animate-page_Swapperoo; }
+            .properties__cards.active{
+                @apply grid;
+            }
             .properties__page__selection{
                 @apply text-center pt-[30px] mb-4;
                 .properties__page__selection__wrapper, .properties__page__selection__list{
@@ -433,7 +439,7 @@
         .properties__selection__sidebar{
             @apply h-fit p-8 r-10p bg-l_gray dark:bg-d_gray;
             .selection__wrapper .selection__forms{
-                @apply grid grid-cols-2 xl:grid-cols-1 gap-6;
+                @apply grid lg:grid-cols-2 xl:grid-cols-1 gap-6;
             }
             select.selector, div.selection__room ul, div.selection__bathroom ul, .sqft_slider, .price_slider{
                 @apply r-5p border-[1px] border-d_gray bg-light dark:bg-gray ;
@@ -450,7 +456,7 @@
             
             div.selection__room, div.selection__bathroom{
                 ul{
-                    @apply grid grid-cols-2 justify-center py-3 px-6 mb-4;
+                    @apply grid grid-cols-2 justify-center py-3 px-6 mb-4 bg-light dark:bg-gray;
                     li{
                         @apply py-3 px-0 hover:text-dark_2;
                         .rms {
@@ -461,7 +467,7 @@
                               h-full w-full text-white text-center;
                             }
                             label.checkbox__label{
-                                @apply pl-[26px] text-sm 2xl:text-[19px] dark:text-light;
+                                @apply pl-[26px] text-sm sm:text-[19px] dark:text-light;
                             }
                             input:not(:checked) ~ label.checkbox__label>.checkmark{ @apply animate-unCheck; }
                             input:checked ~ label.checkbox__label>.checkmark{ @apply animate-onCheck bg-primary; }
@@ -471,9 +477,9 @@
                 }
             }
             .sqft_slider, .price_slider{
-                @apply p-6;
+                @apply p-6 mb-4;
                 #range_slider_sqft, #range_slider_price{
-                    @apply px-3 w-full h-[5px] bg-light_2
+                    @apply px-3 my-[11px] w-full h-[5px] mb-8 bg-light_2
                     transition-none border-none outline-none shadow-none;
                     *{@apply transition-none border-0 border-none outline-0 shadow-none !important;}
                     .noUi-connect, .noUi-handle{@apply bg-primary;}
@@ -481,7 +487,10 @@
                     .noUi-handle::before, .noUi-handle::after{ @apply hidden; }
                     .noUi-handle-lower{ @apply right-0; }
                     .noUi-handle-upper{ @apply right-[-30px];}
-                }    
+                }
+                p.range_label{
+                    @apply text-gray dark:text-light font-text-inter text-base lh-130 mb-4;
+                }
             }
             
 
@@ -555,6 +564,7 @@
     .py-20v{ @apply py-[20vh] }
 
     .py100{ @apply py-py100; }
+    .pb-100{ @apply pb-8 sm:pb-12 md:pb-py100; }
     
     .fs-40{ @apply text-[25px] xs:text-[35px] xl:text-[40px]; }
     .fs-33{ @apply text-[21px] lg:text-[28px] xl:text-fs-33}

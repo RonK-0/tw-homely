@@ -657,6 +657,8 @@ p {
   }
 }
 
+/* SHARED STUFF - START */
+
 /* HEADER */
 
 .header {
@@ -816,12 +818,21 @@ p {
   opacity: 1;
 }
 
+/* PAGE BANNER (except home page) */
+
 .propBanner {
+  display: block;
   background-image: url('../dist/img/inner-banner-bg.png');
   background-size: cover;
   background-position: center;
   .propBanner__wrapper {
     height: clamp(350px, 26.042vw, 600px);
+  }
+  .propBanner__wrapper {
+    padding-top: 5.5%;
+  }
+  .propBanner__wrapper {
+    padding-bottom: -5.5%;
   }
   .propBanner__wrapper {
     display: flex;
@@ -873,6 +884,8 @@ p {
     }
   }
 }
+
+/* SECTION HEADINGS */
 
 .sectionHeading {
   margin-bottom: clamp(32px, 2.5vw, 64px);
@@ -962,7 +975,7 @@ p {
   }
 }
 
-/* SHARED SLIDER STUFF */
+/* SLIDER STUFF */
 
 .homeFeaturedProperties, .propertyCheckout{
   .tns-outer {
@@ -972,6 +985,14 @@ p {
     padding-bottom: 3rem !important;
   }
   .tns-outer{
+    .tns-ovh {
+      padding-bottom: 1.5rem !important;
+    }
+    @media (min-width: 1200px) {
+      .tns-ovh {
+        padding-bottom: 0px !important;
+      }
+    }
     .tns-nav {
       position: absolute;
     }
@@ -1086,25 +1107,26 @@ p {
   }
 }
 
-/* SHARED CARDS STUFF */
+/* CARDS STUFF */
 
 .cCard {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5rem;
+  width: 100%;
   background-color: transparent;
   border-radius: 10px;
-}
-
-@media (min-width: 768px) {
-  .cCard {
-    max-width: 416px;
-  }
 }
 
 @media (min-width: 992px) {
   .cCard {
     margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cCard {
+    max-width: 416px;
   }
 }
 
@@ -1290,10 +1312,8 @@ p {
           font-family: Inter, sans-serif;
         }
         span {
-          font-size: clamp(14px, 0.833vw, 22px);
-        }
-        span {
-          font-weight: 500;
+          font-size: 1rem;
+          line-height: 1.5rem;
         }
         span {
           line-height: 150%;
@@ -1314,7 +1334,7 @@ p {
   transition-timing-function: linear;
 }
 
-/* SHARED INPUT CHECKBOX STUFF */
+/* INPUT CHECKBOX STUFF */
 
 .reminder, .rms {
   position: relative;
@@ -1381,6 +1401,8 @@ p {
     display: block;
   }
 }
+
+/* SHARED STUFF - END */
 
 /* HOME PAGE - START */
 
@@ -1813,16 +1835,17 @@ p {
 
 .homeTopRatedProperties__entries {
   display: grid;
+  justify-content: center;
   gap: 1.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .homeTopRatedProperties__entries {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .homeTopRatedProperties__entries {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -2398,12 +2421,7 @@ p {
     background-color: rgb(250 250 250 / var(--tw-bg-opacity));
   }
   .contact .form__wrapper input, textarea {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .contact .form__wrapper input, textarea {
-    padding-left: 0.875rem;
-    padding-right: 0.875rem;
+    padding: clamp(10px, 0.83vw, 22px) clamp(14px, 1.1vw, 30px);
   }
   .contact .form__wrapper input, textarea {
     font-size: 1rem;
@@ -2427,18 +2445,6 @@ p {
   .contact .form__wrapper input:focus, textarea:focus {
     --tw-text-opacity: 1;
     color: rgb(33 37 41 / var(--tw-text-opacity));
-  }
-  @media (min-width: 1200px) {
-    .contact .form__wrapper input, textarea {
-      padding-top: 0.9rem;
-      padding-bottom: 0.9rem;
-    }
-  }
-  @media (min-width: 1200px) {
-    .contact .form__wrapper input, textarea {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
   }
   .broker ul>li>a>i {
     font-size: 1.5rem;
@@ -3009,9 +3015,6 @@ p {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
-    .properties__cards, .properties__cards.active {
-      display: grid;
-    }
     @keyframes navDown {
       0% {
         opacity: 0%;
@@ -3023,6 +3026,9 @@ p {
     }
     .properties__cards, .properties__cards.active {
       animation: navDown 0.5s ease;
+    }
+    .properties__cards.active {
+      display: grid;
     }
     .properties__page__selection {
       margin-bottom: 1rem;
@@ -3164,10 +3170,12 @@ p {
       display: grid;
     }
     .selection__wrapper .selection__forms {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    .selection__wrapper .selection__forms {
       gap: 1.5rem;
+    }
+    @media (min-width: 992px) {
+      .selection__wrapper .selection__forms {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
     @media (min-width: 1200px) {
       .selection__wrapper .selection__forms {
@@ -3284,12 +3292,20 @@ p {
         justify-content: center;
       }
       ul {
+        --tw-bg-opacity: 1;
+        background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+      }
+      ul {
         padding-top: 0.75rem;
         padding-bottom: 0.75rem;
       }
       ul {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
+      }
+      ul:where(.dark, .dark *) {
+        --tw-bg-opacity: 1;
+        background-color: rgb(121 125 134 / var(--tw-bg-opacity));
       }
       ul{
         li {
@@ -3357,7 +3373,7 @@ p {
               font-size: 0.875rem;
               line-height: 1.25rem;
             }
-            @media (min-width: 1400px) {
+            @media (min-width: 576px) {
               label.checkbox__label {
                 font-size: 19px;
               }
@@ -3413,9 +3429,19 @@ p {
       }
     }
     .sqft_slider, .price_slider {
+      margin-bottom: 1rem;
+    }
+    .sqft_slider, .price_slider {
       padding: 1.5rem;
     }
     .sqft_slider, .price_slider{
+      #range_slider_sqft, #range_slider_price {
+        margin-top: 11px;
+        margin-bottom: 11px;
+      }
+      #range_slider_sqft, #range_slider_price {
+        margin-bottom: 2rem;
+      }
       #range_slider_sqft, #range_slider_price {
         height: 5px;
       }
@@ -3500,6 +3526,27 @@ p {
         .noUi-handle-upper {
           right: -30px;
         }
+      }
+      p.range_label {
+        margin-bottom: 1rem;
+      }
+      p.range_label {
+        font-family: Inter, sans-serif;
+      }
+      p.range_label {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+      p.range_label {
+        --tw-text-opacity: 1;
+        color: rgb(121 125 134 / var(--tw-text-opacity));
+      }
+      p.range_label {
+        line-height: 130%;
+      }
+      p.range_label:where(.dark, .dark *) {
+        --tw-text-opacity: 1;
+        color: rgb(250 250 250 / var(--tw-text-opacity));
       }
     }
   }
@@ -3596,12 +3643,12 @@ p {
   margin-bottom: 2rem;
 }
 
-.mb-\[1\.125rem\] {
-  margin-bottom: 1.125rem;
-}
-
 .mb-\[1\.3rem\] {
   margin-bottom: 1.3rem;
+}
+
+.mb-\[18px\] {
+  margin-bottom: 18px;
 }
 
 .mb-\[54px\] {
@@ -3908,10 +3955,6 @@ p {
 
 .pb-\[30px\] {
   padding-bottom: 30px;
-}
-
-.pb-\[32\.5px\] {
-  padding-bottom: 32.5px;
 }
 
 .pb-\[3px\] {
@@ -4245,6 +4288,22 @@ p {
   padding-bottom: clamp(64px, 5.208vw, 200px);
 }
 
+.pb-100 {
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 576px) {
+  .pb-100 {
+    padding-bottom: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .pb-100 {
+    padding-bottom: clamp(64px, 5.208vw, 200px);
+  }
+}
+
 .fs-40 {
   font-size: 25px;
 }
@@ -4307,6 +4366,14 @@ p {
 
 .ls-2 {
   letter-spacing: 0.02em;
+}
+
+.ls-1 {
+  letter-spacing: 0.01em;
+}
+
+.-ls-1 {
+  letter-spacing: -0.01em;
 }
 
 .-ls-2 {
@@ -4424,6 +4491,14 @@ p {
     margin-bottom: 2rem;
   }
 
+  .md\:mb-\[22px\] {
+    margin-bottom: 22px;
+  }
+
+  .md\:mb-\[42px\] {
+    margin-bottom: 42px;
+  }
+
   .md\:inline-block {
     display: inline-block;
   }
@@ -4466,10 +4541,6 @@ p {
     padding-top: 48px;
     padding-bottom: 48px;
   }
-
-  .md\:pb-\[65px\] {
-    padding-bottom: 65px;
-  }
 }
 
 @media (min-width: 992px) {
@@ -4488,6 +4559,14 @@ p {
   .lg\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .lg\:mb-12 {
+    margin-bottom: 3rem;
+  }
+
+  .lg\:mb-\[26px\] {
+    margin-bottom: 26px;
   }
 
   .lg\:mb-\[90px\] {
@@ -4557,6 +4636,10 @@ p {
 }
 
 @media (min-width: 1200px) {
+  .xl\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
   .xl\:mb-3 {
     margin-bottom: 0.75rem;
   }
@@ -4628,15 +4711,6 @@ p {
 
   .xl\:gap-2 {
     gap: 0.5rem;
-  }
-
-  .xl\:gap-7 {
-    gap: 1.75rem;
-  }
-
-  .xl\:py-\[4rem\] {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
   }
 
   .xl\:pb-\[4\.5rem\] {
