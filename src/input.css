@@ -69,18 +69,30 @@
     }
 
     /* BACK TO TOP BUTTON */
-    .back-to-top {
-        @apply bg-primary
-        w-[150px] h-[150px] z-[999] py-[20px] 
-        fixed bottom-0 right-[20px] block opacity-0
-        text-[100px] lh-100 text-center
-        r-f shadow-top_button_shadow
-        transition-all duration-300 scale-[0.3]
-        sm:right-[-20px] sm:bottom-[-20px]
-        ;
+    
+    /* .back-to-top.shown{ @apply opacity-100; } */
+    .backTop{
+        @apply hidden opacity-0 relative r-f;
+        .back-to-top {
+            @apply bg-gray
+            w-[150px] h-[150px] z-[-1] py-[20px] 
+            fixed bottom-0 right-[-23.75px] md:right-0
+            text-[100px] lh-100 text-center text-light
+            r-f shadow-top_button_shadow
+            transition-all duration-300 scale-[0.3];
+        }
+        .back-to-top-bg{
+            @apply r-f w-[55px] h-[55px]
+            shadow-top_button_shadow
+            fixed bottom-[47.5px] right-[23.75px] md:right-[47.5px] z-[-1];
+        }
     }
-    .back-to-top.shown{ @apply opacity-100; }
-
+    .backTop.shown{
+        @apply block opacity-100;
+        .back-to-top{ @apply z-[9999]}
+        .back-to-top-bg{ @apply z-[999]; }
+    }
+    
     /* PAGE BANNER (except home page) */
     .propBanner{
         @apply block bg-prop_details_bg bg-cover bg-center;
@@ -463,12 +475,10 @@
                             @apply flex items-center;
                             .checkmark{ @apply ty-a; }
                             .checkmark:after {
-                              @apply content-['\2714'] top-0 translate-y-[-17.5%] tx-a
+                              @apply content-['\2714'] top-0 tx-a
                               h-full w-full text-white text-center;
                             }
-                            label.checkbox__label{
-                                @apply pl-[26px] text-sm sm:text-[19px] dark:text-light;
-                            }
+                            label.checkbox__label{ @apply pl-[26px] text-sm sm:text-[19px] dark:text-light; }
                             input:not(:checked) ~ label.checkbox__label>.checkmark{ @apply animate-unCheck; }
                             input:checked ~ label.checkbox__label>.checkmark{ @apply animate-onCheck bg-primary; }
                             input[type="checkbox"] + label.checkbox__label{@apply m-[0.2em] py-[0.2em] pr-[0.2em]; }

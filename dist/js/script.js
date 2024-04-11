@@ -26,13 +26,25 @@ togglebtn.addEventListener("click", ()=>{
 //     });
 // });
 
-// on scroll show back to top button
+
+var btt = document.querySelector('.backTop');
+var btt_bg = document.querySelector('.back-to-top-bg');
+
 window.onscroll = function() { 
-    var btt = document.querySelector('.back-to-top');
+    // on scroll show back to top button
     var pageBanner = document.querySelector('#pageBanner');
     var bannerHeight = pageBanner.offsetHeight*0.025;
-    if ( window.scrollY > bannerHeight ) { btt.classList.add("shown"); }
-    else { btt.classList.remove("shown"); }
+    if ( window.scrollY > bannerHeight ) { btt_bg.classList.add("shown"); btt.classList.add("shown"); }
+    else { btt_bg.classList.remove("shown"); btt.classList.remove("shown"); }
+
+    // scroll back to top button outer ring progress indicator
+    let scrollTop = window.scrollY;
+    let docHeight = document.body.offsetHeight;
+    let winHeight = window.innerHeight;
+    let scrollPercent = scrollTop / (docHeight - winHeight);
+    let scrollPercentRounded = Math.round(scrollPercent * 100);
+    let degrees = scrollPercent * 360;
+    document.querySelector(".back-to-top-bg").style.background = `conic-gradient(#A57A5A ${degrees}deg, transparent ${degrees}deg)`;
 }
 
 // scroll to top function
