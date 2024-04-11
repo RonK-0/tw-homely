@@ -74,10 +74,10 @@
     .backTop{
         @apply hidden opacity-0 relative r-f;
         .back-to-top {
-            @apply bg-gray
+            @apply bg-l_gray dark:bg-dark_2
             w-[150px] h-[150px] z-[-1] py-[20px] 
             fixed bottom-0 right-[-23.75px] md:right-0
-            text-[100px] lh-100 text-center text-light
+            text-[100px] lh-100 text-center text-dark dark:text-light
             r-f shadow-top_button_shadow
             transition-all duration-300 scale-[0.3];
         }
@@ -137,26 +137,29 @@
     }
     /* CARDS STUFF */
     .cCard{
-        @apply bg-transparent dark:bg-l_gray r-10p mb-6 lg:mb-0 w-full xl:max-w-[416px] mx-auto;
+        @apply bg-transparent dark:bg-d_gray r-10p mb-6 lg:mb-0 w-full xl:max-w-[416px] mx-auto;
         .card__img{
             @apply relative rounded-t-[10px] overflow-hidden mb-4;
             img{ @apply w-full object-cover transition-all duration-[0.6s] ease-linear; }
             .price{
-                @apply bg-light p-property_entry_price no-mb r-5p
-                ft-md text-property_entry_price font-text-inter text-dark_2
+                @apply bg-light dark:bg-d_gray 
+                p-property_entry_price mb-0 r-5p
+                ft-md text-property_entry_price font-text-inter 
+                text-dark_2 dark:text-light_2 
                 capitalize absolute left-4 bottom-4 lh-130 ls-3;
             }
         }
         .card__text{
             @apply f-col items-start dark:pl-3 dark:pb-3;
-            a{ @apply text-dark text-[23px] font-text-inter ft-md lh-130 capitalize mb-4; }
-            p.location{  @apply text-fs-19 ft-nm lh-140 text-dark font-text-inter mb-2 }
+            a,span{ @apply text-dark dark:text-light text-[23px] font-text-inter ft-md lh-130 capitalize mb-4; }
+            p.location{  @apply text-fs-19 ft-nm lh-140 text-dark dark:text-light font-text-inter mb-2 }
             ul{
                 @apply pl-0  mb-4 flex flex-wrap sm:flex-nowrap;
                 li{
                     @apply mr-5 flex items-center gap-2;
                     *{ @apply text-dark_2; }
-                    span{ @apply text-base text-nowrap lh-150 font-text-inter;}
+                    img{@apply dark:invert;}
+                    span{ @apply text-base text-nowrap lh-150 font-text-inter mb-0 text-dark dark:text-light;}
                 }
             }
         }
@@ -183,7 +186,7 @@
             @apply w-full flex gap-8 relative mx-a;
             .categorySlider_card{
                 @apply f-col-center w-full h-fit p-bannerSlider_card_p select-none
-                r-30p bg-light dark:bg-dark_2 hover:bg-primary
+                r-30p bg-light dark:bg-d_gray hover:bg-primary
                 transition-all duration-500 ease-in-out;
                 object{ @apply w-[32px] mb-2 dark:invert; }
                 h4{ @apply ft-md text-bannerSlider_card_heading text-dark dark:text-light capitalize mb-2; }
@@ -198,21 +201,23 @@
     /* HOME PAGE - FEATURED PROPERTIES SLIDER SECTION */
     .homeFeaturedProperties{
         .sectionHeading p{ @apply ls-3; }
-        .homeFeaturedProperties__entries{ @apply flex gap-6 select-none; }
+        .homeFeaturedProperties__entries{
+            @apply flex gap-6 select-none;
+        }
     }
     /* HOME PAGE - SOLUTIONS SECTION */
     .homeSolution{
-        .sectionHeading p{ @apply no-mb; }
+        .sectionHeading p{ @apply mb-0; }
         .homeSolution__wrapper{
             @apply flex flex-wrap justify-center lg:flex-nowrap gap-6;
             .homeSolution__card{
-                @apply bg-l_gray f-col-center text-center r-20p
+                @apply bg-l_gray dark:bg-d_gray f-col-center text-center r-20p
                 w-full md:max-w-[336px] lg:max-w-[416px] pointer
-                py-[32px] px-[12px] mb-[32px] lg:no-mb sm:p-propertySolution_p;
+                py-[32px] px-[12px] mb-[32px] lg:mb-0 sm:p-propertySolution_p;
                 img{ @apply mb-3 sm:mb-6; }
-                h4{ @apply ft-sb fs-33 font-text-inter lh-120 text-dark 
+                h4{ @apply ft-sb fs-33 font-text-inter lh-120 text-dark dark:text-light
                     mb-[10px] md:mb-3 lg:mb-[15px] xl:mb-4; }            
-                p{ @apply text-gray fs-16 mb-3 sm:mb-6 overflow-hidden font-text-inter lh-130 line-clamp-3 text-ellipsis; }
+                p{ @apply text-gray dark:text-light_2 fs-16 mb-3 sm:mb-6 overflow-hidden font-text-inter lh-130 line-clamp-3 text-ellipsis; }
             }
             .homeSolution__card:hover h4{ @apply text-primary; }
         }
@@ -229,18 +234,22 @@
     /* HOME PAGE - TOP RATED PROPERTIES SECTION */
     .homeTopRatedProperties__entries{
         @apply grid lg:grid-cols-2 xl:grid-cols-3 gap-6 justify-center;
-        .homeTopRatedProperties__card{ @apply bg-light select-none;} }
+        .homeTopRatedProperties__card{ @apply bg-light dark:bg-d_gray select-none;} }
     /* HOME PAGE - CLIENT SUCCESS STORIES SLIDER SECTION */
     .homeClientStories{
         .homeClientStories__wrapper{
             @apply flex;
             .homeClientStories__card{
-                @apply relative bg-light r-10p mx-[12px] overflow-hidden font-text-inter text-center
+                @apply relative bg-light dark:bg-d_gray r-10p
+                mx-[12px] overflow-hidden font-text-inter text-center
                 w-full md:w-[324px] lg:w-[288px] xl:w-[348px] 2xl:w-[408px];
                 img.storiesQuoteSym { @apply absolute top-0 left-0 z-10; }
                 img.storiesClientImg { @apply pt-[50px] mt-[-100px] mb-2 mx-a; }
-                h4.storiesClientName { @apply ft-md text-bannerSlider_card_heading lh-130 text-dark mb-2; }
-                p.storiesClientQuoteText {@apply p-testimonial_text text-gray line-clamp-4 text-ellipsis mb-[28px] lh-150 text-base ls-3; }
+                h4.storiesClientName {
+                    @apply ft-md text-bannerSlider_card_heading lh-130 
+                    text-dark dark:text-light mb-2;
+                }
+                p.storiesClientQuoteText {@apply p-testimonial_text text-gray dark:text-light_2 line-clamp-4 text-ellipsis mb-[28px] lh-150 text-base ls-3; }
             }
         }
     }
@@ -251,13 +260,13 @@
             .homeAgents__card{
                 @apply f-col-center py-8 px-4 mx-3 my-0 select-none
                 w-full md:w-[324px] lg:w-[288px] xl:w-[255px] 2xl:w-[300px]
-                r-10p font-text-inter bg-l_gray;
+                r-10p font-text-inter bg-l_gray dark:bg-d_gray;
                 img{ @apply mb-2; }
-                h4.agentName{ @apply ft-md text-[23px] lh-130 capitalize text-dark mb-[1px]; }
-                p.agentDesignation{ @apply ft-md text-base lh-140 ls-2 text-gray mb-[18px]; }
+                h4.agentName{ @apply ft-md text-[23px] lh-130 capitalize text-center text-dark dark:text-light mb-[1px]; }
+                p.agentDesignation{ @apply ft-md text-base lh-140 ls-2 text-gray dark:text-light_2/80 mb-[18px]; }
                 div.agentSocials{
-                    @apply flex f-center no-mb p-0;
-                    a{ @apply mx-2; i{ @apply text-2xl text-d_gray hover:text-primary; } }
+                    @apply flex f-center mb-0 p-0;
+                    a{ @apply mx-2; i{ @apply text-2xl text-d_gray dark:text-light_2/70 hover:text-primary; } }
                 }
             }
         }
@@ -266,13 +275,13 @@
     .homeBlogEntries{
         @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6;
         .homeBlogEntries__card{
-            @apply bg-light r-10p mb-6 lg:mb-0 w-full select-none;
+            @apply bg-light dark:bg-d_gray r-10p mb-6 lg:mb-0 w-full select-none;
             .card__img{
                 @apply relative rounded-t-[10px] overflow-hidden;
                 img{ @apply w-full object-cover transition-all duration-[0.6s] ease-linear; }
                 .date{
-                    @apply bg-light p-2 no-mb r-5p
-                    ft-md text-blog_entry_date font-text-inter text-dark_2
+                    @apply bg-light dark:bg-d_gray p-2 mb-0 r-5p
+                    ft-md text-blog_entry_date font-text-inter text-dark_2 dark:text-light_2
                     absolute left-4 bottom-4;
                 }
             }
@@ -282,12 +291,12 @@
                     @apply font-text-inter ft-nm text-blog_category_label
                     text-primary lh-130 mb-2;
                 }
-                a{ @apply text-dark text-blog_entry_title font-text-inter ft-md lh-130 capitalize mb-4; }
+                a{ @apply text-dark dark:text-light text-blog_entry_title font-text-inter ft-md lh-130 capitalize mb-4; }
                 ul{
-                    @apply pl-0  no-mb flex;
+                    @apply pl-0  mb-0 flex;
                     li{
                         @apply mr-5 flex items-center gap-2;
-                        *{ @apply text-dark_2; }
+                        *{ @apply text-dark_2 dark:text-light_2; }
                         span{ @apply ft-md text-fs-16_xl lh-150 font-text-inter; }
                         i{ @apply text-blog_entry_fa; }
                     }
@@ -299,34 +308,37 @@
     /* HOME PAGE - CLIENTS SLIDER SECTION */
     .homeClientSlider{
         * { @apply select-none; }
-        .homeClientSlider_logos img{ @apply w-[236px] max-h-[104px] pr-6 object-scale-down; }
+        .homeClientSlider_logos img{ @apply w-[236px] max-h-[104px] pr-6 object-scale-down dark:invert dark:grayscale; }
     }
 /* HOME PAGE - END */
 
 /* PROPERTY DETAILS PAGE - START */
-    .property-details-page section h2, .property-details-page section h3, .property-details-page section h4, property-details-page section h5, .property-details-page section p, .broker i 
-    {@apply text-dark dark:text-dark}
+    .property-details-page section h2, .property-details-page section h3, .property-details-page section h4, property-details-page section h5, .property-details-page section p
+    {@apply text-dark dark:text-light}
 
     /* property__detail */
     .house__item img { @apply r-10p; }
 
     /* SCHEDULE FORM */ 
-    .schedule__tour{
-        .contact .form__wrapper input, textarea{
-            @apply block w-full p-text_inputs border-dark border-[1px] bg-light
-            focus:text-[#212529] placeholder:text-gray text-base r-5p outline-none;
-        }
-        .broker ul>li>a>i{ @apply hover:text-primary text-2xl; }
+    .schedule__tour .contact .form__wrapper input, textarea{
+        @apply block w-full p-text_inputs border-dark border-[1px] 
+        bg-light dark:bg-gray r-5p outline-none
+        text-gray dark:text-light_2 text-base
+        focus:text-[#212529] focus:dark:text-light 
+        placeholder:text-gray placeholder:dark:text-light_2;
     }
+    .broker .broker__wrapper ul>li>a>i{ @apply text-dark dark:text-light_2/70 hover:text-primary text-2xl; }
     
     /* INFORMATION SECTION*/
     .house__information__reviews{
-        .house__info ul li{ @apply flex gap-3 items-center my-4; }
+        .house__info ul li{ @apply flex gap-3 items-center my-4; img{@apply dark:invert;} }
         .floor__plans__wrapper{
             .floor_plans_accordion{
                 @apply pointer transition-all;
                 .floor_plans_info{
-                    @apply r-5p py-[22px] px-6 flex flex-col gap-y-3 md:flex-row md:justify-between text-dark_2 bg-light;
+                    @apply r-5p py-[22px] px-6 flex flex-col gap-y-3
+                    md:flex-row md:justify-between 
+                    text-dark_2 dark:text-light_2 bg-light dark:bg-dark_2;
                     span{
                         @apply text-base ft-md;
                         i{ @apply mr-2 text-fs-16; }
@@ -362,7 +374,7 @@
             .customer__reviews{
                 @apply *:lh-130;
                 .customer__user .customer__stars>i{ @apply text-primary text-base lh-100; }
-                p{ @apply text-gray text-base ls-3 font-text-inter; }
+                p{ @apply text-gray dark:text-light_2 text-base ls-3 font-text-inter; }
             }
         }
         /* add review */
@@ -385,8 +397,9 @@
                 #checkbox { @apply mb-6 ml-4 mr-[10px]; }
                 .form__identity input, textarea {
                     @apply block w-full p-text_inputs r-5p outline-none
-                    text-gray focus:text-dark text-base lh-140 
-                    border-dark border-[1px] bg-light;
+                    bg-light dark:bg-gray border-dark border-[1px]
+                    text-gray dark:text-light_2 lh-140 text-base
+                    focus:text-dark focus:dark:text-light;
                 }
             }
         }
@@ -478,7 +491,7 @@
                               @apply content-['\2714'] top-0 tx-a
                               h-full w-full text-white text-center;
                             }
-                            label.checkbox__label{ @apply pl-[26px] text-sm sm:text-[19px] dark:text-light; }
+                            label.checkbox__label{ @apply pl-[26px] text-sm sm:text-[19px] xl:text-sm 2xl:text-[19px] dark:text-light; }
                             input:not(:checked) ~ label.checkbox__label>.checkmark{ @apply animate-unCheck; }
                             input:checked ~ label.checkbox__label>.checkmark{ @apply animate-onCheck bg-primary; }
                             input[type="checkbox"] + label.checkbox__label{@apply m-[0.2em] py-[0.2em] pr-[0.2em]; }
@@ -509,6 +522,47 @@
 /* PROPERTIES PAGE - END */
 }
 
+/* ABOUT PAGE - START */
+    .about__wrapper{
+        @apply grid xl:grid-cols-2;
+        .about__card{
+            @apply relative r-20p mb-12 xl:mb-0 bg-transparent;
+            .about__card__img{ @apply r-20p object-cover; }
+            .about__card__text{
+                @apply p-8 r-20p font-text-inter
+                bg-light md:bg-l_gray dark:bg-d_gray
+                md:absolute md:tx-a md:ty-a;
+                h4{@apply ft-md font-text-inter text-[23px] lh-130 capitalize mb-2 text-dark dark:text-light;}
+                p{ @apply ft-nm text-base lh-140 ls-2 mb-2 text-dark dark:text-light; }
+                ul>li{ @apply pr-[7px]; img{@apply mr-2;} span{@apply ft-nm;} }
+            }
+        }
+        .about__details{
+            .about__details__content{
+                h2{
+                    @apply ft-sb text-[32px] sm:text-[38px] md:text-[42px] xl:text-[48px] text-dark_2 dark:text-light_2 mb-4 -ls-1 lh-120 uppercase;
+                }
+                h4{
+                    @apply ft-sb fs-19 text-dark dark:text-light mb-2 lh-120;
+                }
+                p{
+                    @apply text-base font-text-inter text-gray lh-130 ft-nm ls-3;
+                }
+            }
+            ul>li{
+                @apply text-center text-dark dark:text-light
+                f-col-center gap-5 w-1/2 md:w-fit;
+                img{@apply dark:invert;}
+                p{
+                    @apply ft-md text-[21px] xl:text-[19px] 2xl:text-[23px]
+                    font-text-inter text-dark dark:text-light capitalize mb-6;
+                }
+            }
+        }
+    }
+    
+/* ABOUT PAGE - END */
+
 @layer utilities{
     .btn{
         @apply inline-block
@@ -524,14 +578,14 @@
         text-light hover:text-primary;
     }
     .btn.bg--light-p{
-        @apply bg-light hover:bg-primary
-        border-dark hover:border-transparent 
-        text-dark hover:text-light;
+        @apply bg-light dark:bg-dark_2 hover:bg-primary
+        border-dark dark:border-light hover:border-transparent 
+        text-dark dark:text-light hover:text-light;
     }
     .btn.bg--transparent-p{
         @apply bg-transparent hover:bg-primary
-        border-dark hover:border-transparent 
-        text-dark hover:text-light;
+        border-dark dark:border-light hover:border-transparent 
+        text-dark dark:text-light hover:text-light;
     }
     .btn.bg--transparent{
         @apply bg-transparent text-dark
@@ -545,10 +599,11 @@
         r-5p block w-full
     }
 
-    .f-col{ @apply flex flex-col }
-    .f-col-center{ @apply flex flex-col items-center justify-center }
-    .f-center {@apply items-center justify-center }
-    .f-between-center {@apply items-center justify-between }
+    .f-col{ @apply flex flex-col; }
+    .f-col-center{ @apply flex flex-col items-center justify-center; }
+    .f-center {@apply items-center justify-center; }
+    .between-center {@apply justify-between items-center; }
+    .between-end {@apply justify-between items-end; }
 
     .ft-el{ @apply font-extralight }
     .ft-lt{ @apply font-light }
@@ -562,7 +617,6 @@
     .mb-40x{ @apply mb-[40px] }
     .mb-60x{ @apply mb-[60px] }
     .mb-80x{ @apply mb-[80px] }
-    .no-mb{ @apply mb-0 }
     .mx-a{ @apply mx-auto }
 
     .tx-a{ @apply left-1/2 -translate-x-1/2 }

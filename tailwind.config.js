@@ -35,7 +35,6 @@ module.exports = {
         primary: "#A57A5A",
         homeFeaturedProperties_Nav: '#c9cbcc',
         homeFeaturedProperties_Nav_outline: 'rgba(44, 45, 47, 0.2)',
-        l_blue: "#F0F2F4",
       },
       fontFamily: {
         'text-poppins': ["Poppins", "sans-serif"],

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homely - About</title>
+    <link href="../src/output.css" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon-dark.png">
+
+    <!-- INTER FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- POPPINS FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+
+    <!-- AOS -->
+    <!-- <link href="./vendor/aos/aos.css" rel="stylesheet">
+    <script src="./vendor/aos/aos.js"></script> -->
+
+    <!-- TINY SLIDER -->
+    <!-- <link rel="stylesheet" href="./vendor/tiny-slider/tiny-slider.css" /> -->
+
+</head>
+<body id="top" class="bg-light dark:bg-dark dark:text-light">
+    <header class="header text-dark absolute top-0 l-0 z-[999] w-full py-[20px] pt-[25px]">
+        <div class="container">
+            <nav class="header__wrapper flex between-center relative">
+                <a href="./index.html" class="xl:mr-[35px]"><img src="./img/logo.png" alt=""></a>
+                <div>
+                    <button class="burger p-[10px] text-[24px] block xl:hidden"><i class="fas fa-bars"></i></button>
+                    <ul class="nav__links hidden xl:flex flex-col xl:flex-row xl:justify-between gap-[30px]">
+                        <li class="nav__link_item"><a href="./index.html">Home</a></li>
+                        <li class="nav__link_item"><a href="./about.html" class="active">About</a></li>
+                        <li class="nav__link_item"><a href="./properties.html">Properties</a></li>
+                        <li class="nav__link_item"><a href="./property-details.html">Property Details</a></li>
+                        <li class="nav__link_item xl:mr-[30px]"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hidden xl:flex justify-end gap-[clamp(12px,0.83vw,20px)] text-[clamp(20px,1.25vw,36px)] items-center ">
+                    <!-- <a href="tel:123"><i class="fas fa-phone text-primary text-[32px]"></i></a> -->
+                    <a href="tel:123"><object data="./img/phone.svg"></object></a>
+                    <!-- <button class="toggleBtn block mx-a my-0 p-0 rounded-full leading-none"><i class="fas fa-circle-half-stroke text-light dark:text-dark dark:bg-light rounded-full leading-none"></i></button> -->
+                    <a href="tel:123"><span class="ft-md hover:text-primary">+1 234 567 890</span></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+ 
+    <!-- CONTENT START -->
+    <section class="propBanner" id="pageBanner">
+        <div class="container">
+            <div class="propBanner__wrapper">
+                <h2>ABOUT US</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="about py100 bg-l_gray dark:bg-dark_2">
+        <div class="container">
+            <div class="about__wrapper">
+                <div class="about__card cCard">
+                    <img src="./img/about/img-1.png" alt="" class="about__card__img">
+                    <div class="about__card__text card__text">
+                        <h4>Lakeside Terrace Villas</h4>
+                        <p class="location">678 Ocean View Drive</p>
+                        <ul>
+                            <li><img src="./img/home/icons/bed.svg" alt="bed icon"><span>6 Beds</span></li>
+                            <li><img src="./img/home/icons/bath.svg" alt="bath icon"><span>2 Baths</span></li>
+                            <li><img src="./img/home/icons/size.svg" alt="size icon"><span>200 sqft</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about__details">
+                    <div class="about__details__content">
+                        <h2>Connecting You with Your Dream Home</h2>
+                        <h4>History:</h4>
+                        <p class="mb-4">Homely is a modern real estate platform dedicated to providing the best experience for buyers, sellers, and agents. Our mission is to simplify the buying and selling process, while providing exceptional service and expertise. We are committed to using innovative technology to make real estate transactions faster, easier, and more transparent.</p>
+                        <h4>Mission:</h4>
+                        <p class="mb-8">Homely is a modern real estate platform dedicated to providing the best experience for buyers, sellers, and agents. Our mission is to simplify the buying and selling process, while providing exceptional service and expertise. We are committed to using innovative technology to make real estate transactions faster, easier, and more transparent.</p>
+                    </div>
+                    <ul class="flex between-end flex-wrap md:flex-nowrap">
+                        <li class="">
+                            <img src="./img/about/icons/trust-icon.png" alt="">
+                            <p>Trusted</p>
+                        </li>
+                        <li class="">
+                            <img src="./img/about/icons/img-1.png" alt="">
+                            <p>Financing Easy</p>
+                        </li>
+                        <li class="">
+                            <img src="./img/about/icons/call-center-icon.png" alt="">
+                            <p>24/7 Support</p>
+                        </li>
+                        <li class="">
+                            <img src="./img/about/icons/client-icon.png" alt="">
+                            <p>Happy Clients</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="homeAgents py100 bg-light dark:bg-dark">
+        <div class="container">
+            <div class="sectionHeading">
+                <h2>MEET OUR REAL ESTATE AGENTS</h2>
+                <p>Meet our team of experienced and professional real estate agents <br>ready to help you with your property needs.</p>
+            </div>
+            <div class="homeAgents__wrapper">
+                <div class="homeAgents__card">
+                    <img src="./img/home/agents/img-4 (1).png" alt="">
+                    <h4 class="agentName">Richard Johnson</h4>
+                    <p class="agentDesignation">Real Estate Broker</p>
+                    <div class="agentSocials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-basketball-ball"></i></a>
+                    </div>
+                </div>
+                <div class="homeAgents__card">
+                    <img src="./img/home/agents/img-5 (1).png" alt="">
+                    <h4 class="agentName">Rebecca Robinson</h4>
+                    <p class="agentDesignation">Real Estate Broker</p>
+                    <div class="agentSocials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-basketball-ball"></i></a>
+                    </div>
+                </div>
+                <div class="homeAgents__card">
+                    <img src="./img/home/agents/img-6 (1).png" alt="">
+                    <h4 class="agentName">Susan Hernandez</h4>
+                    <p class="agentDesignation">Real Estate Broker</p>
+                    <div class="agentSocials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-basketball-ball"></i></a>
+                    </div>
+                </div>
+                <div class="homeAgents__card">
+                    <img src="./img/home/agents/img-7 (1).png" alt="">
+                    <h4 class="agentName">William Martinez</h4>
+                    <p class="agentDesignation">Real Estate Broker</p>
+                    <div class="agentSocials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-basketball-ball"></i></a>
+                    </div>
+                </div>
+                <div class="homeAgents__card">
+                    <img src="./img/home/agents/img-5 (1).png" alt="">
+                    <h4 class="agentName">Rebecca Robinson</h4>
+                    <p class="agentDesignation">Real Estate Broker</p>
+                    <div class="agentSocials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-basketball-ball"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="homeClientStories py100 bg-l_gray dark:bg-dark_2">
+        <div class="container">
+            <div class="sectionHeading">
+                <h2>OUR CLIENT'S SUCCESS STORIES</h2>
+                <p>Discover how our clients found their dream homes and successful<br> real estate investments with the help of our expert agents.</p>
+            </div>
+            <div class="homeClientStories__wrapper">
+                <div class="homeClientStories__card">
+                    <img src="./img/home/quote.png" alt="" class="storiesQuoteSym">
+                    <img src="./img/home/testimonial/img-1.png" alt="" class="w-full">
+                    <img src="./img/home/testimonial/clients/img-1.png" alt="" class="storiesClientImg">
+                    <h4 class="storiesClientName">Emily Johnson</h4>
+                    <p class="storiesClientQuoteText">"The real estate agents were incredibly responsive and helpful throughout the entire process. I couldn't have asked for a better experience."</p>
+                </div>
+                <div class="homeClientStories__card">
+                    <img src="./img/home/quote.png" alt="" class="storiesQuoteSym">
+                    <img src="./img/home/testimonial/img-2.png" alt="" class="w-full">
+                    <img src="./img/home/testimonial/clients/img-2.png" alt="" class="storiesClientImg">
+                    <h4 class="storiesClientName">Sophia Rodriguez</h4>
+                    <p class="storiesClientQuoteText">"The real estate agents were incredibly responsive and helpful throughout the entire process. I couldn't have asked for a better experience."</p>
+                </div>
+                <div class="homeClientStories__card">
+                    <img src="./img/home/quote.png" alt="" class="storiesQuoteSym">
+                    <img src="./img/home/testimonial/img-3.png" alt="" class="w-full">
+                    <img src="./img/home/testimonial/clients/img-3.png" alt="" class="storiesClientImg">
+                    <h4 class="storiesClientName">Emily Johnson</h4>
+                    <p class="storiesClientQuoteText">"The real estate agents were incredibly responsive and helpful throughout the entire process. I couldn't have asked for a better experience."</p>
+                </div>
+                <div class="homeClientStories__card">
+                    <img src="./img/home/quote.png" alt="" class="storiesQuoteSym">
+                    <img src="./img/home/testimonial/img-1.png" alt="" class="w-full">
+                    <img src="./img/home/testimonial/clients/img-1.png" alt="" class="storiesClientImg">
+                    <h4 class="storiesClientName">Emily Johnson</h4>
+                    <p class="storiesClientQuoteText">"The real estate agents were incredibly responsive and helpful throughout the entire process. I couldn't have asked for a better experience."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="homeClientSlider bg-light dark:bg-dark py-[32px] md:py-[48px] lg:py-clientSlider_p">
+        <div class="container">
+            <div class="homeClientSlider_logos flex select-none ease-linear">
+                <img src="./img/home/brand_logos/brand-logo-1.png" alt=""><img src="./img/home/brand_logos/brand-logo-2.png" alt=""><img src="./img/home/brand_logos/brand-logo-3.png" alt=""><img src="./img/home/brand_logos/brand-logo-4.png" alt=""><img src="./img/home/brand_logos/brand-logo-5.png" alt="">
+                <img src="./img/home/brand_logos/brand-logo-1.png" alt=""><img src="./img/home/brand_logos/brand-logo-2.png" alt=""><img src="./img/home/brand_logos/brand-logo-3.png" alt=""><img src="./img/home/brand_logos/brand-logo-4.png" alt=""><img src="./img/home/brand_logos/brand-logo-5.png" alt="">
+                <img src="./img/home/brand_logos/brand-logo-1.png" alt=""><img src="./img/home/brand_logos/brand-logo-2.png" alt=""><img src="./img/home/brand_logos/brand-logo-3.png" alt=""><img src="./img/home/brand_logos/brand-logo-4.png" alt=""><img src="./img/home/brand_logos/brand-logo-5.png" alt="">
+                <img src="./img/home/brand_logos/brand-logo-1.png" alt=""><img src="./img/home/brand_logos/brand-logo-2.png" alt=""><img src="./img/home/brand_logos/brand-logo-3.png" alt=""><img src="./img/home/brand_logos/brand-logo-4.png" alt=""><img src="./img/home/brand_logos/brand-logo-5.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- CONTENT END -->
+
+    <script src="./js/script.js"></script>
+    <script src="./vendor/tiny-slider/tiny-slider.js"></script>
+    <script>
+        //clients success slider
+        var homeClientTestimonies = tns({
+            container: ".homeClientStories__wrapper",
+            items: 1,
+            loop: true,
+            center: false,
+            autoplay: true,
+            autoplayHoverPause: true,
+            autoplayButtonOutput: false,
+            controls: false,
+            nav: true,
+            speed: 750,
+            autoplayTimeout: 3000,
+            preventActionWhenRunning: true,
+            mouseDrag: true,
+            touch: true,
+            navAsThumbnails: true,
+            responsive: {
+                992: { items: 3, center: true, },
+                768:  { items: 2, },
+            }
+        });
+
+        // real estate agents slider
+        var agentsSlider = tns({
+            container: ".homeAgents__wrapper",
+            items: 2,
+            loop: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+            autoplayButtonOutput: false,
+            controls: false,
+            nav: false,
+            speed: 750,
+            autoplayTimeout: 2500,
+            preventActionWhenRunning: true,
+            mouseDrag: true,
+            touch: true,
+            responsive: {
+                1200: { items: 4 },
+                992:  { items: 3 },
+                768:  { items: 2 },
+            }
+        });
+
+        // client logos slider
+        var clientSlider = tns({
+            container: ".homeClientSlider_logos",
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+            autoplayButtonOutput: false,
+            controls: false,
+            nav: false,
+            speed: 5000,
+            autoplayTimeout: 0,
+            preventActionWhenRunning: true,
+            mouseDrag: true,
+            touch: true,
+            responsive: {
+                1200: { items: 5 },
+                992:  { items: 4 },
+                768:  { items: 3 },
+                576:  { items: 2 },
+            }
+        });
+    </script>
+    
+    <!-- FOOTER -->
+    <footer class="footer bg-footer_bg bg-cover bg-no-repeat bg-center font-text-inter">
+        <div class="container">
+            <div class="footer__wrapper text-light pt-[100px] pb-[30px]">
+                <button class="toggleBtn block mx-a my-0 p-0 rounded-full leading-none"><i class="fas fa-circle-half-stroke text-light dark:text-dark dark:bg-light rounded-full leading-none"></i></button>
+
+                <div class="footer__top f-col-center mb-10 md:mb-8 text-center">
+                    <h2 class="mb-4 fs-40 ft-sb lh-120 text-light dark:text-light lg:max-w-[66.67%]">FIND YOUR DREAM HOME TODAY WITH OUR EXTENSIVE PROPERTY COLLECTION</h2>
+                    <button class="btn bg--primary-w ft-sb">View Properties</button>
+                </div>
+                <div class="footer__middle flex flex-wrap lg:flex-nowrap lg:justify-between">
+                    <div class="lg:order-1 mb-[54px] w-full lg:w-[25%] text-wrap px-0 lg:px-2">
+                        <h3 class="text-[28px] mb-3 ft-md">LOCATION</h3>
+                        <p class="fs-19 lh-130 mb-3">123 Street, Your City, State and Country.</p>
+                        <p class="fs-19 lh-130 mb-10">123 Street, Your City, State and Country.</p>
+                        <h3 class="text-[28px] mb-4 ft-md">TIMING</h3>
+                        <p class="fs-19 lh-130 mb-3 ft-md -ls-2">Mon-Sat, 9AM - 5PM</p>
+                        <p class="fs-19 lh-130 ft-md -ls-2">Sunday Off</p>
+                    </div>
+                    <div class="order-first lg:order-2 lg:mx-auto w-full lg:w-[33.33%] mb-12 lg:mt-[150px] lg:mb-[90px] px-0 lg:px-2">
+                        <h3 class="fs-23 ft-md mb-4">Subscribe Our Newsletter</h3>
+                        <form action="" class="w-full flex justify-between bg-light dark:bg-dark_2 py-[12px] px-[24px] rounded-[10px] fs-19">
+                            <input type="email" placeholder="Your Email" id="footerEmailInput" class="w-full bg-light dark:bg-dark_2 text-d_gray dark:text-light_2">
+                            <button class="text-d_gray dark:text-light_2 text-[24px] leading-none mr-1"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                    <div class="lg:order-3 mb-[54px] w-full lg:w-[25%] text-wrap f-col px-0 lg:px-2">
+                        <h3 class="text-[28px] mb-3 ft-md">CONTACT US</h3>
+                        <a href="tel:123" class="mb-3"><span class="ft-sb hover:text-primary">+1 123 456 789</span></a>
+                        <a href="tel:123" class="mb-3"><span class="ft-sb hover:text-primary">+1 123 456 789</span></a>
+                        <a href="mailto:info@homelyexample.com" class="mb-8"><span class="ft-md hover:text-primary">info@homelyexample.com</span></a>
+
+                        <h3 class="text-[28px] mb-3">FOLLOW US</h3>
+                        <ul class="flex text-[24px] gap-3">
+                            <li><a href="#" class="fab fa-facebook-f hover:text-primary"></a></li>
+                            <li><a href="#" class="fab fa-instagram hover:text-primary"></a></li>
+                            <li><a href="#" class="fab fa-twitter hover:text-primary"></a></li>
+                            <li><a href="#" class="fas fa-basketball hover:text-primary"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-center fs-19">&copy;2024 Homely, All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="backTop">
+        <button class="back-to-top fas fa-angle-up" onclick="scrollToTop()"></button>
+        <div class="back-to-top-bg"></div>
+    </div>
+</body>
+</html>
