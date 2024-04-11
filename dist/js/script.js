@@ -11,8 +11,12 @@ burg.addEventListener("click", ()=>{
 });
 
 const rt = document.querySelector("body");
-const togglebtn = document.querySelector(".toggleBtn");
-togglebtn.addEventListener("click", ()=>{
+const togglebtn1 = document.querySelector("#b-w-button-1");
+const togglebtn2 = document.querySelector("#b-w-button-2");
+togglebtn1.addEventListener("click", ()=>{
+    rt.classList.toggle("dark");
+});
+togglebtn2.addEventListener("click", ()=>{
     rt.classList.toggle("dark");
 });
 

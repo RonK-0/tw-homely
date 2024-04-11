@@ -758,6 +758,15 @@ p {
         color: rgb(250 250 250 / 0.5);
       }
     }
+    button {
+      width: 100%;
+    }
+    button {
+      text-align: center;
+    }
+    button {
+      border-radius: 5px;
+    }
   }
   ul.nav__links.show {
     position: absolute;
@@ -804,6 +813,48 @@ p {
   }
   object {
     width: clamp(24px, 10vw, 38px);
+  }
+  button.toggleBtn {
+    margin: 0px;
+  }
+  button.toggleBtn {
+    height: 1.75rem;
+  }
+  button.toggleBtn {
+    width: 1.75rem;
+  }
+  button.toggleBtn {
+    overflow: hidden;
+  }
+  button.toggleBtn {
+    border-radius: 9999px;
+  }
+  button.toggleBtn {
+    --tw-bg-opacity: 1;
+    background-color: rgb(13 13 13 / var(--tw-bg-opacity));
+  }
+  button.toggleBtn {
+    padding: 0px;
+  }
+  button.toggleBtn:where(.dark, .dark *) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+  }
+  button.toggleBtn{
+    i {
+      border-radius: 9999px;
+    }
+    i {
+      line-height: 1;
+    }
+    i {
+      --tw-text-opacity: 1;
+      color: rgb(250 250 250 / var(--tw-text-opacity));
+    }
+    i:where(.dark, .dark *) {
+      --tw-text-opacity: 1;
+      color: rgb(13 13 13 / var(--tw-text-opacity));
+    }
   }
 }
 
@@ -5086,6 +5137,10 @@ p {
 
   .xl\:mr-\[35px\] {
     margin-right: 35px;
+  }
+
+  .xl\:block {
+    display: block;
   }
 
   .xl\:flex {

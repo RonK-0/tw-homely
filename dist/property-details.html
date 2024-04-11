@@ -33,18 +33,22 @@
                 <div>
                     <button class="burger p-[10px] text-[24px] block xl:hidden"><i class="fas fa-bars"></i></button>
                     <ul class="nav__links hidden xl:flex flex-col xl:flex-row xl:justify-between gap-[30px]">
-                        <li class="nav__link_item"><a href="./index.html">Home</a></li>
+                        <li class="nav__link_item"><a href="./index.html" class="active">Home</a></li>
                         <li class="nav__link_item"><a href="./about.html">About</a></li>
                         <li class="nav__link_item"><a href="./properties.html">Properties</a></li>
-                        <li class="nav__link_item"><a href="./property-details.html" class="active">Property Details</a></li>
+                        <li class="nav__link_item"><a href="./property-details.html">Property Details</a></li>
                         <li class="nav__link_item xl:mr-[30px]"><a href="#">Contact</a></li>
+                        <button class="toggleBtn block xl:hidden" id="b-w-button-1"><i class="fas fa-circle-half-stroke"></i></button>
                     </ul>
                 </div>
-                <div class="hidden xl:flex justify-end gap-[clamp(12px,0.83vw,20px)] text-[clamp(20px,1.25vw,36px)] items-center ">
-                    <!-- <a href="tel:123"><i class="fas fa-phone text-primary text-[32px]"></i></a> -->
-                    <a href="tel:123"><object data="./img/phone.svg"></object></a>
-                    <!-- <button class="toggleBtn block mx-a my-0 p-0 rounded-full leading-none"><i class="fas fa-circle-half-stroke text-light dark:text-dark dark:bg-light rounded-full leading-none"></i></button> -->
-                    <a href="tel:123"><span class="ft-md hover:text-primary">+1 234 567 890</span></a>
+                <div class="hidden xl:flex gap-3 items-center">
+                    <div class="hidden xl:flex justify-end gap-[clamp(12px,0.83vw,20px)] text-[clamp(20px,1.25vw,36px)] items-center ">
+                        <!-- <a href="tel:123"><i class="fas fa-phone text-primary text-[32px]"></i></a> -->
+                        <a href="tel:123"><object data="./img/phone.svg"></object></a>
+                        <!-- <button class="toggleBtn block mx-a my-0 p-0 rounded-full leading-none"><i class="fas fa-circle-half-stroke text-light dark:text-dark dark:bg-light rounded-full leading-none"></i></button> -->
+                        <a href="tel:123"><span class="ft-md hover:text-primary">+1 234 567 890</span></a>
+                    </div>
+                    <button class="toggleBtn hidden xl:block" id="b-w-button-2"><i class="fas fa-circle-half-stroke"></i></button>
                 </div>
             </nav>
         </div>
@@ -565,8 +569,6 @@
      <footer class="footer bg-footer_bg bg-cover bg-no-repeat bg-center font-text-inter">
         <div class="container">
             <div class="footer__wrapper text-light pt-[100px] pb-[30px]">
-                <button class="toggleBtn block mx-a my-0 p-0 rounded-full leading-none"><i class="fas fa-circle-half-stroke text-light dark:text-dark dark:bg-light rounded-full leading-none"></i></button>
-
                 <div class="footer__top f-col-center mb-10 md:mb-8 text-center">
                     <h2 class="mb-4 fs-40 ft-sb lh-120 text-light dark:text-light lg:max-w-[66.67%]">FIND YOUR DREAM HOME TODAY WITH OUR EXTENSIVE PROPERTY COLLECTION</h2>
                     <button class="btn bg--primary-w ft-sb">View Properties</button>
