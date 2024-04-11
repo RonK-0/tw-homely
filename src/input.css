@@ -36,11 +36,10 @@
     body{
         @apply bg-light h-full
         font-text-poppins ft-nm text-dark
-        /* overflow-hidden */
         text-text_xs sm:text-text_sm md:text-text_md lg:text-text_lg;
     }
-    *, body, h1, h2, h3, h4, p, form, input, a, button, ul, li, span{
-        @apply transition-all duration-300 ease-in-out
+    *, body, h1, h2, h3, h4, h5, i, a, p, span, form, input, button, ul, li, small{
+        @apply transition-all duration-200 ease-linear;
     }
     a, button, select, input[type='checkbox'] { @apply pointer; }
     p{ @apply ls-3; }
@@ -67,10 +66,7 @@
         }
         object{ @apply w-tel_icon; }
     }
-
     /* BACK TO TOP BUTTON */
-    
-    /* .back-to-top.shown{ @apply opacity-100; } */
     .backTop{
         @apply hidden opacity-0 relative r-f;
         .back-to-top {
@@ -201,9 +197,7 @@
     /* HOME PAGE - FEATURED PROPERTIES SLIDER SECTION */
     .homeFeaturedProperties{
         .sectionHeading p{ @apply ls-3; }
-        .homeFeaturedProperties__entries{
-            @apply flex gap-6 select-none;
-        }
+        .homeFeaturedProperties__entries{ @apply flex gap-6 select-none; }
     }
     /* HOME PAGE - SOLUTIONS SECTION */
     .homeSolution{
@@ -224,7 +218,7 @@
     }
     /* HOME PAGE - DREAM HOME SECTION */
     .homeDreamHome__wrapper{
-        @apply grid grid-cols-2 lg:grid-cols-3 gap-[25px];
+        @apply grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-[25px];
         .homeDreamHome__entry{
             @apply r-10p overflow-hidden;
             img { @apply transition-all duration-[0.6s] ease-linear; }
@@ -249,7 +243,10 @@
                     @apply ft-md text-bannerSlider_card_heading lh-130 
                     text-dark dark:text-light mb-2;
                 }
-                p.storiesClientQuoteText {@apply p-testimonial_text text-gray dark:text-light_2 line-clamp-4 text-ellipsis mb-[28px] lh-150 text-base ls-3; }
+                p.storiesClientQuoteText {
+                    @apply p-testimonial_text text-gray dark:text-light_2
+                    line-clamp-4 text-ellipsis mb-[28px] lh-150 text-base ls-3;
+                }
             }
         }
     }
@@ -313,7 +310,8 @@
 /* HOME PAGE - END */
 
 /* PROPERTY DETAILS PAGE - START */
-    .property-details-page section h2, .property-details-page section h3, .property-details-page section h4, property-details-page section h5, .property-details-page section p
+    .property-details-page section h2, .property-details-page section h3, .property-details-page section h4,
+    .property-details-page section h5, .property-details-page section p
     {@apply text-dark dark:text-light}
 
     /* property__detail */
@@ -524,12 +522,12 @@
 
 /* ABOUT PAGE - START */
     .about__wrapper{
-        @apply grid xl:grid-cols-2;
+        @apply grid xl:grid-cols-2 gap-6 items-center;
         .about__card{
-            @apply relative r-20p mb-12 xl:mb-0 bg-transparent;
-            .about__card__img{ @apply r-20p object-cover; }
+            @apply relative r-20p mb-12 xl:mb-0 bg-transparent max-w-full;
+            .about__card__img{ @apply r-20p object-cover w-full aspect-square; }
             .about__card__text{
-                @apply p-8 r-20p font-text-inter
+                @apply p-8 r-20p font-text-inter mt-12 xl:mt-0
                 bg-light md:bg-l_gray dark:bg-d_gray
                 md:absolute md:tx-a md:ty-a;
                 h4{@apply ft-md font-text-inter text-[23px] lh-130 capitalize mb-2 text-dark dark:text-light;}
@@ -540,14 +538,11 @@
         .about__details{
             .about__details__content{
                 h2{
-                    @apply ft-sb text-[32px] sm:text-[38px] md:text-[42px] xl:text-[48px] text-dark_2 dark:text-light_2 mb-4 -ls-1 lh-120 uppercase;
+                    @apply ft-sb text-[32px] sm:text-[38px] md:text-[42px] xl:text-[48px]
+                    text-dark_2 dark:text-light_2 mb-4 -ls-1 lh-120 uppercase;
                 }
-                h4{
-                    @apply ft-sb fs-19 text-dark dark:text-light mb-2 lh-120;
-                }
-                p{
-                    @apply text-base font-text-inter text-gray lh-130 ft-nm ls-3;
-                }
+                h4{ @apply ft-sb fs-19 text-dark dark:text-light mb-2 lh-120; }
+                p{ @apply text-base font-text-inter text-gray lh-130 ft-nm ls-3; }
             }
             ul>li{
                 @apply text-center text-dark dark:text-light

@@ -36,6 +36,10 @@ module.exports = {
         homeFeaturedProperties_Nav: '#c9cbcc',
         homeFeaturedProperties_Nav_outline: 'rgba(44, 45, 47, 0.2)',
       },
+      gridTemplateColumns: {
+        // 'auto-fill-100': 'repeat(auto-fill, minmax(100px, 1fr))',
+        'auto-fit': 'repeat(auto-fit, minmax(0, 1fr))',
+      },
       fontFamily: {
         'text-poppins': ["Poppins", "sans-serif"],
         'text-inter': ["Inter", "sans-serif"],

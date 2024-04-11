@@ -438,7 +438,6 @@
     </section>
     <!-- CONTENT END -->
 
-    <script src="./js/script.js"></script>
     <script src="./vendor/tiny-slider/tiny-slider.js"></script>
     <script>
         // banner categories slider
@@ -446,6 +445,7 @@
             container: ".homeBanner_categorySlider__wrapper",
             items: 1,
             loop: true,
+            center: true,
             autoplay: true,
             autoplayHoverPause: true,
             autoplayButtonOutput: false,
@@ -457,10 +457,10 @@
             mouseDrag: true,
             touch: true,
             responsive: {
-                1200: { items: 5 },
-                992:  { items: 4 },
-                768:  { items: 3 },
-                490:  { items: 2 },
+                1200: { items: 5, },
+                992:  { items: 4, },
+                768:  { items: 3, center: true, },
+                490:  { items: 2, center: false, },
             }
         });
 
@@ -469,7 +469,7 @@
             container: ".homeFeaturedProperties__entries",
             items: 1,
             loop: true,
-            center: false,
+            center: true,
             autoplay: true,
             autoplayHoverPause: true,
             autoplayButtonOutput: false,
@@ -483,7 +483,7 @@
             navAsThumbnails: true,
             responsive: {
                 1200: { items: 3, center: true, },
-                768:  { items: 2, },
+                768:  { items: 2, center: false, },
             }
         });
 
@@ -492,7 +492,7 @@
             container: ".homeClientStories__wrapper",
             items: 1,
             loop: true,
-            center: false,
+            center: true,
             autoplay: true,
             autoplayHoverPause: true,
             autoplayButtonOutput: false,
@@ -505,8 +505,8 @@
             touch: true,
             navAsThumbnails: true,
             responsive: {
-                992: { items: 3, center: true, },
-                768:  { items: 2, },
+                992: { items: 3, },
+                768:  { items: 2, center: false,},
             }
         });
 
@@ -515,6 +515,7 @@
             container: ".homeAgents__wrapper",
             items: 1,
             loop: true,
+            center: true,
             autoplay: true,
             autoplayHoverPause: true,
             autoplayButtonOutput: false,
@@ -528,7 +529,7 @@
             responsive: {
                 1200: { items: 4 },
                 992:  { items: 3 },
-                768:  { items: 2 },
+                768:  { items: 2, center: false, },
             }
         });
 
@@ -606,5 +607,7 @@
         <button class="back-to-top fas fa-angle-up" onclick="scrollToTop()"></button>
         <div class="back-to-top-bg"></div>
     </div>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
