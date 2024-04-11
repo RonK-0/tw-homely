@@ -4217,12 +4217,12 @@ p {
   font-size: 32px;
 }
 
-.text-\[clamp\(20px\2c 1\.25vw\2c 36px\)\] {
-  font-size: clamp(20px,1.25vw,36px);
+.text-\[40px\] {
+  font-size: 40px;
 }
 
-.text-banner_h1 {
-  font-size: clamp(64px, 5.156vw, 150px);
+.text-\[clamp\(20px\2c 1\.25vw\2c 36px\)\] {
+  font-size: clamp(20px,1.25vw,36px);
 }
 
 .text-fs-16 {
@@ -5001,6 +5001,10 @@ p {
   .sm\:text-\[16px\] {
     font-size: 16px;
   }
+
+  .sm\:text-\[60px\] {
+    font-size: 60px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -5031,6 +5035,10 @@ p {
   .md\:py-\[48px\] {
     padding-top: 48px;
     padding-bottom: 48px;
+  }
+
+  .md\:text-\[70px\] {
+    font-size: 70px;
   }
 }
 
@@ -5115,6 +5123,10 @@ p {
   .lg\:py-clientSlider_p {
     padding-top: clamp(64px, 5.208vw, 200px);
     padding-bottom: clamp(64px, 5.208vw, 200px);
+  }
+
+  .lg\:text-banner_h1 {
+    font-size: clamp(64px, 5.156vw, 150px);
   }
 }
 
