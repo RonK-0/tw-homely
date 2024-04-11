@@ -22,12 +22,6 @@
     @apply bg-light/75 dark:bg-light/80 hover:bg-light rounded-[4px];
 }
 
-
-@font-face {
-    font-family: "Poppins";
-    src: url("../dist/fonts/");
-}
-
 @layer base {
     html, html:focus-within {
         @apply scroll-smooth
@@ -45,6 +39,22 @@
     p{ @apply ls-3; }
     .tns-visually-hidden { @apply hidden; }
     .tns-outer { @apply w-full overflow-hidden mx-a select-none; }
+
+    /* ANIMATIONS - START */
+    @keyframes navDown {
+        0% { opacity: 0%; }
+        100% { opacity: 100%; }
+    }
+    @keyframes onCheck {
+        0% { scale: 0; }
+        100% { scale: 1; }
+    }
+    @keyframes unCheck {
+        0% { scale: 1; }
+        50% { scale: 0; }
+        100% { scale: 1; }
+    }
+    /* ANIAMTIONS - END */
 }
 
 @layer components{

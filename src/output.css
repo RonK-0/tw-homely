@@ -510,6 +510,44 @@ p {
   margin-right: auto;
 }
 
+/* ANIMATIONS - START */
+
+@keyframes navDown {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes onCheck {
+  0% {
+    scale: 0;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes unCheck {
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 0;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+/* ANIAMTIONS - END */
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -666,15 +704,6 @@ p {
   * {
     --tw-text-opacity: 1;
     color: rgb(250 250 250 / var(--tw-text-opacity));
-  }
-  @keyframes navDown {
-    0% {
-      opacity: 0%;
-    }
-
-    100% {
-      opacity: 100%;
-    }
   }
   ul.nav__links {
     animation: navDown 0.25s linear;
@@ -3157,30 +3186,8 @@ p {
       }
     }
   }
-  @keyframes unCheck {
-    0% {
-      scale: 1;
-    }
-
-    50% {
-      scale: 0;
-    }
-
-    100% {
-      scale: 1;
-    }
-  }
   .reminder input:not(:checked) ~ label>.checkmark {
     animation: unCheck 0.2s ease;
-  }
-  @keyframes onCheck {
-    0% {
-      scale: 0;
-    }
-
-    100% {
-      scale: 1;
-    }
   }
   .reminder input:checked ~ label>.checkmark {
     animation: onCheck 0.2s ease;
@@ -3256,15 +3263,6 @@ p {
     @media (min-width: 768px) {
       .properties__cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-    @keyframes navDown {
-      0% {
-        opacity: 0%;
-      }
-
-      100% {
-        opacity: 100%;
       }
     }
     .properties__cards, .properties__cards.active {
@@ -3632,30 +3630,8 @@ p {
               --tw-text-opacity: 1;
               color: rgb(250 250 250 / var(--tw-text-opacity));
             }
-            @keyframes unCheck {
-              0% {
-                scale: 1;
-              }
-
-              50% {
-                scale: 0;
-              }
-
-              100% {
-                scale: 1;
-              }
-            }
             input:not(:checked) ~ label.checkbox__label>.checkmark {
               animation: unCheck 0.2s ease;
-            }
-            @keyframes onCheck {
-              0% {
-                scale: 0;
-              }
-
-              100% {
-                scale: 1;
-              }
             }
             input:checked ~ label.checkbox__label>.checkmark {
               animation: onCheck 0.2s ease;
@@ -4609,12 +4585,6 @@ p {
 
 :where(.dark, .dark *)::-webkit-scrollbar-thumb {
   background-color: rgb(250 250 250 / 0.8);
-}
-
-@font-face {
-  font-family: "Poppins";
-
-  src: url("../dist/fonts/");
 }
 
 /* ABOUT PAGE - START */
