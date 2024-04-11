@@ -4217,16 +4217,16 @@ p {
   font-size: 32px;
 }
 
-.text-\[40px\] {
-  font-size: 40px;
-}
-
 .text-\[clamp\(20px\2c 1\.25vw\2c 36px\)\] {
   font-size: clamp(20px,1.25vw,36px);
 }
 
 .text-fs-16 {
   font-size: clamp(11px, 3.59vw, 14px);
+}
+
+.text-heading_h2 {
+  font-size: clamp(36px, 2.5vw, 64px);
 }
 
 .text-lg {
@@ -5001,10 +5001,6 @@ p {
   .sm\:text-\[16px\] {
     font-size: 16px;
   }
-
-  .sm\:text-\[60px\] {
-    font-size: 60px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -5035,10 +5031,6 @@ p {
   .md\:py-\[48px\] {
     padding-top: 48px;
     padding-bottom: 48px;
-  }
-
-  .md\:text-\[70px\] {
-    font-size: 70px;
   }
 }
 
