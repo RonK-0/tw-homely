@@ -457,19 +457,21 @@
                     @apply flex justify-center items-start gap-5;
                 }
                 .properties__page__selection__wrapper{
-                    li{
+                    button, .page-numbers, .next i, .prev i{
                         @apply f-col-center r-10p w-10 h-10 block
                         shadow-property_page_button_shadow dark:shadow-property_page_button_shadow_dark
-                        bg-light hover:bg-primary dark:bg-gray;
-                        button{
+                        bg-light hover:bg-primary dark:bg-gray
+                        
+                        text-[21px] lh-140 text-center text-dark dark:text-light;
+                        /* button{
                             @apply bg-transparent w-10 h-10
                             text-[21px] lh-140 text-center text-dark dark:text-light;
                         }
-                        button.fas{ @apply text-[22px]; }
+                        button.fas{ @apply text-[22px]; } */
                     }
-                    li:hover, li.active{
+                    button:hover, button.active, .page-numbers:hover, .page-numbers.current{
                         @apply bg-primary text-light;
-                        button{ @apply text-light; }
+                        /* button{ @apply text-light; } */
                     }
                 }
             }

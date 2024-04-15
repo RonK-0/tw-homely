@@ -3353,96 +3353,86 @@ p {
         gap: 1.25rem;
       }
       .properties__page__selection__wrapper{
-        li {
+        button, .page-numbers, .next i, .prev i {
           display: block;
         }
-        li {
+        button, .page-numbers, .next i, .prev i {
           height: 2.5rem;
         }
-        li {
+        button, .page-numbers, .next i, .prev i {
           width: 2.5rem;
         }
-        li {
+        button, .page-numbers, .next i, .prev i {
           --tw-bg-opacity: 1;
           background-color: rgb(250 250 250 / var(--tw-bg-opacity));
         }
-        li {
+        button, .page-numbers, .next i, .prev i {
+          text-align: center;
+        }
+        button, .page-numbers, .next i, .prev i {
+          font-size: 21px;
+        }
+        button, .page-numbers, .next i, .prev i {
+          --tw-text-opacity: 1;
+          color: rgb(13 13 13 / var(--tw-text-opacity));
+        }
+        button, .page-numbers, .next i, .prev i {
           --tw-shadow: 42px 42px 24px rgba(0, 0, 0, 0.01),24px 24px 20px rgba(0, 0, 0, 0.03), 11px 11px 15px rgba(0, 0, 0, 0.04), 3px 3px 8px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05);;
           --tw-shadow-colored: 42px 42px 24px var(--tw-shadow-color), 24px 24px 20px var(--tw-shadow-color), 11px 11px 15px var(--tw-shadow-color), 3px 3px 8px var(--tw-shadow-color), 0px 0px 0px var(--tw-shadow-color);
           box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
         }
-        li {
+        button, .page-numbers, .next i, .prev i {
           display: flex;
         }
-        li {
+        button, .page-numbers, .next i, .prev i {
           flex-direction: column;
         }
-        li {
+        button, .page-numbers, .next i, .prev i {
           align-items: center;
         }
-        li {
+        button, .page-numbers, .next i, .prev i {
           justify-content: center;
         }
-        li {
+        button, .page-numbers, .next i, .prev i {
+          line-height: 140%;
+        }
+        button, .page-numbers, .next i, .prev i {
           border-radius: 10px;
         }
-        li:hover {
+        button:hover, .page-numbers:hover, .next i:hover, .prev i:hover {
           --tw-bg-opacity: 1;
           background-color: rgb(165 122 90 / var(--tw-bg-opacity));
         }
-        li:where(.dark, .dark *) {
+        button:where(.dark, .dark *), .page-numbers:where(.dark, .dark *), .next i:where(.dark, .dark *), .prev i:where(.dark, .dark *) {
           --tw-bg-opacity: 1;
           background-color: rgb(121 125 134 / var(--tw-bg-opacity));
         }
-        li:where(.dark, .dark *) {
+        button:where(.dark, .dark *), .page-numbers:where(.dark, .dark *), .next i:where(.dark, .dark *), .prev i:where(.dark, .dark *) {
+          --tw-text-opacity: 1;
+          color: rgb(250 250 250 / var(--tw-text-opacity));
+        }
+        button:where(.dark, .dark *), .page-numbers:where(.dark, .dark *), .next i:where(.dark, .dark *), .prev i:where(.dark, .dark *) {
           --tw-shadow: 42px 42px 24px rgba(255, 255, 255, 0.01),24px 24px 20px rgba(255, 255, 255, 0.03), 11px 11px 15px rgba(255, 255, 255, 0.04), 3px 3px 8px rgba(255, 255, 255, 0.05), 0px 0px 0px rgba(255, 255, 255, 0.05);;
           --tw-shadow-colored: 42px 42px 24px var(--tw-shadow-color), 24px 24px 20px var(--tw-shadow-color), 11px 11px 15px var(--tw-shadow-color), 3px 3px 8px var(--tw-shadow-color), 0px 0px 0px var(--tw-shadow-color);
           box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
         }
-        li{
-          button {
-            height: 2.5rem;
-          }
-          button {
-            width: 2.5rem;
-          }
-          button {
-            background-color: transparent;
-          }
-          button {
-            text-align: center;
-          }
-          button {
-            font-size: 21px;
-          }
-          button {
-            --tw-text-opacity: 1;
-            color: rgb(13 13 13 / var(--tw-text-opacity));
-          }
-          button {
-            line-height: 140%;
-          }
-          button:where(.dark, .dark *) {
-            --tw-text-opacity: 1;
-            color: rgb(250 250 250 / var(--tw-text-opacity));
-          }
-          button.fas {
-            font-size: 22px;
-          }
+        button, .page-numbers, .next i, .prev i{
+          /* button{
+                            @apply bg-transparent w-10 h-10
+                            text-[21px] lh-140 text-center text-dark dark:text-light;
+                        }
+                        button.fas{ @apply text-[22px]; } */
         }
-        li:hover, li.active {
+        button:hover, button.active, .page-numbers:hover, .page-numbers.current {
           --tw-bg-opacity: 1;
           background-color: rgb(165 122 90 / var(--tw-bg-opacity));
         }
-        li:hover, li.active {
+        button:hover, button.active, .page-numbers:hover, .page-numbers.current {
           --tw-text-opacity: 1;
           color: rgb(250 250 250 / var(--tw-text-opacity));
         }
-        li:hover, li.active{
-          button {
-            --tw-text-opacity: 1;
-            color: rgb(250 250 250 / var(--tw-text-opacity));
-          }
+        button:hover, button.active, .page-numbers:hover, .page-numbers.current{
+          /* button{ @apply text-light; } */
         }
       }
     }
