@@ -340,6 +340,21 @@
                             </ul>
                             <li><button class="fas fa-chevron-right"></i></button></li>
                         </ul>
+						<ul class="properties__page__selection__wrapper">
+						<li><?php previous_posts_link('<button class="fas fa-chevron-left"></button>'); ?></li>
+						<ul class="properties__page__selection__list">
+							<?php
+								for($i=1; $i<=$activity->max_num_pages; $i++) {
+									echo '<li id="'.$i.'"';
+									if($i == get_query_var('paged')) {
+										echo ' class="active"';
+									}
+									echo '><button>'.$i.'</button></li>';
+								}
+							?>
+						</ul>
+						<li><?php next_posts_link('<button class="fas fa-chevron-right"></i></button>'); ?></li>
+					</ul>
                     </div>
                 </div>
                 

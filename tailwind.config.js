@@ -62,7 +62,7 @@ module.exports = {
         'banner_h1' : 'clamp(64px, 5.156vw, 150px)',
         'bannerSlider_card_heading' : 'clamp(19px, 1.2vw, 32px)',
         'bannerSlider_card_details' : 'clamp(13px, 0.83vw, 20px)',
-        'heading_h2' : 'clamp(36px, 2.5vw, 64px)',
+        'heading_h2' : 'clamp(36px, 8vw, 64px)',
 
         'property_entry_price' : 'clamp(16px, 1vw, 24px)',
 

@@ -62,6 +62,7 @@
     /* HEADER */
     .header {
         *{ @apply text-light; }
+        .header__wrapper a>img{ @apply w-4/5 md:w-full }
         ul.nav__links {
             @apply animate-navDown xl:animate-none transition-all duration-500;
             li.nav__link_item{
