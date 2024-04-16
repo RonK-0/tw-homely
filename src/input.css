@@ -64,8 +64,12 @@
         *{ @apply text-light; }
         .header__wrapper a>img{ @apply w-4/5 md:w-full }
         ul.nav__links {
-            @apply animate-navDown xl:animate-none transition-all duration-500;
-            li.nav__link_item{
+            @apply animate-navDown xl:animate-none transition-all duration-500
+            hidden xl:flex flex-col xl:flex-row xl:justify-between gap-[30px];
+            #menu-header_menu{
+                @apply xl:flex flex-col xl:flex-row xl:justify-between gap-[30px];
+            }
+            li.nav__link_item, .menu-item{
                 @apply font-text-inter text-[19px] xl:text-base 2xl:text-[19px] lh-140 ft-nm;
                 a:hover{ @apply text-primary; }
                 a.active{ @apply text-primary hover:text-light/50; }
@@ -74,7 +78,7 @@
         }
         ul.nav__links.show{
             @apply block absolute right-0 r-8p bg-dark py-[15px] px-[20px] overflow-hidden transition-all duration-500;
-            li.nav__link_item{ @apply mb-[10px] mr-0; }
+            li.nav__link_item, .menu-item{ @apply mb-[10px] mr-0; }
         }
         object{ @apply w-tel_icon; }
         button.toggleBtn{
@@ -389,6 +393,8 @@
                 @apply *:lh-130;
                 .customer__user .customer__stars>i{ @apply text-primary text-base lh-100; }
                 p{ @apply text-gray dark:text-light_2 text-base ls-3 font-text-inter; }
+                img{ max-w=[64px] max-h-[64px]; }
+                .customer__stars{w-[138px];}
             }
         }
         /* add review */

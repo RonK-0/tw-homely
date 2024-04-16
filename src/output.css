@@ -714,7 +714,16 @@ p {
     }
   }
   ul.nav__links {
+    display: none;
+  }
+  ul.nav__links {
     animation: navDown 0.25s linear;
+  }
+  ul.nav__links {
+    flex-direction: column;
+  }
+  ul.nav__links {
+    gap: 30px;
   }
   ul.nav__links {
     transition-property: all;
@@ -726,34 +735,70 @@ p {
   }
   @media (min-width: 1200px) {
     ul.nav__links {
+      display: flex;
+    }
+  }
+  @media (min-width: 1200px) {
+    ul.nav__links {
       animation: none;
     }
   }
+  @media (min-width: 1200px) {
+    ul.nav__links {
+      flex-direction: row;
+    }
+  }
+  @media (min-width: 1200px) {
+    ul.nav__links {
+      justify-content: space-between;
+    }
+  }
   ul.nav__links {
-    li.nav__link_item {
+    #menu-header_menu {
+      flex-direction: column;
+    }
+    #menu-header_menu {
+      gap: 30px;
+    }
+    @media (min-width: 1200px) {
+      #menu-header_menu {
+        display: flex;
+      }
+    }
+    @media (min-width: 1200px) {
+      #menu-header_menu {
+        flex-direction: row;
+      }
+    }
+    @media (min-width: 1200px) {
+      #menu-header_menu {
+        justify-content: space-between;
+      }
+    }
+    li.nav__link_item, .menu-item {
       font-family: Inter, sans-serif;
     }
-    li.nav__link_item {
+    li.nav__link_item, .menu-item {
       font-size: 19px;
     }
-    li.nav__link_item {
+    li.nav__link_item, .menu-item {
       font-weight: 400;
     }
-    li.nav__link_item {
+    li.nav__link_item, .menu-item {
       line-height: 140%;
     }
     @media (min-width: 1200px) {
-      li.nav__link_item {
+      li.nav__link_item, .menu-item {
         font-size: 1rem;
         line-height: 1.5rem;
       }
     }
     @media (min-width: 1400px) {
-      li.nav__link_item {
+      li.nav__link_item, .menu-item {
         font-size: 19px;
       }
     }
-    li.nav__link_item{
+    li.nav__link_item, .menu-item{
       a:hover {
         --tw-text-opacity: 1;
         color: rgb(165 122 90 / var(--tw-text-opacity));
@@ -812,10 +857,10 @@ p {
     border-radius: 0.5rem;
   }
   ul.nav__links.show{
-    li.nav__link_item {
+    li.nav__link_item, .menu-item {
       margin-bottom: 10px;
     }
-    li.nav__link_item {
+    li.nav__link_item, .menu-item {
       margin-right: 0px;
     }
   }
