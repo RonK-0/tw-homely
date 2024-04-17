@@ -2358,6 +2358,18 @@ p {
       img {
         margin-bottom: 0.5rem;
       }
+      img {
+        max-height: 120px;
+      }
+      img {
+        max-width: 120px;
+      }
+      img {
+        overflow: hidden;
+      }
+      img {
+        border-radius: 9999px;
+      }
       h4.agentName {
         margin-bottom: 1px;
       }

@@ -279,7 +279,7 @@
                 @apply f-col-center py-8 px-4 mx-3 my-0 select-none
                 w-full md:w-[324px] lg:w-[288px] xl:w-[255px] 2xl:w-[300px]
                 r-10p font-text-inter bg-l_gray dark:bg-d_gray;
-                img{ @apply mb-2; }
+                img{ @apply mb-2 max-w-[120px] max-h-[120px] rounded-full overflow-hidden; }
                 h4.agentName{ @apply ft-md text-[23px] lh-130 capitalize text-center text-dark dark:text-light mb-[1px]; }
                 p.agentDesignation{ @apply ft-md text-base lh-140 ls-2 text-gray dark:text-light_2/80 mb-[18px]; }
                 div.agentSocials{
