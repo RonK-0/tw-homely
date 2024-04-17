@@ -40,8 +40,8 @@
                     <ul class="nav__links hidden xl:flex flex-col xl:flex-row xl:justify-between gap-[30px]">
                         <li class="nav__link_item"><a href="./index.html">Home</a></li>
                         <li class="nav__link_item"><a href="./about.html">About</a></li>
-                        <li class="nav__link_item"><a href="./properties.html">Properties</a></li>
-                        <li class="nav__link_item"><a href="./property-details.html" class="active">Property Details</a></li>
+                        <li class="nav__link_item"><a href="./properties.html" class="active">Properties</a></li>
+                        <li class="nav__link_item"><a href="./property-details.html">Property Details</a></li>
                         <li class="nav__link_item xl:mr-[30px]"><a href="#">Contact</a></li>
                         <button class="toggleBtn block xl:hidden" id="b-w-button-1"><i class="fas fa-circle-half-stroke"></i></button>
                     </ul>
@@ -331,18 +331,15 @@
                         </div>
                     </div>
                     <div class="properties__page__selection">
-                        <div class="properties__page__selection__wrapper">
-                            <button class="fas fa-chevron-left"></button>
-                            <button id="1" class="active">1</button>
-                            <button id="2">2</button>
-                            <button id="3">3</button>
-                            <!-- <ul class="properties__page__selection__list">
-                                <div id="1" class="active"><button>1</button></div>
-                                <div id="2"><button>2</button></div>
-                                <div id="3"><button>3</button></div>
-                            </ul> -->
-                            <button class="fas fa-chevron-right"></button>
-                        </div>
+                        <ul class="properties__page__selection__wrapper">
+                            <li><button class="fas fa-chevron-left"></button></li>
+                            <ul class="properties__page__selection__list">
+                                <li id="1" class="active"><button>1</button></li>
+                                <li id="2"><button>2</button></li>
+                                <li id="3"><button>3</button></li>
+                            </ul>
+                            <li><button class="fas fa-chevron-right"></i></button></li>
+                        </ul>
                     </div>
                 </div>
                 
