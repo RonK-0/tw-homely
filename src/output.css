@@ -811,6 +811,10 @@ p {
         color: rgb(250 250 250 / 0.5);
       }
     }
+    .current_page_item a {
+      --tw-text-opacity: 1;
+      color: rgb(165 122 90 / var(--tw-text-opacity));
+    }
     button {
       width: 100%;
     }
@@ -2711,14 +2715,14 @@ p {
 
 /* PROPERTY DETAILS PAGE - START */
 
-.property-details-page section h2, .property-details-page section h3, .property-details-page section h4,
-    .property-details-page section h5, .property-details-page section p {
+.property-details-page h2, .property-details-page h3, .property-details-page h4,
+    .property-details-page h5, .property-details-page p {
   --tw-text-opacity: 1;
   color: rgb(13 13 13 / var(--tw-text-opacity));
 }
 
-.property-details-page section h2:where(.dark, .dark *), .property-details-page section h3:where(.dark, .dark *), .property-details-page section h4:where(.dark, .dark *),
-    .property-details-page section h5:where(.dark, .dark *), .property-details-page section p:where(.dark, .dark *) {
+.property-details-page h2:where(.dark, .dark *), .property-details-page h3:where(.dark, .dark *), .property-details-page h4:where(.dark, .dark *),
+    .property-details-page h5:where(.dark, .dark *), .property-details-page p:where(.dark, .dark *) {
   --tw-text-opacity: 1;
   color: rgb(250 250 250 / var(--tw-text-opacity));
 }
@@ -2786,20 +2790,28 @@ p {
   color: rgb(250 250 250 / var(--tw-text-opacity));
 }
 
-.broker .broker__wrapper ul>li>a>i {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  --tw-text-opacity: 1;
-  color: rgb(13 13 13 / var(--tw-text-opacity));
-}
-
-.broker .broker__wrapper ul>li>a>i:hover {
-  --tw-text-opacity: 1;
-  color: rgb(165 122 90 / var(--tw-text-opacity));
-}
-
-.broker .broker__wrapper ul>li>a>i:where(.dark, .dark *) {
-  color: rgb(214 216 219 / 0.7);
+.broker .broker__wrapper{
+  img {
+    max-height: 100px;
+  }
+  img {
+    max-width: 100px;
+  }
+  ul>li>a>i {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  ul>li>a>i {
+    --tw-text-opacity: 1;
+    color: rgb(13 13 13 / var(--tw-text-opacity));
+  }
+  ul>li>a>i:hover {
+    --tw-text-opacity: 1;
+    color: rgb(165 122 90 / var(--tw-text-opacity));
+  }
+  ul>li>a>i:where(.dark, .dark *) {
+    color: rgb(214 216 219 / 0.7);
+  }
 }
 
 /* INFORMATION SECTION*/
@@ -2822,6 +2834,14 @@ p {
     img:where(.dark, .dark *) {
       --tw-invert: invert(100%);
       filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+    }
+    h3 {
+      --tw-text-opacity: 1;
+      color: rgb(13 13 13 / var(--tw-text-opacity));
+    }
+    h3:where(.dark, .dark *) {
+      --tw-text-opacity: 1;
+      color: rgb(250 250 250 / var(--tw-text-opacity));
     }
   }
   .floor__plans__wrapper{
@@ -2886,7 +2906,15 @@ p {
           line-height: 1.5rem;
         }
         span {
+          --tw-text-opacity: 1;
+          color: rgb(27 28 30 / var(--tw-text-opacity));
+        }
+        span {
           font-weight: 500;
+        }
+        span:where(.dark, .dark *) {
+          --tw-text-opacity: 1;
+          color: rgb(214 216 219 / var(--tw-text-opacity));
         }
         span{
           i {
@@ -2894,6 +2922,14 @@ p {
           }
           i {
             font-size: clamp(11px, 3.59vw, 14px);
+          }
+          i {
+            --tw-text-opacity: 1;
+            color: rgb(27 28 30 / var(--tw-text-opacity));
+          }
+          i:where(.dark, .dark *) {
+            --tw-text-opacity: 1;
+            color: rgb(214 216 219 / var(--tw-text-opacity));
           }
         }
         ul {
@@ -2929,6 +2965,16 @@ p {
           ul {
             font-size: 1rem;
             line-height: 1.5rem;
+          }
+        }
+        ul{
+          li {
+            --tw-text-opacity: 1;
+            color: rgb(27 28 30 / var(--tw-text-opacity));
+          }
+          li:where(.dark, .dark *) {
+            --tw-text-opacity: 1;
+            color: rgb(214 216 219 / var(--tw-text-opacity));
           }
         }
       }
@@ -3105,6 +3151,23 @@ p {
       p:where(.dark, .dark *) {
         --tw-text-opacity: 1;
         color: rgb(214 216 219 / var(--tw-text-opacity));
+      }
+      img {
+        max-height: 64px;
+      }
+      img {
+        max-width: 64px;
+      }
+      .customer__stars {
+        width: 138px;
+      }
+      .customer__info h4 {
+        --tw-text-opacity: 1;
+        color: rgb(13 13 13 / var(--tw-text-opacity));
+      }
+      .customer__info h4:where(.dark, .dark *) {
+        --tw-text-opacity: 1;
+        color: rgb(250 250 250 / var(--tw-text-opacity));
       }
     }
   }

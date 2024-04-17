@@ -75,7 +75,7 @@ module.exports = {
         'prop_title': 'clamp(24px, 4vw, 40px)',
         'play_btn': 'clamp(24px, 1.88vw, 42px)',
 
-        'button' : 'clamp(16px, 1vw, 24px)',
+        'button' : 'clamp(16px, 1vw, 24px) !important',
       },
       listStyleType: {
       //   none: 'none',

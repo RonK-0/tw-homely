@@ -74,6 +74,7 @@
                 a:hover{ @apply text-primary; }
                 a.active{ @apply text-primary hover:text-light/50; }
             }
+            .current_page_item a { @apply text-primary; }
             button{@apply text-center w-full r-5p;}
         }
         ul.nav__links.show{
@@ -330,8 +331,8 @@
 /* HOME PAGE - END */
 
 /* PROPERTY DETAILS PAGE - START */
-    .property-details-page section h2, .property-details-page section h3, .property-details-page section h4,
-    .property-details-page section h5, .property-details-page section p
+    .property-details-page h2, .property-details-page h3, .property-details-page h4,
+    .property-details-page h5, .property-details-page p
     {@apply text-dark dark:text-light}
 
     /* property__detail */
@@ -345,11 +346,11 @@
         focus:text-[#212529] focus:dark:text-light 
         placeholder:text-gray placeholder:dark:text-light_2;
     }
-    .broker .broker__wrapper ul>li>a>i{ @apply text-dark dark:text-light_2/70 hover:text-primary text-2xl; }
+    .broker .broker__wrapper{ img{ @apply max-w-[100px] max-h-[100px]; } ul>li>a>i{ @apply text-dark dark:text-light_2/70 hover:text-primary text-2xl; }}
     
     /* INFORMATION SECTION*/
     .house__information__reviews{
-        .house__info ul li{ @apply flex gap-3 items-center my-4; img{@apply dark:invert;} }
+        .house__info ul li{ @apply flex gap-3 items-center my-4; img{@apply dark:invert;} h3{@apply text-dark dark:text-light;} }
         .floor__plans__wrapper{
             .floor_plans_accordion{
                 @apply pointer transition-all;
@@ -358,10 +359,10 @@
                     md:flex-row md:justify-between 
                     text-dark_2 dark:text-light_2 bg-light dark:bg-dark_2;
                     span{
-                        @apply text-base ft-md;
-                        i{ @apply mr-2 text-fs-16; }
+                        @apply text-base ft-md text-dark_2 dark:text-light_2;
+                        i{ @apply text-dark_2 dark:text-light_2 mr-2 text-fs-16; }
                     }
-                    ul{ @apply flex items-center pl-4 sm:pl-5 gap-7 sm:gap-9 ft-md text-xs sm:text-base; }
+                    ul{ @apply flex items-center pl-4 sm:pl-5 gap-7 sm:gap-9 ft-md text-xs sm:text-base; li{@apply text-dark_2 dark:text-light_2;} }
                 }
                 .floor__plan__img{ @apply hidden; }
             }
@@ -393,8 +394,9 @@
                 @apply *:lh-130;
                 .customer__user .customer__stars>i{ @apply text-primary text-base lh-100; }
                 p{ @apply text-gray dark:text-light_2 text-base ls-3 font-text-inter; }
-                img{ max-w=[64px] max-h-[64px]; }
-                .customer__stars{w-[138px];}
+                img{ @apply max-w-[64px] max-h-[64px]; }
+                .customer__stars{ @apply w-[138px];}
+                .customer__info h4{ @apply text-dark dark:text-light; }
             }
         }
         /* add review */
